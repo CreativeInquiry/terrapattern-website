@@ -1,0 +1,1 @@
+guard 'sass', :input => 'sass', :output => 'public/css', :all_on_start => true

@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    /  - ----- PER-PAGE META --------------------------------------------------
+    = yield_content :meta
+
+    /  - ----- CSS ------------------------------------------------------------
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.15.0/mapbox-gl.css' rel='stylesheet' />
+    
+    %link{rel:"stylesheet", href:"/css/bootstrap.min.css"}
+
+    %link{rel:"stylesheet", href:"/css/app.css"}
+
+    =# partial :google_analytics
+    
+  %body
+  = partial "partials/header"
+  .container-fluid.main-content
+    = yield
+  = partial "partials/footer"
+
+
+  /  - ----- JAVASCRIPTS -------------------------------------------------------
+  %script{src: "/js/jquery.min.js"}
+  %script{src: "/js/bootstrap.min.js"}
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.15.0/mapbox-gl.js'></script>
+  <script src='https://api.mapbox.com/mapbox.js/plugins/geojson-extent/v0.0.1/geojson-extent.js'></script>
+
+  %script{src: "/js/app.js"}
+  = yield_content :javascript
