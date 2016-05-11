@@ -1,0 +1,23 @@
+.row
+  .col-md-12
+    = insert_content("introduction")
+.row.map-interface
+  .col-md-6
+    #main-map
+  .col-md-1
+    #toolbox.toolbox
+      %ul.list-unstyled.tools
+        %li#pin
+      .geo_feedback
+        .lat
+        .lng
+  .col-md-5
+    .results
+      #result-grid.hidden
+        %p Complete!
+      #waiting.hidden
+        %p Processing.  Please be patient        
+      #no-results
+        %p Please select a place by clicking a site of interest the map on the left.
+        %p Using machine learning, Terrapattern will search for other things that resemble it around the world*.
+        %p.smaller (And by world, we mean Allegheny County.  It's a small world, after all.) 
