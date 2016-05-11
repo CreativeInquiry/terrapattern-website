@@ -91,6 +91,7 @@ DEPENDENCIES
   sinatra-flash
   sinatra-partial
   sinatra-subdomain
+  tilt
   typhoeus
 
 BUNDLED WITH

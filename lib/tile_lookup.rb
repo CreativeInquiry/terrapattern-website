@@ -25,13 +25,13 @@ class TileLookup
 
   def create_geojson(data)
     features = data.collect do |datum|
-      {type: "Feature", properties: nil, geometry: {type: "Point", coordinates: datum.reverse}}
+      tsne = {cluster: {x: datum[:tsne][0], y: datum[:tsne][1]}}
+      {type: "Feature", properties: tsne, geometry: {type: "Point", coordinates: datum[:coords].reverse}}
     end  
     obj = {type: "FeatureCollection", features: features}
   end
 
-  def lookup(lat, lng, location="Allegheny", zoom="19", limit="25")
-
+  def lookup(lat, lng, location="Allegheny", zoom="19", limit="100")
     lat = lat.to_f
     lng = lng.to_f
     if lat >=0
@@ -53,7 +53,8 @@ class TileLookup
     results = Typhoeus.get(uri)
     data = JSON.parse(results.body)
     processed_data = data["matches"].collect do |point|
-      id_to_coords(point["filename"])
+      {coords: id_to_coords(point["filename"]),
+       tsne: point["tsne_pos"]} 
     end
     create_geojson processed_data
   end

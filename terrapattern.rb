@@ -11,7 +11,9 @@ require "sinatra/subdomain"
 
 # Rendering Libraries
 require "haml"
+require 'tilt/haml'
 require "sass"
+require 'yaml'
 
 # Terrapattern-specific libraries
 require_relative "lib/tile_lookup"
@@ -26,7 +28,9 @@ require_relative "lib/helpers"
 class Terrapattern < Sinatra::Base
   enable :sessions
   set :session_secret, ENV["SESSION_SECRET"]
-
+  set :city_data, YAML::load(File.open('data/cities.yaml'))["cities"]
+  set :city_urls, settings.city_data.collect{|city| city["url_name"]}
+  set :city_names, settings.city_data.collect{|city| city["name"]}
   $tile_lookup = TileLookup.new
   $markdown = MarkdownPartial.new
 
@@ -58,9 +62,9 @@ class Terrapattern < Sinatra::Base
   end
  
   subdomain do
-    get "/bios" do
+    get "/team" do
       send_to_www
-      haml :bios
+      haml :team
     end
 
     get "/about" do
@@ -69,11 +73,16 @@ class Terrapattern < Sinatra::Base
     end
 
     get "/" do
+      send_to_www unless settings.city_urls.include? subdomain
+      @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
+      @geojson = File.read(@city_data["geojson"])
       haml :interface
     end
 
     get "/search" do
-      json $tile_lookup.lookup(params['lat'], params['lng'], "Allegheny", 19)
+      redirect("/") unless settings.city_urls.include? subdomain
+      city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
+      json $tile_lookup.lookup(params['lat'], params['lng'], city_data["search_locale"], 19)
     end
 
   end

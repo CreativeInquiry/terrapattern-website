@@ -1,23 +1,48 @@
+-###################################################
+-#   Page-specific CSS
+-###################################################
+
+- content_for :css do
+  %link{rel:"stylesheet", href:"/css/interface.css"}
+
+-###################################################
+-#   Page-specific Javascript
+-###################################################
+
+- content_for :javascript do
+  :javascript
+    var MAPS_API_KEY = "#{ENV["GMAPS_KEY"]}";
+    var bounding_box = #{@city_data["bounding_box"].to_json};
+    var map_center   = #{@city_data["center"].to_json};
+    var boundary     = #{@geojson};
+
+  %script{src: "https://maps.googleapis.com/maps/api/js?key=#{ENV["GMAPS_KEY"]}&callback=initMap&libraries=places", async: "async", defer: "defer"}
+
+  %script{src: "/js/app.js"}
+
+-###################################################
+-#   Page template
+-###################################################
+
 .row
   .col-md-12
-    = insert_content("introduction")
-.row.map-interface
-  .col-md-6
+    #city_info
+      %h1= @city_data["name"]
+      / = @city_data.inspect
+.row
+  .col-md-12
+    = insert_content("instructions")
+.row#map_interface
+  .col-md-7
+    %input#search_box.controls{type:"text", placeholder: "Search for a location in #{@city_data["name"]}"}
     #main-map
-  .col-md-1
-    #toolbox.toolbox
-      %ul.list-unstyled.tools
-        %li#pin
-      .geo_feedback
-        .lat
-        .lng
+      #map
   .col-md-5
-    .results
-      #result-grid.hidden
-        %p Complete!
-      #waiting.hidden
-        %p Processing.  Please be patient        
-      #no-results
-        %p Please select a place by clicking a site of interest the map on the left.
-        %p Using machine learning, Terrapattern will search for other things that resemble it around the world*.
-        %p.smaller (And by world, we mean Allegheny County.  It's a small world, after all.) 
+    .container-fluid
+      .row
+        .col-md-12  
+          #results_grid
+          #results_pagination
+      .row
+        .col-md-12
+          #tsne_grid

@@ -6,6 +6,7 @@ source 'https://rubygems.org'
 gem 'puma'
 gem "rack"
 gem 'rack_csrf'
+gem 'tilt'
 
 ## Gems for Sintatra
 gem "sinatra", "~> 1.4.7"
