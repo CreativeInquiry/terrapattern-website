@@ -1,4 +1,5 @@
 helpers do
+
   # Construct a link to +url_fragment+, which should be given relative to
   # the base of this Sinatra app.  The mode should be either
   # <code>:path_only</code>, which will generate an absolute path within

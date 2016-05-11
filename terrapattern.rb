@@ -12,12 +12,14 @@ require "haml"
 require "sass"
 
 require_relative "lib/tile_lookup"
+require_relative "lib/markdown_partial"
 
 
 class Terrapattern < Sinatra::Base
   enable :sessions
   set :session_secret, ENV["SESSION_SECRET"]
   $tile_lookup = TileLookup.new
+  $markdown = MarkdownPartial.new
 
   register Sinatra::Flash
   register Sinatra::Namespace
@@ -26,11 +28,15 @@ class Terrapattern < Sinatra::Base
   helpers Sinatra::JSON
   helpers Sinatra::ContentFor
 
-
+  helpers do 
+    def insert_content(id)
+      $markdown.insert_content(id)
+    end
+  end
+ 
   configure :development do
     register Sinatra::Reloader
-    # also_reload 'lib/helpers.rb' 
-
+     also_reload 'lib/markdown_partial.rb' 
   end
 
   get '/' do
