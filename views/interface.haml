@@ -16,7 +16,7 @@
     var map_center   = #{@city_data["center"].to_json};
     var boundary     = #{@geojson};
 
-  %script{src: "https://maps.googleapis.com/maps/api/js?key=#{ENV["GMAPS_KEY"]}&callback=initMap&libraries=places", async: "async", defer: "defer"}
+  %script{src: "https://maps.googleapis.com/maps/api/js?key=#{ENV["GMAPS_KEY"]}&callback=terrapatternMap.initialize&libraries=places", async: "async", defer: "defer"}
 
   %script{src: "/js/app.js"}
 
