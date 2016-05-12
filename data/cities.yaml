@@ -29,44 +29,44 @@ cities:
       ne_lng: -82.910507
     geojson: "data/detroit.json"      # The relative path for the geojson boundary of the object
 
-  - name: New York City
-    url_name: nyc
-    primary_color:   "#003884"
-    secondary_color: "#ff6600"
-    center:
-      lng: -73.9675438
-      lat: 40.7828687
-    bounding_box: 
-      ne_lat: 40.477399
-      ne_lng: -73.700272
-      sw_lat: 40.917577
-      sw_lng: -74.25909
-    geojson: "data/nyc.json"      # The relative path for the geojson boundary of the object
+  # - name: New York City
+  #   url_name: nyc
+  #   primary_color:   "#003884"
+  #   secondary_color: "#ff6600"
+  #   center:
+  #     lng: -73.9675438
+  #     lat: 40.7828687
+  #   bounding_box: 
+  #     ne_lat: 40.477399
+  #     ne_lng: -73.700272
+  #     sw_lat: 40.917577
+  #     sw_lng: -74.25909
+  #   geojson: "data/nyc.json"      # The relative path for the geojson boundary of the object
 
-  - name: Berlin
-    url_name: berlin
-    primary_color:   "#E2382A"
-    secondary_color: "#000000"
+  # - name: Berlin
+  #   url_name: berlin
+  #   primary_color:   "#E2382A"
+  #   secondary_color: "#000000"
 
-  - name: Belgrade
-    url_name: belgrade
-    primary_color:   "#002079"
-    secondary_color: "#C3010D"
-    bounding_box: 
-      sw_lat: 40.853779
-      sw_lng: 13.37508
-      ne_lat: 46.876652
-      ne_lng: 23.038071
+  # - name: Belgrade
+  #   url_name: belgrade
+  #   primary_color:   "#002079"
+  #   secondary_color: "#C3010D"
+  #   bounding_box: 
+  #     sw_lat: 40.853779
+  #     sw_lng: 13.37508
+  #     ne_lat: 46.876652
+  #     ne_lng: 23.038071
   
 
 
 
-  - name: London
-    url_name: london
-    primary_color:   "#cf142b"
-    secondary_color: "#00247d"
+  # - name: London
+  #   url_name: london
+  #   primary_color:   "#cf142b"
+  #   secondary_color: "#00247d"
 
-  - name: San Francisco
-    url_name: sf
-    primary_color:   "#c41230"
-    secondary_color: "#fdbf57"
+  # - name: San Francisco
+  #   url_name: sf
+  #   primary_color:   "#c41230"
+  #   secondary_color: "#fdbf57"

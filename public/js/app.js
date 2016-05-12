@@ -1,4 +1,30 @@
-// For 
+// CONSTANTS
+//----------------------------------------------------------------------
+var THE_WHOLE_WORLD = [
+        [0, 90],
+        [180, 90],
+        [180, -90],
+        [0, -90],
+        [-180, -90],
+        [-180, 0],
+        [-180, 90],
+        [0, 90]
+];
+var BOUNDARY_STYLE = {
+    strokeWeight: 0,
+    fillColor: "#000000",
+    fillOpacity: .7
+  }
+
+
+// Class variables
+//----------------------------------------------------------------------
+var lastValidCenter;
+var defaultBounds;
+var map;
+var pinIds = [];
+
+//----------------------------------------------------------------------
 function getTileImage(lat,lng,size=200) {
   var url = "https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&zoom=19";
   url = url + "&center=" + lng + "," + lat;
@@ -7,55 +33,45 @@ function getTileImage(lat,lng,size=200) {
   return url
 } 
 
-// function hideStuff() {
-//   $('#result-grid').addClass("hidden");
-//   $('#no-results').addClass("hidden");
-//   $('#waiting').addClass("hidden");
-// }
+//---------------------------------------------
+function hideEverythingBut(and_then_show=null) {
+  $('#result-grid').addClass("hidden");
+  $('#no-results').addClass("hidden");
+  $('#waiting').addClass("hidden");
+  $(and_then_show).removeClass("hidden");
+}
 
-// function handleClick(e) {
+//---------------------------------------------
+function handleClick(e) {
     
-//     hideStuff();
-//      $('#waiting').removeClass("hidden");
-//     var roundAmount = 1000;
+    hideEverythingBut('#waiting');
+    var roundAmount = 1000;
     
-//     // $("#toolbox .lat").text("Lat: "+ Math.round(e.lngLat.lat*roundAmount)/roundAmount);
-//     // $("#toolbox .lng").text("Lng: "+ Math.round(e.lngLat.lng*roundAmount)/roundAmount);
-    
-//     var data = {lat: e.lngLat.lat, lng: e.lngLat.lng}
-//     var results = $.get("/search", data);
-//     results.done(function(e){
-//       hideStuff();
-//        $('#result-grid').removeClass("hidden");
-//       pointSource.setData(e);
+    var data = {lat: e.latLng.lat(), lng: e.latLng.lng()}
+ 
+    var results = $.get("/search", data);
+    results.done(function(e){
+      
+      hideEverythingBut('#result-grid');
+     
+      pinIds.forEach(function(p) {
+        map.data.remove(map.data.getFeatureById(p));
+      })
 
-//       var bb =  geojsonExtent(e);
-//       map.fitBounds([[bb[0],bb[1]],[bb[2],bb[3]]], {padding: 20});
-//     });
-// }
+      var pins = map.data.addGeoJson(e);
+      var pinBounds = new google.maps.LatLngBounds();
+      pinIds = [];
 
-// function gotoPoint(lat, lng) {
-//   map.flyTo({center: [lat, lng]});
-// }
+      for (var i = 0; i < pins.length; i++) {
+        pinIds.push(pins[i].getId());
+        pinBounds.extend( pins[i].getGeometry().get());
+      }
 
-// function initializePoints() {
-//   map.addSource('points',pointSource);
-//   map.addLayer({
-//       "id": "point",
-//       "source": "points",
-//       "type": "circle",
-//       "paint": {
-//           "circle-radius": 10,
-//           "circle-color": "#007cbf"
-//       }
-//   });
-//   console.log("init");
-// }
+      map.fitBounds(pinBounds);
+    });
+}
 
-var lastValidCenter;
-var defaultBounds;
-var map;
-
+//---------------------------------------------
 function initMap() {
 
   var mapOptions = {
@@ -82,25 +98,10 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('main-map'), mapOptions);  
   lastValidCenter = map.getCenter();
 
-
-  var the_whole_world = [
-          [0, 90],
-          [180, 90],
-          [180, -90],
-          [0, -90],
-          [-180, -90],
-          [-180, 0],
-          [-180, 90],
-          [0, 90]
-  ];
-  
-  boundary.geometry.coordinates.unshift(the_whole_world);
+  // Initialize the grey boundary
+  boundary.geometry.coordinates.unshift(THE_WHOLE_WORLD);
   map.data.addGeoJson(boundary, {idPropertyName: "region_boundary"});
-  map.data.setStyle({
-    strokeWeight: 0,
-    fillColor: "#000000",
-    fillOpacity: .7
-  });
+  map.data.setStyle(BOUNDARY_STYLE);
 
   // Set up the search box
   var input = document.getElementById('search_box');
@@ -108,8 +109,8 @@ function initMap() {
   searchBox.setBounds(map.getBounds());
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-
-
+  // Set up the click handler
+  map.addListener('click', handleClick);
 
   // Setup the search listenter
   searchBox.addListener('places_changed', function() {
