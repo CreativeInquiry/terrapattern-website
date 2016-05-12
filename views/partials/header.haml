@@ -4,5 +4,5 @@
       %a.navbar-brand{href:"/"} Terrapattern
     %ul.list-inline
       - settings.city_data.each do |city|
-        %a{href: "http://#{city['url_name']}.terrapattern.dev"}
+        %a{href: "http://#{city['url_name']}.terrapattern.dev#{(":" + settings.port.to_s) unless settings.port == 80 } "}
           = city["name"]
