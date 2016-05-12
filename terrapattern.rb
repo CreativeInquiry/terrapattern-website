@@ -84,6 +84,11 @@ class Terrapattern < Sinatra::Base
       haml :about
     end
 
+    get "/faq" do
+      send_to_www
+      haml :faq
+    end
+
     get "/" do
       send_to_www unless settings.city_urls.include? subdomain
       @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
