@@ -26,8 +26,8 @@ require_relative "lib/helpers"
 #######################################
 
 class Terrapattern < Sinatra::Base
-  enable :sessions
-  set :session_secret, ENV["SESSION_SECRET"]
+  # enable :sessions
+  # set :session_secret, ENV["SESSION_SECRET"]
   set :city_data, YAML::load(File.open('data/cities.yaml'))["cities"]
   set :city_urls, settings.city_data.collect{|city| city["url_name"]}
   set :city_names, settings.city_data.collect{|city| city["name"]}

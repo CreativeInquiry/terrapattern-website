@@ -1,25 +1,42 @@
-### Existing Cities
+This is the website and front end for the Terrapattern project.
 
-To install, download the repo, then run
+## Installation Instructions:
 
-    gem install foreman
-    gem install bundler
-    bundle install
+This site has been developed using [Sinatra](http://www.sinatrarb.com), a Ruby library for small websites.  It uses the standard conventions of a Sinatra project, and is designed to be hosted on [Heroku](http://www.heroku.com).  
 
-The command to run the server locally is 
 
-    foreman start
+To run this site locally, you'll need to clone the repo, then run the following commands in your terminal:
 
-You'll need the following env variables to be set:
+```bash
+  gem install bundler
+  gem install foreman
+  bundle install
+```
 
-    SESSION_SECRET=<random string>
+Additionally, You'll need the following environment variables to be set:
+
+    # This is the URL to to the service running the search engine.
     SEARCH_SERVER=<URL to the Search Server>
-    TERRAPATTERN_USERNAME=<username>
-    TERRAPATTERN_PASSWORD=<password>
+    # This is a Google API Browser key authorized to use the Google Maps Javascript API.
     GMAPS_KEY=<google api key>
 
-For testing, it's helpful to modify your ``/etc/hosts`` file by adding the following the lines:
+If you'd like the project to have a *tiny* bit of security, you can set these variables.  Note that this uses HTTP basic authentication is not *actually* secure without using https, but it does prevent random people from stumbling upon things.
+
+    TERRAPATTERN_USERNAME=<username>
+    TERRAPATTERN_PASSWORD=<password>
+
+For testing, it can be helpful to modify your ``/etc/hosts`` file by adding the following the lines:
 
     127.0.0.1 www.terrapattern.dev
     127.0.0.1 pgh.terrapattern.dev
     127.0.0.1 detroit.terrapattern.dev
+
+This allows you to test the multi-domain functionality locally.
+
+## Running the Application
+
+The command to run the server locally is 
+
+```bash
+  foreman start
+```
