@@ -12,7 +12,7 @@ class MarkdownPartial
       autolink: true, 
       strikethrough: true, 
       no_intra_emphasis: true, 
-      space_after_headers: true
+      space_after_headers: false
     }
     
     markdown_html_options = {

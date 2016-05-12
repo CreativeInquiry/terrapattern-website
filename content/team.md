@@ -63,7 +63,7 @@ The *Terrapattern* project was developed at the [Frank-Ratchye STUDIO for Creati
 
 #Acknowledgments 
 
-### The *Terrapattern* project was made possible through a Media Innovation [Prototype Fund](http://www.knightfoundation.org/grants/201551228/) grant from the [John S. and James L. Knight Foundation](http://www.knightfoundation.org/), which supports transformational ideas that promote quality journalism, advance media innovation, engage communities and foster the arts. The Knight Foundation believes that democracy thrives when people and communities are informed and engaged.
+**The *Terrapattern* project was made possible through a Media Innovation [Prototype Fund](http://www.knightfoundation.org/grants/201551228/) grant from the [John S. and James L. Knight Foundation](http://www.knightfoundation.org/), which supports transformational ideas that promote quality journalism, advance media innovation, engage communities and foster the arts. The Knight Foundation believes that democracy thrives when people and communities are informed and engaged.**
 
 ![alt text](images/knight-logo-blue.png)
 

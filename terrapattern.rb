@@ -59,9 +59,21 @@ class Terrapattern < Sinatra::Base
     get '/' do
       haml :index
     end
+
+
   end
  
   subdomain do
+
+    get '/images/*.*' do |file,ext|
+      path = "content/images/#{file}.#{ext}"
+      unless File.exist? path
+        pass
+      end
+      content_type ext.to_sym
+      File.read(path, mode: "rb")
+    end
+
     get "/team" do
       send_to_www
       haml :team
