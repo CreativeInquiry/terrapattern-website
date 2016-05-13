@@ -5,16 +5,27 @@ require 'json'
 class TileLookup
 
   def initialize
-    raw_data = CSV.read("data/points.csv", headers: true)
-    @lats = []
-    @lngs = []
+    # raw_data = CSV.read("data/points.csv", headers: true)
+    # @lats = []
+    # @lngs = []
 
-    raw_data.each do |val|
-      @lats.push val[0].to_f
-      @lngs.push val[1].to_f
-    end
-    @lats.sort!
-    @lngs.sort!
+    # raw_data.each do |val|
+    #   @lats.push val[0].to_f
+    #   @lngs.push val[1].to_f
+    # end
+    # @lats.uniq!
+    # @lats.sort!
+    # @lngs.uniq!
+    # @lngs.sort!
+
+    # File.open("data/lat_lngs.json", "w") do |f|
+    #   f.puts ({lat: @lats, lng: @lngs}).to_json
+    # end
+
+    data = JSON.parse(File.read("data/lat_lngs.json"))
+    @lats = data["lat"]
+    @lngs = data["lng"]
+
   end
 
 
@@ -32,19 +43,14 @@ class TileLookup
     obj = {type: "FeatureCollection", features: features}
   end
 
-  def lookup(lat, lng, location="Allegheny", zoom="19", limit="50")
+  def lookup(lat, lng, location="Allegheny", zoom="19", limit="90")
     lat = lat.to_f
     lng = lng.to_f
-    if lat >=0
-      tile_lat = @lats.bsearch{|i| i>= lat }
-    else
-      tile_lat = @lats.reverse.bsearch{|i| i<= lat }
-    end
-    if lng >= 0
-      tile_lng = @lngs.bsearch{|i| i>= lng }
-    else
-      tile_lng = @lngs.reverse.bsearch{|i| i <= lng }
-    end
+    
+    tile_lat = @lats.min_by { |x| (x - lat).abs } 
+    tile_lng = @lngs.min_by { |x| (x - lng).abs } 
+
+
     id  = "#{location}_#{tile_lat}_#{tile_lng}_z#{zoom}.png"
 
     obj = {lat: tile_lat, lng: tile_lng, id: id, base_lat: lat, base_lng: lng}

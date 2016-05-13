@@ -1,3 +1,19 @@
+.location_tile {
+  width: 16%;
+  cursor: pointer;
+  margin: 1px;
+  border: 2px solid transparent;
+  position: relative;
+  display: inline-block; }
+  .location_tile img {
+    width: 100%;
+    height: 100%; }
+  .location_tile:hover {
+    border: 2px solid red; }
+
+#results_pagination {
+  text-align: center; }
+
 #main-map {
   height: 500px;
   width: 100%; }
