@@ -1,10 +1,9 @@
 # Frequently Asked Questions
 
 ---
-
 ### What's the basic idea? 
 
-The Terrapattern project is a prototype tool that provides open-ended, *visual query-by-example for satellite imagery*. 
+Terrapattern is a prototype tool that provides open-ended, *visual query-by-example for satellite imagery*. 
 
 * **YOU** click on a "feature of interest" in a satellite image;
 * **TERRAPATTERN** returns a batch of the most similar-looking places nearby.
@@ -76,8 +75,12 @@ We're a group of new-media artists, creative technologists, and students who are
 
 *This statement constitutes our privacy policy.* We are strongly committed to protecting the privacy and anonymity of the visitors to this site. We do not collect or share personal information, and we don't track or profile you. The IP address that is associated with your search(es) is not recorded or shared, and this web site does not use tracking or identifying cookies. Other than our optional [visitor feedback survey](http://goo.gl/forms/8T7zY28nHm), we do not collect or log any user data. Your search information is not stored, and cannot be linked back to you. 
 
+--- 
+### How can I cite this work? 
+
+Levin, G., Newbury, D., McDonald, K., Alvarado, I., Tiwari, A., & Zaheer, M. "Terrapattern: Open-Ended, Visual Query-By-Example for Satellite Imagery using Deep Learning", May 2016. [http://terrapattern.com](http://terrapattern.com).
+
 ---
 ### My question's not addressed here!
 
 *We'd love to help. Please feel free to get in touch with us via email at [contact@terrapattern.com](mailto:contact@terrapattern.com), or connect with lead investigator [@golan](https://twitter.com/golan) on Twitter.*
-

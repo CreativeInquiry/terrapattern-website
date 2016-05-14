@@ -62,7 +62,7 @@ The *Terrapattern* project was developed at the [Frank-Ratchye STUDIO for Creati
 --- 
 #Acknowledgments 
 
-**The *Terrapattern* project was made possible through a Media Innovation [Prototype Fund](http://www.knightfoundation.org/grants/201551228/) grant from the [John S. and James L. Knight Foundation](http://www.knightfoundation.org/), which supports transformational ideas that promote quality journalism, advance media innovation, engage communities and foster the arts. The Knight Foundation believes that democracy thrives when people and communities are informed and engaged.**
+**Terrapattern was made possible through a Media Innovation [Prototype Fund](http://www.knightfoundation.org/grants/201551228/) grant from the [John S. and James L. Knight Foundation](http://www.knightfoundation.org/), which supports transformational ideas that promote quality journalism, advance media innovation, engage communities and foster the arts. The Knight Foundation believes that democracy thrives when people and communities are informed and engaged.**
 
 ![alt text](images/knight-logo-blue.png)
 
@@ -74,10 +74,10 @@ We express our gratitude to [**Knight Foundation**](http://www.knightfoundation.
 
 Members of the Carnegie Mellon University [**CREATE Lab**](http://cmucreatelab.org/) provided essential advice and guidance in performing large-scale computations on satellite imagery for humanitarian purposes. We are especially grateful to [Randy Sargent](http://www.ri.cmu.edu/person.html?type=newsmedia&person_id=2434), Paul Dille, and Professor Illah Nourbakhsh of the CREATE Lab. 
 
-The leadership team of [**DataKind**](http://www.datakind.org/), which works to harness the power of data science in the service of humanity, provided crucial early encouragement of this investigation. We express our gratitude to [Jake Porway](http://www.datakind.org/our-team), Founder and Executive Director, and [Erin Akred](http://www.datakind.org/our-team), Chief Data Scientist and Head of DataKind Labs, for their advice and support. 
+The leadership team of [**DataKind**](http://www.datakind.org/), which works to harness the power of data science in the service of humanity, provided crucial early encouragement of this investigation. We express our gratitude to [Jake Porway](http://www.datakind.org/our-team), Founder and Executive Director, and [Erin Akred](http://www.datakind.org/our-team), Chief Data Scientist and Head of DataKind Labs, for their interest and support. 
 
 Our colleagues in the CMU [**Machine Learning Department**](http://www.ml.cmu.edu/) (MLD) provided key technical advice and support. In particular, our project uses an implementation of *Cover Trees*, developed by Manzil Zaheer in the MLD, for fast, asynchronous nearest neighbor search. This implementation made it possible for our project to function in real-time. We thank Professors [Alex Smola](http://alex.smola.org/), David Andersen, and Ruslan Salakhutdinov for their kind support in making this possible.
 
-We thank the organizers of the [**Alt-AI**](http://alt-ai.net/) conference, [Gene Kogan](http://www.genekogan.com/) and Lauren Gardner, and the directors of the [**SFPC**](http://sfpc.io/) (School for Poetic Computation), [Taeyoon Choi](http://sfpc.io/people/taeyoon-choi/) and [Zachary Lieberman](http://sfpc.io/people/zach-lieberman/), for kindly inviting the *Terrapattern* project to [premiere](http://alt-ai.net/#exhibition) in an exhibition at this conference event. 
+We thank the organizers of the [**Alt-AI**](http://alt-ai.net/) conference, [Gene Kogan](http://www.genekogan.com/) and Lauren Gardner, and the directors of the [**SFPC**](http://sfpc.io/) (School for Poetic Computation), [Taeyoon Choi](http://sfpc.io/people/taeyoon-choi/) and [Zachary Lieberman](http://sfpc.io/people/zach-lieberman/), for kindly inviting the *Terrapattern* project to premiere in an [exhibition](http://alt-ai.net/#exhibition) at this unique conference event. 
 
 Last, but not least, we acknowledge the support of our hardworking staff and students at the [**Frank-Ratchye STUDIO for Creative Inquiry**](studioforcreativeinquiry.org), including Tom Hughes, Linda Hager, [Dan Moore](makeitdoathing.com), Aprameya Mysore, and [Charlotte Stiles](http://charlottestiles.com/).
