@@ -3,33 +3,43 @@
 ---
 
 
-Recent 
+Terrapattern 
+
+panoptic perceptron
+
+
+[Ambrosia Lake Uranium Disposal Site, New Mexico](http://clui.org/ludb/site/ambrosia-lake-uranium-tailings-pile)
 
 
 
 
+Catching pirate fishers
 
 
+Speculative: Concentrated Animal Feeding Operations, or CAFOs; URANIUM MILL TAILINGS DEPOSITS Uranium mill tailings deposits
 
-
-
-
-
-
-
+"Gamma Gardens", also called radiation farms, are tomic Gardening/ Radiation Farms)
+http://pruned.blogspot.com/2011/04/atomic-gardens.html mutation breeding
 
 
 ---
 ### Bibliography
 
+Coolidge, Matthew and The Center for Land Use Interpretation. "[Land Use Database](http://clui.org/ludb/page/about-database)". *clui.org.* Accessed 5/14/2016. 
+
+Garling, Caleb."[Startup Promises Business Insights from Satellite Images](https://www.technologyreview.com/s/535866/startup-promises-business-insights-from-satellite-images/)". *TechnologyReview.com,* MIT Technology Review, 3/16/2015. Accessed 5/14/2016.
+
 Hogenboom, Melissa. "[Watching penguins, and their poo, from space](http://www.bbc.com/earth/story/20141210-surprising-use-of-penguin-poo)". *BBC.com*. 12/10/2014. Accessed 5/14/2016.
 
 Howard, Brian C. "[Tiny Team Uses Satellites to Bust Illegal Fishing Worldwide](http://news.nationalgeographic.com/2015/06/150615-skytruth-pirate-fishing-illegal-big-data-ocean-conservation/)". *NationalGeographic.com*, 6/15/2015. Accessed 5/14/2016.
 
+Trevi, Alexander. "[Atomic Gardens](http://pruned.blogspot.com/2011/04/atomic-gardens.html)". *Pruned.blogspot.com.* 4/20/2011. Accessed 5/14/2016.
 
 
 
 
+
+	
 
 
 
