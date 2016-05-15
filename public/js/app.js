@@ -465,7 +465,8 @@ var terrapatternMap = (function(){
     return id.replace(/\./g, "");
   }
   //-----------------------------------------------------------------
-  function getTileImage(lat,lng,id="",size=256) {
+  function getTileImage(lat,lng,id,size) {
+    if (!size) {size = 256};
     var url = "https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&zoom=19";
     url = url + "&center=" + lat + "," + lng;
     url = url + "&size=" + size + "x" + size;
@@ -474,11 +475,13 @@ var terrapatternMap = (function(){
   }
 
   //-----------------------------------------------------------------
-  function hideEverythingBut(and_then_show=null) {
+  function hideEverythingBut(and_then_show) {
     $('#result-grid').addClass("hidden");
     $('#no-results').addClass("hidden");
     $('#waiting').addClass("hidden");
-    $(and_then_show).removeClass("hidden");
+    if (and_then_show) {
+      $(and_then_show).removeClass("hidden");
+    }
   }
 
   //-----------------------------------------------------------------
@@ -505,7 +508,7 @@ var terrapatternMap = (function(){
   }
 
   //-----------------------------------------------------------------
-  function handleClick(e, data=undefined) {
+  function handleClick(e, data) {
 
       hideEverythingBut('#waiting');
       resetUI();
@@ -683,7 +686,7 @@ var terrapatternMap = (function(){
   }
 
   //-----------------------------------------------------------------
-  function handleDrawingRectangle(e, point = false) {
+  function handleDrawingRectangle(e, point) {
     point = point ? point : e.latLng;
     var bounds = getCurrentTileBounds(point.lat(), point.lng());
 
