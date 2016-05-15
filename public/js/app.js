@@ -56,21 +56,19 @@ var p5Map = function(p) {
 
 
   // p5 Event Handlers
+  p.windowResized = recalulateCanvasSize;
+
   p.mousePressed = function() {
     if (mouseInBounds(tsneFrameLeft,tsneFrameLeft+tsneFrameWidth,tsneFrameTop,tsneFrameTop+tsneFrameHeight) && closestDot) {
       terrapatternMap.gotoPin(closestDot.id);
     }
   }
 
-  p.windowResized = function() {
-    recalulateCanvasSize();
-  }
 
   // Helper Functions
   function mouseInBounds(x1,x2,y1,y2) {
     return (p.mouseX > x1 && p.mouseX < x2 && p.mouseY > y1 && p.mouseY < y2) 
   }
-
 
   function drawDot(dot){
     var radius = (dot == closestDot) ? 8 : 4;
@@ -82,7 +80,6 @@ var p5Map = function(p) {
   }
 
   function recalulateCanvasSize() {
-
     var availableWidth = $('#mini_displays').width();
     var mapRatio = $('#main-map').height() / $('#main-map').width();
     var desiredHeight = ((availableWidth-GUTTER)/2)*mapRatio;
@@ -149,7 +146,7 @@ var p5Map = function(p) {
     tsneDots.forEach(drawDot)
   }
 
-  function drawMinmap() {
+  function drawMinmap(pins, currentPin) {
     // draw the background
     p.push();
     p.translate(minmapFrameLeft,minmapFrameTop);
@@ -157,18 +154,44 @@ var p5Map = function(p) {
     p.fill(FRAME_COLOR);
     p.rect(0,0,minmapFrameWidth,minmapFrameHeight)
 
+    if (google == undefined) { return;}
+
+
+    var bottomLeftPoint = terrapatternMap.getProjection().fromLatLngToPoint(  new google.maps.LatLng({lat: bounding_box.sw_lat, lng: bounding_box.sw_lng}))
+    var topRightPoint = terrapatternMap.getProjection().fromLatLngToPoint( new google.maps.LatLng({lat: bounding_box.ne_lat, lng: bounding_box.ne_lng}))
+    
+    var mapHeight = Math.abs(bottomLeftPoint.y - topRightPoint.y);
+    var mapWidth = Math.abs(bottomLeftPoint.x - topRightPoint.x);
+    var mapRatio = mapWidth / mapHeight;
+    var boxRatio = minmapFrameWidth / minmapFrameHeight;
+
+    var xOffset, yOffset 
+    if (mapRatio > boxRatio) {
+      xOffset = 0;
+      yOffset = (minmapFrameHeight - (minmapFrameWidth / mapRatio))/2;
+    } 
+    else {
+      xOffset = (minmapFrameWidth - (minmapFrameHeight / mapRatio))/2;
+      yOffset = 0;
+    }
+
     p.stroke(AXIS_COLOR);
     p.beginShape();
     var x,y;
+    var border = 10;
     boundary.geometry.coordinates[1].forEach(function(point){
-      x = p.map(point[0],bounding_box.sw_lng, bounding_box.ne_lng,2,minmapFrameWidth-2);
-      y = p.map(point[1],bounding_box.ne_lat, bounding_box.sw_lat,2,minmapFrameHeight-2);
+      x = p.map(point[0],bounding_box.sw_lng, bounding_box.ne_lng,border+xOffset,minmapFrameWidth  - (border+xOffset));
+      y = p.map(point[1],bounding_box.ne_lat, bounding_box.sw_lat,border+yOffset,minmapFrameHeight - (border+yOffset));
       p.vertex(x,y);
     })
     p.endShape(p.close);
 
     p.noStroke();
     p.pop();
+
+    // stop drawing unless there are pins
+    if (pins == undefined) { return;}
+
   }
 
 }
@@ -181,8 +204,15 @@ var p5MapCanvas = new p5(p5Map, 'mini_displays');
 
 /*----------------------------------------------------------------------------- 
 This is a wrapper around both the main map and the thumnail display, as
-well as containing most of the main functions.  Currently, it exposes the 
-following functions:
+well as containing most of the main functions.  
+
+GETTERS AND SETTERS
+
+  getPins(): A getter for the list of pins available.
+  getCurrentPin(): A getter for the currently selected pin.
+  getProjection: A getter for the current map's projection
+
+FUNCTIONS
 
   initialize()
 
@@ -201,8 +231,6 @@ following functions:
   as a string.  The pin ids are currently their filenames as provided by the
   search API.
 
-  getPins(): A getter for the list of pins available.
-  getCurrentPin(): A getter for the currently selected pin.
 
 -----------------------------------------------------------------------------*/
 var terrapatternMap = (function(){
@@ -489,7 +517,8 @@ var terrapatternMap = (function(){
     gotoPage: showThumbnails,
     gotoPin: goToPin,
     getPins: function() { return pins},
-    getCurrentPin: function() {return lastSelected}
+    getCurrentPin: function() {return lastSelected},
+    getProjection: function() {return map.getProjection()}
   };
 }());
 
