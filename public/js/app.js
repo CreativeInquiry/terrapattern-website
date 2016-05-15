@@ -187,18 +187,14 @@ var p5Map = function(p) {
 
     // Actually draw the minmap border
     var pos;
-
-    p.translate(minmapFrameLeft,minmapFrameTop);
-
-    p.stroke(AXIS_COLOR);
-    p.noFill();
+    p.noStroke();
+    p.fill(AXIS_COLOR);
     p.beginShape();
     BOUNDARY.geometry.coordinates[1].forEach(function(point){
       pos = getPointfromLatLng(point[1],point[0]);
       p.vertex(pos.x,pos.y);
     });
     p.endShape(p.close);
-    p.noStroke();
 
     // draw Viewport Box
     var viewableBounds = terrapatternMap.getBounds();
