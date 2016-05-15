@@ -1,4 +1,45 @@
-// Setup Palette
+/*----------------------------------------------------------------------------- 
+# Terrapattern User Interface Code 
+#### written by: David Newbury (@workergnome)
+
+
+This is the main interface code for the Terrapattern user interface.  
+It uses p5.js and the Google Maps API to generate four content sections:
+
+* The Map, which is a google map, constrained to a specific geographical region
+* The Minmap, which is a small display of the geographical region.
+* The TSNE, which is dimension-reduced display of the search results.
+* The Tiles, which are a set of thumbnails of the search results.
+
+This code assumes that several global variables have been set before
+this code is initialized.  These are:
+
+    var MAPS_API_KEY = <A Google Maps API key>;
+    var BOUNDARY     = <a geoJSON object containing the outline of the region>;
+    var BOUNDING_BOX = {
+                          sw_lat: FLOAT, 
+                          sw_lng: FLOAT,
+                          ne_lat: FLOAT,
+                          nw_lng: FLOAT
+                        };
+    var MAP_CENTER   =  {
+                          lat: FLOAT,
+                          lng: FLOAT
+                        }
+
+-----------------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------------
+## Configurable Settings:
+
+These are the magic number an strings that can be set to modify the appearance 
+of the interface.  
+-----------------------------------------------------------------------------*/
+
+// Color Palette
 var FRAME_COLOR = "#808080";                      // Color of the graph backgrounds
 var AXIS_COLOR = "#909090";                       // Color of the graph elements
 var SELECTED_COLOR = "goldenrod";                 // Color of the current dot/pin
@@ -11,13 +52,19 @@ var SMALL_RADIUS = 4;             // Size of a normal dot (in pixels)
 var MEDIUM_RADIUS = 6;            // Size of a hovered dot (in pixels)
 var LARGE_RADIUS = 10;            // Size of a selected dot (in pixels)
 var GUTTER = 10;                  // Border between the two graphs (in pixels)
+var THUMBNAILS_PER_PAGE = 4*6;    // The number of tile results to show per-page
+
+
 
 
 /*----------------------------------------------------------------------------- 
-This is a p5.js wrapper for the two small graphical displays.  One is the 
+## Minmap and TSNE grid code
+
+This is the p5.js wrapper for the two small graphical displays.  One is the 
 "tsne" display, which is a 2d cluster of a dimensionally-reduced representation
 of the various pins.  The other is a "minmap", which is a helpful display of
-where you are positioned within the map.
+where the main map and the various poins are located within the geographical
+region.
 
 There are no externally controllable functions exposed, but it does call 
 "gotoPin" and it does check for the list of pins and the currently selected
@@ -142,8 +189,9 @@ var p5Map = function(p) {
     var pos;
 
     p.stroke(AXIS_COLOR);
+    p.noFill();
     p.beginShape();
-    boundary.geometry.coordinates[1].forEach(function(point){
+    BOUNDARY.geometry.coordinates[1].forEach(function(point){
       pos = getPointfromLatLng(point[1],point[0]);
       p.vertex(pos.x,pos.y);
     })
@@ -196,7 +244,7 @@ var p5Map = function(p) {
   }
 
   function mouseInMinmapBounds() {
-    mouseInBounds(minmapFrameLeft,minmapFrameLeft+minmapFrameWidth,minmapFrameTop,minmapFrameTop+minmapFrameHeight)
+    return mouseInBounds(minmapFrameLeft,minmapFrameLeft+minmapFrameWidth,minmapFrameTop,minmapFrameTop+minmapFrameHeight)
   }
 
   //-----------------------------------------------------------------
@@ -247,9 +295,9 @@ var p5Map = function(p) {
     var x,y;
 
     // Calculations for scaling the minmap appropriately.
-    // TODO:  Much of this is static, or can be done on resize.  
-    var bottomLeftPoint = terrapatternMap.getProjection().fromLatLngToPoint(  new google.maps.LatLng({lat: bounding_box.sw_lat, lng: bounding_box.sw_lng}))
-    var topRightPoint = terrapatternMap.getProjection().fromLatLngToPoint( new google.maps.LatLng({lat: bounding_box.ne_lat, lng: bounding_box.ne_lng}))
+    // TODO:  Much of this is static or could be done on resize.  
+    var bottomLeftPoint = terrapatternMap.getProjection().fromLatLngToPoint(  new google.maps.LatLng({lat: BOUNDING_BOX.sw_lat, lng: BOUNDING_BOX.sw_lng}))
+    var topRightPoint = terrapatternMap.getProjection().fromLatLngToPoint( new google.maps.LatLng({lat: BOUNDING_BOX.ne_lat, lng: BOUNDING_BOX.ne_lng}))
     var mapHeight = Math.abs(bottomLeftPoint.y - topRightPoint.y);
     var mapWidth = Math.abs(bottomLeftPoint.x - topRightPoint.x);
     var mapRatio = mapWidth / mapHeight;
@@ -265,8 +313,8 @@ var p5Map = function(p) {
       yOffset = 0;
     }
 
-    x = p.map(lng,bounding_box.sw_lng, bounding_box.ne_lng,LARGE_RADIUS+xOffset,minmapFrameWidth  - (LARGE_RADIUS+xOffset));
-    y = p.map(lat,bounding_box.ne_lat, bounding_box.sw_lat,LARGE_RADIUS+yOffset,minmapFrameHeight - (LARGE_RADIUS+yOffset));
+    x = p.map(lng,BOUNDING_BOX.sw_lng, BOUNDING_BOX.ne_lng,LARGE_RADIUS+xOffset,minmapFrameWidth  - (LARGE_RADIUS+xOffset));
+    y = p.map(lat,BOUNDING_BOX.ne_lat, BOUNDING_BOX.sw_lat,LARGE_RADIUS+yOffset,minmapFrameHeight - (LARGE_RADIUS+yOffset));
     return {x: x, y: y}
   }
 }
@@ -275,19 +323,20 @@ var p5Map = function(p) {
 var p5MapCanvas = new p5(p5Map, 'mini_displays');
 
 
-
-
 /*----------------------------------------------------------------------------- 
-This is a wrapper around both the main map and the thumnail display, as
-well as containing most of the main functions.  
+## Map and Tiles code
 
-GETTERS AND SETTERS
+This is a wrapper around both the main map and the thumbnail displays of
+tiles, as well as code that contains functions that operate on the system
+as a whole.  
+
+#### GETTERS AND SETTERS
 
   getPins(): A getter for the list of pins available.
   getCurrentPin(): A getter for the currently selected pin.
   getProjection: A getter for the current map's projection
 
-FUNCTIONS
+#### EXPOSED FUNCTIONS
 
   initialize()
 
@@ -306,16 +355,14 @@ FUNCTIONS
   as a string.  The pin ids are currently their filenames as provided by the
   search API.
 
-
 -----------------------------------------------------------------------------*/
+
 var terrapatternMap = (function(){
   // CONSTANTS
 
   // Explicitly magic numbers.  
   var LAT_OFFSET = 0.0005225;
   var LNG_OFFSET = 0.0006865;
-
-  var THUMBNAILS_PER_PAGE = 4*6;
 
   var THE_WHOLE_WORLD = [
           [0, 90],
@@ -333,7 +380,7 @@ var terrapatternMap = (function(){
       fillOpacity: .7
   };
   var MAP_OPTIONS = {
-            center: {lat: map_center.lat, lng: map_center.lng},
+            center: {lat: MAP_CENTER.lat, lng: MAP_CENTER.lng},
             zoom: 17,
             mapTypeId: "satellite",
             mapTypeControl: false,
@@ -358,11 +405,12 @@ var terrapatternMap = (function(){
   var rawGeoJson;
   var lastSelected;
 
+  //-----------------------------------------------------------------
   function getCurrentTileBounds(lat,lng) {
     lat = lat-LAT_OFFSET/2;
     lng = lng-LNG_OFFSET/2;
-    var minLng = bounding_box.sw_lng;
-    var minLat = bounding_box.sw_lat;
+    var minLng = BOUNDING_BOX.sw_lng;
+    var minLat = BOUNDING_BOX.sw_lat;
 
     var north = minLat + Math.floor((lat-minLat)/LAT_OFFSET)*LAT_OFFSET+LAT_OFFSET/2;
     var south = minLat + Math.ceil((lat-minLat)/LAT_OFFSET)*LAT_OFFSET+LAT_OFFSET/2;
@@ -377,6 +425,7 @@ var terrapatternMap = (function(){
     };
   }
 
+  //-----------------------------------------------------------------
   function goToPin(id) {
     // console.log("going to pin", id)
     var pinToSelect = map.data.getFeatureById(id);
@@ -387,7 +436,7 @@ var terrapatternMap = (function(){
     lastSelected = id;
   }
 
-  //-----------------
+  //-----------------------------------------------------------------
   function getTileImage(lat,lng,id="",size=256) {
     var url = "https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&zoom=19";
     url = url + "&center=" + lat + "," + lng;
@@ -396,7 +445,7 @@ var terrapatternMap = (function(){
     return "<div class='location_tile' id='"+id+"'><img alt='' src='"+url+"'/></div>"
   } 
 
-  //-----------------
+  //-----------------------------------------------------------------
   function hideEverythingBut(and_then_show=null) {
     $('#result-grid').addClass("hidden");
     $('#no-results').addClass("hidden");
@@ -404,7 +453,7 @@ var terrapatternMap = (function(){
     $(and_then_show).removeClass("hidden");
   }
 
-  //-----------------
+  //-----------------------------------------------------------------
   function handlePan() {
     if (defaultBounds.contains(map.getCenter())) {
         // still within valid bounds, so save the last valid position
@@ -415,7 +464,7 @@ var terrapatternMap = (function(){
     map.panTo(lastValidCenter);
   }
 
-  //-----------------
+  //-----------------------------------------------------------------
   function handleSearch() {
     var places = searchBox.getPlaces();
 
@@ -427,7 +476,7 @@ var terrapatternMap = (function(){
     map.setZoom(18);
   }
 
-  //-----------------
+  //-----------------------------------------------------------------
   function handleClick(e) {
       
       hideEverythingBut('#waiting');
@@ -440,6 +489,7 @@ var terrapatternMap = (function(){
       results.done(handleNewPins);
   }
 
+  //-----------------------------------------------------------------
   function handleNewPins(e) {
 
     // setup ui
@@ -467,7 +517,7 @@ var terrapatternMap = (function(){
     map.fitBounds(pinBounds);
   }
 
-
+  //-----------------------------------------------------------------
   function drawPagination(currentPage) {
     paginationCurrentPage = currentPage;
 
@@ -494,6 +544,7 @@ var terrapatternMap = (function(){
     $("#results_pagination").html(str);
   }
 
+  //-----------------------------------------------------------------
   function showThumbnails(page) {
     var pinId, pinGeo; 
 
@@ -514,7 +565,7 @@ var terrapatternMap = (function(){
   }
 
 
-  //-----------------
+  //-----------------------------------------------------------------
   function initMap() {
     tileRectangle = new google.maps.Rectangle();
 
@@ -522,17 +573,17 @@ var terrapatternMap = (function(){
 
     // Set the search boundary (just a hint, not a requirement)
     defaultBounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(bounding_box.sw_lat, bounding_box.sw_lng),
-      new google.maps.LatLng(bounding_box.ne_lat, bounding_box.ne_lng)
+      new google.maps.LatLng(BOUNDING_BOX.sw_lat, BOUNDING_BOX.sw_lng),
+      new google.maps.LatLng(BOUNDING_BOX.ne_lat, BOUNDING_BOX.ne_lng)
     );
 
     // Initialize the map object
     map = new google.maps.Map(document.getElementById('main-map'), MAP_OPTIONS);  
     lastValidCenter = map.getCenter();
 
-    // Initialize the grey boundary
-    boundary.geometry.coordinates.unshift(THE_WHOLE_WORLD);
-    map.data.addGeoJson(boundary);
+    // Initialize the grey BOUNDARY
+    BOUNDARY.geometry.coordinates.unshift(THE_WHOLE_WORLD);
+    map.data.addGeoJson(BOUNDARY);
     map.data.setStyle(BOUNDARY_STYLE);
 
     // Set up the search box
@@ -553,6 +604,7 @@ var terrapatternMap = (function(){
     })
   }
 
+  //-----------------------------------------------------------------
   function handlePaginationClick(e) {
     e.preventDefault();
     var pagenum = $(this).text();
@@ -564,15 +616,11 @@ var terrapatternMap = (function(){
     else { showThumbnails(pagenum -1)};
   }
 
+  //-----------------------------------------------------------------
   function handleDrawingRectangle(e, point = false) {
     var point = point ? point : e.latLng;
     var bounds = getCurrentTileBounds(point.lat(), point.lng())
 
-    // var rectBounds = tileRectangle.getBounds();
-    // if (rectBounds && rectBounds.equals(bounds)) {
-    //   console.log('dup');
-    //   return};
-    // console.log("centered at:", bounds)
     tileRectangle.setOptions({
       strokeColor: '#000000',
       strokeOpacity: 0.6,
@@ -585,8 +633,9 @@ var terrapatternMap = (function(){
     });
   }
 
-
+  //-----------------------------------------------------------------
   // Expose the module's interface to the world (you naughty code, you).
+  //-----------------------------------------------------------------
   return {
     initialize: initMap,
     gotoPage: showThumbnails,

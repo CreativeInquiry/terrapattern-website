@@ -12,9 +12,9 @@
 - content_for :javascript do
   :javascript
     var MAPS_API_KEY = "#{ENV["GMAPS_KEY"]}";
-    var bounding_box = #{@city_data["bounding_box"].to_json};
-    var map_center   = #{@city_data["center"].to_json};
-    var boundary     = #{@geojson};
+    var BOUNDING_BOX = #{@city_data["bounding_box"].to_json};
+    var MAP_CENTER   = #{@city_data["center"].to_json};
+    var BOUNDARY     = #{@geojson};
 
   %script{src: "https://maps.googleapis.com/maps/api/js?key=#{ENV["GMAPS_KEY"]}&callback=terrapatternMap.initialize&libraries=places", async: "async", defer: "defer"}
 
