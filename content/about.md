@@ -11,21 +11,51 @@ panoptic perceptron
 [Ambrosia Lake Uranium Disposal Site, New Mexico](http://clui.org/ludb/site/ambrosia-lake-uranium-tailings-pile)
 
 
+<img width="240" height="135" src="images/16x9_oil_tanks_orbital_insight.jpg" />
+<img width="240" height="135" src="images/16x9_penguin_poop_digitalglobe.jpg" alt="Satellite views of penguin poop can help track wildlife populations and their diet. Image credit: DigitalGlobe/BAS." />
+<img width="240" height="135" src="images/16x9_ambrosia_lake_disposal_site_clui.jpg" alt="Aerial view of the Ambrosia Lake Uranium Disposal Site in New Mexico, a radioactive tailings pile. Image credit: Center for Land Use Interpretation (clui.org)" />
+<img width="240" height="135" src="images/16x9_right_whales_fretwell.jpg" "Processed satellite images of southern right whales. Image credit: Peter Fretwell et al." />
+<img width="240" height="135" src="images/16x9_illegal_logging_roads_maap.jpg" "Aerial view of illegal logging roads in the Amazon rainforest. Image credit:  Monitoring of the Andean Amazon Project" />
+<img width="240" height="135" src="images/16x9_magnetic_deer_alignment_begall.png" alt="Examinations of cattle and deer from satellite images reveal that they align their body axes along the earth's magnetic field. Image credit: Begall et al." />
 
 
-Catching pirate fishers
+* Catching pirate fishers
 
+* new logging roads in the central Peruvian Amazon
 
 Speculative: Concentrated Animal Feeding Operations, or CAFOs; URANIUM MILL TAILINGS DEPOSITS Uranium mill tailings deposits
 
-"Gamma Gardens", also called radiation farms, are tomic Gardening/ Radiation Farms)
+* "Gamma Gardens", also called radiation farms, are tomic Gardening/ Radiation Farms)
 http://pruned.blogspot.com/2011/04/atomic-gardens.html mutation breeding
 
+The Signal Program worked with 2014 HHI
+fellow Michael Hughes last year to develop
+a prototype feature extraction algorithm,
+called “Tukul Detector”. The Tukul DetecSIGNAL
+PROGRAM
+ON HUMAN SECURITY AND
+TECHNOLOGY
+tor identifies and counts traditional African
+huts, known as “tukuls”, that are routinely
+present in satellite imagery of rural regions
+in Africa. 
+
+
+The Signal Program
+on Human Security and Technology
 
 ---
 ### Bibliography
 
+*The following projects and initiatives use satellite imagery, oftentimes in combination with machine learning and computer vision, to track phenomena of interest in the built and natural world.*
+
+
+
+Begall, Sabine et al. "[Magnetic alignment in grazing and resting cattle and deer](http://www.pnas.org/content/early/2008/08/22/0803650105)". *Proceedings of the National Academy of Sciences* 105, no. 36 (9/9/2008), pp. 13,451-13,455. DOI: 10.1073/pnas.0803650105
+
 Coolidge, Matthew and The Center for Land Use Interpretation. "[Land Use Database](http://clui.org/ludb/page/about-database)". *clui.org.* Accessed 5/14/2016. 
+
+Fretwell, Peter T., Staniland Iain J., and Forcada, Jaume. "[Whales from Space: Counting Southern Right Whales by Satellite](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088655)". *PLoS ONE* 9(2): e88655. doi:10.1371/journal.pone.0088655.
 
 Garling, Caleb."[Startup Promises Business Insights from Satellite Images](https://www.technologyreview.com/s/535866/startup-promises-business-insights-from-satellite-images/)". *TechnologyReview.com,* MIT Technology Review, 3/16/2015. Accessed 5/14/2016.
 
@@ -33,13 +63,20 @@ Hogenboom, Melissa. "[Watching penguins, and their poo, from space](http://www.b
 
 Howard, Brian C. "[Tiny Team Uses Satellites to Bust Illegal Fishing Worldwide](http://news.nationalgeographic.com/2015/06/150615-skytruth-pirate-fishing-illegal-big-data-ocean-conservation/)". *NationalGeographic.com*, 6/15/2015. Accessed 5/14/2016.
 
+"[MAAP #18: Proliferation of Logging Roads in the Peruvian Amazon](http://maaproject.org/2015/maap18-logroads/)". *maaproject.org*, Monitoring of the Andean Amazon Project, 10/30/2015. Accessed 5/14/2016.
+
+"[MAAP #30: Gold Mining Invasion of Tambopata National Reserve Intensifies](http://maaproject.org/2016/invasion-tambopata-3/)". *maaproject.org*, Monitoring of the Andean Amazon Project, 4/12/2016. Accessed 5/15/2016.
+
+Raymond, Nathaniel A.; Card, Brittany L.; and Baker, Isaac L. "[A New Forensics: Developing Standard Remote Sensing Methodologies to Detect and Document Mass Atrocities](http://scholarcommons.usf.edu/gsp/vol8/iss3/6/)". (11/2014) *Genocide Studies and Prevention: An International Journal*: Vol. 8: no. 3: 33-48. DOI: 10.5038/1911-9933.8.3.4
+
+Raymond, Nathaniel A.; Vidan, Gili; and the staff of the Signal Program on Human Security and Technology at the Harvard Humanitarian Initiative (Isaac Baker, Ziad Achkar, Brittany Card, Benjamin Davies, and Steve Juntunen). "[Tents and Tukuls: Lessons from the Development of AMALGAM](http://thetechchallenge.org/tents-and-tukuls-lessons-from-the-development-of-amalgam-3/)". *thetechchallenge.org*, Mass Atrocity Prevention Tech Challenge, 12/10/2014. Accessed 5/15/2016.
+
 Trevi, Alexander. "[Atomic Gardens](http://pruned.blogspot.com/2011/04/atomic-gardens.html)". *Pruned.blogspot.com.* 4/20/2011. Accessed 5/14/2016.
 
 
 
 
 
-	
 
 
 
@@ -74,16 +111,8 @@ Here are some reasons why that may be true:
 
 We'd love to hear your stories and feedback! If you discover something interesting, send a tweet with the hashtag [#terrapattern](https://twitter.com/hashtag/terrapattern) and the URL of your search. We also invite you to complete [this brief visitor survey](http://goo.gl/forms/8T7zY28nHm) to tell us what you think!
 
----
-### Why have you only offered three cities? 
-
-It's the scale we could afford. Storing the model data for each metro region requires about 10GB of active RAM. (That's *RAM*—not hard disk.) To store and serve a searchable model for (say) the entire United States would require nearly 2,000 times as much RAM and CPU power as we're currently leasing, and the development of a much more sophisticated software architecture as well. Think of the *Terrapattern* project as a proof-of-concept probe to test how (or whether) "visual query-by-example" for satellite imagery might become a part of our everyday future. Remember, you saw it here first :)
-
----
-### Why did you select the cities you did? 
-
-Most of our team members currently call Pittsburgh home. We additionally selected New York City and San Francisco because so many of our friends and peers live there—especially those exploring new intersections of art, design, journalism, technology, data science and social change.
-
+ Think of the *Terrapattern* project as a proof-of-concept probe to test how (or whether) "visual query-by-example" for satellite imagery might become a part of our everyday future. Remember, you saw it here first :)
+ 
 ---
 ### Who else is creating similar systems? 
 
