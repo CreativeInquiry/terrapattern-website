@@ -1,21 +1,27 @@
 .location_tile {
-  width: 16%;
+  width: 15.5%;
   cursor: pointer;
-  margin: 1px;
+  margin: 0.5%;
   border: 2px solid transparent;
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  height: 100%; }
   .location_tile img {
     width: 100%;
     height: 100%; }
   .location_tile:hover {
     border: 2px solid red; }
 
-#results_pagination {
+#no_results, #results_grid, #waiting, #results_pagination {
   text-align: center; }
 
+#minmap, #tsne_grid {
+  height: 166px;
+  margin-bottom: 10px;
+  background-color: #333; }
+
 #main-map {
-  height: 500px;
+  height: 516px;
   width: 100%; }
 
 #map {
@@ -49,30 +55,3 @@
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px dashed #ccc; }
-
-.toolbox, .results {
-  height: 500px;
-  height: 500px;
-  border: 1px solid #ddd; }
-
-.toolbox {
-  background-color: #ddd; }
-
-#no-results, #result-grid, #waiting {
-  text-align: center;
-  padding: 60px 40px; }
-
-#toolbox {
-  width: 100%;
-  position: relative;
-  padding: 2px; }
-
-.tools {
-  margin: 0; }
-
-.geo_feedback {
-  padding-top: 2px;
-  bottom: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%; }

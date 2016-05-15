@@ -1,13 +1,78 @@
+var p5Map = function(p) {
+  var lastClosest;
+
+  function mouseInBounds() {
+    return (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY < p.height) 
+  }
+
+  p.setup = function() {
+    p.createCanvas(255, 166);
+    p.noStroke();
+  }
+
+  p.mousePressed = function() {
+    if (mouseInBounds() && lastClosest) {
+      terrapatternMap.gotoPin(lastClosest.id);
+    }
+  }
+
+  p.draw = function() {
+
+    p.background(204);
+
+    if (terrapatternMap.getPins() == undefined) { return;}
+
+    var closestDot;
+    var pinCoordinate, pinX, pinY;
+    var tsneDots = [];
+    var currentPin = terrapatternMap.getCurrentPin();
+
+    terrapatternMap.getPins().forEach(function(pin, index) {
+      pinCoordinate = pin.getProperty("cluster");
+      obj = {};
+      obj.x = p.map(pinCoordinate.x,-1,1,0,p.width);
+      obj.y = p.map(pinCoordinate.y,-1,1,p.height,0);
+      obj.isFirst = (index == 0);
+      obj.id = pin.getId();
+      obj.isSelected = (currentPin == obj.id);
+
+      if (mouseInBounds()) { 
+        if (!closestDot) {
+          closestDot = obj;
+        }
+        else if (p.dist(p.mouseX, p.mouseY, obj.x, obj.y) < p.dist(p.mouseX, p.mouseY, closestDot.x, closestDot.y)) {
+          closestDot = obj;
+        }
+      }
+      tsneDots.push(obj)    
+    })
+
+    lastClosest = closestDot;
+
+    tsneDots.forEach(function(obj){
+      radius = obj == closestDot ? 8 : 4;
+      obj.isFirst ?  p.fill(255,0,0) : p.fill(255);
+      if (obj.isSelected) {
+        p.fill(0,0,200);
+      }
+      p.ellipse(obj.x,obj.y,radius,radius);
+    })
+  }
+}
+
+var p5MapCanvas = new p5(p5Map, 'minmap');
+
+//-------------------------------------------------------
+//-------------------------------------------------------
+
 var terrapatternMap = (function(){
-
-
   // CONSTANTS
 
   // Explicitly magic numbers.  
   var LAT_OFFSET = 0.0005225;
   var LNG_OFFSET = 0.0006865;
 
-  var THUMBNAILS_PER_PAGE = 18;
+  var THUMBNAILS_PER_PAGE = 4*6;
 
   var THE_WHOLE_WORLD = [
           [0, 90],
@@ -47,6 +112,8 @@ var terrapatternMap = (function(){
   var pins;
   var paginationCurrentPage;
   var searchBox;
+  var rawGeoJson;
+  var lastSelected;
 
   function getCurrentTileBounds(lat,lng) {
     lat = lat-LAT_OFFSET/2;
@@ -68,12 +135,13 @@ var terrapatternMap = (function(){
   }
 
   function goToPin(id) {
-    console.log("going to pin", id)
+    // console.log("going to pin", id)
     var pinToSelect = map.data.getFeatureById(id);
     latLng = pinToSelect.getGeometry().get();
     map.setCenter(latLng);
     map.setZoom(18);
     handleDrawingRectangle(null, latLng);
+    lastSelected = id;
   }
 
   //-----------------
@@ -120,7 +188,7 @@ var terrapatternMap = (function(){
   function handleClick(e) {
       
       hideEverythingBut('#waiting');
-      console.log("searching");
+      // console.log("searching");
 
 
       // var data = 
@@ -139,7 +207,8 @@ var terrapatternMap = (function(){
       map.data.remove(map.data.getFeatureById(p));
     })
 
-    pins = map.data.addGeoJson(e);
+    rawGeoJson = e;
+    pins = map.data.addGeoJson(rawGeoJson);
 
     // add new pins
     var pinBounds = new google.maps.LatLngBounds();
@@ -206,6 +275,8 @@ var terrapatternMap = (function(){
   function initMap() {
     tileRectangle = new google.maps.Rectangle();
 
+
+
     // Set the search boundary (just a hint, not a requirement)
     defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(bounding_box.sw_lat, bounding_box.sw_lng),
@@ -242,7 +313,7 @@ var terrapatternMap = (function(){
   function handlePaginationClick(e) {
     e.preventDefault();
     var pagenum = $(this).text();
-    console.log("pagenum",pagenum);
+    // console.log("pagenum",pagenum);
     if ($(this).hasClass("disabled")) {return}
     else if (pagenum-1 == paginationCurrentPage) {return}
     else if (pagenum == "«") {showThumbnails(paginationCurrentPage - 1)}
@@ -258,7 +329,7 @@ var terrapatternMap = (function(){
     // if (rectBounds && rectBounds.equals(bounds)) {
     //   console.log('dup');
     //   return};
-    console.log("centered at:", bounds)
+    // console.log("centered at:", bounds)
     tileRectangle.setOptions({
       strokeColor: '#000000',
       strokeOpacity: 0.6,
@@ -275,7 +346,11 @@ var terrapatternMap = (function(){
   // Expose the module's interface to the world (you naughty code, you).
   return {
     initialize: initMap,
-    gotoPage: showThumbnails
+    gotoPage: showThumbnails,
+    gotoPin: goToPin,
+    getPins: function() { return pins},
+    getCurrentPin: function() {return lastSelected}
   };
 }());
+
 

@@ -43,7 +43,7 @@ class TileLookup
     obj = {type: "FeatureCollection", features: features}
   end
 
-  def lookup(lat, lng, location="Allegheny", zoom="19", limit="90")
+  def lookup(lat, lng, location="Allegheny", zoom="19", limit="96")
     lat = lat.to_f
     lng = lng.to_f
     

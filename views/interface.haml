@@ -18,7 +18,7 @@
 
   %script{src: "https://maps.googleapis.com/maps/api/js?key=#{ENV["GMAPS_KEY"]}&callback=terrapatternMap.initialize&libraries=places", async: "async", defer: "defer"}
 
-  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/p5.min.js" charset="utf-8"></script>
 
   %script{src: "/js/app.js"}
 
@@ -42,9 +42,11 @@
   .col-md-5
     .container-fluid
       .row
+        .col-md-6
+          #minmap
+        .col-md-6
+          #tsne_grid
+      .row
         .col-md-12  
           #results_grid
           #results_pagination
-      .row
-        .col-md-12
-          #tsne_grid
