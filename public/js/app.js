@@ -3,9 +3,13 @@ var SELECTED_COLOR = "goldenrod";
 var PRIMARY_TILE_COLOR = "blue";
 var BACKGROUND_COLOR = "#255";
 var FRAME_COLOR = "#808080";
-var DEFAULT_TILE_COLOR = "white";
+var DEFAULT_TILE_COLOR = "rgba(255,255,255,0.5)";
+var HOVERED_TILE_COLOR = "rgba(255,255,255,1)";
 var AXIS_COLOR = "#909090";
 
+var SMALL_RADIUS = 4;
+var MEDIUM_RADIUS = 6;
+var LARGE_RADIUS = 10;
 
 /*----------------------------------------------------------------------------- 
 This is a p5.js wrapper for the two small graphical displays.  One is the 
@@ -22,7 +26,8 @@ drawing style when not being interacted with.
 -----------------------------------------------------------------------------*/
 var p5Map = function(p) {
   var GUTTER = 10;
- 
+  var MINMAP_BORDER = LARGE_RADIUS;
+
   var closestDot;
   
   // bounding boxes for the subwindows
@@ -61,6 +66,10 @@ var p5Map = function(p) {
     if (mouseInBounds(tsneFrameLeft,tsneFrameLeft+tsneFrameWidth,tsneFrameTop,tsneFrameTop+tsneFrameHeight) && closestDot) {
       terrapatternMap.gotoPin(closestDot.id);
     }
+    else if (mouseInBounds(minmapFrameLeft,minmapFrameLeft+minmapFrameWidth,minmapFrameTop,minmapFrameTop+minmapFrameHeight)) {  
+      terrapatternMap.gotoPin(closestDot.id);
+    }
+
   }
 
 
@@ -70,10 +79,22 @@ var p5Map = function(p) {
   }
 
   function drawDot(dot){
-    var radius = (dot == closestDot) ? 8 : 4;
-    dot.isFirst ?  p.fill(PRIMARY_TILE_COLOR) : p.fill(DEFAULT_TILE_COLOR);
+    p.fill(DEFAULT_TILE_COLOR);
+    var radius = SMALL_RADIUS;
+    if (dot == closestDot) {
+      p.fill(HOVERED_TILE_COLOR);
+    }
+    if (dot.isFirst) {
+      radius = MEDIUM_RADIUS;
+      p.fill(PRIMARY_TILE_COLOR);
+    }
     if (dot.isSelected) {
-      p.fill(SELECTED_COLOR);
+     p.fill(SELECTED_COLOR);
+     radius = MEDIUM_RADIUS;
+    }
+    // always make the hovered dot bigger
+    if (dot == closestDot) {
+      radius = LARGE_RADIUS;
     }
     p.ellipse(dot.x,dot.y,radius,radius);
   }
@@ -123,8 +144,8 @@ var p5Map = function(p) {
     pins.forEach(function(pin, index) {
       pinCoordinate = pin.getProperty("cluster");
       obj = {};
-      obj.x = p.map(pinCoordinate.x,-1,1,tsneFrameLeft,tsneFrameLeft+tsneFrameWidth);
-      obj.y = p.map(pinCoordinate.y,-1,1,tsneFrameTop,tsneFrameTop+tsneFrameHeight);
+      obj.x = p.map(pinCoordinate.x,-1,1,tsneFrameLeft + LARGE_RADIUS,tsneFrameLeft+tsneFrameWidth- LARGE_RADIUS);
+      obj.y = p.map(pinCoordinate.y,-1,1,tsneFrameTop + LARGE_RADIUS,tsneFrameTop+tsneFrameHeight - LARGE_RADIUS);
       obj.isFirst = (index == 0);
       obj.id = pin.getId();
       obj.isSelected = (currentPin == obj.id);
@@ -142,7 +163,7 @@ var p5Map = function(p) {
 
     //draw the pins
     p.noStroke();
-    tsneDots.forEach(drawDot)
+    tsneDots.forEach(drawDot);
   }
 
   function drawMinmap(pins, currentPin) {
@@ -153,18 +174,72 @@ var p5Map = function(p) {
     p.fill(FRAME_COLOR);
     p.rect(0,0,minmapFrameWidth,minmapFrameHeight)
 
+    // Break out unless the map has been initialized.
     if (google == undefined) { return;}
 
+    
 
+    // Actually draw the minmap border
+    p.stroke(AXIS_COLOR);
+    p.beginShape();
+
+    var pos;
+    boundary.geometry.coordinates[1].forEach(function(point){
+      pos = getPointfromLatLng(point[1],point[0]);
+      p.vertex(pos.x,pos.y);
+    })
+    p.endShape(p.close);
+    p.noStroke();
+    p.pop();
+
+    // stop drawing unless there are pins
+    if (pins == undefined) { return;}
+
+    // build pin list
+    var pinCoordinates, pinXY;
+    var minmapDots = [];
+    pins.forEach(function(pin, index) {
+      pinCoordinates = pin.getGeometry().get();
+      pinXY = getPointfromLatLng(pinCoordinates.lat(),pinCoordinates.lng())
+      obj = {};
+      obj.x = pinXY.x;
+      obj.y = pinXY.y;
+      obj.isFirst = (index == 0);
+      obj.id = pin.getId();
+      obj.isSelected = (currentPin == obj.id);
+
+      if (mouseInBounds(minmapFrameLeft,minmapFrameLeft+minmapFrameWidth,minmapFrameTop,minmapFrameTop+minmapFrameHeight)) { 
+        if (obj.isFirst) {
+          closestDot = obj;
+        }
+        else if (p.dist(p.mouseX, p.mouseY, obj.x, obj.y) < p.dist(p.mouseX, p.mouseY, closestDot.x, closestDot.y)) {
+          closestDot = obj;
+        }
+      }
+      minmapDots.push(obj)    
+    })
+
+    //draw the pins
+    p.noStroke();
+    minmapDots.forEach(drawDot)
+
+
+
+  }
+
+  function getPointfromLatLng(lat,lng) {
+    var x,y;
+
+    // Calculations for scaling the minmap appropriately.
+    // TODO:  Much of this is static, or can be done on resize.  
     var bottomLeftPoint = terrapatternMap.getProjection().fromLatLngToPoint(  new google.maps.LatLng({lat: bounding_box.sw_lat, lng: bounding_box.sw_lng}))
     var topRightPoint = terrapatternMap.getProjection().fromLatLngToPoint( new google.maps.LatLng({lat: bounding_box.ne_lat, lng: bounding_box.ne_lng}))
-    
     var mapHeight = Math.abs(bottomLeftPoint.y - topRightPoint.y);
     var mapWidth = Math.abs(bottomLeftPoint.x - topRightPoint.x);
     var mapRatio = mapWidth / mapHeight;
     var boxRatio = minmapFrameWidth / minmapFrameHeight;
+    var xOffset, yOffset; 
 
-    var xOffset, yOffset 
     if (mapRatio > boxRatio) {
       xOffset = 0;
       yOffset = (minmapFrameHeight - (minmapFrameWidth / mapRatio))/2;
@@ -174,23 +249,9 @@ var p5Map = function(p) {
       yOffset = 0;
     }
 
-    p.stroke(AXIS_COLOR);
-    p.beginShape();
-    var x,y;
-    var border = 10;
-    boundary.geometry.coordinates[1].forEach(function(point){
-      x = p.map(point[0],bounding_box.sw_lng, bounding_box.ne_lng,border+xOffset,minmapFrameWidth  - (border+xOffset));
-      y = p.map(point[1],bounding_box.ne_lat, bounding_box.sw_lat,border+yOffset,minmapFrameHeight - (border+yOffset));
-      p.vertex(x,y);
-    })
-    p.endShape(p.close);
-
-    p.noStroke();
-    p.pop();
-
-    // stop drawing unless there are pins
-    if (pins == undefined) { return;}
-
+    x = p.map(lng,bounding_box.sw_lng, bounding_box.ne_lng,MINMAP_BORDER+xOffset,minmapFrameWidth  - (MINMAP_BORDER+xOffset));
+    y = p.map(lat,bounding_box.ne_lat, bounding_box.sw_lat,MINMAP_BORDER+yOffset,minmapFrameHeight - (MINMAP_BORDER+yOffset));
+    return {x: x, y: y}
   }
 
 }
