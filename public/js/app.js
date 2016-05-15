@@ -56,6 +56,21 @@ var THUMBNAILS_PER_PAGE = 4*6;    // The number of tile results to show per-page
 
 
 
+// Dynamically add stylesheets for some of these colors.
+
+var sheet = (function() {
+  // Create the <style> tag
+  var style = document.createElement("style");
+
+  // WebKit hack :(
+  style.appendChild(document.createTextNode(""));
+
+  document.head.appendChild(style);
+  return style.sheet;
+})();
+sheet.insertRule(".location_tile.selected { border-color: "+ SELECTED_COLOR +" }",0);
+sheet.insertRule(".location_tile.original { border-color: "+ PRIMARY_TILE_COLOR +" }",0);
+
 
 /*----------------------------------------------------------------------------- 
 ## Minmap and TSNE grid code
@@ -426,8 +441,18 @@ var terrapatternMap = (function(){
   }
 
   //-----------------------------------------------------------------
-  function goToPin(id) {
+  function gotoPin(id) {
     // console.log("going to pin", id)
+
+    var pinNumber = pinIds.indexOf(id)
+
+    console.log("pinNumber", pinNumber);
+    showThumbnails(Math.floor(pinNumber/THUMBNAILS_PER_PAGE));
+
+    console.log(id)
+    $('.location_tile').removeClass("selected");
+    $("#" + DOM_IdFromId(id)).addClass("selected");
+
     var pinToSelect = map.data.getFeatureById(id);
     latLng = pinToSelect.getGeometry().get();
     map.setCenter(latLng);
@@ -436,13 +461,17 @@ var terrapatternMap = (function(){
     lastSelected = id;
   }
 
+  function DOM_IdFromId(id) {
+    if (!id) {return "";} 
+    return id.replace(/\./g, "");
+  }
   //-----------------------------------------------------------------
   function getTileImage(lat,lng,id="",size=256) {
     var url = "https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&zoom=19";
     url = url + "&center=" + lat + "," + lng;
     url = url + "&size=" + size + "x" + size;
     url = url + "&key=" + MAPS_API_KEY;
-    return "<div class='location_tile' id='"+id+"'><img alt='' src='"+url+"'/></div>"
+    return "<div class='location_tile' data-original-id='"+ id +"' id='"+DOM_IdFromId(id)+"'><img alt='' src='"+url+"'/></div>"
   } 
 
   //-----------------------------------------------------------------
@@ -504,17 +533,17 @@ var terrapatternMap = (function(){
     pins = map.data.addGeoJson(rawGeoJson);
 
     // add new pins
-    var pinBounds = new google.maps.LatLngBounds();
+    // var pinBounds = new google.maps.LatLngBounds();
     pinIds = [];
     for (var i = 0; i < pins.length; i++) {
       pinIds.push(pins[i].getId());
-      pinBounds.extend( pins[i].getGeometry().get());
+      // pinBounds.extend( pins[i].getGeometry().get());
     }
 
     showThumbnails(0);
-
+    gotoPin(pinIds[0]);
     // zoom
-    map.fitBounds(pinBounds);
+    // map.fitBounds(pinBounds);
   }
 
   //-----------------------------------------------------------------
@@ -561,6 +590,9 @@ var terrapatternMap = (function(){
       pinGeo = pins[i].getGeometry().get();
       $("#results_grid").append(getTileImage(pinGeo.lat(), pinGeo.lng(), pinId));
     }
+    $('#' + DOM_IdFromId(lastSelected)).addClass("selected");
+    $("#" + DOM_IdFromId(pinIds[0])).addClass("original");
+
     drawPagination(page);
   }
 
@@ -600,7 +632,7 @@ var terrapatternMap = (function(){
 
     $("#results_pagination").on("click", "li", handlePaginationClick)    
     $("#results_grid").on("click", ".location_tile", function(){
-      goToPin($(this).attr("id"))
+      gotoPin($(this).data("original-id"))
     })
   }
 
@@ -639,7 +671,7 @@ var terrapatternMap = (function(){
   return {
     initialize: initMap,
     gotoPage: showThumbnails,
-    gotoPin: goToPin,
+    gotoPin: gotoPin,
     getPins: function() { return pins},
     getCurrentPin: function() {return lastSelected},
     getProjection: function() {return map.getProjection()}
