@@ -451,10 +451,8 @@ var terrapatternMap = (function(){
 
     var pinNumber = pinIds.indexOf(id);
 
-    console.log("pinNumber", pinNumber);
     showThumbnails(Math.floor(pinNumber/THUMBNAILS_PER_PAGE));
 
-    console.log(id);
     $('.location_tile').removeClass("selected");
     $("#" + domIdFromId(id)).addClass("selected");
 
@@ -511,12 +509,16 @@ var terrapatternMap = (function(){
   }
 
   //-----------------------------------------------------------------
-  function handleClick(e) {
+  function handleClick(e, data=undefined) {
 
       hideEverythingBut('#waiting');
+      resetUI();
 
-      var data = tileRectangle.getBounds().getCenter();
-      var results = $.get("/search", {lat: data.lat(), lng: data.lng()});
+      if (!data) {
+        var loc = tileRectangle.getBounds().getCenter();
+        data = {lat: loc.lat(), lng: loc.lng()}
+      }
+      var results = $.get("/search", data);
       results.done(handleNewPins);
   }
 
@@ -538,6 +540,15 @@ var terrapatternMap = (function(){
     for (var i = 0; i < pins.length; i+=1) {
       pinIds.push(pins[i].getId());
     }
+
+    var base_loc = pins[0].getGeometry().get();
+    var uri = URI(document.URL);
+    var prevData =  uri.query(true);
+    uri.query({lat: base_loc.lat(), lng: base_loc.lng()})
+    if (!(JSON.stringify(prevData) ==  JSON.stringify(uri.query(true)))){
+      history.pushState({},"",uri.toString());
+    }
+
 
     gotoPin(pinIds[0]);
   }
@@ -625,11 +636,43 @@ var terrapatternMap = (function(){
     map.addListener('mousemove',handleDrawingRectangle);
     map.addListener('click', handleClick);
     searchBox.addListener('places_changed', handleSearch);
+    window.addEventListener('popstate', handlePopState);
 
     $("#results_pagination").on("click", "li", handlePaginationClick);
     $("#results_grid").on("click", ".location_tile", function(){
       gotoPin($(this).data("original-id"));
     });
+  }
+
+  function resetUI() {
+    pins = undefined;
+    $('.location_tile').remove();
+    $("#results_pagination").html("");
+    pinIds.forEach(function(p) {
+      map.data.remove(map.data.getFeatureById(p));
+    });
+    pinIds = [];
+  }
+
+  //-----------------------------------------------------------------
+  function handlePopState(e) {
+    var uri = URI(document.URL);
+    var data = uri.search(true);
+    console.log("handlePopState", data);
+
+    if (data.lat == undefined || data.lng == undefined) {
+      resetUI();
+      map.setCenter(MAP_CENTER);
+      map.setZoom(18);
+      return;
+    }
+
+    if (pins) {
+      var currentLatLng = pins[0].getGeometry().get();
+    }
+    if (!pins || Number(data["lat"]) != currentLatLng.lat() || Number(data["lng"]) != currentLatLng.lng()) {
+      handleClick(null, data);
+    }
   }
 
   //-----------------------------------------------------------------
