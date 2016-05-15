@@ -15,10 +15,8 @@
 #no_results, #results_grid, #waiting, #results_pagination {
   text-align: center; }
 
-#minmap, #tsne_grid {
-  height: 166px;
-  margin-bottom: 10px;
-  background-color: #333; }
+#mini_displays {
+  margin-bottom: 10px; }
 
 #main-map {
   height: 516px;

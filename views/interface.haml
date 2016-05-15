@@ -35,17 +35,30 @@
   .col-md-12
     = insert_content("instructions")
 .row#map_interface
+
   .col-md-7
-    %input#search_box.controls{type:"text", placeholder: "Search for a location in #{@city_data["name"]}"}
-    #main-map
-      #map
+    .container-fluid
+      .row
+        .col-md-12
+          %h4 Map
+      .row
+        .col-md-12
+          %input#search_box.controls{type:"text", placeholder: "Search for a location in #{@city_data["name"]}"}
+          #main-map
+            #map
   .col-md-5
     .container-fluid
       .row
         .col-md-6
-          #minmap
+          %h4 Minmap
         .col-md-6
-          #tsne_grid
+          %h4 TSNE Grid
+      .row
+        .col-md-12
+          #mini_displays
+      .row
+        .col-md-12
+          %h4 Results
       .row
         .col-md-12  
           #results_grid

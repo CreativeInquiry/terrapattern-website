@@ -1,43 +1,123 @@
-var p5Map = function(p) {
-  var lastClosest;
+// Setup Palette
+var SELECTED_COLOR = "goldenrod";
+var PRIMARY_TILE_COLOR = "blue";
+var BACKGROUND_COLOR = "#255";
+var FRAME_COLOR = "#808080";
+var DEFAULT_TILE_COLOR = "white";
+var AXIS_COLOR = "#909090";
 
-  function mouseInBounds() {
-    return (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY < p.height) 
+
+
+/*----------------------------------------------------------------------------- 
+This is a p5.js wrapper for the two small graphical displays.  One is the 
+"tsne" display, which is a 2d cluster of a dimensionally-reduced representation
+of the various pins.  The other is a "minmap", which is a helpful display of
+where you are positioned within the map.
+
+There are no externally controllable functions exposed, but it does call 
+"gotoPin" and it does check for the list of pins and the currently selected
+pin on each frame.
+
+This could be made more efficient if needed by moving to an event-based 
+drawing style when not being interacted with.
+-----------------------------------------------------------------------------*/
+var p5Map = function(p) {
+  var closestDot;
+  var tsneFrameWidth;
+  var tsneFrameHeight;
+  var tsneFrameTop; 
+  var tsneFrameLeft;
+  var minmapFrameWidth;
+  var minmapFrameHeight;
+  var minmapFrameTop; 
+  var minmapFrameLeft;
+  var gutter;
+
+
+  function recalulateCanvasSize() {
+    gutter = 10;
+
+    var availableWidth = $('#mini_displays').width();
+    var mapRatio = $('#main-map').height() / $('#main-map').width();
+    var desiredHeight = ((availableWidth-gutter)/2)*mapRatio;
+
+    p.resizeCanvas(availableWidth,desiredHeight);
+
+    tsneFrameWidth    = p.width/2-gutter/2;
+    tsneFrameHeight   = p.height;
+    tsneFrameTop      = 0;
+    tsneFrameLeft     = p.width/2+gutter;
+    minmapFrameWidth  = p.width/2-gutter/2;
+    minmapFrameHeight = p.height;
+    minmapFrameTop    = 0;
+    minmapFrameLeft   = 0;
   }
 
   p.setup = function() {
-    p.createCanvas(255, 166);
-    p.noStroke();
-  }
-
-  p.mousePressed = function() {
-    if (mouseInBounds() && lastClosest) {
-      terrapatternMap.gotoPin(lastClosest.id);
-    }
+    p.createCanvas(100, 100);
+    recalulateCanvasSize();
   }
 
   p.draw = function() {
+    p.clear();
+    // p.background(BACKGROUND_COLOR);
 
-    p.background(204);
-
-    if (terrapatternMap.getPins() == undefined) { return;}
-
-    var closestDot;
-    var pinCoordinate, pinX, pinY;
-    var tsneDots = [];
+    var pins = terrapatternMap.getPins();
     var currentPin = terrapatternMap.getCurrentPin();
 
-    terrapatternMap.getPins().forEach(function(pin, index) {
+    drawTsne(pins,currentPin);
+    drawMinmap(pins,currentPin);
+
+  }
+
+  p.mousePressed = function() {
+    if (mouseInBounds(tsneFrameLeft,tsneFrameWidth,tsneFrameTop,tsneFrameWidth) && closestDot) {
+      terrapatternMap.gotoPin(closestDot.id);
+    }
+  }
+
+  p.windowResized = function() {
+    recalulateCanvasSize();
+  }
+
+
+  function mouseInBounds(x1,x2,y1,y2) {
+    return (p.mouseX > x1 && p.mouseX < x2 && p.mouseY > y1 && p.mouseY < y2) 
+  }
+
+  function drawTsne(pins, currentPin) {
+
+    // draw the background
+    p.push();
+    p.translate(tsneFrameLeft,tsneFrameTop);
+    var pinCoordinate, pinX, pinY;
+    var tsneDots = [];
+
+    p.noStroke();
+    p.fill(FRAME_COLOR);
+    p.rect(0,0,tsneFrameWidth,tsneFrameHeight)
+
+    p.stroke(AXIS_COLOR);
+    p.line(2,tsneFrameHeight/2,tsneFrameWidth-2,tsneFrameHeight/2);
+    p.line(tsneFrameWidth/2,2,tsneFrameWidth/2,tsneFrameHeight-2);
+    p.noStroke();
+    p.pop();
+
+    // stop drawing unless there are pins
+    if (pins == undefined) { return;}
+
+    // build pin list
+    pins.forEach(function(pin, index) {
       pinCoordinate = pin.getProperty("cluster");
       obj = {};
-      obj.x = p.map(pinCoordinate.x,-1,1,0,p.width);
-      obj.y = p.map(pinCoordinate.y,-1,1,p.height,0);
+      obj.x = p.map(pinCoordinate.x,-1,1,tsneFrameLeft,tsneFrameWidth);
+      obj.y = p.map(pinCoordinate.y,-1,1,tsneFrameTop,tsneFrameHeight);
       obj.isFirst = (index == 0);
       obj.id = pin.getId();
       obj.isSelected = (currentPin == obj.id);
 
-      if (mouseInBounds()) { 
-        if (!closestDot) {
+      if (mouseInBounds(tsneFrameLeft,tsneFrameWidth,tsneFrameTop,tsneFrameWidth)) { 
+        if (obj.isFirst) {
           closestDot = obj;
         }
         else if (p.dist(p.mouseX, p.mouseY, obj.x, obj.y) < p.dist(p.mouseX, p.mouseY, closestDot.x, closestDot.y)) {
@@ -47,24 +127,74 @@ var p5Map = function(p) {
       tsneDots.push(obj)    
     })
 
-    lastClosest = closestDot;
-
-    tsneDots.forEach(function(obj){
-      radius = obj == closestDot ? 8 : 4;
-      obj.isFirst ?  p.fill(255,0,0) : p.fill(255);
-      if (obj.isSelected) {
-        p.fill(0,0,200);
-      }
-      p.ellipse(obj.x,obj.y,radius,radius);
-    })
+    //draw the pins
+    tsneDots.forEach(drawDot)
   }
+
+  function drawMinmap() {
+    // draw the background
+    p.push();
+    p.translate(minmapFrameLeft,minmapFrameTop);
+    p.noStroke();
+    p.fill(FRAME_COLOR);
+    p.rect(0,0,minmapFrameWidth,minmapFrameHeight)
+
+    p.stroke(AXIS_COLOR);
+    p.beginShape();
+    var x,y;
+    boundary.geometry.coordinates[1].forEach(function(point){
+      x = p.map(point[0],bounding_box.sw_lng, bounding_box.ne_lng,2,minmapFrameWidth-2);
+      y = p.map(point[1],bounding_box.ne_lat, bounding_box.sw_lat,2,minmapFrameHeight-2);
+      p.vertex(x,y);
+    })
+    p.endShape(p.close);
+
+    p.noStroke();
+    p.pop();
+  }
+
+  function drawDot(dot){
+      var radius = (dot == closestDot) ? 8 : 4;
+      dot.isFirst ?  p.fill(PRIMARY_TILE_COLOR) : p.fill(DEFAULT_TILE_COLOR);
+      if (dot.isSelected) {
+        p.fill(SELECTED_COLOR);
+      }
+      p.ellipse(dot.x,dot.y,radius,radius);
+    }
 }
 
-var p5MapCanvas = new p5(p5Map, 'minmap');
+// Create the P5 Object.
+var p5MapCanvas = new p5(p5Map, 'mini_displays');
 
-//-------------------------------------------------------
-//-------------------------------------------------------
 
+
+
+/*----------------------------------------------------------------------------- 
+This is a wrapper around both the main map and the thumnail display, as
+well as containing most of the main functions.  Currently, it exposes the 
+following functions:
+
+  initialize()
+
+  This will build the map system and set everything up.  It requires that the 
+  google maps API be loaded, and is used as a callback argument for the 
+  library's loading.
+
+  gotoPage(pageNumber)
+
+  This will set the thumbnail grid to the page given.  It is zero-indexed,
+  so page 0 is the first page, etc.
+  
+  gotoPin(pid_id)
+  
+  This will select a specific pin.  It should be passed the desired pin's ID
+  as a string.  The pin ids are currently their filenames as provided by the
+  search API.
+
+  getPins(): A getter for the list of pins available.
+  getCurrentPin(): A getter for the currently selected pin.
+
+-----------------------------------------------------------------------------*/
 var terrapatternMap = (function(){
   // CONSTANTS
 
