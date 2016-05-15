@@ -40,12 +40,13 @@ of the interface.
 -----------------------------------------------------------------------------*/
 
 // Color Palette
-var FRAME_COLOR = "#808080";                      // Color of the graph backgrounds
-var AXIS_COLOR = "#909090";                       // Color of the graph elements
-var SELECTED_COLOR = "goldenrod";                 // Color of the current dot/pin
-var PRIMARY_TILE_COLOR = "blue";                  // Color of the searched-for dot/pin
-var DEFAULT_TILE_COLOR = "rgba(255,255,255,0.5)"; // Color of a normal dot/pin
-var HOVERED_TILE_COLOR = "rgba(255,255,255,1)";   // Color of a hovered-over dot/pin
+var FRAME_COLOR = "#808080";                       // Color of the graph backgrounds
+var AXIS_COLOR = "#909090";                        // Color of the graph elements
+var SELECTED_COLOR = "blue";                       // Color of the current dot/pin
+var PRIMARY_TILE_COLOR = "goldenrod";              // Color of the searched-for dot/pin
+var DEFAULT_TILE_COLOR = "rgba(255,255,255,0.5)";  // Color of a normal dot/pin
+var HOVERED_TILE_COLOR = "rgba(255,255,255,1)";    // Color of a hovered-over dot/pin
+var VIEWPORT_BOX_COLOR = "rgba(255,255,255,0.25)"; // Color of the viewport box
 
 // Magic Numbers
 var SMALL_RADIUS = 4;             // Size of a normal dot (in pixels)
@@ -53,23 +54,6 @@ var MEDIUM_RADIUS = 6;            // Size of a hovered dot (in pixels)
 var LARGE_RADIUS = 10;            // Size of a selected dot (in pixels)
 var GUTTER = 10;                  // Border between the two graphs (in pixels)
 var THUMBNAILS_PER_PAGE = 4*6;    // The number of tile results to show per-page
-
-
-
-// Dynamically add stylesheets for some of these colors.
-
-var sheet = (function() {
-  // Create the <style> tag
-  var style = document.createElement("style");
-
-  // WebKit hack :(
-  style.appendChild(document.createTextNode(""));
-
-  document.head.appendChild(style);
-  return style.sheet;
-})();
-sheet.insertRule(".location_tile.selected { border-color: "+ SELECTED_COLOR +" }",0);
-sheet.insertRule(".location_tile.original { border-color: "+ PRIMARY_TILE_COLOR +" }",0);
 
 
 /*----------------------------------------------------------------------------- 
@@ -203,6 +187,8 @@ var p5Map = function(p) {
     // Actually draw the minmap border
     var pos;
 
+    p.translate(minmapFrameLeft,minmapFrameTop);
+
     p.stroke(AXIS_COLOR);
     p.noFill();
     p.beginShape();
@@ -212,6 +198,25 @@ var p5Map = function(p) {
     })
     p.endShape(p.close);
     p.noStroke();
+
+    // draw Viewport Box
+    var viewableBounds = terrapatternMap.getBounds();
+    var ne = viewableBounds.getNorthEast();
+    var sw = viewableBounds.getSouthWest();
+
+    var p1 = getPointfromLatLng(ne.lat(), ne.lng());
+    var p2 = getPointfromLatLng(sw.lat(), sw.lng());
+    p.fill(VIEWPORT_BOX_COLOR);
+    // console.log (ne.lat(), ne.lng(), sw.lat(), sw.lng())
+    // console.log (;
+    if (p1.x > minmapFrameLeft + minmapFrameWidth) {
+      p1.x = minmapFrameLeft + minmapFrameWidth;
+    }
+    if (p2.y > minmapFrameTop + minmapFrameHeight) {
+      p2.y = minmapFrameTop + minmapFrameHeight;
+    }
+    p.rect(p2.x,p1.y,Math.abs(p2.x-p1.x),Math.abs(p2.y-p1.y));
+
 
     // stop drawing unless there are pins
     if (pins == undefined) { return;}
@@ -334,8 +339,6 @@ var p5Map = function(p) {
   }
 }
 
-// Create the P5 Object.
-var p5MapCanvas = new p5(p5Map, 'mini_displays');
 
 
 /*----------------------------------------------------------------------------- 
@@ -599,9 +602,9 @@ var terrapatternMap = (function(){
 
   //-----------------------------------------------------------------
   function initMap() {
+
+    // Create the tile square
     tileRectangle = new google.maps.Rectangle();
-
-
 
     // Set the search boundary (just a hint, not a requirement)
     defaultBounds = new google.maps.LatLngBounds(
@@ -672,8 +675,29 @@ var terrapatternMap = (function(){
     initialize: initMap,
     gotoPage: showThumbnails,
     gotoPin: gotoPin,
-    getPins: function() { return pins},
-    getCurrentPin: function() {return lastSelected},
-    getProjection: function() {return map.getProjection()}
+    getPins:       function() {return pins},
+    getCurrentPin: function() {return lastSelected;},
+    getProjection: function() {return map.getProjection();},
+    getBounds:     function() {return map.getBounds();}
   };
 }());
+
+
+
+// Create the P5 Object.
+var p5MapCanvas = new p5(p5Map, 'mini_displays');
+
+/*-----------------------------------------------------------------------------
+ Dynamically add stylesheets to the DOM for the tile's colors.
+-----------------------------------------------------------------------------*/
+
+var sheet = (function() {
+  var style = document.createElement("style");
+  style.appendChild(document.createTextNode(""));   // WebKit hack :(
+  document.head.appendChild(style);
+  return style.sheet;
+})();
+
+sheet.insertRule(".location_tile.selected { border-color: "+ SELECTED_COLOR +" }",0);
+sheet.insertRule(".location_tile.original { border-color: "+ PRIMARY_TILE_COLOR +" }",0);
+
