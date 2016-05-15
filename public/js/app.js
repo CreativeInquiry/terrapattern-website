@@ -1,15 +1,17 @@
 // Setup Palette
-var SELECTED_COLOR = "goldenrod";
-var PRIMARY_TILE_COLOR = "blue";
-var BACKGROUND_COLOR = "#255";
-var FRAME_COLOR = "#808080";
-var DEFAULT_TILE_COLOR = "rgba(255,255,255,0.5)";
-var HOVERED_TILE_COLOR = "rgba(255,255,255,1)";
-var AXIS_COLOR = "#909090";
+var FRAME_COLOR = "#808080";                      // Color of the graph backgrounds
+var AXIS_COLOR = "#909090";                       // Color of the graph elements
+var SELECTED_COLOR = "goldenrod";                 // Color of the current dot/pin
+var PRIMARY_TILE_COLOR = "blue";                  // Color of the searched-for dot/pin
+var DEFAULT_TILE_COLOR = "rgba(255,255,255,0.5)"; // Color of a normal dot/pin
+var HOVERED_TILE_COLOR = "rgba(255,255,255,1)";   // Color of a hovered-over dot/pin
 
-var SMALL_RADIUS = 4;
-var MEDIUM_RADIUS = 6;
-var LARGE_RADIUS = 10;
+// Magic Numbers
+var SMALL_RADIUS = 4;             // Size of a normal dot (in pixels)
+var MEDIUM_RADIUS = 6;            // Size of a hovered dot (in pixels)
+var LARGE_RADIUS = 10;            // Size of a selected dot (in pixels)
+var GUTTER = 10;                  // Border between the two graphs (in pixels)
+
 
 /*----------------------------------------------------------------------------- 
 This is a p5.js wrapper for the two small graphical displays.  One is the 
@@ -25,8 +27,6 @@ This could be made more efficient if needed by moving to an event-based
 drawing style when not being interacted with.
 -----------------------------------------------------------------------------*/
 var p5Map = function(p) {
-  var GUTTER = 10;
-  var MINMAP_BORDER = LARGE_RADIUS;
 
   var closestDot;
   
@@ -35,90 +35,48 @@ var p5Map = function(p) {
   var tsneFrameHeight;
   var tsneFrameTop; 
   var tsneFrameLeft;
-
   var minmapFrameWidth;
   var minmapFrameHeight;
   var minmapFrameTop; 
   var minmapFrameLeft;
   
 
+  //-----------------------------------------------------------------
+  // Base P5 Functions
+  //-----------------------------------------------------------------
   p.setup = function() {
     p.createCanvas(100, 100);
     recalulateCanvasSize();
   }
 
   p.draw = function() {
-
-    p.clear();
-
     var pins = terrapatternMap.getPins();
     var currentPin = terrapatternMap.getCurrentPin();
 
+    p.clear();
     drawTsne(pins,currentPin);
     drawMinmap(pins,currentPin);
   }
 
 
+  //-----------------------------------------------------------------
   // p5 Event Handlers
+  //-----------------------------------------------------------------
   p.windowResized = recalulateCanvasSize;
 
   p.mousePressed = function() {
-    if (mouseInBounds(tsneFrameLeft,tsneFrameLeft+tsneFrameWidth,tsneFrameTop,tsneFrameTop+tsneFrameHeight) && closestDot) {
+    if (mouseInTsneBounds() && closestDot) {
       terrapatternMap.gotoPin(closestDot.id);
     }
-    else if (mouseInBounds(minmapFrameLeft,minmapFrameLeft+minmapFrameWidth,minmapFrameTop,minmapFrameTop+minmapFrameHeight)) {  
+    else if (mouseInMinmapBounds() && closestDot) {  
       terrapatternMap.gotoPin(closestDot.id);
     }
-
   }
 
-
-  // Helper Functions
-  function mouseInBounds(x1,x2,y1,y2) {
-    return (p.mouseX > x1 && p.mouseX < x2 && p.mouseY > y1 && p.mouseY < y2) 
-  }
-
-  function drawDot(dot){
-    p.fill(DEFAULT_TILE_COLOR);
-    var radius = SMALL_RADIUS;
-    if (dot == closestDot) {
-      p.fill(HOVERED_TILE_COLOR);
-    }
-    if (dot.isFirst) {
-      radius = MEDIUM_RADIUS;
-      p.fill(PRIMARY_TILE_COLOR);
-    }
-    if (dot.isSelected) {
-     p.fill(SELECTED_COLOR);
-     radius = MEDIUM_RADIUS;
-    }
-    // always make the hovered dot bigger
-    if (dot == closestDot) {
-      radius = LARGE_RADIUS;
-    }
-    p.ellipse(dot.x,dot.y,radius,radius);
-  }
-
-  function recalulateCanvasSize() {
-    var availableWidth = $('#mini_displays').width();
-    var mapRatio = $('#main-map').height() / $('#main-map').width();
-    var desiredHeight = ((availableWidth-GUTTER)/2)*mapRatio;
-
-    p.resizeCanvas(availableWidth,desiredHeight);
-
-    tsneFrameWidth    = p.width/2-GUTTER/2;
-    tsneFrameHeight   = p.height;
-    tsneFrameTop      = 0;
-    tsneFrameLeft     = p.width/2+GUTTER;
-   
-    minmapFrameWidth  = p.width/2-GUTTER/2;
-    minmapFrameHeight = p.height;
-    minmapFrameTop    = 0;
-    minmapFrameLeft   = 0;
-  }
-
-
+ 
+  //-----------------------------------------------------------------
   // Drawing Functions
+  //-----------------------------------------------------------------
   function drawTsne(pins, currentPin) {
 
     // draw the background
@@ -150,7 +108,7 @@ var p5Map = function(p) {
       obj.id = pin.getId();
       obj.isSelected = (currentPin == obj.id);
 
-      if (mouseInBounds(tsneFrameLeft,tsneFrameLeft+tsneFrameWidth,tsneFrameTop,tsneFrameTop+tsneFrameHeight)) { 
+      if (mouseInTsneBounds()) { 
         if (obj.isFirst) {
           closestDot = obj;
         }
@@ -166,31 +124,31 @@ var p5Map = function(p) {
     tsneDots.forEach(drawDot);
   }
 
+    //-----------------------------------------------------------------
   function drawMinmap(pins, currentPin) {
+    
     // draw the background
     p.push();
     p.translate(minmapFrameLeft,minmapFrameTop);
     p.noStroke();
     p.fill(FRAME_COLOR);
     p.rect(0,0,minmapFrameWidth,minmapFrameHeight)
+    p.pop();
 
-    // Break out unless the map has been initialized.
+    // Stop here unless the map has been initialized.
     if (google == undefined) { return;}
 
-    
-
     // Actually draw the minmap border
+    var pos;
+
     p.stroke(AXIS_COLOR);
     p.beginShape();
-
-    var pos;
     boundary.geometry.coordinates[1].forEach(function(point){
       pos = getPointfromLatLng(point[1],point[0]);
       p.vertex(pos.x,pos.y);
     })
     p.endShape(p.close);
     p.noStroke();
-    p.pop();
 
     // stop drawing unless there are pins
     if (pins == undefined) { return;}
@@ -208,7 +166,7 @@ var p5Map = function(p) {
       obj.id = pin.getId();
       obj.isSelected = (currentPin == obj.id);
 
-      if (mouseInBounds(minmapFrameLeft,minmapFrameLeft+minmapFrameWidth,minmapFrameTop,minmapFrameTop+minmapFrameHeight)) { 
+      if (mouseInMinmapBounds()) { 
         if (obj.isFirst) {
           closestDot = obj;
         }
@@ -222,11 +180,69 @@ var p5Map = function(p) {
     //draw the pins
     p.noStroke();
     minmapDots.forEach(drawDot)
-
-
-
   }
 
+
+  //-----------------------------------------------------------------
+  // Helper Functions
+  //-----------------------------------------------------------------
+
+  function mouseInBounds(x1,x2,y1,y2) {
+    return (p.mouseX > x1 && p.mouseX < x2 && p.mouseY > y1 && p.mouseY < y2) 
+  }
+
+  function mouseInTsneBounds() {
+    return mouseInBounds(tsneFrameLeft,tsneFrameLeft+tsneFrameWidth,tsneFrameTop,tsneFrameTop+tsneFrameHeight)
+  }
+
+  function mouseInMinmapBounds() {
+    mouseInBounds(minmapFrameLeft,minmapFrameLeft+minmapFrameWidth,minmapFrameTop,minmapFrameTop+minmapFrameHeight)
+  }
+
+  //-----------------------------------------------------------------
+  function drawDot(dot){
+    p.fill(DEFAULT_TILE_COLOR);
+    var radius = SMALL_RADIUS;
+    if (dot == closestDot) {
+      p.fill(HOVERED_TILE_COLOR);
+    }
+    if (dot.isFirst) {
+      radius = MEDIUM_RADIUS;
+      p.fill(PRIMARY_TILE_COLOR);
+    }
+    if (dot.isSelected) {
+     p.fill(SELECTED_COLOR);
+     radius = MEDIUM_RADIUS;
+    }
+    // always make the hovered dot bigger
+    if (dot == closestDot) {
+      radius = LARGE_RADIUS;
+    }
+    p.ellipse(dot.x,dot.y,radius,radius);
+  }
+
+  //-----------------------------------------------------------------
+  function recalulateCanvasSize() {
+    var availableWidth = $('#mini_displays').width();
+    var mapRatio = $('#main-map').height() / $('#main-map').width();
+    var desiredHeight = ((availableWidth-GUTTER)/2)*mapRatio;
+
+    p.resizeCanvas(availableWidth,desiredHeight);
+
+    tsneFrameWidth    = p.width/2-GUTTER/2;
+    tsneFrameHeight   = p.height;
+    tsneFrameTop      = 0;
+    tsneFrameLeft     = p.width/2+GUTTER;
+   
+    minmapFrameWidth  = p.width/2-GUTTER/2;
+    minmapFrameHeight = p.height;
+    minmapFrameTop    = 0;
+    minmapFrameLeft   = 0;
+  }
+
+  
+
+  //-----------------------------------------------------------------
   function getPointfromLatLng(lat,lng) {
     var x,y;
 
@@ -249,11 +265,10 @@ var p5Map = function(p) {
       yOffset = 0;
     }
 
-    x = p.map(lng,bounding_box.sw_lng, bounding_box.ne_lng,MINMAP_BORDER+xOffset,minmapFrameWidth  - (MINMAP_BORDER+xOffset));
-    y = p.map(lat,bounding_box.ne_lat, bounding_box.sw_lat,MINMAP_BORDER+yOffset,minmapFrameHeight - (MINMAP_BORDER+yOffset));
+    x = p.map(lng,bounding_box.sw_lng, bounding_box.ne_lng,LARGE_RADIUS+xOffset,minmapFrameWidth  - (LARGE_RADIUS+xOffset));
+    y = p.map(lat,bounding_box.ne_lat, bounding_box.sw_lat,LARGE_RADIUS+yOffset,minmapFrameHeight - (LARGE_RADIUS+yOffset));
     return {x: x, y: y}
   }
-
 }
 
 // Create the P5 Object.
@@ -581,5 +596,3 @@ var terrapatternMap = (function(){
     getProjection: function() {return map.getProjection()}
   };
 }());
-
-
