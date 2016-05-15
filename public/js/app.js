@@ -7,7 +7,6 @@ var DEFAULT_TILE_COLOR = "white";
 var AXIS_COLOR = "#909090";
 
 
-
 /*----------------------------------------------------------------------------- 
 This is a p5.js wrapper for the two small graphical displays.  One is the 
 "tsne" display, which is a 2d cluster of a dimensionally-reduced representation
