@@ -22,36 +22,21 @@ This could be made more efficient if needed by moving to an event-based
 drawing style when not being interacted with.
 -----------------------------------------------------------------------------*/
 var p5Map = function(p) {
+  var GUTTER = 10;
+ 
   var closestDot;
+  
+  // bounding boxes for the subwindows
   var tsneFrameWidth;
   var tsneFrameHeight;
   var tsneFrameTop; 
   var tsneFrameLeft;
+
   var minmapFrameWidth;
   var minmapFrameHeight;
   var minmapFrameTop; 
   var minmapFrameLeft;
-  var gutter;
-
-
-  function recalulateCanvasSize() {
-    gutter = 10;
-
-    var availableWidth = $('#mini_displays').width();
-    var mapRatio = $('#main-map').height() / $('#main-map').width();
-    var desiredHeight = ((availableWidth-gutter)/2)*mapRatio;
-
-    p.resizeCanvas(availableWidth,desiredHeight);
-
-    tsneFrameWidth    = p.width/2-gutter/2;
-    tsneFrameHeight   = p.height;
-    tsneFrameTop      = 0;
-    tsneFrameLeft     = p.width/2+gutter;
-    minmapFrameWidth  = p.width/2-gutter/2;
-    minmapFrameHeight = p.height;
-    minmapFrameTop    = 0;
-    minmapFrameLeft   = 0;
-  }
+  
 
   p.setup = function() {
     p.createCanvas(100, 100);
@@ -59,19 +44,20 @@ var p5Map = function(p) {
   }
 
   p.draw = function() {
+
     p.clear();
-    // p.background(BACKGROUND_COLOR);
 
     var pins = terrapatternMap.getPins();
     var currentPin = terrapatternMap.getCurrentPin();
 
     drawTsne(pins,currentPin);
     drawMinmap(pins,currentPin);
-
   }
 
+
+  // p5 Event Handlers
   p.mousePressed = function() {
-    if (mouseInBounds(tsneFrameLeft,tsneFrameWidth,tsneFrameTop,tsneFrameWidth) && closestDot) {
+    if (mouseInBounds(tsneFrameLeft,tsneFrameLeft+tsneFrameWidth,tsneFrameTop,tsneFrameTop+tsneFrameHeight) && closestDot) {
       terrapatternMap.gotoPin(closestDot.id);
     }
   }
@@ -80,11 +66,42 @@ var p5Map = function(p) {
     recalulateCanvasSize();
   }
 
-
+  // Helper Functions
   function mouseInBounds(x1,x2,y1,y2) {
     return (p.mouseX > x1 && p.mouseX < x2 && p.mouseY > y1 && p.mouseY < y2) 
   }
 
+
+  function drawDot(dot){
+    var radius = (dot == closestDot) ? 8 : 4;
+    dot.isFirst ?  p.fill(PRIMARY_TILE_COLOR) : p.fill(DEFAULT_TILE_COLOR);
+    if (dot.isSelected) {
+      p.fill(SELECTED_COLOR);
+    }
+    p.ellipse(dot.x,dot.y,radius,radius);
+  }
+
+  function recalulateCanvasSize() {
+
+    var availableWidth = $('#mini_displays').width();
+    var mapRatio = $('#main-map').height() / $('#main-map').width();
+    var desiredHeight = ((availableWidth-GUTTER)/2)*mapRatio;
+
+    p.resizeCanvas(availableWidth,desiredHeight);
+
+    tsneFrameWidth    = p.width/2-GUTTER/2;
+    tsneFrameHeight   = p.height;
+    tsneFrameTop      = 0;
+    tsneFrameLeft     = p.width/2+GUTTER;
+   
+    minmapFrameWidth  = p.width/2-GUTTER/2;
+    minmapFrameHeight = p.height;
+    minmapFrameTop    = 0;
+    minmapFrameLeft   = 0;
+  }
+
+
+  // Drawing Functions
   function drawTsne(pins, currentPin) {
 
     // draw the background
@@ -110,13 +127,13 @@ var p5Map = function(p) {
     pins.forEach(function(pin, index) {
       pinCoordinate = pin.getProperty("cluster");
       obj = {};
-      obj.x = p.map(pinCoordinate.x,-1,1,tsneFrameLeft,tsneFrameWidth);
-      obj.y = p.map(pinCoordinate.y,-1,1,tsneFrameTop,tsneFrameHeight);
+      obj.x = p.map(pinCoordinate.x,-1,1,tsneFrameLeft,tsneFrameLeft+tsneFrameWidth);
+      obj.y = p.map(pinCoordinate.y,-1,1,tsneFrameTop,tsneFrameTop+tsneFrameHeight);
       obj.isFirst = (index == 0);
       obj.id = pin.getId();
       obj.isSelected = (currentPin == obj.id);
 
-      if (mouseInBounds(tsneFrameLeft,tsneFrameWidth,tsneFrameTop,tsneFrameWidth)) { 
+      if (mouseInBounds(tsneFrameLeft,tsneFrameLeft+tsneFrameWidth,tsneFrameTop,tsneFrameTop+tsneFrameHeight)) { 
         if (obj.isFirst) {
           closestDot = obj;
         }
@@ -128,6 +145,7 @@ var p5Map = function(p) {
     })
 
     //draw the pins
+    p.noStroke();
     tsneDots.forEach(drawDot)
   }
 
@@ -153,14 +171,6 @@ var p5Map = function(p) {
     p.pop();
   }
 
-  function drawDot(dot){
-      var radius = (dot == closestDot) ? 8 : 4;
-      dot.isFirst ?  p.fill(PRIMARY_TILE_COLOR) : p.fill(DEFAULT_TILE_COLOR);
-      if (dot.isSelected) {
-        p.fill(SELECTED_COLOR);
-      }
-      p.ellipse(dot.x,dot.y,radius,radius);
-    }
 }
 
 // Create the P5 Object.
