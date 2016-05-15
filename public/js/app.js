@@ -1,9 +1,9 @@
-/*----------------------------------------------------------------------------- 
-# Terrapattern User Interface Code 
+/*-----------------------------------------------------------------------------
+# Terrapattern User Interface Code
 #### written by: David Newbury (@workergnome)
 
 
-This is the main interface code for the Terrapattern user interface.  
+This is the main interface code for the Terrapattern user interface.
 It uses p5.js and the Google Maps API to generate four content sections:
 
 * The Map, which is a google map, constrained to a specific geographical region
@@ -17,7 +17,7 @@ this code is initialized.  These are:
     var MAPS_API_KEY = <A Google Maps API key>;
     var BOUNDARY     = <a geoJSON object containing the outline of the region>;
     var BOUNDING_BOX = {
-                          sw_lat: FLOAT, 
+                          sw_lat: FLOAT,
                           sw_lng: FLOAT,
                           ne_lat: FLOAT,
                           nw_lng: FLOAT
@@ -35,8 +35,8 @@ this code is initialized.  These are:
 /*-----------------------------------------------------------------------------
 ## Configurable Settings:
 
-These are the magic number an strings that can be set to modify the appearance 
-of the interface.  
+These are the magic number an strings that can be set to modify the appearance
+of the interface.
 -----------------------------------------------------------------------------*/
 
 // Color Palette
@@ -53,39 +53,40 @@ var SMALL_RADIUS = 4;             // Size of a normal dot (in pixels)
 var MEDIUM_RADIUS = 6;            // Size of a hovered dot (in pixels)
 var LARGE_RADIUS = 10;            // Size of a selected dot (in pixels)
 var GUTTER = 10;                  // Border between the two graphs (in pixels)
-var THUMBNAILS_PER_PAGE = 4*6;    // The number of tile results to show per-page
+var THUMBNAILS_PER_PAGE = 4 * 6;    // The number of tile results to show per-page
 
 
-/*----------------------------------------------------------------------------- 
+/*-----------------------------------------------------------------------------
 ## Minmap and TSNE grid code
 
-This is the p5.js wrapper for the two small graphical displays.  One is the 
+This is the p5.js wrapper for the two small graphical displays.  One is the
 "tsne" display, which is a 2d cluster of a dimensionally-reduced representation
 of the various pins.  The other is a "minmap", which is a helpful display of
 where the main map and the various poins are located within the geographical
 region.
 
-There are no externally controllable functions exposed, but it does call 
+There are no externally controllable functions exposed, but it does call
 "gotoPin" and it does check for the list of pins and the currently selected
 pin on each frame.
 
-This could be made more efficient if needed by moving to an event-based 
+This could be made more efficient if needed by moving to an event-based
 drawing style when not being interacted with.
 -----------------------------------------------------------------------------*/
 var p5Map = function(p) {
 
+  "use strict";
   var closestDot;
-  
+
   // bounding boxes for the subwindows
   var tsneFrameWidth;
   var tsneFrameHeight;
-  var tsneFrameTop; 
+  var tsneFrameTop;
   var tsneFrameLeft;
   var minmapFrameWidth;
   var minmapFrameHeight;
-  var minmapFrameTop; 
+  var minmapFrameTop;
   var minmapFrameLeft;
-  
+
 
   //-----------------------------------------------------------------
   // Base P5 Functions
@@ -93,7 +94,7 @@ var p5Map = function(p) {
   p.setup = function() {
     p.createCanvas(100, 100);
     recalulateCanvasSize();
-  }
+  };
 
   p.draw = function() {
     var pins = terrapatternMap.getPins();
@@ -102,7 +103,7 @@ var p5Map = function(p) {
     p.clear();
     drawTsne(pins,currentPin);
     drawMinmap(pins,currentPin);
-  }
+  };
 
 
   //-----------------------------------------------------------------
@@ -114,12 +115,12 @@ var p5Map = function(p) {
     if (mouseInTsneBounds() && closestDot) {
       terrapatternMap.gotoPin(closestDot.id);
     }
-    else if (mouseInMinmapBounds() && closestDot) {  
+    else if (mouseInMinmapBounds() && closestDot) {
       terrapatternMap.gotoPin(closestDot.id);
     }
-  }
+  };
 
- 
+
   //-----------------------------------------------------------------
   // Drawing Functions
   //-----------------------------------------------------------------
@@ -133,7 +134,7 @@ var p5Map = function(p) {
 
     p.noStroke();
     p.fill(FRAME_COLOR);
-    p.rect(0,0,tsneFrameWidth,tsneFrameHeight)
+    p.rect(0,0,tsneFrameWidth,tsneFrameHeight);
 
     p.stroke(AXIS_COLOR);
     p.line(2,tsneFrameHeight/2,tsneFrameWidth-2,tsneFrameHeight/2);
@@ -147,14 +148,14 @@ var p5Map = function(p) {
     // build pin list
     pins.forEach(function(pin, index) {
       pinCoordinate = pin.getProperty("cluster");
-      obj = {};
+      var obj = {};
       obj.x = p.map(pinCoordinate.x,-1,1,tsneFrameLeft + LARGE_RADIUS,tsneFrameLeft+tsneFrameWidth- LARGE_RADIUS);
       obj.y = p.map(pinCoordinate.y,-1,1,tsneFrameTop + LARGE_RADIUS,tsneFrameTop+tsneFrameHeight - LARGE_RADIUS);
       obj.isFirst = (index == 0);
       obj.id = pin.getId();
       obj.isSelected = (currentPin == obj.id);
 
-      if (mouseInTsneBounds()) { 
+      if (mouseInTsneBounds()) {
         if (obj.isFirst) {
           closestDot = obj;
         }
@@ -162,8 +163,8 @@ var p5Map = function(p) {
           closestDot = obj;
         }
       }
-      tsneDots.push(obj)    
-    })
+      tsneDots.push(obj);
+    });
 
     //draw the pins
     p.noStroke();
@@ -172,13 +173,13 @@ var p5Map = function(p) {
 
     //-----------------------------------------------------------------
   function drawMinmap(pins, currentPin) {
-    
+
     // draw the background
     p.push();
     p.translate(minmapFrameLeft,minmapFrameTop);
     p.noStroke();
     p.fill(FRAME_COLOR);
-    p.rect(0,0,minmapFrameWidth,minmapFrameHeight)
+    p.rect(0,0,minmapFrameWidth,minmapFrameHeight);
     p.pop();
 
     // Stop here unless the map has been initialized.
@@ -195,7 +196,7 @@ var p5Map = function(p) {
     BOUNDARY.geometry.coordinates[1].forEach(function(point){
       pos = getPointfromLatLng(point[1],point[0]);
       p.vertex(pos.x,pos.y);
-    })
+    });
     p.endShape(p.close);
     p.noStroke();
 
@@ -226,15 +227,15 @@ var p5Map = function(p) {
     var minmapDots = [];
     pins.forEach(function(pin, index) {
       pinCoordinates = pin.getGeometry().get();
-      pinXY = getPointfromLatLng(pinCoordinates.lat(),pinCoordinates.lng())
-      obj = {};
+      pinXY = getPointfromLatLng(pinCoordinates.lat(),pinCoordinates.lng());
+      var obj = {};
       obj.x = pinXY.x;
       obj.y = pinXY.y;
       obj.isFirst = (index == 0);
       obj.id = pin.getId();
       obj.isSelected = (currentPin == obj.id);
 
-      if (mouseInMinmapBounds()) { 
+      if (mouseInMinmapBounds()) {
         if (obj.isFirst) {
           closestDot = obj;
         }
@@ -242,12 +243,12 @@ var p5Map = function(p) {
           closestDot = obj;
         }
       }
-      minmapDots.push(obj)    
-    })
+      minmapDots.push(obj);
+    });
 
     //draw the pins
     p.noStroke();
-    minmapDots.forEach(drawDot)
+    minmapDots.forEach(drawDot);
   }
 
 
@@ -256,15 +257,15 @@ var p5Map = function(p) {
   //-----------------------------------------------------------------
 
   function mouseInBounds(x1,x2,y1,y2) {
-    return (p.mouseX > x1 && p.mouseX < x2 && p.mouseY > y1 && p.mouseY < y2) 
+    return (p.mouseX > x1 && p.mouseX < x2 && p.mouseY > y1 && p.mouseY < y2);
   }
 
   function mouseInTsneBounds() {
-    return mouseInBounds(tsneFrameLeft,tsneFrameLeft+tsneFrameWidth,tsneFrameTop,tsneFrameTop+tsneFrameHeight)
+    return mouseInBounds(tsneFrameLeft,tsneFrameLeft+tsneFrameWidth,tsneFrameTop,tsneFrameTop+tsneFrameHeight);
   }
 
   function mouseInMinmapBounds() {
-    return mouseInBounds(minmapFrameLeft,minmapFrameLeft+minmapFrameWidth,minmapFrameTop,minmapFrameTop+minmapFrameHeight)
+    return mouseInBounds(minmapFrameLeft,minmapFrameLeft+minmapFrameWidth,minmapFrameTop,minmapFrameTop+minmapFrameHeight);
   }
 
   //-----------------------------------------------------------------
@@ -301,33 +302,33 @@ var p5Map = function(p) {
     tsneFrameHeight   = p.height;
     tsneFrameTop      = 0;
     tsneFrameLeft     = p.width/2+GUTTER;
-   
+
     minmapFrameWidth  = p.width/2-GUTTER/2;
     minmapFrameHeight = p.height;
     minmapFrameTop    = 0;
     minmapFrameLeft   = 0;
   }
 
-  
+
 
   //-----------------------------------------------------------------
   function getPointfromLatLng(lat,lng) {
     var x,y;
 
     // Calculations for scaling the minmap appropriately.
-    // TODO:  Much of this is static or could be done on resize.  
-    var bottomLeftPoint = terrapatternMap.getProjection().fromLatLngToPoint(  new google.maps.LatLng({lat: BOUNDING_BOX.sw_lat, lng: BOUNDING_BOX.sw_lng}))
-    var topRightPoint = terrapatternMap.getProjection().fromLatLngToPoint( new google.maps.LatLng({lat: BOUNDING_BOX.ne_lat, lng: BOUNDING_BOX.ne_lng}))
+    // TODO:  Much of this is static or could be done on resize.
+    var bottomLeftPoint = terrapatternMap.getProjection().fromLatLngToPoint(  new google.maps.LatLng({lat: BOUNDING_BOX.sw_lat, lng: BOUNDING_BOX.sw_lng}));
+    var topRightPoint = terrapatternMap.getProjection().fromLatLngToPoint( new google.maps.LatLng({lat: BOUNDING_BOX.ne_lat, lng: BOUNDING_BOX.ne_lng}));
     var mapHeight = Math.abs(bottomLeftPoint.y - topRightPoint.y);
     var mapWidth = Math.abs(bottomLeftPoint.x - topRightPoint.x);
     var mapRatio = mapWidth / mapHeight;
     var boxRatio = minmapFrameWidth / minmapFrameHeight;
-    var xOffset, yOffset; 
+    var xOffset, yOffset;
 
     if (mapRatio > boxRatio) {
       xOffset = 0;
       yOffset = (minmapFrameHeight - (minmapFrameWidth / mapRatio))/2;
-    } 
+    }
     else {
       xOffset = (minmapFrameWidth - (minmapFrameHeight / mapRatio))/2;
       yOffset = 0;
@@ -335,18 +336,18 @@ var p5Map = function(p) {
 
     x = p.map(lng,BOUNDING_BOX.sw_lng, BOUNDING_BOX.ne_lng,LARGE_RADIUS+xOffset,minmapFrameWidth  - (LARGE_RADIUS+xOffset));
     y = p.map(lat,BOUNDING_BOX.ne_lat, BOUNDING_BOX.sw_lat,LARGE_RADIUS+yOffset,minmapFrameHeight - (LARGE_RADIUS+yOffset));
-    return {x: x, y: y}
+    return {x: x, y: y};
   }
-}
+};
 
 
 
-/*----------------------------------------------------------------------------- 
+/*-----------------------------------------------------------------------------
 ## Map and Tiles code
 
 This is a wrapper around both the main map and the thumbnail displays of
 tiles, as well as code that contains functions that operate on the system
-as a whole.  
+as a whole.
 
 #### GETTERS AND SETTERS
 
@@ -358,17 +359,17 @@ as a whole.
 
   initialize()
 
-  This will build the map system and set everything up.  It requires that the 
-  google maps API be loaded, and is used as a callback argument for the 
+  This will build the map system and set everything up.  It requires that the
+  google maps API be loaded, and is used as a callback argument for the
   library's loading.
 
   gotoPage(pageNumber)
 
   This will set the thumbnail grid to the page given.  It is zero-indexed,
   so page 0 is the first page, etc.
-  
+
   gotoPin(pid_id)
-  
+
   This will select a specific pin.  It should be passed the desired pin's ID
   as a string.  The pin ids are currently their filenames as provided by the
   search API.
@@ -376,9 +377,11 @@ as a whole.
 -----------------------------------------------------------------------------*/
 
 var terrapatternMap = (function(){
+  "use strict";
+
   // CONSTANTS
 
-  // Explicitly magic numbers.  
+  // Explicitly magic numbers.
   var LAT_OFFSET = 0.0005225;
   var LNG_OFFSET = 0.0006865;
 
@@ -395,7 +398,7 @@ var terrapatternMap = (function(){
   var BOUNDARY_STYLE = {
       strokeWeight: 0,
       fillColor: "#000000",
-      fillOpacity: .7
+      fillOpacity: 0.7
   };
   var MAP_OPTIONS = {
             center: {lat: MAP_CENTER.lat, lng: MAP_CENTER.lng},
@@ -416,7 +419,7 @@ var terrapatternMap = (function(){
   var defaultBounds;
   var map;
   var pinIds = [];
-  var tileRectangle; 
+  var tileRectangle;
   var pins;
   var paginationCurrentPage;
   var searchBox;
@@ -439,33 +442,32 @@ var terrapatternMap = (function(){
       north: north,
       south: south,
       east:  east,
-      west: west,
+      west: west
     };
   }
 
   //-----------------------------------------------------------------
   function gotoPin(id) {
-    // console.log("going to pin", id)
 
-    var pinNumber = pinIds.indexOf(id)
+    var pinNumber = pinIds.indexOf(id);
 
     console.log("pinNumber", pinNumber);
     showThumbnails(Math.floor(pinNumber/THUMBNAILS_PER_PAGE));
 
-    console.log(id)
+    console.log(id);
     $('.location_tile').removeClass("selected");
-    $("#" + DOM_IdFromId(id)).addClass("selected");
+    $("#" + domIdFromId(id)).addClass("selected");
 
     var pinToSelect = map.data.getFeatureById(id);
-    latLng = pinToSelect.getGeometry().get();
+    var latLng = pinToSelect.getGeometry().get();
     map.setCenter(latLng);
     map.setZoom(18);
     handleDrawingRectangle(null, latLng);
     lastSelected = id;
   }
 
-  function DOM_IdFromId(id) {
-    if (!id) {return "";} 
+  function domIdFromId(id) {
+    if (!id) {return "";}
     return id.replace(/\./g, "");
   }
   //-----------------------------------------------------------------
@@ -474,8 +476,8 @@ var terrapatternMap = (function(){
     url = url + "&center=" + lat + "," + lng;
     url = url + "&size=" + size + "x" + size;
     url = url + "&key=" + MAPS_API_KEY;
-    return "<div class='location_tile' data-original-id='"+ id +"' id='"+DOM_IdFromId(id)+"'><img alt='' src='"+url+"'/></div>"
-  } 
+    return "<div class='location_tile' data-original-id='"+ id +"' id='" + domIdFromId(id) + "'><img alt='' src='"+url+"'/></div>";
+  }
 
   //-----------------------------------------------------------------
   function hideEverythingBut(and_then_show=null) {
@@ -490,7 +492,7 @@ var terrapatternMap = (function(){
     if (defaultBounds.contains(map.getCenter())) {
         // still within valid bounds, so save the last valid position
         lastValidCenter = map.getCenter();
-        return; 
+        return;
     }
     // not valid anymore => return to last valid position
     map.panTo(lastValidCenter);
@@ -510,43 +512,34 @@ var terrapatternMap = (function(){
 
   //-----------------------------------------------------------------
   function handleClick(e) {
-      
+
       hideEverythingBut('#waiting');
-      // console.log("searching");
 
-
-      // var data = 
       var data = tileRectangle.getBounds().getCenter();
       var results = $.get("/search", {lat: data.lat(), lng: data.lng()});
       results.done(handleNewPins);
   }
 
   //-----------------------------------------------------------------
-  function handleNewPins(e) {
+  function handleNewPins(data) {
 
     // setup ui
     hideEverythingBut('#result-grid');
-   
+
     // cleanup old pins
     pinIds.forEach(function(p) {
       map.data.remove(map.data.getFeatureById(p));
-    })
+    });
 
-    rawGeoJson = e;
+    rawGeoJson = data;
     pins = map.data.addGeoJson(rawGeoJson);
 
-    // add new pins
-    // var pinBounds = new google.maps.LatLngBounds();
     pinIds = [];
-    for (var i = 0; i < pins.length; i++) {
+    for (var i = 0; i < pins.length; i+=1) {
       pinIds.push(pins[i].getId());
-      // pinBounds.extend( pins[i].getGeometry().get());
     }
 
-    showThumbnails(0);
     gotoPin(pinIds[0]);
-    // zoom
-    // map.fitBounds(pinBounds);
   }
 
   //-----------------------------------------------------------------
@@ -554,31 +547,31 @@ var terrapatternMap = (function(){
     paginationCurrentPage = currentPage;
 
     var totalNumberOfPages = Math.ceil(pins.length/THUMBNAILS_PER_PAGE);
-    var str = "<nav>"
-    str    += "<ul class='pagination pagination-sm'>"
+    var str = "<nav>";
+    str    += "<ul class='pagination pagination-sm'>";
 
-    str    += "<li class='"
+    str    += "<li class='";
     if (currentPage == 0){str +="disabled";}
-    str    += "'><a href='#'>&laquo;</a></li>"
-    
-    for (var q1 = 1; q1 <=totalNumberOfPages; q1++) {
-      str   += "<li class='"
-      if (q1 == currentPage+1) {str   += "active";}
-      str   += "'><a href='#'>"+q1+"</a></li>"
+    str    += "'><a href='#'>&laquo;</a></li>";
+
+    for (var i = 1; i <=totalNumberOfPages; i+=1) {
+      str   += "<li class='";
+      if (i == currentPage+1) {str   += "active";}
+      str   += "'><a href='#'>"+i+"</a></li>";
     }
 
-    str    += "<li class='"
+    str    += "<li class='";
     if (currentPage == totalNumberOfPages-1 ){str +="disabled";}
-    str    += "'><a href='#'>&raquo;</a></li>"
+    str    += "'><a href='#'>&raquo;</a></li>";
 
-    str    += "</ul>"
-    str    += "</nav>"
+    str    += "</ul>";
+    str    += "</nav>";
     $("#results_pagination").html(str);
   }
 
   //-----------------------------------------------------------------
   function showThumbnails(page) {
-    var pinId, pinGeo; 
+    var pinId, pinGeo;
 
     // cleanup
     $('.location_tile').remove();
@@ -588,13 +581,13 @@ var terrapatternMap = (function(){
     var numberOfThumbs = pins.length > startingThumb+THUMBNAILS_PER_PAGE ? THUMBNAILS_PER_PAGE : pins.length-startingThumb;
 
     // add the tiles
-    for (var i = startingThumb; i < startingThumb+numberOfThumbs; i++) {
+    for (var i = startingThumb; i < startingThumb+numberOfThumbs; i+=1) {
       pinId = pins[i].getId();
       pinGeo = pins[i].getGeometry().get();
       $("#results_grid").append(getTileImage(pinGeo.lat(), pinGeo.lng(), pinId));
     }
-    $('#' + DOM_IdFromId(lastSelected)).addClass("selected");
-    $("#" + DOM_IdFromId(pinIds[0])).addClass("original");
+    $('#' + domIdFromId(lastSelected)).addClass("selected");
+    $("#" + domIdFromId(pinIds[0])).addClass("original");
 
     drawPagination(page);
   }
@@ -613,7 +606,7 @@ var terrapatternMap = (function(){
     );
 
     // Initialize the map object
-    map = new google.maps.Map(document.getElementById('main-map'), MAP_OPTIONS);  
+    map = new google.maps.Map(document.getElementById('main-map'), MAP_OPTIONS);
     lastValidCenter = map.getCenter();
 
     // Initialize the grey BOUNDARY
@@ -633,28 +626,27 @@ var terrapatternMap = (function(){
     map.addListener('click', handleClick);
     searchBox.addListener('places_changed', handleSearch);
 
-    $("#results_pagination").on("click", "li", handlePaginationClick)    
+    $("#results_pagination").on("click", "li", handlePaginationClick);
     $("#results_grid").on("click", ".location_tile", function(){
-      gotoPin($(this).data("original-id"))
-    })
+      gotoPin($(this).data("original-id"));
+    });
   }
 
   //-----------------------------------------------------------------
   function handlePaginationClick(e) {
     e.preventDefault();
     var pagenum = $(this).text();
-    // console.log("pagenum",pagenum);
-    if ($(this).hasClass("disabled")) {return}
-    else if (pagenum-1 == paginationCurrentPage) {return}
-    else if (pagenum == "«") {showThumbnails(paginationCurrentPage - 1)}
-    else if (pagenum == "»") {showThumbnails(paginationCurrentPage + 1)}
-    else { showThumbnails(pagenum -1)};
+    if ($(this).hasClass("disabled")) {return;}
+    else if (pagenum-1 == paginationCurrentPage) {return;}
+    else if (pagenum == "«") {showThumbnails(paginationCurrentPage - 1);}
+    else if (pagenum == "»") {showThumbnails(paginationCurrentPage + 1);}
+    else { showThumbnails(pagenum -1);}
   }
 
   //-----------------------------------------------------------------
   function handleDrawingRectangle(e, point = false) {
-    var point = point ? point : e.latLng;
-    var bounds = getCurrentTileBounds(point.lat(), point.lng())
+    point = point ? point : e.latLng;
+    var bounds = getCurrentTileBounds(point.lat(), point.lng());
 
     tileRectangle.setOptions({
       strokeColor: '#000000',
@@ -675,7 +667,7 @@ var terrapatternMap = (function(){
     initialize: initMap,
     gotoPage: showThumbnails,
     gotoPin: gotoPin,
-    getPins:       function() {return pins},
+    getPins:       function() {return pins;},
     getCurrentPin: function() {return lastSelected;},
     getProjection: function() {return map.getProjection();},
     getBounds:     function() {return map.getBounds();}
@@ -700,4 +692,3 @@ var sheet = (function() {
 
 sheet.insertRule(".location_tile.selected { border-color: "+ SELECTED_COLOR +" }",0);
 sheet.insertRule(".location_tile.original { border-color: "+ PRIMARY_TILE_COLOR +" }",0);
-
