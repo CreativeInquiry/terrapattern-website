@@ -5,8 +5,8 @@ cities:
     primary_color:   "#F5DC0F"    # The dominant color for the location
     secondary_color: "#000000"    # The secondary color for the location
     center:                       # This is the default location for the map
-      lng: -79.9436               #  --
-      lat: 40.4433                #  --
+      lng: -79.942907              #  --
+      lat: 40.441544               #  --
     bounding_box:                 # This is the bounding box for constraining search
       sw_lat: 40.194352           #  --
       sw_lng: -80.360873          #  --
