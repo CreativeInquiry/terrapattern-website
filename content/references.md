@@ -1,12 +1,11 @@
 # References and Related Work
 
----
-Previously, work of this kind has been highly bespoke, customized in idiosyncratic ways for specific problems by isolated teams.
+
 
 ---
-### Bibliography
+### Kindred Projects
 
-*The following projects and initiatives use satellite imagery, oftentimes in combination with various forms of computer vision, to track phenomena of interest in the built and natural world.*
+*The following projects and initiatives use satellite imagery, oftentimes in combination with various forms of computer vision, to track phenomena of interest in the built and natural world. Until recently, much of this work has been tuned for specific geospatial problems.*
 
 Begall, Sabine et al. "[Magnetic alignment in grazing and resting cattle and deer](http://www.pnas.org/content/early/2008/08/22/0803650105)". *Proceedings of the National Academy of Sciences* 105, no. 36 (9/9/2008), pp. 13,451-13,455. DOI: 10.1073/pnas.0803650105
 
@@ -44,7 +43,7 @@ Venkataramanan, Madhumita. "[Space archaeologist discovers lost cities with sate
 ---
 # Technical Bibliography
 
-*The following research projects and open-source codebases are specifically concerned with the application of 'deep-learning' techniques to satellite imagery.*
+*The following research projects and open-source codebases are specifically concerned with the application of 'deep-learning' techniques to satellite imagery. Several of these projects employ OpenStreetMap labels as training data, as we do.*
 
 [Learning to Detect Roads in High-Resolution Aerial
 Images](http://www.cs.toronto.edu/~fritz/absps/road_detection.pdf) by Volodymyr Mnih and Geoffrey E. Hinton (2010), a seminal paper in the application of machine learning to the problem of making assertions about satellite imagery. 
