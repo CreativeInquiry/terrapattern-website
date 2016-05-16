@@ -12,6 +12,14 @@ module Sinatra
       $markdown.insert_content(id)
     end
 
+    def subdomain_url(name)
+      if settings.environment == :development
+        "http://#{name}.terrapattern.dev:#{request.port}"
+      else
+        "http://#{name}.terrapattern.com"
+      end
+    end
+
   end
   helpers TerrapatternHelpers
 end

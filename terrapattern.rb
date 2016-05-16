@@ -95,6 +95,11 @@ class Terrapattern < Sinatra::Base
       haml :faq
     end
 
+    get "/references" do
+      send_to_www
+      haml :references
+    end
+
     # JSON route for connecting to the search implementation
     get "/search" do
       redirect("/") unless settings.city_urls.include? subdomain

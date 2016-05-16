@@ -37,13 +37,20 @@
         .block
           %h2= @city_data["name"]
           .col-md-8.header-description
-            %p.prose
+            %p.prose= insert_content("interface_subhead")
 
 %section#service-page.pages.service-page
   .container
+    .row
+      .col-md-7
+        = insert_content("interface_instructions_left")
+      .col-md-5
+        = insert_content("interface_instructions_right")
     .row#map_interface
       .col-md-7
         .block
+          .row
+            .col-md-12
           .row
             .col-md-12
               %input#search_box.controls.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms", type:"text", placeholder: "Search for a location in #{@city_data["name"]}"}
@@ -53,7 +60,7 @@
         .block
           .row
             .col-md-6
-              %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}Minmap
+              %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"} Minmap
             .col-md-6
               %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}Relevance Plot
           .row
@@ -61,7 +68,7 @@
               #mini_displays
           .row
             .col-md-12
-              %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}Results
+              %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}Search Results
           .row
             .col-md-12  
               #results_grid
