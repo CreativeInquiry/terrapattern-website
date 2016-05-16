@@ -3,11 +3,11 @@
     .navbar-header
       %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
         %span.sr-only Toggle navigation
-        / %span.icon-bar
-        / %span.icon-bar
-        / %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
       .navbar-brand
-        %a{:href => "/"}
+        %a{:href => subdomain_url("www")}
           %img{:alt => "", :src => "images/terrapattern_logo_white.png"}
 
     %nav.navbar.collapse.navbar-collapse.navbar-right{:role => "navigation"}
