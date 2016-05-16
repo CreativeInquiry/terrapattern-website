@@ -35,6 +35,8 @@ Raymond, Nathaniel A.; Vidan, Gili; and the staff of the Signal Program on Human
 Raymond, Nathaniel A.; Card, Brittany L.; Baker, Isaac L.; and Al Achkar, Ziad. "[Satellite Imagery Interpretation Guide: Intentional Burning of Tukuls](http://hhi.harvard.edu/sites/default/files/publications/siig_ii_burned_tukuls_3.pdf)". *http://hhi.harvard.edu*.
 Signal Program on Human Security and Technology at the Harvard Humanitarian Initative, 2014. Accessed 5/15/2016.
 
+Rothfeld, Michael and Patterson, Scott. "[Traders Seek an Edge With High-Tech Snooping](http://www.wsj.com/articles/SB10001424052702303497804579240182187225264)". *The Wall Street Journal,* 12/18/2013. Accessed 5/15/2016.
+
 Trevi, Alexander. "[Atomic Gardens](http://pruned.blogspot.com/2011/04/atomic-gardens.html)". *Pruned.blogspot.com.* 4/20/2011. Accessed 5/14/2016.
 
 Venkataramanan, Madhumita. "[Space archaeologist discovers lost cities with satellite imagery](http://www.wired.co.uk/magazine/archive/2014/12/start/scanning-the-past)". *Wired.co.uk*, Wired Media, 11/14/2014. Accessed 5/15/2016.
