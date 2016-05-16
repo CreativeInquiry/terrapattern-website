@@ -3,7 +3,7 @@
 ---
 ### What's the basic idea? 
 
-Terrapattern is a prototype that provides open-ended,  *similar-image search for satellite photos*—an open-source tool for exploring the unmapped, and the unmappable. Click an interesting spot in a map of New York, San Francisco, or Pittsburgh, and Terrapattern will find other locations that look similar.
+Terrapattern is a prototype that provides *similar-image search for satellite photos*—an open-source, open-ended tool for exploring the unmapped, and the unmappable. Click an interesting spot in a map of New York, San Francisco, or Pittsburgh, and Terrapattern will find other locations that look similar.
 
 * **YOU** click on a "feature of interest" in a satellite image;
 * **TERRAPATTERN** returns a batch of the most similar-looking places nearby.
@@ -54,7 +54,7 @@ We'd love to hear your stories and feedback! If you discover something interesti
 
 We suspect that most of the big players in the space of satellite imaging, such as Google, Microsoft, Digital Globe, Planet Labs, and others are exploring the opportunities afforded by machine learning—particularly in light of recent and significant advances in convolutional neural networks and other deep learning techniques. 
 
-One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for user-defined ("out-of-set") categories. By contrast, most of the systems listed above are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. For more information, please see our [*about*](about.html) page. 
+One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for user-defined ("out-of-set") categories. By contrast, most of the systems listed above are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. For more information, please see our [**about**](about.html) page. 
 
 ---
 ### Why have you only offered three cities? 
@@ -69,7 +69,7 @@ Most of our team members currently call Pittsburgh home. We additionally selecte
 ---
 ### Who are you, and who funded this? 
 
-We're a group of new-media artists, creative technologists, and students who are affiliated in various ways with the Frank-Ratchye [STUDIO for Creative Inquiry](studioforcreativeinquiry.org) at Carnegie Mellon University, a lab for experimental research at the intersection of art, science, technology and culture. This project was made possible by a grant in Media Innovation from the [Knight Foundation](http://knightfoundation.org/grants/201551228/) [Prototype Fund](http://www.knightfoundation.org/funding-initiatives/knight-prototype-fund/). For more information, please see our [*team*](team.html) page. 
+We're a group of new-media artists, creative technologists, and students who are affiliated in various ways with the Frank-Ratchye [STUDIO for Creative Inquiry](studioforcreativeinquiry.org) at Carnegie Mellon University, a lab for experimental research at the intersection of art, science, technology and culture. This project was made possible by a grant in Media Innovation from the [Knight Foundation](http://knightfoundation.org/grants/201551228/) [Prototype Fund](http://www.knightfoundation.org/funding-initiatives/knight-prototype-fund/). For more information, please see our [**team**](team.html) page. 
 
 ---
 ### What data do you collect from this site's visitors? 
