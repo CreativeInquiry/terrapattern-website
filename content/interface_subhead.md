@@ -1,1 +1,1 @@
-interface_subhead.md
+ Click on a place in the map to find similar places
