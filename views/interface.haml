@@ -28,40 +28,47 @@
 -#   Page template
 -###################################################
 
-.row
-  .col-md-12
-    #city_info
-      %h1= @city_data["name"]
-      / = @city_data.inspect
-.row
-  .col-md-12
-    = insert_content("instructions")
-.row#map_interface
+%section.global-page-header
+  .container
+    .row
+      .col-md-12
+        .block
+          %h2= @city_data["name"]
+          .col-md-8.header-description
+            %p.prose Click on a place in the map to find similar places
 
-  .col-md-7
-    .container-fluid
-      .row
-        .col-md-12
-          %h4 Map
-      .row
-        .col-md-12
-          %input#search_box.controls{type:"text", placeholder: "Search for a location in #{@city_data["name"]}"}
-          #main-map
-            #map
-  .col-md-5
-    .container-fluid
-      .row
-        .col-md-6
-          %h4 Minmap
-        .col-md-6
-          %h4 TSNE Grid
-      .row
-        .col-md-12
-          #mini_displays
-      .row
-        .col-md-12
-          %h4 Results
-      .row
-        .col-md-12  
-          #results_grid
-          #results_pagination
+%section#service-page.pages.service-page
+  .container
+    .row#map_interface
+      .col-md-7
+        .block
+          .row
+            .col-md-12
+              %input#search_box.controls.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms", type:"text", placeholder: "Search for a location in #{@city_data["name"]}"}
+              #main-map.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}
+                #map
+      .col-md-5
+        .block
+          .row
+            .col-md-6
+              %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}Minmap
+            .col-md-6
+              %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}TSNE Grid
+          .row
+            .col-md-12
+              #mini_displays
+          .row
+            .col-md-12
+              %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}Results
+          .row
+            .col-md-12  
+              #results_grid
+              #results_pagination
+
+%section#call-to-action
+  .container
+    .row
+      .col-md-12
+        .block
+          %h2.title.wow.fadeInDown.export{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"} Export your geojson
+          %a.btn.btn-default.btn-contact.wow.fadeInDown{"data-wow-delay" => ".7s", "data-wow-duration" => "500ms", :href => "contact.html"} Export
