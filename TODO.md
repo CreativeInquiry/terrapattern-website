@@ -3,6 +3,7 @@
 * [ ] color/style the markings
 * [ ] Fix the searching on doubleclick bug
 * [ ] Add a loading message/screen
+* [ ] Make historystate fire on initial page load
 
 ## Completed TODOS
 
