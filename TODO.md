@@ -19,7 +19,11 @@ Make the cities list dynamic
 add references header link
 discuss footer on the homepage
 Make buttons work/dynamically generated
-
+Make Favicon
+Reformat Acknoledgements
+Reduce Team Photos
+Tweak Interface Colors
+Tweet this URL?
 
 --- 
 
