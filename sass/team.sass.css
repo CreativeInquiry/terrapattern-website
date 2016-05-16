@@ -1,0 +1,35 @@
+#team 
+  margin: 100px 0
+
+.team-member 
+  margin-top: 30px
+
+.team-member:hover .team-img img 
+  opacity: .8
+
+.team-member .team-img 
+  position: relative
+
+.team-member .team-img .team-pic 
+  width: 100%
+
+.team-member .team_designation 
+  font-size: 13px
+
+.team-member h3 
+  /*color: #337ab7*/
+  margin-bottom: 0
+  font-size: 20px
+
+.team-member p 
+  font-size: 14px
+
+.team-member .social-icons a 
+  background: #337ab7
+  color: #fff
+  padding: 4px 8px
+  display: inline-block
+  font-size: 15px
+
+.team-member .social-icons .facebook 
+  padding: 4px 12px
