@@ -19,78 +19,25 @@
       .col-md-4
         .team-member.wow.fadeInLeft{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}
           = insert_content("golan_bio")
-
+          / %p.social-icons
+          /   %a{:href => "https://twitter.com/golan", :target => "_blank"}
+          /     %i.ion-social-twitter-outline
       .col-md-4
         .team-member.wow.fadeInLeft{"data-wow-delay" => ".5s", "data-wow-duration" => "500ms"}
-          .team-img
-            %img.team-pic{:alt => "", :src => "images/david_newbury.jpg"}
-          %h3.team_name David Newbury
-          %p.team_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore .
-          %p.social-icons
-            %a.facebook{:href => "#", :target => "_blank"}
-              %i.ion-social-facebook-outline
-            %a{:href => "#", :target => "_blank"}
-              %i.ion-social-twitter-outline
-            %a{:href => "#", :target => "_blank"}
-              %i.ion-social-linkedin-outline
-
+          = insert_content("david_bio")
       .col-md-4
         .team-member.wow.fadeInLeft{"data-wow-delay" => ".7s", "data-wow-duration" => "500ms"}
-          .team-img
-            %img.team-pic{:alt => "", :src => "images/kyle_mcdonald.jpg"}
-          %h3.team_name Kyle McDonald
-          %p.team_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore .
-          %p.social-icons
-            %a.facebook{:href => "#", :target => "_blank"}
-              %i.ion-social-facebook-outline
-            %a{:href => "#", :target => "_blank"}
-              %i.ion-social-twitter-outline
-            %a{:href => "#", :target => "_blank"}
-              %i.ion-social-linkedin-outline
-
+          = insert_content("kyle_bio")
     .row
       .col-md-4
         .team-member.wow.fadeInLeft{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}
-          .team-img
-            %img.team-pic{:alt => "", :src => "images/irene_alvarado.jpg"}
-          %h3.team_name Irene Alvarado
-          %p.team_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          %p.social-icons
-            %a.facebook{:href => "#", :target => "_blank"}
-              %i.ion-social-facebook-outline
-            %a{:href => "#", :target => "_blank"}
-              %i.ion-social-twitter-outline
-            %a{:href => "#", :target => "_blank"}
-              %i.ion-social-linkedin-outline
-
+          = insert_content("irene_bio")
       .col-md-4
         .team-member.wow.fadeInLeft{"data-wow-delay" => ".5s", "data-wow-duration" => "500ms"}
-          .team-img
-            %img.team-pic{:alt => "", :src => "images/aman_tiwari.jpg"}
-          %h3.team_name Aman Tiwari
-          %p.team_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore .
-          %p.social-icons
-            %a.facebook{:href => "#", :target => "_blank"}
-              %i.ion-social-facebook-outline
-            %a{:href => "#", :target => "_blank"}
-              %i.ion-social-twitter-outline
-            %a{:href => "#", :target => "_blank"}
-              %i.ion-social-linkedin-outline
-
+          = insert_content("aman_bio")
       .col-md-4
         .team-member.wow.fadeInLeft{"data-wow-delay" => ".7s", "data-wow-duration" => "500ms"}
-          .team-img
-            %img.team-pic{:alt => "", :src => "images/manzil_zaheer.jpg"}
-          %h3.team_name Manzil Zaheer
-          %p.team_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore .
-          %p.social-icons
-            %a.facebook{:href => "#", :target => "_blank"}
-              %i.ion-social-facebook-outline
-            %a{:href => "#", :target => "_blank"}
-              %i.ion-social-twitter-outline
-            %a{:href => "#", :target => "_blank"}
-              %i.ion-social-linkedin-outline
-
+          = insert_content("manzil_bio")
 
 
 %section.company-description
@@ -100,59 +47,22 @@
         %img.img-responsive.center-block.studio-logo{:alt => "", :src => "images/studio_logo.png"}
       .col-md-6
         .block
-          %h3.subtitle.wow.fadeInUp{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"} The Frank-Ratchye Studio for Creative Inquiry
-          %p.wow.fadeInUp{"data-wow-delay" => ".5s", "data-wow-duration" => "500ms"}
-            The Terrapattern project was developed at the Frank-Ratchye STUDIO for Creative Inquiry (@creativeinquiry), a flexible laboratory dedicated to the support of atypical, anti-disciplinary and inter-institutional research at the intersection of the arts, science, technology and culture. Founded in 1989 within the College of Fine Arts at Carnegie Mellon University, the STUDIO serves as a locus for hybrid enterprises on the CMU campus, the Pittsburgh region, and internationally.
-          %p.wow.fadeInUp{"data-wow-delay" => ".7s", "data-wow-duration" => "500ms"}
-            The STUDIO's current emphasis on new media arts builds on more than two decades of experience hosting interdisciplinary artists in an environment enriched by world-class science and engineering departments.Through our programs, the STUDIO provides opportunities for learning, dialogue and research that lead to innovative breakthroughs, new policies, and the redefinition of the role of artists in a quickly changing world.
+          = insert_content("studio_bio")
+      
 
 
 %section#feature.acknowledgements
   .container
     .section-heading
-      %h1.title.wow.fadeInDown{"data-wow-delay" => ".3s"} Acknowledgments
-      .row
+      .row#knight_acknowledgement
         .col-md-6.col-md-offset-3
-          %p.wow.fadeInDown{"data-wow-delay" => ".5s"}
-            Terrapattern was made possible through a Media Innovation Prototype Fund grant from the John S. and James L. Knight Foundation, which supports transformational ideas that promote quality journalism, advance media innovation, engage communities and foster the arts. The Knight Foundation believes that democracy thrives when people and communities are informed and engaged.
+          = insert_content("acknowledgement_knight")
       .row
         .col-md-6.col-md-offset-3
           %img.img-responsive.center-block.knight-logo.wow.fadeInDown{:alt => "", "data-wow-delay" => ".5s", :src => "images/knight.png"}
     .row.grid-acknowledgments
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInUp.animated{"data-wow-delay" => "300ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading Knight Foundation
-            %p We express our gratitude to Knight Foundation, and in particular Chris Barr, Director of the Media Innovation program and manager of the Knight Prototype Fund, and Eva Pereira, Media Innovation Associate, for their advocacy, support, and patient cultivation of our investigation.
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInDown.animated{"data-wow-delay" => "600ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading CREATE Lab
-            %p
-              Members of the Carnegie Mellon University CREATE Lab provided essential advice and guidance in performing large-scale computations on satellite imagery for humanitarian purposes. We are especially grateful to Randy Sargent, Paul Dille, and Professor Illah Nourbakhsh of the CREATE Lab.
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInDown.animated{"data-wow-delay" => "900ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading DataKind
-            %p
-              The leadership team of DataKind, which works to harness the power of data science in the service of humanity, provided crucial early encouragement of this investigation. We express our gratitude to Jake Porway, Founder and Executive Director, and Erin Akred, Chief Data Scientist and Head of DataKind Labs, for their interest and support.
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInDown.animated{"data-wow-delay" => "300ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading CMU Machine Learning Department
-            %p
-              Our colleagues in the CMU Machine Learning Department (MLD) provided key technical advice and support. In particular, our project uses an implementation of Cover Trees, developed by Manzil Zaheer in the MLD, for fast, asynchronous nearest neighbor search. This implementation made it possible for our project to function in real-time. We thank Professors Alex Smola, David Andersen, and Ruslan Salakhutdinov for their kind support in making this possible.
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInDown.animated{"data-wow-delay" => "600ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading Alt-AI & SFPC
-            %p
-              We thank the organizers of the Alt-AI conference, Gene Kogan and Lauren Gardner, and the directors of the SFPC (School for Poetic Computation), Taeyoon Choi and Zachary Lieberman, for kindly inviting the Terrapattern project to premiere in an exhibition at this unique conference event.
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInDown.animated{"data-wow-delay" => "900ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading Frank-Ratchye STUDIO for Creative Inquiry
-            %p Last, but not least, we acknowledge the support of our hardworking staff and students at the Frank-Ratchye STUDIO for Creative Inquiry, including Tom Hughes, Linda Hager, Dan Moore, Aprameya Mysore, and Charlotte Stiles.
+      .col-md-8.col-md-offset-2
+        = insert_content("thanks")
 
 
 %section#call-to-action

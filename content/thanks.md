@@ -1,0 +1,19 @@
+#### Professor Levin and the Terrapattern team gratefully acknowledge the following individuals and organizations for their support and encouragement:
+
+We express our gratitude to [**Knight Foundation**](http://www.knightfoundation.org/), and in particular [Chris Barr](http://www.knightfoundation.org/staff/chris-barr/), Director of the Media Innovation program and manager of the Knight Prototype Fund, and [Eva Pereira](http://www.knightfoundation.org/staff/eva-pereira/), Media Innovation Associate, for their advocacy, support, and patient cultivation of our investigation.
+
+Members of the Carnegie Mellon University [**CREATE Lab**](http://cmucreatelab.org/) provided essential advice and guidance in performing large-scale computations on satellite imagery for humanitarian purposes. We are especially grateful to [Randy Sargent](http://www.ri.cmu.edu/person.html?type=newsmedia&person_id=2434), Paul Dille, and Professor Illah Nourbakhsh of the CREATE Lab. 
+
+The leadership team of [**DataKind**](http://www.datakind.org/), which works to harness the power of data science in the service of humanity, provided crucial early encouragement of this investigation. We express our gratitude to [Jake Porway](http://www.datakind.org/our-team), Founder and Executive Director, and [Erin Akred](http://www.datakind.org/our-team), Chief Data Scientist and Head of DataKind Labs, for their interest and support. 
+
+Our colleagues in the CMU [**Machine Learning Department**](http://www.ml.cmu.edu/) (MLD) provided key technical advice and support. In particular, our project uses an implementation of [*Cover Trees*](https://github.com/manzilzaheer/CoverTree), developed by Manzil Zaheer in the MLD, for fast, asynchronous nearest neighbor search. This implementation made it possible for our project to function in real-time. We thank Manzil and his professors [Alex Smola](http://alex.smola.org/), David Andersen, and Ruslan Salakhutdinov for their kind support in making this possible.
+
+We thank the organizers of the [**Alt-AI**](http://alt-ai.net/) conference, [Gene Kogan](http://www.genekogan.com/) and Lauren Gardner, and the directors of the [**SFPC**](http://sfpc.io/) (School for Poetic Computation), [Taeyoon Choi](http://sfpc.io/people/taeyoon-choi/) and [Zachary Lieberman](http://sfpc.io/people/zach-lieberman/), for kindly inviting the *Terrapattern* project to premiere in an [exhibition](http://alt-ai.net/#exhibition) at this unique conference event. 
+
+We gratefully acknowledge [**Planet Labs**](https://www.planet.com/), and in particular Andrew Zolli, Joe Mascaro, and Rob Simmon, for their interest and encouragement, and for providing access to geospatial data through their Ambassadors Program.
+
+We thank Professor [**Rich Pell**](http://www.andrew.cmu.edu/user/rp3h/), founder and co-director of the [Center for Postnatural History](http://www.postnatural.org/), for invaluable suggestions and discussions about how our project can help us understand the anthropocene. 
+
+To train our neural network, our project made use of more than 500,000 nodes, polygons and other map labels meticulously contributed by the members of the [**OpenStreetMap**](https://www.openstreetmap.org) volunteer community over nearly ten years. It has been [pointed out](http://www.spacemachine.net/views/2016/3/datasets-over-algorithms) that many AI breakthroughs have been constrained by the availability of high-quality training datasets. We are grateful to the OSM commmunity for developing and releasing their freely-reusable geospatial data.
+
+Last, but not least, we acknowledge the support of our hardworking staff and students at the [**Frank-Ratchye STUDIO for Creative Inquiry**](studioforcreativeinquiry.org), including Tom Hughes, Linda Hager, [Dan Moore](makeitdoathing.com), Aprameya Mysore, and [Charlotte Stiles](http://charlottestiles.com/).
