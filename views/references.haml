@@ -1,3 +1,21 @@
-.row#references_page
-  .col-md-12
-    = insert_content("references")
+%section.global-page-header
+  .container
+    .row
+      .col-md-12
+        .block
+          %h2 References and Related Work
+          .col-md-8.header-description
+            %p.prose
+
+
+%section
+  .container
+    .row
+      .col-md-12.references
+        = insert_content("references_projects")
+
+%section
+  .container
+    .row
+      .col-md-12.bibliography
+        = insert_content("references_bibliography")

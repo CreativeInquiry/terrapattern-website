@@ -1,9 +1,4 @@
-# References and Related Work
-
-
-
----
-### Kindred Projects
+## Kindred Projects
 
 *The following projects and initiatives use satellite imagery, oftentimes in combination with various forms of computer vision, to track phenomena of interest in the built and natural world. Until recently, much of this work has been tuned for specific geospatial problems.*
 
@@ -19,7 +14,8 @@ Garling, Caleb."[Startup Promises Business Insights from Satellite Images](https
 
 Hogenboom, Melissa. "[Watching penguins, and their poo, from space](http://www.bbc.com/earth/story/20141210-surprising-use-of-penguin-poo)". *BBC.com*. 12/10/2014. Accessed 5/14/2016.
 
-Howard, Brian C. "[Tiny Team Uses Satellites to Bust Illegal Fishing Worldwide](http://news.nationalgeographic.com/2015/06/150615-skytruth-pirate-fishing-illegal-big-data-ocean-conservation/)". *NationalGeographic.com*, 6/15/2015. Accessed 5/14/2016.
+Howard, Brian C. "[Tiny Team Uses Satellites to Bust Illegal Fishing Worldwide](http://news.nationalgeographic.com/2015/06/150615-skytruth-pirate-fishing-i
+llegal-big-data-ocean-conservation/)". *NationalGeographic.com*, 6/15/2015. Accessed 5/14/2016.
 
 Howard, Brian C. "[New Theory Behind Dozens of Craters Found in Siberia](http://news.nationalgeographic.com/news/2015/02/150227-siberia-mystery-holes-craters-pingos-methane-hydrates-science/)". *news.nationalgeographic.com*, National Geographic Society, 2/27/2015. Accessed 5/14/2016.
 
@@ -39,21 +35,3 @@ Rothfeld, Michael and Patterson, Scott. "[Traders Seek an Edge With High-Tech Sn
 Trevi, Alexander. "[Atomic Gardens](http://pruned.blogspot.com/2011/04/atomic-gardens.html)". *Pruned.blogspot.com.* 4/20/2011. Accessed 5/14/2016.
 
 Venkataramanan, Madhumita. "[Space archaeologist discovers lost cities with satellite imagery](http://www.wired.co.uk/magazine/archive/2014/12/start/scanning-the-past)". *Wired.co.uk*, Wired Media, 11/14/2014. Accessed 5/15/2016.
-
----
-# Technical Bibliography
-
-*The following research projects and open-source codebases are specifically concerned with the application of 'deep-learning' techniques to satellite imagery. Several of these projects employ OpenStreetMap labels as training data, as we do.*
-
-[Learning to Detect Roads in High-Resolution Aerial
-Images](http://www.cs.toronto.edu/~fritz/absps/road_detection.pdf) by Volodymyr Mnih and Geoffrey E. Hinton (2010), a seminal paper in the application of machine learning to the problem of making assertions about satellite imagery. 
- 
-[Machine Learning for Aerial Image Labeling](https://www.cs.toronto.edu/~vmnih/docs/Mnih_Volodymyr_PhD_Thesis.pdf), Volodymyr Mnih's 2013 doctoral thesis from the University of Toronto, under the advisement of Geoff Hinton. 
-
-[Humanitarian Mapping with Deep Learning](https://github.com/larsroemheld/OSM-HOT-ConvNet) by Stanford graduate student, Lars Roemheld (2016). Like the *Terrapattern* project, this project uses OpenStreetMap (OSM) to help train a neural net, in order to help support map creation in the developing world.
-
-[OSM-Crosswalk-Detection](https://github.com/geometalab/OSM-Crosswalk-Detection) by Marcel Huber (2015). Developed at the University of Applied Sciences Rapperswil, this project again trains deep learning models with OSM labels to locate Swiss crosswalks.
-
-[DeepOSM](https://github.com/trailbehind/DeepOSM) (2016), by Andrew L. Johnson, trains a neural network with OSM labels and infrared images from the U.S. National Agriculture Imagery Program (NAIP), in order to detect unmapped hiking trails.
-
-
