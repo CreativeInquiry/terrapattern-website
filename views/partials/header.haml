@@ -1,4 +1,4 @@
-%header#top-bar.animated-header.pages-header
+%header#top-bar{class: (alt_header ? "animated-header landing-page" : "animated-header pages-header")}
   .container
     .navbar-header
       %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
@@ -13,7 +13,7 @@
       .main-menu
         %ul.nav.navbar-nav.navbar-right
           %li
-            %a{:href => "http://www.terrapattern.dev:#{settings.port.to_s}"}Home
+            %a{:href => "/"}Home
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
               Cities
@@ -27,8 +27,8 @@
                 %li
                   %a{:href => "http://london.terrapattern.dev:#{settings.port.to_s}"}London
           %li
-            %a{:href => "http://www.terrapattern.dev/about:#{settings.port.to_s}"}About
+            %a{:href => "/about"}About
           %li
-            %a{:href => "http://www.terrapattern.dev/faq:#{settings.port.to_s}"}FAQ
+            %a{:href => "/faq"}FAQ
           %li
-            %a{:href => "http://www.terrapattern.dev:#{settings.port.to_s}/team"}Team
+            %a{:href => "/team"}Team

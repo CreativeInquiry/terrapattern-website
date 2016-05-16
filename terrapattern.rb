@@ -64,6 +64,7 @@ class Terrapattern < Sinatra::Base
   # Handle the landing page
   subdomain :www do
     get '/' do
+      @use_alt_header = true
       haml :index
     end
   end

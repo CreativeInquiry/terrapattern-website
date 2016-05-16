@@ -2,7 +2,6 @@
 %html
   %head
     / PER-PAGE META --------------------------------------------------
-    = yield_content :meta
     %meta{:charset => "utf-8"}
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
     %link{:href => "images/favicon.png", :rel => "icon", :type => "image/png"}
@@ -12,6 +11,7 @@
     %meta{:content => "", :name => "author"}
     %meta{:content => "telephone=no", :name => "format-detection"}
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    = yield_content :meta
 
     / CSS ------------------------------------------------------------
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>   
@@ -25,12 +25,9 @@
     =# partial :google_analytics
     
   %body
-  - if request.url == "http://www.terrapattern.dev:#{settings.port.to_s}/"
-    = partial "partials/header-landing"
-  - else
-    = partial "partials/header"
+  = partial "partials/header", locals: {alt_header: @use_alt_header}
   = yield
-  - if request.url != "http://www.terrapattern.dev:#{settings.port.to_s}/"
+  - if !@use_alt_header
     = partial "partials/footer"
 
   / JAVASCRIPTS -------------------------------------------------------
