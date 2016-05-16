@@ -21,25 +21,20 @@ There has never been a more exciting time to observe human activity and understa
 ---
 ### Motivation and Intended Use
 
-It has been predicted that, within the next three years, access to daily-updated, whole-earth satellite imagery with sub-meter resolution will become widely available online. There will be many important stories about natural and human activities latent in this data. Without special effort, however, it is doubtful that this imagery will have annotation layers that make such stories discoverable.In light of this, the *Terrapattern* prototype is intended to demonstrate a workflow by which users—such as journalists, citizen scientists, humanitarian agencies, social justice activists, archaeologists, urban planners, and other researchers—can easily search for visually consistent “patterns of interest”. We are particularly keen to help people identify, characterize and track indicators which have not been detected or measured previously, and which have sociological, humanitarian, or scientific significance. 
+It has been predicted that, within the next three years, access to daily-updated, whole-earth satellite imagery with sub-meter resolution will become widely available online. There will be many important stories about natural and human activities latent in this data. Without special effort, however, it is doubtful that this imagery will have annotation layers that make such stories discoverable.In light of this, the *Terrapattern* prototype is intended to demonstrate a workflow by which users—such as journalists, citizen scientists, humanitarian agencies, social justice activists, archaeologists, urban planners, and other researchers—can easily search for visually consistent “patterns of interest”. We are particularly keen to help people identify, characterize and track indicators which have not been detected or measured previously, and which have sociological, humanitarian, scientific, or cultural significance. 
 
-Our goal is to provide a geospatial software tool that makes it easy for everyday people, who may lack expertise in machine vision, to specify the *thing* that they are interested in; to automatically find more instances of that *thing*; and to provide the locations of those instances in a common data format that easily allows for further study. 
+Our goal is to provide a geospatial software tool that makes it easy for everyday people, who may lack expertise in machine vision, to specify the *thing* that they are interested in; to automatically find more examples of that *thing*; and to provide the locations of those instances in a common data format that easily allows for further examination. 
 
 ---
 ### About our Prototype
 
-*Terrapattern* is a “panoptic perceptron” that allows a user to perform *queries-by-example* in satellite imagery. A user clicks on a “feature of interest” in a satellite image; the *Terrapattern* system returns a batch of the most similar-looking places nearby; the user can then download the list of these locations in GeoJSON format.
+*Terrapattern* is a “panoptic perceptron” that allows a user to perform *queries-by-example* in satellite imagery. A visitor clicks on a “feature of interest” in a satellite image; the *Terrapattern* system returns a batch of the most similar-looking places nearby; and the visitor can then download a list of these locations in GeoJSON format.
 
-We emphasize that *Terrapattern* is a **prototype**. As of May 2016, it allows users to search in the greater metropolitan regions of three American cities: New York City, San Francisco, and Pittsburgh (Allegheny County). Altogether more than 2,200 square miles (5700 km²) are fully searchable. Allowing high-resolution searches in an area the size of the United States (e.g. ~3.8M mi² or 9.9M km²) is technically and financially beyond the scope of this project. 
+For our purposes, “interesting” features are anthropogenic or natural phenomena that are not only socially or scientifically meaningful, but also *visually distinctive*—thus lending themselves ideally to machine recognition. Examples could include things like animal herds, methane blowholes, factories, destroyed homes, or logging roads. Many other patterns await discovery.
 
-Terrapattern has limitations 
+We aim to test the assumptions: * That there are *undiscovered patterns of activity* that are only visible from the vantage point of satellite imagery; * That these patterns can *offer insight* into trends, stories and phenomena of social, economic, ecological, anthropological, humanitarian, scientific, artistic or other cultural interest;* That there exists a subset of such patterns in satellite imagery which, because of their repetition and visual consistency, lend themselves particularly well to automated detection and analysis by means of computer vision and machine learning; * That there is (or would be) demand for information about these patterns among domain experts, as well as among journalists, citizen scientists, and others in the Fourth Estate;* And that it is possible to create software tools which make such workflows easy and reliable, for researchers whose teams might otherwise lack expertise in computer vision and machine learning. 
 
-For our purposes, “interesting” patterns are anthropogenic and/or natural phenomena that are not only socially or scientifically meaningful, but also visually distinctive—thus lending themselves ideally to machine recognition. Examples could include problems like monitoring elephant herds, counting Siberian methane blowholes, identifying destroyed homes, measuring reservoir loss, or tracing the paths of the logging roads that precede deforestation. Many other patterns await discovery.
-
-We aim to test the assumptions: * That there are undiscovered patterns of activity that are only visible from the vantage point of satellite imagery; * That these patterns can offer insight into trends, stories and phenomena of social, economic, ecological, anthropological, humanitarian, scientific, artistic or other cultural interest;* That there exists a subset of such patterns in satellite imagery which, because of their repetition and visual consistency, lend themselves particularly well to automated detection and analysis by means of computer vision and machine learning; * That there is (or would be) demand for information about these patterns among domain experts and NGO’s, as well as among journalists, citizen scientists, and others in the Fourth Estate;* And that it is possible to create software tools which make such workflows easy and reliable, for researchers whose teams might otherwise lack expertise in computer vision and machine learning. 
-
-
- 
+We emphasize that *Terrapattern* is a limited **prototype**. As of May 2016, it allows users to search in the greater metropolitan regions of three American cities: New York City, San Francisco, and Pittsburgh (Allegheny County). Altogether more than 2,200 square miles (5700 km²) are fully searchable. Allowing high-resolution searches in an area the size of the United States (e.g. ~3.8M mi² or 9.9M km²) is technically and financially beyond the scope of our project at the current time. 
 
 ---
 ### Inspirations
@@ -126,9 +121,5 @@ in Africa.
 ### Credits
 
 We're a group of new-media artists, creative technologists, and students who are affiliated in various ways with the Frank-Ratchye [STUDIO for Creative Inquiry](studioforcreativeinquiry.org) at Carnegie Mellon University, a lab for experimental research at the intersection of art, science, technology and culture. This project was made possible by a grant in Media Innovation from the [John S. and James L. Knight Foundation](http://knightfoundation.org/grants/201551228/) [Prototype Fund](http://www.knightfoundation.org/funding-initiatives/knight-prototype-fund/). For more information, please see our [**team**](team.html) page. 
-
-<img width="240" height="48" src="images/knight-logo-blue.png" />
-
-<img width="240" height="130" src="images/studio_for_creative_inquiry_transparent.png" />
 
 
