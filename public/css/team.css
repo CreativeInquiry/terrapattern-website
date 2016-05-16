@@ -31,6 +31,9 @@
   padding-bottom: 30px;
   padding-top: 30px; }
 
+.grid-acknowledgments h4 {
+  text-align: center; }
+
 @media only screen and (max-width: 767px) {
   #knight_acknowledgement h2 {
     font-size: 40px; } }

@@ -61,40 +61,8 @@
         .col-md-6.col-md-offset-3
           %img.img-responsive.center-block.knight-logo.wow.fadeInDown{:alt => "", "data-wow-delay" => ".5s", :src => "images/knight.png"}
     .row.grid-acknowledgments
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInUp.animated{"data-wow-delay" => "300ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading Knight Foundation
-            %p We express our gratitude to Knight Foundation, and in particular Chris Barr, Director of the Media Innovation program and manager of the Knight Prototype Fund, and Eva Pereira, Media Innovation Associate, for their advocacy, support, and patient cultivation of our investigation.
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInDown.animated{"data-wow-delay" => "600ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading CREATE Lab
-            %p
-              Members of the Carnegie Mellon University CREATE Lab provided essential advice and guidance in performing large-scale computations on satellite imagery for humanitarian purposes. We are especially grateful to Randy Sargent, Paul Dille, and Professor Illah Nourbakhsh of the CREATE Lab.
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInDown.animated{"data-wow-delay" => "900ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading DataKind
-            %p
-              The leadership team of DataKind, which works to harness the power of data science in the service of humanity, provided crucial early encouragement of this investigation. We express our gratitude to Jake Porway, Founder and Executive Director, and Erin Akred, Chief Data Scientist and Head of DataKind Labs, for their interest and support.
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInDown.animated{"data-wow-delay" => "300ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading CMU Machine Learning Department
-            %p
-              Our colleagues in the CMU Machine Learning Department (MLD) provided key technical advice and support. In particular, our project uses an implementation of Cover Trees, developed by Manzil Zaheer in the MLD, for fast, asynchronous nearest neighbor search. This implementation made it possible for our project to function in real-time. We thank Professors Alex Smola, David Andersen, and Ruslan Salakhutdinov for their kind support in making this possible.
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInDown.animated{"data-wow-delay" => "600ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading Alt-AI & SFPC
-            %p
-              We thank the organizers of the Alt-AI conference, Gene Kogan and Lauren Gardner, and the directors of the SFPC (School for Poetic Computation), Taeyoon Choi and Zachary Lieberman, for kindly inviting the Terrapattern project to premiere in an exhibition at this unique conference event.
-      .col-md-4.col-lg-4.col-xs-12
-        .media.wow.fadeInDown.animated{"data-wow-delay" => "900ms", "data-wow-duration" => "500ms"}
-          .media-body
-            %h4.media-heading Frank-Ratchye STUDIO for Creative Inquiry
-            %p Last, but not least, we acknowledge the support of our hardworking staff and students at the Frank-Ratchye STUDIO for Creative Inquiry, including Tom Hughes, Linda Hager, Dan Moore, Aprameya Mysore, and Charlotte Stiles.
+      .col-md-8.col-md-offset-2
+        = insert_content("thanks")
 
 
 %section#call-to-action

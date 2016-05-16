@@ -1,11 +1,4 @@
-
-
-
-![alt text](images/knight-logo-blue.png)
-
----
-
-*Professor Levin and the Terrapattern team gratefully acknowledge the following individuals and organizations for their support and encouragement:*
+#### Professor Levin and the Terrapattern team gratefully acknowledge the following individuals and organizations for their support and encouragement:
 
 We express our gratitude to [**Knight Foundation**](http://www.knightfoundation.org/), and in particular [Chris Barr](http://www.knightfoundation.org/staff/chris-barr/), Director of the Media Innovation program and manager of the Knight Prototype Fund, and [Eva Pereira](http://www.knightfoundation.org/staff/eva-pereira/), Media Innovation Associate, for their advocacy, support, and patient cultivation of our investigation.
 
