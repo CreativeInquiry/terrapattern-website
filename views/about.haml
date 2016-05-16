@@ -1,3 +1,14 @@
-.row#about_page
-  .col-md-12
-    = insert_content("about")
+%section.global-page-header
+  .container
+    .row
+      .col-md-12
+        .block
+          %h2 About Terrapattern
+          .col-md-8.header-description
+            %p.prose A Prototype for Visual Query-by-Example in Satellite Imagery
+
+%section
+  .container
+    .row
+      .col-md-12.about
+        = insert_content("about")

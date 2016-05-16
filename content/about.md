@@ -1,10 +1,3 @@
-# About Terrapattern
-
-### A Prototype for Visual Query-by-Example in Satellite Imagery
-
-*Published 20 May, 2016*
-
----
 ### Overview
 
 **We present *Terrapattern*: “similar-image search” for satellite photos.** It's an open-source tool for discovering “patterns of interest” in unlabeled satellite imagery—a prototype for exploring the unmapped, and the unmappable. 
@@ -21,7 +14,9 @@ There has never been a more exciting time to observe human activity and understa
 ---
 ### Motivation and Intended Use
 
-It has been predicted that, within the next three years, access to daily-updated, whole-earth satellite imagery with sub-meter resolution will become widely available online. There will be many important stories about natural and human activities latent in this data. Without special effort, however, it is doubtful that this imagery will have annotation layers that make such stories discoverable.In light of this, the *Terrapattern* prototype is intended to demonstrate a workflow by which users—such as journalists, citizen scientists, humanitarian agencies, social justice activists, archaeologists, urban planners, and other researchers—can easily search for visually consistent “patterns of interest”. We are particularly keen to help people identify, characterize and track indicators which have not been detected or measured previously, and which have sociological, humanitarian, scientific, or cultural significance. 
+It has been predicted that, within the next three years, access to daily-updated, whole-earth satellite imagery with sub-meter resolution will become widely available online. There will be many important stories about natural and human activities latent in this data. Without special effort, however, it is doubtful that this imagery will have annotation layers that make such stories discoverable.
+
+In light of this, the *Terrapattern* prototype is intended to demonstrate a workflow by which users—such as journalists, citizen scientists, humanitarian agencies, social justice activists, archaeologists, urban planners, and other researchers—can easily search for visually consistent “patterns of interest”. We are particularly keen to help people identify, characterize and track indicators which have not been detected or measured previously, and which have sociological, humanitarian, scientific, or cultural significance. 
 
 Our goal is to provide a geospatial software tool that makes it easy for everyday people, who may lack expertise in machine vision, to specify the *thing* that they are interested in; to automatically find more examples of that *thing*; and to provide the locations of those instances in a common data format that easily allows for further examination. 
 
@@ -32,7 +27,13 @@ Our goal is to provide a geospatial software tool that makes it easy for everyda
 
 For our purposes, “interesting” features are anthropogenic or natural phenomena that are not only socially or scientifically meaningful, but also *visually distinctive*—thus lending themselves ideally to machine recognition. Examples could include things like animal herds, methane blowholes, factories, destroyed homes, or logging roads. Many other patterns await discovery.
 
-We aim to test the assumptions: * That there are *undiscovered patterns of activity* that are only visible from the vantage point of satellite imagery; * That these patterns can *offer insight* into trends, stories and phenomena of social, economic, ecological, anthropological, humanitarian, scientific, artistic or other cultural interest;* That there exists a subset of such patterns in satellite imagery which, because of their repetition and visual consistency, lend themselves particularly well to automated detection and analysis by means of computer vision and machine learning; * That there is (or would be) demand for information about these patterns among domain experts, as well as among journalists, citizen scientists, and others in the Fourth Estate;* And that it is possible to create software tools which make such workflows easy and reliable, for researchers whose teams might otherwise lack expertise in computer vision and machine learning. 
+We aim to test the assumptions: 
+
+* That there are *undiscovered patterns of activity* that are only visible from the vantage point of satellite imagery; 
+* That these patterns can *offer insight* into trends, stories and phenomena of social, economic, ecological, anthropological, humanitarian, scientific, artistic or other cultural interest;
+* That there exists a subset of such patterns in satellite imagery which, because of their repetition and visual consistency, lend themselves particularly well to automated detection and analysis by means of computer vision and machine learning; 
+* That there is (or would be) demand for information about these patterns among domain experts, as well as among journalists, citizen scientists, and others in the Fourth Estate;
+* And that it is possible to create software tools which make such workflows easy and reliable, for researchers whose teams might otherwise lack expertise in computer vision and machine learning. 
 
 We emphasize that *Terrapattern* is a limited **prototype**. As of May 2016, it allows users to search in the greater metropolitan regions of three American cities: New York City, San Francisco, and Pittsburgh (Allegheny County). Altogether more than 2,200 square miles (5700 km²) are fully searchable. Allowing high-resolution searches in an area the size of the United States (e.g. ~3.8M mi² or 9.9M km²) is technically and financially beyond the scope of our project at the current time. 
 
