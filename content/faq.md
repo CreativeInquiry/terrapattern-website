@@ -1,6 +1,3 @@
-# Frequently Asked Questions
-
----
 ### What's the basic idea? 
 
 Terrapattern is a prototype that provides *similar-image search for satellite photos*—an open-source, open-ended tool for exploring the unmapped, and the unmappable. Click an interesting spot in a map of New York, San Francisco, or Pittsburgh, and Terrapattern will find other locations that look similar.
@@ -80,8 +77,3 @@ We're a group of new-media artists, creative technologists, and students who are
 ### How should I cite this project? 
 
 Levin, G., Newbury, D., McDonald, K., Alvarado, I., Tiwari, A., and Zaheer, M. "Terrapattern: Open-Ended, Visual Query-By-Example for Satellite Imagery using Deep Learning", May 2016. [http://terrapattern.com](http://terrapattern.com).
-
----
-### My question is not addressed here!
-
-*We'd love to help. Please feel free to get in touch with us via email at [contact@terrapattern.com](mailto:contact@terrapattern.com), or connect with lead investigator [@golan](https://twitter.com/golan) on Twitter.*

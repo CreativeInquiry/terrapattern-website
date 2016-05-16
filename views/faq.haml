@@ -1,3 +1,29 @@
-.row#faq_page
-  .col-md-12
-    = insert_content("faq")
+%section.global-page-header
+  .container
+    .row
+      .col-md-12
+        .block
+          %h2 FAQ
+          .col-md-8.header-description
+            %p.prose
+
+%section
+  .container
+    .row
+      .col-md-12
+        = insert_content("faq")
+
+
+
+%section#call-to-action
+  .container
+    .row
+      .col-md-12
+        .block
+          %h2.title.wow.fadeInDown.export{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"} My question is not addressed here!
+          %p.wow.fadeInDown{"data-wow-delay" => ".5s", "data-wow-duration" => "500ms"}
+            We'd love to help. Please feel free to get in touch with us via email at
+            %a{:href => "mailto:contact@terrapattern.com"} contact@terrapattern.com
+            or connect with lead investigator
+            %a{:href => "https://twitter.com/golan"} @golan
+            on Twitter.

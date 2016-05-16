@@ -1208,3 +1208,7 @@ article {
 .main-content {
   width: 100%;
 }
+
+#call-to-action a {
+  color: white;
+}
