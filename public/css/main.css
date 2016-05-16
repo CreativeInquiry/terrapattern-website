@@ -1173,6 +1173,33 @@ article {
   color: white;
 }
 
+#call-to-action a:hover {
+  /*text-decoration: underline ;    */
+  color: #DBDBDB;
+}
+
 .global-page-header a {
   color: white;
+}
+
+.global-page-header a:hover {
+  color: #DBDBDB;
+  /*text-decoration: underline ;*/
+}
+
+.faq {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.faq h3 {
+  font-weight: 600;
+  margin-bottom: 18px;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.faq hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
