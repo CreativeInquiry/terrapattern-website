@@ -1177,3 +1177,7 @@ article {
 #call-to-action a {
   color: white;
 }
+
+.global-page-header a {
+  color: white;
+}
