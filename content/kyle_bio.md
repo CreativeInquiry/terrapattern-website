@@ -1,0 +1,5 @@
+![alt text](images/kyle_mcdonald.jpg)
+
+### Kyle McDonald
+
+[**Kyle McDonald**](http://kylemcdonald.net/) ([@kcimc](https://twitter.com/kcimc)) is an artist who works in the open with code. He is a contributor to arts-engineering toolkits like openFrameworks, and spends a significant amount of time building tools that allow artists to use new algorithms in creative ways. He enjoys creatively subverting networked communication and computation, exploring glitch and embedded biases, and extending these concepts to the reversal of everything from personal identity to work habits. Kyle is an adjunct professor at NYU's ITP, and was formerly a member of F.A.T. Lab, community manager for openFrameworks, and artist in residence at the Frank-Ratchye STUDIO for Creative Inquiry at Carnegie Mellon. He frequently leads workshops exploring computer vision and interaction.

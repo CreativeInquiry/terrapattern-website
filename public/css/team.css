@@ -3,20 +3,15 @@
 
 .team-member {
   margin-top: 30px; }
-  .team-member:hover .team-img img {
+  .team-member img {
+    float: right;
+    width: 100%;
+    padding-bottom: 5px; }
+  .team-member:hover img {
     opacity: 0.8; }
-  .team-member .team_img {
-    position: relative; }
-
-.team-member .team-img .team-pic {
-  width: 100%; }
-
-.team-member .team_designation {
-  font-size: 13px; }
 
 .team-member h3 {
-  /*color: #337ab7 */
-  margin-bottom: 0;
+  margin-bottom: 3px;
   font-size: 20px; }
 
 .team-member p {
@@ -31,3 +26,11 @@
 
 .team-member .social-icons .facebook {
   padding: 4px 12px; }
+
+#knight_acknowledgement h2 {
+  padding-bottom: 30px;
+  padding-top: 30px; }
+
+@media only screen and (max-width: 767px) {
+  #knight_acknowledgement h2 {
+    font-size: 40px; } }

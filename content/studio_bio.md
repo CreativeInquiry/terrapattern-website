@@ -1,0 +1,5 @@
+### The Frank-Ratchye STUDIO for Creative Inquiry
+
+The *Terrapattern* project was developed at the [**Frank-Ratchye STUDIO for Creative Inquiry**](http://studioforcreativeinquiry.org/) ([@creativeinquiry](twitter.com/creativeinquiry)), a flexible laboratory dedicated to the support of atypical, anti-disciplinary and inter-institutional research at the intersection of the arts, science, technology and culture. Founded in 1989 within the [College of Fine Arts](http://www.cfa.cmu.edu/) at [Carnegie Mellon University](http://www.cmu.edu/), the STUDIO serves as a locus for hybrid enterprises on the CMU campus, the Pittsburgh region, and internationally. 
+
+The STUDIO's current emphasis on new media arts builds on more than two decades of experience hosting interdisciplinary artists in an environment enriched by world-class science and engineering departments. Through our programs, the STUDIO provides opportunities for learning, dialogue and research that lead to innovative breakthroughs, new policies, and the redefinition of the role of artists in a quickly changing world.

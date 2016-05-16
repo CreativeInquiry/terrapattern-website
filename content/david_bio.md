@@ -1,0 +1,5 @@
+![alt text](images/david_newbury.jpg)
+
+### David Newbury
+
+[**David Newbury**](http://www.workergnome.com/) ([@workergnome](https://twitter.com/workergnome)) is a creative developer working at the intersections between hardware, animation and data. He explores methods of using technology to provide novel experiences without obvious technological mediation. He has spent the past 15 years working on interactive projects for major brands, including Samsung, Google, and Oreo, as well as working with museums, universities and public broadcasting. His work has received national attention, including Emmy awards and coverage in *Wired*, *Vice*, and other publications. He runs a small design practice, Workergnome Studios, focusing on unusual development projects, and he gives workshops on using technology for artistic practices.
