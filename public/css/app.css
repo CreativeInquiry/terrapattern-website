@@ -1,24 +1,3 @@
-html {
-  background-color: #111; }
-
-body {
-  background-color: #eee;
-  padding-top: 90px;
-  font-family: "EB Garamond", serif; }
-
-p {
-  font-size: 18px; }
-
-p.smaller {
-  font-size: 12px; }
-
-.important {
-  font-weight: bold; }
-
-.main-content {
-  min-height: 300px;
-  margin-bottom: 50px; }
-
 .page-footer {
   border-top: 2px solid #27541F;
   background-color: #111;

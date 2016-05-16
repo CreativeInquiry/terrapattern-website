@@ -1,0 +1,1 @@
+## Terrapattern finds places that look the same using machine learning. Terrapatterns provides researchers, journalists, citizen scientists, and artists the ability to quickly and easily scan extremely large geographical areas for specific visual features.

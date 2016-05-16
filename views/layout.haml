@@ -3,24 +3,39 @@
   %head
     / PER-PAGE META --------------------------------------------------
     = yield_content :meta
+    %meta{:charset => "utf-8"}
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    %link{:href => "images/favicon.png", :rel => "icon", :type => "image/png"}
+    %title Terrapattern
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "keywords"}
+    %meta{:content => "", :name => "author"}
+    %meta{:content => "telephone=no", :name => "format-detection"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
 
     / CSS ------------------------------------------------------------
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>   
     %link{rel:"stylesheet", href:"/css/bootstrap.min.css"}
-    %link{rel:"stylesheet", href:"/css/app.css"}
+    %link{rel:"stylesheet", href:"/css/animate.css"}
+    %link{rel:"stylesheet", href:"/css/responsive.css"}
+    %link{rel:"stylesheet", href:"/css/ionicons.min.css"}
+    %link{rel:"stylesheet", href:"/css/main.css"}
     = yield_content :css
 
     =# partial :google_analytics
     
   %body
-  = partial "partials/header"
-  .container-fluid.main-content
-    = yield
-  = partial "partials/footer"
-
+  - if request.url == "http://www.terrapattern.dev:#{settings.port.to_s}/"
+    = partial "partials/header-landing"
+  - else
+    = partial "partials/header"
+  = yield
+  - if request.url != "http://www.terrapattern.dev:#{settings.port.to_s}/"
+    = partial "partials/footer"
 
   / JAVASCRIPTS -------------------------------------------------------
   %script{src: "/js/jquery.min.js"}
   %script{src: "/js/bootstrap.min.js"}
+  %script{src: "/js/wow.min.js"}
 
   = yield_content :javascript

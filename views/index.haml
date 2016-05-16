@@ -1,3 +1,17 @@
-.row#home_page
-  .col-md-12
-    = insert_content("introduction")
+%section#hero-area.vcenter
+  .container
+    .row
+      .col-md-5
+        .block.wow.fadeInUp{"data-wow-delay" => ".3s"}
+          %section.cd-intro
+            %h1.wow.fadeInUp.animated.cd-headline.slide{"data-wow-delay" => ".4s"}
+              %span TERRAPATTERN
+              %br
+          .wow.fadeInUp.animated{"data-wow-delay"=>".6s"}
+            = insert_content("landing_page")
+          %a.btn-lines.dark.light.wow.fadeInUp.animated.smooth-scroll.btn.btn-default.btn-green{"data-section" => "#works", "data-wow-delay" => ".9s", :href => "#works"} New York
+          %a.btn-lines.dark.light.wow.fadeInUp.animated.smooth-scroll.btn.btn-default.btn-green{"data-section" => "#works", "data-wow-delay" => ".9s", :href => "#works"} San Francisco
+          %a.btn-lines.dark.light.wow.fadeInUp.animated.smooth-scroll.btn.btn-default.btn-green{"data-section" => "#works", "data-wow-delay" => ".9s", :href => "#works"} Pittsburgh
+      .col-md-7
+        .block.wow.fadeInUp{"data-wow-delay" => ".3s"}
+          %img{:alt => "", :height => "100%", :src => "images/worldmap.svg", :width => "100%"}

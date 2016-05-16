@@ -23,11 +23,11 @@ class MarkdownPartial
   end
 
   def insert_content(id)
-    unless @memoed_content[id]
+   # unless @memoed_content[id]
       content = File.read("content/#{id}.md")
       markdown_text =   @markdown.render(content)
       @memoed_content[id] = markdown_text
-    end  
+   # end  
     return @memoed_content[id]
   end
 
