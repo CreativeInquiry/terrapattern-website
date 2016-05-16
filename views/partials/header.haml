@@ -3,12 +3,13 @@
     .navbar-header
       %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
         %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
+        / %span.icon-bar
+        / %span.icon-bar
+        / %span.icon-bar
       .navbar-brand
-        %a{:href => "http://www.terrapattern.dev:#{settings.port.to_s}"}
+        %a{:href => "/"}
           %img{:alt => "", :src => "images/terrapattern_logo_white.png"}
+
     %nav.navbar.collapse.navbar-collapse.navbar-right{:role => "navigation"}
       .main-menu
         %ul.nav.navbar-nav.navbar-right
@@ -20,12 +21,9 @@
               %span.caret
             .dropdown-menu
               %ul
-                %li
-                  %a{:href => "http://pgh.terrapattern.dev:#{settings.port.to_s}"} Pittsburgh
-                %li
-                  %a{:href => "http://nyc.terrapattern.dev:#{settings.port.to_s}"}New York
-                %li
-                  %a{:href => "http://london.terrapattern.dev:#{settings.port.to_s}"}London
+                - settings.city_names.each_with_index do |name, id|
+                  %li
+                    %a{:href => subdomain_url(settings.city_urls[id])}= name
           %li
             %a{:href => "/about"}About
           %li
