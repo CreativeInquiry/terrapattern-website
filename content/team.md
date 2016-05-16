@@ -80,4 +80,6 @@ Our colleagues in the CMU [**Machine Learning Department**](http://www.ml.cmu.ed
 
 We thank the organizers of the [**Alt-AI**](http://alt-ai.net/) conference, [Gene Kogan](http://www.genekogan.com/) and Lauren Gardner, and the directors of the [**SFPC**](http://sfpc.io/) (School for Poetic Computation), [Taeyoon Choi](http://sfpc.io/people/taeyoon-choi/) and [Zachary Lieberman](http://sfpc.io/people/zach-lieberman/), for kindly inviting the *Terrapattern* project to premiere in an [exhibition](http://alt-ai.net/#exhibition) at this unique conference event. 
 
+We thank Professor [**Rich Pell**](http://www.andrew.cmu.edu/user/rp3h/), founder and co-director of the [Center for Postnatural History](http://www.postnatural.org/), for invaluable suggestions and discussions about how our project can help us understand the anthropocene. 
+
 Last, but not least, we acknowledge the support of our hardworking staff and students at the [**Frank-Ratchye STUDIO for Creative Inquiry**](studioforcreativeinquiry.org), including Tom Hughes, Linda Hager, [Dan Moore](makeitdoathing.com), Aprameya Mysore, and [Charlotte Stiles](http://charlottestiles.com/).

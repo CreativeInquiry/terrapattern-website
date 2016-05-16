@@ -3,20 +3,32 @@
 ---
 
 
-Terrapattern 
-
 panoptic perceptron
 
 
-[Ambrosia Lake Uranium Disposal Site, New Mexico](http://clui.org/ludb/site/ambrosia-lake-uranium-tailings-pile)
-
+[//]: # (See slideshow code at http://www.w3schools.com/howto/howto_js_slideshow.asp)
 
 <img width="240" height="135" src="images/16x9_oil_tanks_orbital_insight.jpg" />
-<img width="240" height="135" src="images/16x9_penguin_poop_digitalglobe.jpg" alt="Satellite views of penguin poop can help track wildlife populations and their diet. Image credit: DigitalGlobe/BAS." />
-<img width="240" height="135" src="images/16x9_ambrosia_lake_disposal_site_clui.jpg" alt="Aerial view of the Ambrosia Lake Uranium Disposal Site in New Mexico, a radioactive tailings pile. Image credit: Center for Land Use Interpretation (clui.org)" />
-<img width="240" height="135" src="images/16x9_right_whales_fretwell.jpg" "Processed satellite images of southern right whales. Image credit: Peter Fretwell et al." />
+<img width="240" height="135" src="images/16x9_tukul_detector_hhi.jpg" alt="Researchers can detect mass atrocities by identifying razed dwellings in South Sudan. Image credit: The Signal Program on Human Security and Technology at the Harvard Humanitarian Initiative" />
 <img width="240" height="135" src="images/16x9_illegal_logging_roads_maap.jpg" "Aerial view of illegal logging roads in the Amazon rainforest. Image credit:  Monitoring of the Andean Amazon Project" />
+
+<img width="240" height="135" src="images/16x9_penguin_poop_digitalglobe.jpg" alt="Satellite views of penguin poop can help track wildlife populations and their diet. Image credit: DigitalGlobe/BAS." />
+<img width="240" height="135" src="images/16x9_right_whales_fretwell.jpg" "Processed satellite images of southern right whales. Image credit: Peter Fretwell et al." />
+<img width="240" height="135" src="images/16x9_parcak_space_archaeology_nasa.jpg" alt="'Space archaeologist' Sarah Parcak has discovered ancient Egyptian pyramids using satellite imagery and computer vision. Image credit: NASA" />
 <img width="240" height="135" src="images/16x9_magnetic_deer_alignment_begall.png" alt="Examinations of cattle and deer from satellite images reveal that they align their body axes along the earth's magnetic field. Image credit: Begall et al." />
+<img width="240" height="135" src="images/16x9_ambrosia_lake_disposal_site_clui.jpg" alt="Aerial view of the Ambrosia Lake Uranium Disposal Site in New Mexico, a radioactive tailings pile. Image credit: Center for Land Use Interpretation (clui.org)" />
+<img width="240" height="135" src="images/16x9_gamma_garden_irb.jpg" alt="A 'gamma garden' at the Institute for Radiation Breeding in Ibaraki, Japan. Image credit: Google" />
+<img width="240" height="135" src="images/16x9_siberian_methane_blowhole_yanao.jpg" />
+
+
+first spotted by a helicopter pilot in 2013.
+In an ominous positive feedback loop, a recently discovered crater in the thawing Siberian permafrost is spewing methane, a potent greenhouse gas, into the atmosphere. Photo by Marya Zulinova, press service of the Governor, Yamal-Nenets Autonomous District (YaNAO).
+
+
+
+
+
+
 
 
 * Catching pirate fishers
@@ -41,15 +53,12 @@ present in satellite imagery of rural regions
 in Africa. 
 
 
-The Signal Program
-on Human Security and Technology
+
 
 ---
 ### Bibliography
 
 *The following projects and initiatives use satellite imagery, oftentimes in combination with machine learning and computer vision, to track phenomena of interest in the built and natural world.*
-
-
 
 Begall, Sabine et al. "[Magnetic alignment in grazing and resting cattle and deer](http://www.pnas.org/content/early/2008/08/22/0803650105)". *Proceedings of the National Academy of Sciences* 105, no. 36 (9/9/2008), pp. 13,451-13,455. DOI: 10.1073/pnas.0803650105
 
@@ -63,15 +72,23 @@ Hogenboom, Melissa. "[Watching penguins, and their poo, from space](http://www.b
 
 Howard, Brian C. "[Tiny Team Uses Satellites to Bust Illegal Fishing Worldwide](http://news.nationalgeographic.com/2015/06/150615-skytruth-pirate-fishing-illegal-big-data-ocean-conservation/)". *NationalGeographic.com*, 6/15/2015. Accessed 5/14/2016.
 
+Howard, Brian C. "[New Theory Behind Dozens of Craters Found in Siberia](http://news.nationalgeographic.com/news/2015/02/150227-siberia-mystery-holes-craters-pingos-methane-hydrates-science/)". *news.nationalgeographic.com*, National Geographic Society, 2/27/2015. Accessed 5/14/2016.
+
 "[MAAP #18: Proliferation of Logging Roads in the Peruvian Amazon](http://maaproject.org/2015/maap18-logroads/)". *maaproject.org*, Monitoring of the Andean Amazon Project, 10/30/2015. Accessed 5/14/2016.
 
 "[MAAP #30: Gold Mining Invasion of Tambopata National Reserve Intensifies](http://maaproject.org/2016/invasion-tambopata-3/)". *maaproject.org*, Monitoring of the Andean Amazon Project, 4/12/2016. Accessed 5/15/2016.
 
-Raymond, Nathaniel A.; Card, Brittany L.; and Baker, Isaac L. "[A New Forensics: Developing Standard Remote Sensing Methodologies to Detect and Document Mass Atrocities](http://scholarcommons.usf.edu/gsp/vol8/iss3/6/)". (11/2014) *Genocide Studies and Prevention: An International Journal*: Vol. 8: no. 3: 33-48. DOI: 10.5038/1911-9933.8.3.4
+Pell, Richard W. and Allen, Lauren B. "[Preface to a Genealogy of the Postnatural](http://postnatural.org/filter/Intercalations-2/Preface-to-a-Genealogy-of-the-Postnatural)". In *Intercalations 2: Land & Animal & Non-Animal*, Edited by Anna-Sophie Springer & Etienne Turpin. K. Verlag and the Haus der Kulturen der Welt, Berlin. 2015.
 
 Raymond, Nathaniel A.; Vidan, Gili; and the staff of the Signal Program on Human Security and Technology at the Harvard Humanitarian Initiative (Isaac Baker, Ziad Achkar, Brittany Card, Benjamin Davies, and Steve Juntunen). "[Tents and Tukuls: Lessons from the Development of AMALGAM](http://thetechchallenge.org/tents-and-tukuls-lessons-from-the-development-of-amalgam-3/)". *thetechchallenge.org*, Mass Atrocity Prevention Tech Challenge, 12/10/2014. Accessed 5/15/2016.
 
+Raymond, Nathaniel A.; Card, Brittany L.; Baker, Isaac L.; and Al Achkar, Ziad. "[Satellite Imagery Interpretation Guide: Intentional Burning of Tukuls](http://hhi.harvard.edu/sites/default/files/publications/siig_ii_burned_tukuls_3.pdf)". *http://hhi.harvard.edu*.
+Signal Program on Human Security and Technology at the Harvard Humanitarian Initative, 2014. Accessed 5/15/2016.
+
 Trevi, Alexander. "[Atomic Gardens](http://pruned.blogspot.com/2011/04/atomic-gardens.html)". *Pruned.blogspot.com.* 4/20/2011. Accessed 5/14/2016.
+
+Venkataramanan, Madhumita. "[Space archaeologist discovers lost cities with satellite imagery](http://www.wired.co.uk/magazine/archive/2014/12/start/scanning-the-past)". *Wired.co.uk*, Wired Media, 11/14/2014. Accessed 5/15/2016.
+
 
 
 
