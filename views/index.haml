@@ -9,9 +9,8 @@
               %br
           .wow.fadeInUp.animated{"data-wow-delay"=>".6s"}
             = insert_content("landing_page")
-          %a.btn-lines.dark.light.wow.fadeInUp.animated.smooth-scroll.btn.btn-default.btn-green{"data-section" => "#works", "data-wow-delay" => ".9s", :href => "#works"} New York
-          %a.btn-lines.dark.light.wow.fadeInUp.animated.smooth-scroll.btn.btn-default.btn-green{"data-section" => "#works", "data-wow-delay" => ".9s", :href => "#works"} San Francisco
-          %a.btn-lines.dark.light.wow.fadeInUp.animated.smooth-scroll.btn.btn-default.btn-green{"data-section" => "#works", "data-wow-delay" => ".9s", :href => "#works"} Pittsburgh
+          - settings.city_names.each_with_index do |name, id|
+            %a.btn-lines.dark.light.wow.fadeInUp.animated.smooth-scroll.btn.btn-default.btn-green{"data-wow-delay" => ".9s", :href => subdomain_url(settings.city_urls[id])}= name
       .col-md-7
         .block.wow.fadeInUp{"data-wow-delay" => ".3s"}
           %img{:alt => "", :height => "100%", :src => "images/worldmap.svg", :width => "100%"}
