@@ -1,4 +1,4 @@
-## Technical Bibliography
+### Technical Bibliography
 
 *The following research projects and open-source codebases are specifically concerned with the application of 'deep-learning' techniques to satellite imagery. Several of these projects employ OpenStreetMap labels as training data, as we do.*
 

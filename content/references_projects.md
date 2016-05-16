@@ -1,4 +1,4 @@
-## Kindred Projects
+### Kindred Projects
 
 *The following projects and initiatives use satellite imagery, oftentimes in combination with various forms of computer vision, to track phenomena of interest in the built and natural world. Until recently, much of this work has been tuned for specific geospatial problems.*
 

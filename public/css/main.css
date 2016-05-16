@@ -1199,7 +1199,28 @@ article {
   line-height: 30px;
 }
 
+.references h3 {
+  font-weight: 600;
+  margin-bottom: 18px;
+  font-size: 22px;
+  line-height: 30px;
+}
+
 .faq hr {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.references {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.bibliography-section {
+  background: #f8f8f8;
+}
+
+.bibliography {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
