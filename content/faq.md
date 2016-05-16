@@ -2,24 +2,22 @@
 
 Terrapattern is a prototype that provides *similar-image search for satellite photos*—an open-source, open-ended tool for exploring the unmapped, and the unmappable. Click an interesting spot in a map of New York, San Francisco, or Pittsburgh, and Terrapattern will find other locations that look similar.
 
-* **YOU** click on a "feature of interest" in a satellite image;
-* **TERRAPATTERN** returns a batch of the most similar-looking places nearby.
-* **YOU** can then download a list of these locations in GeoJSON format.
+**YOU** click on a "feature of interest" in a satellite image.
+
+**TERRAPATTERN** returns a batch of the most similar-looking places nearby.
+
+**YOU** can then download a list of these locations in GeoJSON format.
 
 ---
+
 ### What can I use Terrapattern for? 
 
 The Terrapattern tool is ideal for locating specialized [nonbuilding structures](https://en.wikipedia.org/wiki/Nonbuilding_structure) and other forms of otherwise unremarkable [soft infrastructure](https://en.wikipedia.org/wiki/Soft_infrastructure) that aren't usually indicated on maps. For example, one of our friends is using it to find disused swimming pools—for [guerilla skateboarding](http://www.epictv.com/media/podcast/inside-californias-guerrilla-pool-skate-scene-%7C-pool-nation-ep-1/600243). 
 
-More generally, we hope you can help us understand how the Terrapattern project could useful to *you*! We especially invite citizen scientists, data journalists, humanitarian researchers, and other domain experts to tell us about how our app is, or could be, of use. For some of the case studies which inspired us, please see our [*about*](about.html) page. 
+More generally, we hope you can help us understand how the Terrapattern project could useful to *you*! We especially invite citizen scientists, data journalists, humanitarian researchers, and other domain experts to tell us about how our app is, or could be, of use. For some of the case studies which inspired us, please see our [**about**](about.html) page. 
 
 ---
-### Is this art? 
 
-Maybe. 
-
-
----
 ### How does it work? 
 
 Behind the scenes, Terrapattern's search is based on two tricks.
@@ -29,6 +27,7 @@ The first trick is a deep convolutional neural network (DCNN), using the [Incept
 Unfortunately, it can take a long time to search all the descriptions, so we have another trick. The [CoverTree](https://github.com/manzilzaheer/CoverTree) algorithm precomputes relationships between the descriptions, and this allows us do a search in just a second or two.
 
 ---
+
 ### The results I'm getting don't seem accurate. 
 
 Sure. Here are some reasons why that may be true: 
@@ -62,6 +61,13 @@ It's the scale we could afford. Storing the model data for each metro region req
 ### Why did you select the cities you did? 
 
 Most of our team members currently call Pittsburgh home. We additionally selected New York City and San Francisco because so many of our friends and peers live there—especially those exploring new intersections of art, design, journalism, technology, data science and social change.
+
+---
+
+### Is this art? 
+
+Maybe. 
+
 
 ---
 ### Who are you, and who funded this? 
