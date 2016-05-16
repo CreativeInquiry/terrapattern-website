@@ -1,33 +1,59 @@
 # About Terrapattern
 
+### A Prototype for Visual Query-by-Example in Satellite Imagery
+
 ---
+### Overview
+
+There has never been a more exciting time to observe human activity and understand the patterns of humanity’s impact on the world. We aim to help people discover such patterns in satellite imagery, with the help of deep learning machine vision techniques. **We present *Terrapattern*, an open-source prototype for discovering “patterns of interest” in unlabeled satellite imagery, with an open-ended, visual query-by-example interface.** Our tool is ideal for locating specialized nonbuilding structures and other forms of soft infrastructure that aren't usually indicated on maps. 
+
+---
+### Motivation and Intended Use
+
+It has been predicted that, within the next five years, access to daily-updated, whole-earth satellite imagery with sub-meter resolution will become widely available online. There will be many important stories about natural and human activities latent in this data. Without special effort, however, it is doubtful that this imagery will have annotation layers that make such stories discoverable.In light of this, the *Terrapattern* project is intended to provide users—such as journalists, citizen scientists, humanitarian agencies, social justice activists, archaeologists, urban planners, and other researchers—with the ability to easily search for visually consistent “patterns of interest”.  We are particularly keen to help people identify, characterize and track indicators which have not been detected or measured previously, and which have sociological, humanitarian, or scientific significance. 
+
+Our goal is to provide a geospatial software tool that makes it easy for interested domain experts, who may lack expertise in machine vision, to specify the thing that they are interested in; to automatically find more instances of that thing; and to have those instances reported in a common data format that allows for further study. 
+
+---
+### About the Prototype
+
+*Terrapattern* is a “panoptic perceptron” that allows a user to perform *queries-by-example* in satellite imagery. A user clicks on a “feature of interest” in a satellite image; the *Terrapattern* system returns a batch of the most similar-looking places nearby; the user can then download the list of these locations in GeoJSON format.
+
+We emphasize that *Terrapattern* is a **prototype**. As of May 2016, it allows users to search in the greater metropolitan regions of three American cities: New York City, San Francisco, and Pittsburgh (Allegheny County). Altogether more than 2,200 square miles (5700 km²) are fully searchable. Allowing high-resolution searches in an area the size of the United States (e.g. 3.8M mi² or 9.9M km²) is technically and financially beyond the scope of this project. 
+
+Technically, the Terrapattern tool uses a model convolutional neural network the Tensorflow
+
+Terrapattern has limitations 
 
 
-panoptic perceptron
+
 
 
 [//]: # (See slideshow code at http://www.w3schools.com/howto/howto_js_slideshow.asp)
 
-<img width="240" height="135" src="images/16x9_oil_tanks_orbital_insight.jpg" />
-<img width="240" height="135" src="images/16x9_tukul_detector_hhi.jpg" alt="Researchers can detect mass atrocities by identifying razed dwellings in South Sudan. Image credit: The Signal Program on Human Security and Technology at the Harvard Humanitarian Initiative" />
-<img width="240" height="135" src="images/16x9_illegal_logging_roads_maap.jpg" "Aerial view of illegal logging roads in the Amazon rainforest. Image credit:  Monitoring of the Andean Amazon Project" />
 
+ 
+
+---
+# Inspirations
+Previously, work of this kind has been highly bespoke, customized in idiosyncratic ways for specific problems by isolated teams.
+
+<img width="240" height="135" src="images/16x9_oil_tanks_orbital_insight.jpg" "Orbital Insight, Inc. measures the shadows on oil tanks with floating lids to estimate the size of a region's oil reserves. They then sell this information to hedge funds and other market speculators. Image credit: Orbital Insight." />
+<img width="240" height="135" src="images/16x9_tukul_detector_hhi.jpg" alt="Researchers can detect mass atrocities by identifying domestic dwellings, known as 'tukuls', that have been razed in South Sudan. Image credit: The Signal Program on Human Security and Technology at the Harvard Humanitarian Initiative." />
+<img width="240" height="135" src="images/16x9_illegal_logging_roads_maap.jpg" "Aerial view of illegal logging roads in the Amazon rainforest. Image credit:  Monitoring of the Andean Amazon Project." />
+<img width="240" height="135" src="images/16x9_illegal_gold_mine_aca.jpg" />
 <img width="240" height="135" src="images/16x9_penguin_poop_digitalglobe.jpg" alt="Satellite views of penguin poop can help track wildlife populations and their diet. Image credit: DigitalGlobe/BAS." />
 <img width="240" height="135" src="images/16x9_right_whales_fretwell.jpg" "Processed satellite images of southern right whales. Image credit: Peter Fretwell et al." />
 <img width="240" height="135" src="images/16x9_parcak_space_archaeology_nasa.jpg" alt="'Space archaeologist' Sarah Parcak has discovered ancient Egyptian pyramids using satellite imagery and computer vision. Image credit: NASA" />
 <img width="240" height="135" src="images/16x9_magnetic_deer_alignment_begall.png" alt="Examinations of cattle and deer from satellite images reveal that they align their body axes along the earth's magnetic field. Image credit: Begall et al." />
-<img width="240" height="135" src="images/16x9_ambrosia_lake_disposal_site_clui.jpg" alt="Aerial view of the Ambrosia Lake Uranium Disposal Site in New Mexico, a radioactive tailings pile. Image credit: Center for Land Use Interpretation (clui.org)" />
-<img width="240" height="135" src="images/16x9_gamma_garden_irb.jpg" alt="A 'gamma garden' at the Institute for Radiation Breeding in Ibaraki, Japan. Image credit: Google" />
-<img width="240" height="135" src="images/16x9_siberian_methane_blowhole_yanao.jpg" />
+
+DataKind roof
+
+
 
 
 first spotted by a helicopter pilot in 2013.
 In an ominous positive feedback loop, a recently discovered crater in the thawing Siberian permafrost is spewing methane, a potent greenhouse gas, into the atmosphere. Photo by Marya Zulinova, press service of the Governor, Yamal-Nenets Autonomous District (YaNAO).
-
-
-
-
-
 
 
 
@@ -54,65 +80,18 @@ in Africa.
 
 
 
-
----
-### Bibliography
-
-*The following projects and initiatives use satellite imagery, oftentimes in combination with machine learning and computer vision, to track phenomena of interest in the built and natural world.*
-
-Begall, Sabine et al. "[Magnetic alignment in grazing and resting cattle and deer](http://www.pnas.org/content/early/2008/08/22/0803650105)". *Proceedings of the National Academy of Sciences* 105, no. 36 (9/9/2008), pp. 13,451-13,455. DOI: 10.1073/pnas.0803650105
-
-Coolidge, Matthew and The Center for Land Use Interpretation. "[Land Use Database](http://clui.org/ludb/page/about-database)". *clui.org.* Accessed 5/14/2016. 
-
-Fretwell, Peter T., Staniland Iain J., and Forcada, Jaume. "[Whales from Space: Counting Southern Right Whales by Satellite](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088655)". *PLoS ONE* 9(2): e88655. doi:10.1371/journal.pone.0088655.
-
-Garling, Caleb."[Startup Promises Business Insights from Satellite Images](https://www.technologyreview.com/s/535866/startup-promises-business-insights-from-satellite-images/)". *TechnologyReview.com,* MIT Technology Review, 3/16/2015. Accessed 5/14/2016.
-
-Hogenboom, Melissa. "[Watching penguins, and their poo, from space](http://www.bbc.com/earth/story/20141210-surprising-use-of-penguin-poo)". *BBC.com*. 12/10/2014. Accessed 5/14/2016.
-
-Howard, Brian C. "[Tiny Team Uses Satellites to Bust Illegal Fishing Worldwide](http://news.nationalgeographic.com/2015/06/150615-skytruth-pirate-fishing-illegal-big-data-ocean-conservation/)". *NationalGeographic.com*, 6/15/2015. Accessed 5/14/2016.
-
-Howard, Brian C. "[New Theory Behind Dozens of Craters Found in Siberia](http://news.nationalgeographic.com/news/2015/02/150227-siberia-mystery-holes-craters-pingos-methane-hydrates-science/)". *news.nationalgeographic.com*, National Geographic Society, 2/27/2015. Accessed 5/14/2016.
-
-"[MAAP #18: Proliferation of Logging Roads in the Peruvian Amazon](http://maaproject.org/2015/maap18-logroads/)". *maaproject.org*, Monitoring of the Andean Amazon Project, 10/30/2015. Accessed 5/14/2016.
-
-"[MAAP #30: Gold Mining Invasion of Tambopata National Reserve Intensifies](http://maaproject.org/2016/invasion-tambopata-3/)". *maaproject.org*, Monitoring of the Andean Amazon Project, 4/12/2016. Accessed 5/15/2016.
-
-Pell, Richard W. and Allen, Lauren B. "[Preface to a Genealogy of the Postnatural](http://postnatural.org/filter/Intercalations-2/Preface-to-a-Genealogy-of-the-Postnatural)". In *Intercalations 2: Land & Animal & Non-Animal*, Edited by Anna-Sophie Springer & Etienne Turpin. K. Verlag and the Haus der Kulturen der Welt, Berlin. 2015.
-
-Raymond, Nathaniel A.; Vidan, Gili; and the staff of the Signal Program on Human Security and Technology at the Harvard Humanitarian Initiative (Isaac Baker, Ziad Achkar, Brittany Card, Benjamin Davies, and Steve Juntunen). "[Tents and Tukuls: Lessons from the Development of AMALGAM](http://thetechchallenge.org/tents-and-tukuls-lessons-from-the-development-of-amalgam-3/)". *thetechchallenge.org*, Mass Atrocity Prevention Tech Challenge, 12/10/2014. Accessed 5/15/2016.
-
-Raymond, Nathaniel A.; Card, Brittany L.; Baker, Isaac L.; and Al Achkar, Ziad. "[Satellite Imagery Interpretation Guide: Intentional Burning of Tukuls](http://hhi.harvard.edu/sites/default/files/publications/siig_ii_burned_tukuls_3.pdf)". *http://hhi.harvard.edu*.
-Signal Program on Human Security and Technology at the Harvard Humanitarian Initative, 2014. Accessed 5/15/2016.
-
-Trevi, Alexander. "[Atomic Gardens](http://pruned.blogspot.com/2011/04/atomic-gardens.html)". *Pruned.blogspot.com.* 4/20/2011. Accessed 5/14/2016.
-
-Venkataramanan, Madhumita. "[Space archaeologist discovers lost cities with satellite imagery](http://www.wired.co.uk/magazine/archive/2014/12/start/scanning-the-past)". *Wired.co.uk*, Wired Media, 11/14/2014. Accessed 5/15/2016.
+For our purposes, “interesting” patterns are anthropogenic and/or natural phenomena that are not only socially or scientifically meaningful, but also visually distinctive—thus lending themselves ideally to machine recognition. Examples could include problems like monitoring elephant herds, counting Siberian methane blowholes, identifying destroyed homes, measuring reservoir loss, or tracing the paths of the logging roads that precede deforestation. Many other patterns await discovery.
+ Whether these patterns concern elephants, parking lots, logging roads, oil tanks, swimming pools, construction sites, munitions craters, methane blowholes, or other phenomena, we cannot predict: it is only important that the patterns of interest are visually consistent enough for algorithmic detection and analysis.
 
 
 
+[Orbital Insight](https://orbitalinsight.com/) (2014-), a company which applies machine learning algorithms to satellite imagery, in order to sell "actionable intelligence" (such as big-box store retail performance, or measurements of oil reserves) to hedge funds.
 
-
-
-
-
-
-
----
-### What's the basic idea? 
-
-Terrapattern is a prototype tool that provides open-ended, *visual query-by-example for satellite imagery*. 
-
-* **YOU** click on a "feature of interest" in a satellite image;
-* **TERRAPATTERN** returns a batch of the most similar-looking places nearby.
-* **YOU** can then download a list of these locations in GeoJSON format.
 
 ---
 ### What can you use Terrapattern for? 
 
-The Terrapattern tool is ideal for locating specialized [nonbuilding structures](https://en.wikipedia.org/wiki/Nonbuilding_structure) and other forms of otherwise unremarkable [soft infrastructure](https://en.wikipedia.org/wiki/Soft_infrastructure) that aren't usually indicated on maps. For example, one of our friends is using it to find disused swimming pools—for [guerilla skateboarding](http://www.epictv.com/media/podcast/inside-californias-guerrilla-pool-skate-scene-%7C-pool-nation-ep-1/600243). 
 
-More generally, we hope you can help us understand how the Terrapattern project could useful to *you*! We especially invite citizen scientists, data journalists, humanitarian researchers, and other domain experts to tell us about how our app is, or could be, of use. For some of the case studies which inspired us, please see our [*about*](about.html) page. 
 
 ---
 ### The results I'm getting don't seem accurate. 
@@ -133,16 +112,7 @@ We'd love to hear your stories and feedback! If you discover something interesti
 ---
 ### Who else is creating similar systems? 
 
-We suspect that most of the big players in the space of satellite imaging, such as Google, Microsoft, Digital Globe, Planet Labs, and others are exploring the opportunities afforded by machine learning—particularly in light of recent and significant advances in convolutional neural networks and other deep learning techniques. Some key related papers and projects are:
-
-* [Learning to Detect Roads in High-Resolution Aerial
-Images](http://www.cs.toronto.edu/~fritz/absps/road_detection.pdf) by Volodymyr Mnih and Geoffrey E. Hinton (2010), a seminal paper in the application of machine learning to the problem of making assertions about satellite imagery.  
-* [Machine Learning for Aerial Image Labeling](https://www.cs.toronto.edu/~vmnih/docs/Mnih_Volodymyr_PhD_Thesis.pdf), Volodymyr Mnih's 2013 doctoral thesis from the University of Toronto, under the advisement of Geoff Hinton. 
-* [Humanitarian Mapping with Deep Learning](https://github.com/larsroemheld/OSM-HOT-ConvNet) by Stanford graduate student, Lars Roemheld (2016). Like the *Terrapattern* project, this project uses OpenStreetMap (OSM) to help train a neural net, in order to help support map creation in the developing world.
-* [OSM-Crosswalk-Detection](https://github.com/geometalab/OSM-Crosswalk-Detection) by Marcel Huber (2015). Developed at the University of Applied Sciences Rapperswil, this project again trains deep learning models with OSM labels to locate Swiss crosswalks.
-* [DeepOSM](https://github.com/trailbehind/DeepOSM) (2016), by Andrew L. Johnson, trains a neural network with OSM labels and infrared images from the U.S. National Agriculture Imagery Program (NAIP), in order to detect unmapped hiking trails.
-* [Orbital Insight](https://orbitalinsight.com/) (2014-), a company which applies machine learning algorithms to satellite imagery, in order to sell "actionable intelligence" (such as big-box store retail performance, or measurements of oil reserves) to hedge funds.
-* Artist [Jenny Odell](http://www.jennyodell.com/satellite.html), in her *Satellite Collections* project (2009-2011), presents collections of similar-looking things that she has cut out from Google satellite imagery.
+We suspect that most of the big players in the space of satellite imaging, such as Google, Microsoft, Digital Globe, Planet Labs, and others are exploring the opportunities afforded by machine learning—particularly in light of recent and significant advances in convolutional neural networks and other deep learning techniques. Some key related papers and projects 
 
 One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for user-defined ("out-of-set") categories. By contrast, most of the systems listed above are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. For more information, please see our [*about*](about.html) page. 
 

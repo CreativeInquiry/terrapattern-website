@@ -50,18 +50,9 @@ It's the scale we could afford. Storing the model data for each metro region req
 Most of our team members currently call Pittsburgh home. We additionally selected New York City and San Francisco because so many of our friends and peers live there—especially those exploring new intersections of art, design, journalism, technology, data science and social change.
 
 ---
-### Who else is creating similar systems? 
+### How is this project different from related work? 
 
-We suspect that most of the big players in the space of satellite imaging, such as Google, Microsoft, Digital Globe, Planet Labs, and others are exploring the opportunities afforded by machine learning—particularly in light of recent and significant advances in convolutional neural networks and other deep learning techniques. Some key related papers and projects are:
-
-* [Learning to Detect Roads in High-Resolution Aerial
-Images](http://www.cs.toronto.edu/~fritz/absps/road_detection.pdf) by Volodymyr Mnih and Geoffrey E. Hinton (2010), a seminal paper in the application of machine learning to the problem of making assertions about satellite imagery.  
-* [Machine Learning for Aerial Image Labeling](https://www.cs.toronto.edu/~vmnih/docs/Mnih_Volodymyr_PhD_Thesis.pdf), Volodymyr Mnih's 2013 doctoral thesis from the University of Toronto, under the advisement of Geoff Hinton. 
-* [Humanitarian Mapping with Deep Learning](https://github.com/larsroemheld/OSM-HOT-ConvNet) by Stanford graduate student, Lars Roemheld (2016). Like the *Terrapattern* project, this project uses OpenStreetMap (OSM) to help train a neural net, in order to help support map creation in the developing world.
-* [OSM-Crosswalk-Detection](https://github.com/geometalab/OSM-Crosswalk-Detection) by Marcel Huber (2015). Developed at the University of Applied Sciences Rapperswil, this project again trains deep learning models with OSM labels to locate Swiss crosswalks.
-* [DeepOSM](https://github.com/trailbehind/DeepOSM) (2016), by Andrew L. Johnson, trains a neural network with OSM labels and infrared images from the U.S. National Agriculture Imagery Program (NAIP), in order to detect unmapped hiking trails.
-* [Orbital Insight](https://orbitalinsight.com/) (2014-), a company which applies machine learning algorithms to satellite imagery, in order to sell "actionable intelligence" (such as big-box store retail performance, or measurements of oil reserves) to hedge funds.
-* Artist [Jenny Odell](http://www.jennyodell.com/satellite.html), in her *Satellite Collections* project (2009-2011), presents collections of similar-looking things that she has cut out from Google satellite imagery.
+We suspect that most of the big players in the space of satellite imaging, such as Google, Microsoft, Digital Globe, Planet Labs, and others are exploring the opportunities afforded by machine learning—particularly in light of recent and significant advances in convolutional neural networks and other deep learning techniques. 
 
 One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for user-defined ("out-of-set") categories. By contrast, most of the systems listed above are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. For more information, please see our [*about*](about.html) page. 
 
@@ -73,14 +64,14 @@ We're a group of new-media artists, creative technologists, and students who are
 ---
 ### What data do you collect from this site's visitors? 
 
-*This statement constitutes our privacy policy.* We are strongly committed to protecting the privacy and anonymity of the visitors to this site. We do not collect or share personal information, and we don't track or profile you. The IP address that is associated with your search(es) is not recorded or shared, and this web site does not use tracking or identifying cookies. Other than our optional [visitor feedback survey](http://goo.gl/forms/8T7zY28nHm), we do not collect or log any user data. Your search information is not stored, and cannot be linked back to you. 
+*The following statement constitutes our privacy policy:* We are strongly committed to protecting the privacy and anonymity of the visitors to this site. We do not collect or share personal information, and we don't track or profile you. The IP address that is associated with your search(es) is not recorded or shared, and this web site does not use tracking or identifying cookies. Other than our optional [visitor feedback survey](http://goo.gl/forms/8T7zY28nHm), we do not collect or log any user data. Your search information is not stored, and cannot be linked back to you. 
 
 --- 
-### How can I cite this work? 
+### How should I cite this project? 
 
-Levin, G., Newbury, D., McDonald, K., Alvarado, I., Tiwari, A., & Zaheer, M. "Terrapattern: Open-Ended, Visual Query-By-Example for Satellite Imagery using Deep Learning", May 2016. [http://terrapattern.com](http://terrapattern.com).
+Levin, G., Newbury, D., McDonald, K., Alvarado, I., Tiwari, A., and Zaheer, M. "Terrapattern: Open-Ended, Visual Query-By-Example for Satellite Imagery using Deep Learning", May 2016. [http://terrapattern.com](http://terrapattern.com).
 
 ---
-### My question's not addressed here!
+### My question is not addressed here!
 
 *We'd love to help. Please feel free to get in touch with us via email at [contact@terrapattern.com](mailto:contact@terrapattern.com), or connect with lead investigator [@golan](https://twitter.com/golan) on Twitter.*
