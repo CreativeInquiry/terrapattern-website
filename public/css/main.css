@@ -1226,20 +1226,27 @@ article {
 
 /* ABOUT */ 
 
-.about-1-overview, .about-2-examples, .about-3-motivation, .about-4-prototype, .about-5-inspirations, .about-6-how  {
+.about  {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.about-2-examples, .about-5-inspirations {
+.about-grey {
   background: #f8f8f8;
 }
 
-.about-3-motivation, .about-6-how {
+.about-blue {
   background: #3887be;
   color: white;
 }
 
-.about-3-motivation p, .about-6-how p {
+.about-blue p {
   color: white;
+}
+
+/* INTRO PAGE */
+
+#landing-page-2 {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
