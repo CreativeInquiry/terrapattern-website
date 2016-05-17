@@ -16,7 +16,7 @@ cities:
 
   - name: San Francisco
     url_name: sf
-    search_locale: "SanFrancisco"    # this is the search server's name for the region
+    search_locale: "San_Fran"    # this is the search server's name for the region
     primary_color:   "#c41230"
     secondary_color: "#fdbf57"
     center:
@@ -30,7 +30,7 @@ cities:
     geojson: "data/sf.json"      # The relative path for the geojson boundary of the object
   
   - name: New York City
-    search_locale: "NewYork"    # this is the search server's name for the region
+    search_locale: "New_York"    # this is the search server's name for the region
     url_name: nyc
     primary_color:   "#003884"
     secondary_color: "#ff6600"

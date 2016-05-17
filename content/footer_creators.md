@@ -1,8 +1,8 @@
 ### Created By
 
 * [Golan Levin](http://flong.com)
-* [Kyle McDonald](http://kylemcdonald.net)
 * [David Newbury](http://www.workergnome.com) 
+* [Kyle McDonald](http://kylemcdonald.net)
 
 #### With Help From
 
