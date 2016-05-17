@@ -4,8 +4,12 @@
 * [ ] Fix the searching on doubleclick bug
 * [ ] Add a loading message/screen
 * [ ] Fix the rounding error in the URL
+<<<<<<< Updated upstream
 * [ ] Make the tiles highlight on dot hover
 * [ ] Write export script
+=======
+* [ ] Create contact@terrapattern.com email address; bump to GL & DN
+>>>>>>> Stashed changes
 
 ## Irene's TODOS
 
