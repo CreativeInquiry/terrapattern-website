@@ -20,8 +20,8 @@ cities:
     primary_color:   "#c41230"
     secondary_color: "#fdbf57"
     center:
-      lat: 37.8002882
-      lng: -122.399558
+      lat: 37.8008602
+      lng: -122.4008237
     bounding_box:
       sw_lat: 37.41969024129289
       sw_lng: -122.56951903458685
@@ -43,43 +43,5 @@ cities:
       ne_lat: 40.917577
       ne_lng: -73.700272
     geojson: "data/nyc.json"      # The relative pat
-
-  # - name: Detroit 
-  #   url_name: detroit
-  #   search_locale:   "Detroit"
-  #   primary_color:   "#104489"
-  #   secondary_color: "#818b94"
-  #   center:
-  #     lng: -83.021703
-  #     lat: 42.3585504
-  #   bounding_box: 
-  #     sw_lat: 42.255459
-  #     sw_lng: -83.287697
-  #     ne_lat: 42.450241
-  #     ne_lng: -82.910507
-  #   geojson: "data/detroit.json"      # The relative path for the geojson boundary of the object
-
-  # - name: Berlin
-  #   url_name: berlin
-  #   primary_color:   "#E2382A"
-  #   secondary_color: "#000000"
-
-  # - name: Belgrade
-  #   url_name: belgrade
-  #   primary_color:   "#002079"
-  #   secondary_color: "#C3010D"
-  #   bounding_box: 
-  #     sw_lat: 40.853779
-  #     sw_lng: 13.37508
-  #     ne_lat: 46.876652
-  #     ne_lng: 23.038071
-  
-
-
-
-  # - name: London
-  #   url_name: london
-  #   primary_color:   "#cf142b"
-  #   secondary_color: "#00247d"
 
   

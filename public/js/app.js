@@ -641,6 +641,9 @@ var terrapatternMap = (function(){
     $("#results_grid").on("click", ".location_tile", function(){
       gotoPin($(this).data("original-id"));
     });
+
+    handlePopState(null);
+
   }
 
   function resetUI() {
