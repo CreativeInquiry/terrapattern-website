@@ -40,13 +40,13 @@ of the interface.
 -----------------------------------------------------------------------------*/
 
 // Color Palette
-var FRAME_COLOR = "#a0a391";                       // Color of the graph backgrounds
-var AXIS_COLOR = "#5c735d";                        // Color of the graph elements
+var FRAME_COLOR = "#b2bdb3";                       // Color of the graph backgrounds
+var AXIS_COLOR = "#efefec";                        // Color of the graph elements
 var SELECTED_COLOR = "#3887be";                       // Color of the current dot/pin
 var PRIMARY_TILE_COLOR = "#2ecc71";              // Color of the searched-for dot/pin
 var DEFAULT_TILE_COLOR = "rgba(255,255,255,0.5)";  // Color of a normal dot/pin
 var HOVERED_TILE_COLOR = "rgba(255,255,255,1)";    // Color of a hovered-over dot/pin
-var VIEWPORT_BOX_COLOR = "rgba(255,255,255,0.25)"; // Color of the viewport box
+var VIEWPORT_BOX_COLOR = "rgba(255,255,255,0.75)"; // Color of the viewport box
 
 // Magic Numbers
 var SMALL_RADIUS = 4;             // Size of a normal dot (in pixels)
@@ -254,7 +254,7 @@ var p5Map = function(p) {
     p.push();
     p.translate(minmapFrameLeft,minmapFrameTop);
     p.noStroke();
-    p.fill(FRAME_COLOR);
+    p.fill(AXIS_COLOR);
     p.rect(0,0,minmapFrameWidth,minmapFrameHeight);
     p.pop();
 
@@ -264,7 +264,7 @@ var p5Map = function(p) {
     // Actually draw the minmap border
     var pos;
     p.noStroke();
-    p.fill(AXIS_COLOR);
+    p.fill(FRAME_COLOR);
     p.beginShape();
     BOUNDARY.geometry.coordinates[1].forEach(function(point){
       pos = getPointfromLatLng(point[1],point[0]);
@@ -797,3 +797,5 @@ var sheet = (function() {
 
 sheet.insertRule(".location_tile.selected { border-color: "+ SELECTED_COLOR +" }",0);
 sheet.insertRule(".location_tile.original { border-color: "+ PRIMARY_TILE_COLOR +" }",0);
+sheet.insertRule("#results_grid { background-color: "+ AXIS_COLOR +" }",0);
+
