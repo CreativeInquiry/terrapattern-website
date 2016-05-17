@@ -5,6 +5,7 @@
 * [ ] Add a loading message/screen
 * [ ] Fix the rounding error in the URL
 * [ ] Make the tiles highlight on dot hover
+* [ ] Write export script
 
 ## Irene's TODOS
 
@@ -12,9 +13,16 @@
 * [ ] Add secondary section for homepage.
 * [ ] discuss footer on the homepage
 * [ ] Make Favicon
-* [ ] Reduce Team Photos
 * [ ] Tweak Interface Colors
+* [ ] Add survey link to CTA on interface
 * [ ] Add license stuff
+
+## Golan's Todos: 
+* [ ] Create CC BY SA for footer; Acknowledge google
+* [ ] Rate limit GOOGle map searches.
+
+
+---
 
 ## Feature Requests
 
@@ -47,11 +55,4 @@
 * [football stadium logos](http://pgh.terrapattern.com/?lat=40.443062&lng=-79.94004849999999) 
 * [transformer stations](http://pgh.terrapattern.com/?lat=40.465007&lng=-80.0471425)
 * [school bus depots](http://pgh.terrapattern.com/?lat=40.461872&lng=-79.77872100000002)
-
-Golan TODO: 
-* Create CC BY SA for footer; Acknowledge google
-* Rate limit GOOGle map searches.
-
-
-
 

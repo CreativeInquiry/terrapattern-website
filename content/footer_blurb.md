@@ -1,4 +1,4 @@
-### TERRAPATTERN
+#### TERRAPATTERN
 
 **Enabling citizen scientists, journalists, and other researchers to detect “patterns of interest” in satellite imagery through an open-source search tool.**
 
