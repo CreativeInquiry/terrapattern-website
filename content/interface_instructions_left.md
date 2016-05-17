@@ -1,1 +1,1 @@
-Left Instructions Go Here.
+Click on a feature of interest in the map below. Terrapattern will find the places in this metro region that look the most similar.
