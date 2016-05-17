@@ -1223,3 +1223,23 @@ article {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+/* ABOUT */ 
+
+.about-1-overview, .about-2-examples, .about-3-motivation, .about-4-prototype, .about-5-inspirations, .about-6-how  {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about-2-examples, .about-5-inspirations {
+  background: #f8f8f8;
+}
+
+.about-3-motivation, .about-6-how {
+  background: #3887be;
+  color: white;
+}
+
+.about-3-motivation p, .about-6-how p {
+  color: white;
+}
