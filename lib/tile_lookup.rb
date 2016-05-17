@@ -5,22 +5,6 @@ require 'json'
 class TileLookup
 
   def initialize
-    # raw_data = CSV.read("data/points.csv", headers: true)
-    # @lats = []
-    # @lngs = []
-
-    # raw_data.each do |val|
-    #   @lats.push val[0].to_f
-    #   @lngs.push val[1].to_f
-    # end
-    # @lats.uniq!
-    # @lats.sort!
-    # @lngs.uniq!
-    # @lngs.sort!
-
-    # File.open("data/lat_lngs.json", "w") do |f|
-    #   f.puts ({lat: @lats, lng: @lngs}).to_json
-    # end
 
     data = JSON.parse(File.read("data/lat_lngs.json"))
 
@@ -37,8 +21,8 @@ class TileLookup
   end
 
 
-  def id_to_coords(filename)
-    filename.split("_")[1..2].collect{|a| a.to_f}
+  def id_to_coords(filename,loc)
+    filename.gsub("#{loc}_","").split("_")[0..1].collect{|a| a.to_f}
   end
 
 
@@ -77,7 +61,7 @@ class TileLookup
     processed_data = data["matches"].collect do |point|
       {
        filename: point["filename"],
-       coords: id_to_coords(point["filename"]),
+       coords: id_to_coords(point["filename"],location),
        tsne: point["tsne_pos"]} 
     end
     create_geojson processed_data
