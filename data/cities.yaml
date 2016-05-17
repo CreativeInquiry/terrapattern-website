@@ -35,8 +35,8 @@ cities:
     primary_color:   "#003884"
     secondary_color: "#ff6600"
     center:
-      lng: -73.9675438
-      lat: 40.7828687
+      lng: -73.9837883
+      lat: 40.7535342
     bounding_box: 
       sw_lat: 40.477399
       sw_lng: -74.25909
