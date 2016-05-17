@@ -704,6 +704,27 @@ var terrapatternMap = (function(){
     $("#results_grid").on("mouseout", ".location_tile", function(){
       hoveredTile = null;
     });
+    $("#export").on("click", function(e) {
+      e.preventDefault();
+      if (rawGeoJson) {
+        // The rest of this code assumes you are not using a library.
+        // It can be made less wordy if you use one.
+        var form = document.createElement("form");
+        form.setAttribute("method", "post");
+        form.setAttribute("action", "/download");
+
+        var hiddenField = document.createElement("input");
+        hiddenField.setAttribute("type", "hidden");
+        hiddenField.setAttribute("name", "geojson");
+        hiddenField.setAttribute("value", JSON.stringify(rawGeoJson));
+
+        form.appendChild(hiddenField);
+
+        document.body.appendChild(form);
+        form.submit();
+      }
+    })
+
 
     handlePopState(null);
 
@@ -799,7 +820,7 @@ var sheet = (function() {
   return style.sheet;
 })();
 
+
 sheet.insertRule(".location_tile.selected { border-color: "+ SELECTED_COLOR +" }",0);
 sheet.insertRule(".location_tile.original { border-color: "+ PRIMARY_TILE_COLOR +" }",0);
 sheet.insertRule("#results_grid { background-color: "+ AXIS_COLOR +" }",0);
-
