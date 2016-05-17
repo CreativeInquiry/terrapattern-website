@@ -13,6 +13,7 @@
 * [ ] Make Favicon
 * [ ] Reduce Team Photos
 * [ ] Tweak Interface Colors
+* [ ] Add license stuff
 
 ## Feature Requests
 

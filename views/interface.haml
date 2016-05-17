@@ -51,24 +51,22 @@
         .block
           .row
             .col-md-12
-          .row
-            .col-md-12
-              %input#search_box.controls.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms", type:"text", placeholder: "Search for a location in #{@city_data["name"]}"}
-              #main-map.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}
+              %input#search_box.controls{type:"text", placeholder: "Search for a location in #{@city_data["name"]}"}
+              #main-map
                 #map
       .col-md-5
         .block
           .row
             .col-md-6
-              %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"} Minmap
+              %h4 Geographical Plot
             .col-md-6
-              %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}Relevance Plot
+              %h4 Relevance Plot
           .row
             .col-md-12
               #mini_displays
           .row
             .col-md-12
-              %h2.wow.fadeInUp.animated{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"}Search Results
+              %h4 Search Results
           .row
             .col-md-12  
               #results_grid

@@ -63,7 +63,7 @@ class TileLookup
 
     obj = {lat: tile_lat, lng: tile_lng, id: id, base_lat: lat, base_lng: lng}
 
-    uri = "#{ENV["SEARCH_SERVER"]}/?filename=#{id}&limit=#{limit}"
+    uri = "#{ENV["SEARCH_SERVER"]}/?filename=#{id}&limit=#{limit}&level=#{zoom}"
     puts "Searching for #{uri}"
     results = Typhoeus.get(uri)
     data = JSON.parse(results.body)

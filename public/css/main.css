@@ -589,12 +589,11 @@ ul.social-icons li {
 .global-page-header {
   background-attachment: fixed;
   background-size: cover;
-  padding: 40px 0 60px 0;
+  padding: 30px 0 30px 0;
   position: relative;
-  /*background: white;*/
   background: #3887be;
   color: white;
-  /*border-bottom: 1px solid rgba(0,0,0,0.10);*/
+  border-bottom: 1px solid rgba(0,0,0,0.10);
 }
 .global-page-header h2 {
   /*font-size: 42px;
@@ -779,8 +778,8 @@ ul.social-icons li {
   color: #fff;
 }
 .service-page {
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .service-page .service-parts .block {
   margin-bottom: 40px;

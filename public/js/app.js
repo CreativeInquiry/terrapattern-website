@@ -40,10 +40,10 @@ of the interface.
 -----------------------------------------------------------------------------*/
 
 // Color Palette
-var FRAME_COLOR = "#808080";                       // Color of the graph backgrounds
-var AXIS_COLOR = "#909090";                        // Color of the graph elements
-var SELECTED_COLOR = "blue";                       // Color of the current dot/pin
-var PRIMARY_TILE_COLOR = "goldenrod";              // Color of the searched-for dot/pin
+var FRAME_COLOR = "#a0a391";                       // Color of the graph backgrounds
+var AXIS_COLOR = "#5c735d";                        // Color of the graph elements
+var SELECTED_COLOR = "#3887be";                       // Color of the current dot/pin
+var PRIMARY_TILE_COLOR = "#2ecc71";              // Color of the searched-for dot/pin
 var DEFAULT_TILE_COLOR = "rgba(255,255,255,0.5)";  // Color of a normal dot/pin
 var HOVERED_TILE_COLOR = "rgba(255,255,255,1)";    // Color of a hovered-over dot/pin
 var VIEWPORT_BOX_COLOR = "rgba(255,255,255,0.25)"; // Color of the viewport box
@@ -52,8 +52,8 @@ var VIEWPORT_BOX_COLOR = "rgba(255,255,255,0.25)"; // Color of the viewport box
 var SMALL_RADIUS = 4;             // Size of a normal dot (in pixels)
 var MEDIUM_RADIUS = 6;            // Size of a hovered dot (in pixels)
 var LARGE_RADIUS = 10;            // Size of a selected dot (in pixels)
-var GUTTER = 10;                  // Border between the two graphs (in pixels)
-var THUMBNAILS_PER_PAGE = 4 * 6;    // The number of tile results to show per-page
+var GUTTER = 32;                  // Border between the two graphs (in pixels)
+var THUMBNAILS_PER_PAGE = 4 * 6;  // The number of tile results to show per-page
 
 
 /*-----------------------------------------------------------------------------
@@ -96,15 +96,47 @@ var p5Map = function(p) {
     recalulateCanvasSize();
   };
 
+
+
+
   p.draw = function() {
+    closestDot = null;
+
     var pins = terrapatternMap.getPins();
     var currentPin = terrapatternMap.getCurrentPin();
 
     p.clear();
-    drawTsne(pins,currentPin);
-    drawMinmap(pins,currentPin);
+    var tsneDots = updateTsne(pins,currentPin);
+    var minmapDots = updateMinmap(pins, currentPin);
+    if (closestDot) {
+      addClosest(tsneDots);
+      addClosest(minmapDots);
+    }
+    drawTsne(tsneDots);
+    drawMinmap(minmapDots);
+    if (pins) {
+      minmapDots.forEach(function(dot) {
+        if (dot.isHovered || dot.isFirst || dot.isSelected) {
+          drawDot(dot);
+        }
+      })
+      tsneDots.forEach(function(dot) {
+        if (dot.isHovered || dot.isFirst || dot.isSelected) {
+          drawDot(dot);
+        }
+      })
+    }
   };
 
+
+  function addClosest(dots) {
+    dots.forEach(function(dot) {
+      if (dot.id == closestDot.id) {
+        dot.isHovered = true;
+      }
+    });
+  }
+ 
 
   //-----------------------------------------------------------------
   // p5 Event Handlers
@@ -124,26 +156,13 @@ var p5Map = function(p) {
   //-----------------------------------------------------------------
   // Drawing Functions
   //-----------------------------------------------------------------
-  function drawTsne(pins, currentPin) {
-
-    // draw the background
-    p.push();
-    p.translate(tsneFrameLeft,tsneFrameTop);
-    var pinCoordinate, pinX, pinY;
-    var tsneDots = [];
-
-    p.noStroke();
-    p.fill(FRAME_COLOR);
-    p.rect(0,0,tsneFrameWidth,tsneFrameHeight);
-
-    p.stroke(AXIS_COLOR);
-    p.line(2,tsneFrameHeight/2,tsneFrameWidth-2,tsneFrameHeight/2);
-    p.line(tsneFrameWidth/2,2,tsneFrameWidth/2,tsneFrameHeight-2);
-    p.noStroke();
-    p.pop();
+  function updateTsne(pins, currentPin) {
 
     // stop drawing unless there are pins
     if (pins == undefined) { return;}
+
+    var pinCoordinate, pinX, pinY;
+    var tsneDots = [];
 
     // build pin list
     pins.forEach(function(pin, index) {
@@ -163,16 +182,73 @@ var p5Map = function(p) {
           closestDot = obj;
         }
       }
+      else if (terrapatternMap.hoveredTile && obj.id == terrapatternMap.hoveredTile) {
+          closestDot = obj;
+      }
       tsneDots.push(obj);
     });
+    return tsneDots;
+  }
+
+  function drawTsne(tsneDots) {
+
+    // draw the background
+    p.push();
+    p.translate(tsneFrameLeft,tsneFrameTop);
+
+    p.noStroke();
+    p.fill(FRAME_COLOR);
+    p.rect(0,0,tsneFrameWidth,tsneFrameHeight);
+
+    p.stroke(AXIS_COLOR);
+    p.line(2,tsneFrameHeight/2,tsneFrameWidth-2,tsneFrameHeight/2);
+    p.line(tsneFrameWidth/2,2,tsneFrameWidth/2,tsneFrameHeight-2);
+    p.noStroke();
+    p.pop();
 
     //draw the pins
     p.noStroke();
-    tsneDots.forEach(drawDot);
+    if(tsneDots) {
+      tsneDots.forEach(drawDot);
+    }
   }
 
     //-----------------------------------------------------------------
-  function drawMinmap(pins, currentPin) {
+  
+  function updateMinmap(pins, currentPin) {
+    // stop drawing unless there are pins
+    if (pins == undefined) { return;}
+
+    // build pin list
+    var pinCoordinates, pinXY;
+    var minmapDots = [];
+    pins.forEach(function(pin, index) {
+      pinCoordinates = pin.getGeometry().get();
+      pinXY = getPointfromLatLng(pinCoordinates.lat(),pinCoordinates.lng());
+      var obj = {};
+      obj.x = pinXY.x;
+      obj.y = pinXY.y;
+      obj.isFirst = (index == 0);
+      obj.id = pin.getId();
+      obj.isSelected = (currentPin == obj.id);
+
+      if (mouseInMinmapBounds()) {
+        if (obj.isFirst) {
+          closestDot = obj;
+        }
+        else if (p.dist(p.mouseX, p.mouseY, obj.x, obj.y) < p.dist(p.mouseX, p.mouseY, closestDot.x, closestDot.y)) {
+          closestDot = obj;
+        }
+      } else if (terrapatternMap.hoveredTile()) {
+          if  (obj.id == terrapatternMap.hoveredTile()){
+            closestDot = obj;
+          }
+      }
+      minmapDots.push(obj);
+    });
+    return minmapDots;
+  }
+  function drawMinmap(minmapDots) {
 
     // draw the background
     p.push();
@@ -213,38 +289,13 @@ var p5Map = function(p) {
       p2.y = minmapFrameTop + minmapFrameHeight;
     }
     p.rect(p2.x,p1.y,Math.abs(p2.x-p1.x),Math.abs(p2.y-p1.y));
-
-
-    // stop drawing unless there are pins
-    if (pins == undefined) { return;}
-
-    // build pin list
-    var pinCoordinates, pinXY;
-    var minmapDots = [];
-    pins.forEach(function(pin, index) {
-      pinCoordinates = pin.getGeometry().get();
-      pinXY = getPointfromLatLng(pinCoordinates.lat(),pinCoordinates.lng());
-      var obj = {};
-      obj.x = pinXY.x;
-      obj.y = pinXY.y;
-      obj.isFirst = (index == 0);
-      obj.id = pin.getId();
-      obj.isSelected = (currentPin == obj.id);
-
-      if (mouseInMinmapBounds()) {
-        if (obj.isFirst) {
-          closestDot = obj;
-        }
-        else if (p.dist(p.mouseX, p.mouseY, obj.x, obj.y) < p.dist(p.mouseX, p.mouseY, closestDot.x, closestDot.y)) {
-          closestDot = obj;
-        }
-      }
-      minmapDots.push(obj);
-    });
+    
 
     //draw the pins
     p.noStroke();
-    minmapDots.forEach(drawDot);
+    if(minmapDots) {
+      minmapDots.forEach(drawDot);
+    }
   }
 
 
@@ -266,9 +317,10 @@ var p5Map = function(p) {
 
   //-----------------------------------------------------------------
   function drawDot(dot){
+    p.noStroke();
     p.fill(DEFAULT_TILE_COLOR);
     var radius = SMALL_RADIUS;
-    if (dot == closestDot) {
+    if (dot.isHovered) {
       p.fill(HOVERED_TILE_COLOR);
     }
     if (dot.isFirst) {
@@ -280,7 +332,7 @@ var p5Map = function(p) {
      radius = MEDIUM_RADIUS;
     }
     // always make the hovered dot bigger
-    if (dot == closestDot) {
+    if (dot.isHovered) {
       radius = LARGE_RADIUS;
     }
     p.ellipse(dot.x,dot.y,radius,radius);
@@ -289,7 +341,7 @@ var p5Map = function(p) {
   //-----------------------------------------------------------------
   function recalulateCanvasSize() {
     var availableWidth = $('#mini_displays').width();
-    var mapRatio = $('#main-map').height() / $('#main-map').width();
+    var mapRatio = 1;//$('#main-map').height() / $('#main-map').width();
     var desiredHeight = ((availableWidth-GUTTER)/2)*mapRatio;
 
     p.resizeCanvas(availableWidth,desiredHeight);
@@ -297,7 +349,7 @@ var p5Map = function(p) {
     tsneFrameWidth    = p.width/2-GUTTER/2;
     tsneFrameHeight   = p.height;
     tsneFrameTop      = 0;
-    tsneFrameLeft     = p.width/2+GUTTER;
+    tsneFrameLeft     = p.width/2+GUTTER/2;
 
     minmapFrameWidth  = p.width/2-GUTTER/2;
     minmapFrameHeight = p.height;
@@ -421,6 +473,7 @@ var terrapatternMap = (function(){
   var searchBox;
   var rawGeoJson;
   var lastSelected;
+  var hoveredTile;
 
   //-----------------------------------------------------------------
   function getCurrentTileBounds(lat,lng) {
@@ -641,6 +694,12 @@ var terrapatternMap = (function(){
     $("#results_grid").on("click", ".location_tile", function(){
       gotoPin($(this).data("original-id"));
     });
+    $("#results_grid").on("mouseover", ".location_tile", function(){
+      hoveredTile = $(this).data("original-id");
+    });
+    $("#results_grid").on("mouseout", ".location_tile", function(){
+      hoveredTile = null;
+    });
 
     handlePopState(null);
 
@@ -715,7 +774,8 @@ var terrapatternMap = (function(){
     getPins:       function() {return pins;},
     getCurrentPin: function() {return lastSelected;},
     getProjection: function() {return map.getProjection();},
-    getBounds:     function() {return map.getBounds();}
+    getBounds:     function() {return map.getBounds();},
+    hoveredTile:    function() {return hoveredTile;}
   };
 }());
 
