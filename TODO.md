@@ -7,6 +7,7 @@
 <<<<<<< Updated upstream
 * [ ] Make the tiles highlight on dot hover
 * [ ] Write export script
+
 =======
 * [ ] Create contact@terrapattern.com email address; bump to GL & DN
 >>>>>>> Stashed changes
@@ -20,6 +21,7 @@
 * [ ] Tweak Interface Colors
 * [ ] Add survey link to CTA on interface
 * [ ] Add license stuff
+* [ ] Help edit Visitor Survey (Google Survey)
 
 ## Golan's Todos: 
 * [ ] Create CC BY SA for footer; Acknowledge google
