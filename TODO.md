@@ -2,10 +2,7 @@
 
 * [ ] color/style the markings
 * [ ] Fix the searching on doubleclick bug
-* [ ] Add a loading message/screen
 * [ ] Fix the rounding error in the URL
-* [ ] Make the tiles highlight on dot hover
-* [ ] Write export script
 * [ ] Create contact@terrapattern.com email address; bump to GL & DN
 
 ## Irene's TODOS
@@ -29,6 +26,8 @@
 ## Feature Requests
 
 * [ ] Tweet this URL?
+* [ ] Make the tiles highlight on dot hover
+
 
 ## Completed TODOS
 
@@ -42,8 +41,8 @@
 * [X] Reformat Acknowledgements
 * [X] Make the cities list dynamic
 * [X] Tweak Interface Colors
-
-
+* [X] Write export script
+* [X] Add a loading message/screen
 
 --- 
 

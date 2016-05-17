@@ -529,6 +529,7 @@ var terrapatternMap = (function(){
 
   //-----------------------------------------------------------------
   function hideEverythingBut(and_then_show) {
+    $("#searching").hide();
     $('#result-grid').addClass("hidden");
     $('#no-results').addClass("hidden");
     $('#waiting').addClass("hidden");
@@ -570,6 +571,7 @@ var terrapatternMap = (function(){
         var loc = tileRectangle.getBounds().getCenter();
         data = {lat: loc.lat(), lng: loc.lng()}
       }
+      $("#searching").show();
       var results = $.get("/search", data);
       results.done(handleNewPins);
   }
