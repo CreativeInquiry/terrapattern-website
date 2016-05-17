@@ -46,5 +46,23 @@
   #search_box:focus {
     border-color: #4d90fe; }
 
-#map_interface h4 {
-  width: 100%; }
+#map_interface {
+  position: relative; }
+  #map_interface h4 {
+    width: 100%; }
+
+#searching {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.45); }
+  #searching h4 {
+    text-align: center;
+    padding-top: 20%;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 3px 3px 3px #000; }

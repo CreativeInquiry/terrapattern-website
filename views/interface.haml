@@ -30,6 +30,8 @@
 -#   Page template
 -###################################################
 
+
+
 %section.global-page-header
   .container
     .row
@@ -47,6 +49,8 @@
       .col-md-5
         = insert_content("interface_instructions_right", @city_data["name"])
     .row#map_interface
+      #searching.overlay
+        %h4="Searching #{@city_data["name"]}..."
       .col-md-7
         .block
           .row
