@@ -4,26 +4,22 @@
 * [ ] Fix the searching on doubleclick bug
 * [ ] Add a loading message/screen
 * [ ] Fix the rounding error in the URL
-<<<<<<< Updated upstream
 * [ ] Make the tiles highlight on dot hover
 * [ ] Write export script
-=======
 * [ ] Create contact@terrapattern.com email address; bump to GL & DN
->>>>>>> Stashed changes
 
 ## Irene's TODOS
 
-* [ ] The map is going to be North America
 * [ ] Add secondary section for homepage.
-* [ ] discuss footer on the homepage
-* [ ] Make Favicon
-* [ ] Tweak Interface Colors
+* [ ] Make footer
 * [ ] Add survey link to CTA on interface
-* [ ] Add license stuff
+* [ ] Make Favicon
 
 ## Golan's Todos: 
 * [ ] Create CC BY SA for footer; Acknowledge google
-* [ ] Rate limit GOOGle map searches.
+* [ ] Rate limit Google map searches.
+* [ ] The map is going to be North America
+* [ ] Define license stuff
 
 
 ---
@@ -43,6 +39,7 @@
 * [X] Make buttons work/dynamically generated
 * [X] Reformat Acknowledgements
 * [X] Make the cities list dynamic
+* [X] Tweak Interface Colors
 
 
 
