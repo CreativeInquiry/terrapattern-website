@@ -13,37 +13,51 @@ cities:
       ne_lat: 40.674935           #  --
       ne_lng: -79.688761          #  --
     geojson: "data/pgh.json"      # The relative path for the geojson boundary of the object
-    # minlat: -80.360873
-    # minlng: 40.194352
 
-  - name: Detroit 
-    url_name: detroit
-    search_locale:   "Detroit"
-    primary_color:   "#104489"
-    secondary_color: "#818b94"
+  - name: San Francisco
+    url_name: sf
+    search_locale: "SanFrancisco"    # this is the search server's name for the region
+    primary_color:   "#c41230"
+    secondary_color: "#fdbf57"
     center:
-      lng: -83.021703
-      lat: 42.3585504
+      lat: 37.8002882
+      lng: -122.399558
+    bounding_box:
+      sw_lat: 37.41969024129289
+      sw_lng: -122.56951903458685
+      ne_lat: 37.89132854978251
+      ne_lng: -121.8944091629237
+    geojson: "data/sf.json"      # The relative path for the geojson boundary of the object
+  
+  - name: New York City
+    search_locale: "NewYork"    # this is the search server's name for the region
+    url_name: nyc
+    primary_color:   "#003884"
+    secondary_color: "#ff6600"
+    center:
+      lng: -73.9675438
+      lat: 40.7828687
     bounding_box: 
-      sw_lat: 42.255459
-      sw_lng: -83.287697
-      ne_lat: 42.450241
-      ne_lng: -82.910507
-    geojson: "data/detroit.json"      # The relative path for the geojson boundary of the object
+      sw_lat: 40.477399
+      sw_lng: -74.25909
+      ne_lat: 40.917577
+      ne_lng: -73.700272
+    geojson: "data/nyc.json"      # The relative pat
 
-  # - name: New York City
-  #   url_name: nyc
-  #   primary_color:   "#003884"
-  #   secondary_color: "#ff6600"
+  # - name: Detroit 
+  #   url_name: detroit
+  #   search_locale:   "Detroit"
+  #   primary_color:   "#104489"
+  #   secondary_color: "#818b94"
   #   center:
-  #     lng: -73.9675438
-  #     lat: 40.7828687
+  #     lng: -83.021703
+  #     lat: 42.3585504
   #   bounding_box: 
-  #     ne_lat: 40.477399
-  #     ne_lng: -73.700272
-  #     sw_lat: 40.917577
-  #     sw_lng: -74.25909
-  #   geojson: "data/nyc.json"      # The relative path for the geojson boundary of the object
+  #     sw_lat: 42.255459
+  #     sw_lng: -83.287697
+  #     ne_lat: 42.450241
+  #     ne_lng: -82.910507
+  #   geojson: "data/detroit.json"      # The relative path for the geojson boundary of the object
 
   # - name: Berlin
   #   url_name: berlin
@@ -68,7 +82,4 @@ cities:
   #   primary_color:   "#cf142b"
   #   secondary_color: "#00247d"
 
-  # - name: San Francisco
-  #   url_name: sf
-  #   primary_color:   "#c41230"
-  #   secondary_color: "#fdbf57"
+  

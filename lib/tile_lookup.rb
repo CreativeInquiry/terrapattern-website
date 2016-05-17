@@ -23,9 +23,17 @@ class TileLookup
     # end
 
     data = JSON.parse(File.read("data/lat_lngs.json"))
-    @lats = data["lat"]
-    @lngs = data["lng"]
 
+    @lats = [] 
+    @lngs = []
+    
+    data.each do |key, val|
+      @lats.push val["lat"]
+      @lngs.push val["lng"]
+    end
+
+    @lats.flatten!
+    @lngs.flatten!
   end
 
 
