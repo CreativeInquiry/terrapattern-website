@@ -107,6 +107,13 @@ class Terrapattern < Sinatra::Base
       json $tile_lookup.lookup(params['lat'], params['lng'], @city_data["search_locale"], 19, 96, params)
     end
 
+    post "/download" do
+    
+      content_type :json
+    attachment "terrapattern.json"
+     params["geojson"]
+    end
+
     # Special helper for the Markdown images.
     get '/images/*.*' do |file,ext|
       path = "content/images/#{file}.#{ext}"
