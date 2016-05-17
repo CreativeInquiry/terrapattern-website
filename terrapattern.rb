@@ -103,8 +103,8 @@ class Terrapattern < Sinatra::Base
     # JSON route for connecting to the search implementation
     get "/search" do
       redirect("/") unless settings.city_urls.include? subdomain
-      city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
-      json $tile_lookup.lookup(params['lat'], params['lng'], city_data["search_locale"], 19)
+      @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
+      json $tile_lookup.lookup(params['lat'], params['lng'], @city_data["search_locale"], 19, 96, params)
     end
 
     # Special helper for the Markdown images.

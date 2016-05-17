@@ -51,7 +51,7 @@ class TileLookup
     obj = {type: "FeatureCollection", features: features}
   end
 
-  def lookup(lat, lng, location="Allegheny", zoom="19", limit="96")
+  def lookup(lat, lng, location="Allegheny", zoom="19", limit="96", opts ={})
     lat = lat.to_f
     lng = lng.to_f
     
@@ -64,6 +64,13 @@ class TileLookup
     obj = {lat: tile_lat, lng: tile_lng, id: id, base_lat: lat, base_lng: lng}
 
     uri = "#{ENV["SEARCH_SERVER"]}/?filename=#{id}&limit=#{limit}&level=#{zoom}&region=#{location}"
+    uri += "&perplexity=#{opts["perplexity"]}"       if opts["perplexity"]
+    uri += "&learning_rate=#{opts["learning_rate"]}" if opts["learning_rate"]
+    uri += "&earlyx=#{opts["earlyx"]}"               if opts["earlyx"]
+    uri += "&metric=#{opts["metric"]}"               if opts["metric"]
+    uri += "&pca=#{opts["pca"]}"                  if opts["pca"]
+    uri += "&pca_only=#{opts["pca_only"]}"             if opts["pca_only"]
+
     puts "Searching for #{uri}"
     results = Typhoeus.get(uri)
     data = JSON.parse(results.body)

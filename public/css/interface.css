@@ -1,7 +1,7 @@
 .location_tile {
-  width: 15.5%;
+  width: 15.75%;
   cursor: pointer;
-  margin: 0.5%;
+  margin: 0.25%;
   border: 4px solid transparent;
   position: relative;
   display: inline-block;
@@ -16,12 +16,16 @@
 #no_results, #results_grid, #waiting, #results_pagination {
   text-align: center; }
 
+#results_grid {
+  min-height: 300px;
+  padding: 6px 0; }
+
 #mini_displays {
   margin-bottom: 10px; }
 
 #main-map {
   margin-top: 10px;
-  height: 599px;
+  height: 598px;
   width: 100%; }
 
 #map {

@@ -42,11 +42,11 @@ of the interface.
 // Color Palette
 var FRAME_COLOR = "#b2bdb3";                       // Color of the graph backgrounds
 var AXIS_COLOR = "#efefec";                        // Color of the graph elements
-var SELECTED_COLOR = "#3887be";                       // Color of the current dot/pin
-var PRIMARY_TILE_COLOR = "#2ecc71";              // Color of the searched-for dot/pin
+var SELECTED_COLOR = "#3887be";                    // Color of the current dot/pin
+var PRIMARY_TILE_COLOR = "#2ecc71";                // Color of the searched-for dot/pin
 var DEFAULT_TILE_COLOR = "rgba(255,255,255,0.5)";  // Color of a normal dot/pin
 var HOVERED_TILE_COLOR = "rgba(255,255,255,1)";    // Color of a hovered-over dot/pin
-var VIEWPORT_BOX_COLOR = "rgba(255,255,255,0.75)"; // Color of the viewport box
+var VIEWPORT_BOX_COLOR = "rgba(255,255,255,0.45)"; // Color of the viewport box
 
 // Magic Numbers
 var SMALL_RADIUS = 4;             // Size of a normal dot (in pixels)
@@ -596,7 +596,11 @@ var terrapatternMap = (function(){
     var base_loc = pins[0].getGeometry().get();
     var uri = URI(document.URL);
     var prevData =  uri.query(true);
-    uri.query({lat: base_loc.lat(), lng: base_loc.lng()})
+    uri.query(function(data){
+      data.lat=base_loc.lat();
+      data.lng=base_loc.lng();
+    });
+
     if (!(JSON.stringify(prevData) ==  JSON.stringify(uri.query(true)))){
       history.pushState({},"",uri.toString());
     }

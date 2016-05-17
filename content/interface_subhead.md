@@ -1,1 +1,1 @@
- Click on a place in the map to find similar places
+ Click on a place in the map to find similar places in $CITY

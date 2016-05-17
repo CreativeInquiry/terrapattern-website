@@ -4,6 +4,7 @@
 * [ ] Fix the searching on doubleclick bug
 * [ ] Add a loading message/screen
 * [ ] Fix the rounding error in the URL
+* [ ] Make the tiles highlight on dot hover
 
 ## Irene's TODOS
 

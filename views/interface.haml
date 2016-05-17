@@ -37,15 +37,15 @@
         .block
           %h2= @city_data["name"]
           .col-md-8.header-description
-            %p.prose= insert_content("interface_subhead")
+            %p.prose= insert_content("interface_subhead", @city_data["name"])
 
 %section#service-page.pages.service-page
   .container
     .row
       .col-md-7
-        = insert_content("interface_instructions_left")
+        = insert_content("interface_instructions_left", @city_data["name"])
       .col-md-5
-        = insert_content("interface_instructions_right")
+        = insert_content("interface_instructions_right", @city_data["name"])
     .row#map_interface
       .col-md-7
         .block
@@ -60,7 +60,7 @@
             .col-md-6
               %h4 Geographical Plot
             .col-md-6
-              %h4 Relevance Plot
+              %h4 Similarity Plot
           .row
             .col-md-12
               #mini_displays
