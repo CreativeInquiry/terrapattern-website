@@ -7,9 +7,18 @@ Terrapattern provides an open-ended interface for visual query-by-example. Simpl
 There has never been a more exciting time to observe human activity and understand the patterns of humanity’s impact on the world. We aim to help people discover such patterns in satellite imagery, with the help of deep learning machine vision techniques.  
 
 ---
-### Gallery
+### Examples
 
-...?
+typologies
+
+[golf course sand traps](http://pgh.terrapattern.com/?lat=40.5261395&lng=-79.8810095)
+
+![Golf course sand traps, identified by Terrapattern](images/demo_golf_course_sand_traps.jpg "Golf course sand traps, identified by Terrapattern")
+
+
+Here are some more example searches you can try: 
+
+[swimming pools in the woods](http://pgh.terrapattern.com/?lat=40.5721195&lng=-79.94004849999999) • [bridges](http://pgh.terrapattern.com/?lat=40.4874745&lng=-79.905037) • [cul de sacs](http://pgh.terrapattern.com/?lat=40.382452&lng=-79.97162750000001) • [Christmas tree farms](http://pgh.terrapattern.com/?lat=40.656242&lng=-79.75606649999997) • [docks](http://pgh.terrapattern.com/?lat=40.4310445&lng=-79.96682199999998) • [highways with semi-trailer trucks](http://pgh.terrapattern.com/?lat=40.4582145&lng=-80.1116735) • [USAF bombers](http://pgh.terrapattern.com/?lat=40.4926995&lng=-80.21327550000001) • [football stadium logos](http://pgh.terrapattern.com/?lat=40.443062&lng=-79.94004849999999) • [transformer stations](http://pgh.terrapattern.com/?lat=40.465007&lng=-80.0471425) • [school bus depots](http://pgh.terrapattern.com/?lat=40.461872&lng=-79.77872100000002)
 
 ---
 ### Motivation and Intended Use
@@ -121,6 +130,6 @@ in Africa.
 ---
 ### Credits
 
-We're a group of new-media artists, creative technologists, and students who are affiliated in various ways with the Frank-Ratchye [STUDIO for Creative Inquiry](studioforcreativeinquiry.org) at Carnegie Mellon University, a lab for experimental research at the intersection of art, science, technology and culture. This project was made possible by a grant in Media Innovation from the [John S. and James L. Knight Foundation](http://knightfoundation.org/grants/201551228/) [Prototype Fund](http://www.knightfoundation.org/funding-initiatives/knight-prototype-fund/). For more information, please see our [**team**](/team) page. 
+We're a group of new-media artists, creative technologists, and students who are affiliated in various ways with the Frank-Ratchye [STUDIO for Creative Inquiry](studioforcreativeinquiry.org) at Carnegie Mellon University, a lab for experimental research at the intersection of art, science, technology and culture. This project was made possible by a grant in Media Innovation from the [John S. and James L. Knight Foundation](http://knightfoundation.org/grants/201551228/) [Prototype Fund](http://www.knightfoundation.org/funding-initiatives/knight-prototype-fund/). For more information, please see our [**team**](team.html) page. 
 
 

@@ -48,6 +48,9 @@
 * [transformer stations](http://pgh.terrapattern.com/?lat=40.465007&lng=-80.0471425)
 * [school bus depots](http://pgh.terrapattern.com/?lat=40.461872&lng=-79.77872100000002)
 
+Golan TODO: 
+* Create CC BY SA for footer; Acknowledge google
+* Rate limit GOOGle map searches.
 
 
 

@@ -1,5 +1,5 @@
 ### TERRAPATTERN
 
-**Enabling journalists, citizen scientists, humanitarian workers and others to detect “patterns of interest” in satellite imagery through an open-source tool.**
+**Enabling citizen scientists, journalists, and other researchers to detect “patterns of interest” in satellite imagery through an open-source search tool.**
 
-Funded through a grant from the [Knight Prototype Fund](http://knightfoundation.org/grants/201551228/) & developed at the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/) at Carnegie Mellon.
+Developed at the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/) at Carnegie Mellon University with support from the from the [John S. and James L. Knight Foundation](http://knightfoundation.org/grants/201551228/) [Prototype Fund](http://www.knightfoundation.org/funding-initiatives/knight-prototype-fund/).

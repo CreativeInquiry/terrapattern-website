@@ -1,1 +1,1 @@
-Right Instructions Go Here
+Below are the top results returned from your search, displayed in a geographic overview, a set of thumbnail images, and a plot of their relative similarity. 
