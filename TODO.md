@@ -14,6 +14,8 @@
 * [ ] Make footer
 * [ ] Add survey link to CTA on interface
 * [ ] Make Favicon
+* [ ] Add license stuff
+* [ ] Help edit Visitor Survey (Google Survey)
 
 ## Golan's Todos: 
 * [ ] Create CC BY SA for footer; Acknowledge google
