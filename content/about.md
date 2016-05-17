@@ -2,9 +2,9 @@
 
 **We present *Terrapattern*: “similar-image search” for satellite photos.** It's an open-source tool for discovering “patterns of interest” in unlabeled satellite imagery—a prototype for exploring the unmapped, and the unmappable. 
 
-Terrapattern has an open-ended interface for visual query-by-example. Just click an interesting spot on Terrapattern's map, and it will find other locations that look similar. Our tool is ideal for locating specialized nonbuilding structures and other forms of soft infrastructure that aren't usually indicated on maps.
+Terrapattern provides an open-ended interface for visual query-by-example. Simply click an interesting spot on Terrapattern's map, and it will find other locations that look similar. Our tool is ideal for locating specialized 'nonbuilding structures' and other forms of soft infrastructure that aren't usually indicated on maps.
 
-There has never been a more exciting time to observe human activity and understand the patterns of humanity’s impact on the world. We aim to help people discover such patterns in satellite imagery, with the help of deep learning machine vision techniques. 
+There has never been a more exciting time to observe human activity and understand the patterns of humanity’s impact on the world. We aim to help people discover such patterns in satellite imagery, with the help of deep learning machine vision techniques.  
 
 ---
 ### Gallery
@@ -23,7 +23,7 @@ Our goal is to provide a geospatial software tool that makes it easy for everyda
 ---
 ### About our Prototype
 
-*Terrapattern* is a “panoptic perceptron” that allows a user to perform *queries-by-example* in satellite imagery. A visitor clicks on a “feature of interest” in a satellite image; the *Terrapattern* system returns a batch of the most similar-looking places nearby; and the visitor can then download a list of these locations in GeoJSON format.
+*Terrapattern* is a “panoptic perceptron” that allows a user to perform arbitrary *queries-by-example* in satellite imagery. A guest clicks on a “feature of interest” in a satellite image; the *Terrapattern* system presents a batch of the most similar-looking places nearby; and the guest can then download a list of these locations in GeoJSON format.
 
 For our purposes, “interesting” features are anthropogenic or natural phenomena that are not only socially or scientifically meaningful, but also *visually distinctive*—thus lending themselves ideally to machine recognition. Examples could include things like animal herds, methane blowholes, factories, destroyed homes, or logging roads. Many other patterns await discovery.
 
