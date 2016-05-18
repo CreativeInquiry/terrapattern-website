@@ -41,6 +41,12 @@ http://sf.terrapattern.com/?lat=37.6051777&lng=-122.03679499999998
 http://sf.terrapattern.com/?lat=37.7843952&lng=-122.47272250000003
 http://sf.terrapattern.com/?lat=37.8585902&lng=-122.49331749999999 
 
+http://sf.terrapattern.com/?lat=37.5137402&lng=-122.04640599999999
+http://nyc.terrapattern.com/?lat=40.6717868&lng=-74.14359139999999
+http://nyc.terrapattern.com/?lat=40.6979118&lng=-74.16212689999998
+http://nyc.terrapattern.com/?lat=40.7161993&lng=-74.1477104
+
+
 http://sf.terrapattern.com/?lat=37.7849177&lng=-122.46448450000003 
 http://sf.terrapattern.com/?lat=37.5038127&lng=-122.04846550000002
 http://sf.terrapattern.com/?lat=37.7791702&lng=-122.45761950000002 
