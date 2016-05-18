@@ -7,6 +7,7 @@
 * [ ] When you mouse over a Google map pin, 
       the corresponding dots light up
 * [ ] Create contact@terrapattern.com email address; bump to GL & DN
+* [ ] Integrate GeoJSON contour maps from Johanna
 
 ## Irene's TODOS
 
@@ -20,7 +21,9 @@
 ## Golan's Todos: 
 * [ ] Rate limit Google map searches.
 * [ ] The map is going to be North America
-* [ ] Finish About page, intro page halves
+* [ ] Finish About page
+* [ ] Finish intro page halves
+* [ ] Make more gallery examples
 
 ---
 
