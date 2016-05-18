@@ -36,9 +36,11 @@ Sure. Here are some reasons why that may be true:
 
 * The Terrapattern tool is *scale dependent*. Our model is developed from Google map tiles analyzed at [magification levels 18 and 19](http://gis.stackexchange.com/questions/7430/what-ratio-scales-do-google-maps-zoom-levels-correspond-to). At the latitude of NYC, these 256x256 pixel tiles represent portions of the earth that are roughly 50-100 meters across. This means that it may be difficult or unreliable to search for features smaller than ~10 meters, or larger than ~200 meters.
 
-* It's possible that the map tiles returned in response to your searches are fresher than the data we analyzed. In other words, the situation on-the-ground may have changed: there could have been new construction, demolition, seasonal variation, etc. 
+* Related to the above, some features fall on the *boundaries* between map tiles. As a result, they may not rise to the top of search results as quickly as features that occur near the center of map tiles. We're working on a fix for this. 
 
-* It's possible that you may have selected something truly unique, and there's really nothing else quite like it around. For example, the [Sandcastle Waterpark](https://www.google.com/maps/place/Sandcastle+Water+Park/@40.3980801,-79.9275436,604a,20y,317.39h/data=!3m1!1e3!4m5!3m4!1s0x8834f02d67fb76bd:0xf1b45395cec34844!8m2!3d40.3979202!4d-79.9273153) in Pittsburgh is extremely distinctive. 
+* It's possible that the map tiles returned in response to your searches are fresher than the data we analyzed in May 2016. In other words, the situation on-the-ground may have changed: there could have been new construction, demolition, seasonal variation, etc. 
+
+* It's possible that you may have chosen to search for something that's genuinely *unique*, and there's really nothing else quite like it around. For example, the [Sandcastle Waterpark](https://www.google.com/maps/place/Sandcastle+Water+Park/@40.3980801,-79.9275436,604a,20y,317.39h/data=!3m1!1e3!4m5!3m4!1s0x8834f02d67fb76bd:0xf1b45395cec34844!8m2!3d40.3979202!4d-79.9273153) in Pittsburgh is extremely distinctive. 
 
 ---
 ### I made a cool discovery with Terrapattern. How can I share it?
@@ -50,7 +52,7 @@ We'd love to hear your stories and feedback! If you discover something interesti
 
 We suspect that most of the big players in the space of satellite imaging, such as Google, Microsoft, Digital Globe, Planet Labs, and others are exploring the opportunities afforded by machine learning—particularly in light of recent and significant advances in convolutional neural networks and other deep learning techniques. 
 
-One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for user-defined ("out-of-set") categories. By contrast, most of the systems listed above are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. For more information, please see our [**about**](about.html) page. 
+One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for *user-defined* ("out-of-set") categories. By contrast, most of the systems listed above are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. For more information, please see our [**about**](about.html) page. 
 
 ---
 ### Why have you only offered three cities? 
