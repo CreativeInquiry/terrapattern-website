@@ -4,6 +4,8 @@
 
 Begall, Sabine et al. "[Magnetic alignment in grazing and resting cattle and deer](http://www.pnas.org/content/early/2008/08/22/0803650105)". *Proceedings of the National Academy of Sciences* 105, no. 36 (9/9/2008), pp. 13,451-13,455. DOI: 10.1073/pnas.0803650105
 
+Begley, Josh. "Prison Map", 2012. *prisonmap.com.* Accessed 5/16/2016. 
+
 Coolidge, Matthew and The Center for Land Use Interpretation. "[Land Use Database](http://clui.org/ludb/page/about-database)". *clui.org.* Accessed 5/14/2016. 
 
 Finer, M.; Novoa S.; and Olexy, T. "[MAAP #30: Gold Mining Invasion of Tambopata National Reserve Intensifies](http://maaproject.org/2016/invasion-tambopata-3/)". *maaproject.org*, Monitoring of the Andean Amazon Project, 4/12/2016. Accessed 5/15/2016.
