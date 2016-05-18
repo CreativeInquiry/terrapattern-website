@@ -53,12 +53,12 @@
         = insert_content("interface_instructions_right", @city_data["name"])
     .row#map_interface
       #searching.overlay
-        %h4="Searching #{@city_data["name"]}..."
+        %h4="Searching the #{@city_data["name"]} metro region..."
       .col-md-7
         .block
           .row
             .col-md-12
-              %input#search_box.controls{type:"text", placeholder: "Search for a location in #{@city_data["name"]}"}
+              %input#search_box.controls{type:"text", placeholder: "Search for a location in the #{@city_data["name"]} metro region"}
               #main-map
                 #map
       .col-md-5
