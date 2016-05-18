@@ -4,9 +4,16 @@
       .col-md-5
         = insert_content("footer_blurb")
 
-      .col-md-2.col-md-offset-2.reference_links
+      .col-md-2.col-md-offset-2.reference_links.hidden-sm.hidden-xs
         = insert_content("footer_links")
 
       .col-md-2.col-md-offset-1.contributors
-        = insert_content("footer_creators")
+        .row
+          .col-md-12.hidden-sm.hidden-xs
+            = insert_content("footer_creators_1")
+            = insert_content("footer_creators_2")
+          .col-xs-6.hidden-md.hidden-lg.hidden-xl
+            = insert_content("footer_creators_1")
+          .col-xs-6.hidden-md.hidden-lg.hidden-xl
+            = insert_content("footer_creators_2")
         

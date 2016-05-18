@@ -1250,3 +1250,26 @@ article {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
+/* Footer */
+
+#footer h4 {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+#footer p {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: #7f7f7f;
+}
+
+#footer a {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-weight: 600;
+}
