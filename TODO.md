@@ -3,6 +3,9 @@
 * [ ] color/style the markings
 * [ ] Fix the searching on doubleclick bug
 * [ ] Fix the rounding error in the URL
+* [ ] Fix weird horizontal offset in NYC tiles (BUG)
+* [ ] When you mouse over a Google map pin, 
+      the corresponding dots light up
 * [ ] Create contact@terrapattern.com email address; bump to GL & DN
 
 ## Irene's TODOS
@@ -15,11 +18,9 @@
 * [ ] Help edit Visitor Survey (Google Survey)
 
 ## Golan's Todos: 
-* [ ] Create CC BY SA for footer; Acknowledge google
 * [ ] Rate limit Google map searches.
 * [ ] The map is going to be North America
-* [ ] Define license stuff
-
+* [ ] Finish About page, intro page halves
 
 ---
 
