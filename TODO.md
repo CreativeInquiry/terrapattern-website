@@ -8,6 +8,7 @@
       the corresponding dots light up
 * [ ] Create contact@terrapattern.com email address; bump to GL & DN
 * [ ] Integrate GeoJSON contour maps from Johanna
+* [ ] it is not possible to zoom into the top edge of the NYC searchable region.
 
 ## Irene's TODOS
 
