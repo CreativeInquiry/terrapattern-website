@@ -1,6 +1,6 @@
 ### Technical Bibliography
 
-*The following research projects and open-source codebases are specifically concerned with the application of 'deep-learning' techniques to satellite imagery. Several of these projects employ OpenStreetMap labels as training data, as we do.*
+*The following research projects and open-source codebases are specifically concerned with the application of 'deep-learning' techniques to satellite imagery. Several of these projects also employ OpenStreetMap labels as training data, as we do.*
 
 [Learning to Detect Roads in High-Resolution Aerial
 Images](http://www.cs.toronto.edu/~fritz/absps/road_detection.pdf) by Volodymyr Mnih and Geoffrey E. Hinton (2010), a seminal paper in the application of machine learning to the problem of making assertions about satellite imagery. 
