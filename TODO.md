@@ -18,6 +18,8 @@
 * [ ] Make Favicon
 * [ ] Add license stuff
 * [ ] Help edit Visitor Survey (Google Survey)
+* [ ] In faq, YOU/TERRAPATTERN/YOU in the "What's the basic idea?" section should be bulleted (ul, li tags etc.) 
+* 
 
 ## Golan's Todos: 
 * [ ] Rate limit Google map searches.

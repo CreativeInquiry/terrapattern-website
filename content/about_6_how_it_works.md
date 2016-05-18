@@ -1,5 +1,11 @@
 ### How it Works
 
-Technical desceiption here. 
-Here's our github. 
-Here are some papers and references. 
+Terrapattern uses a deep convolutional neural network (DCNN), based on the [Inception v3](http://arxiv.org/abs/1512.00567) architecture. We train our DCNN using hundreds of thousands of satellite images that have been labeled in [OpenStreetMap](https://www.openstreetmap.org/), teaching the neural network to predict the category of a place from a satellite photo. In the process, it learns which high-level visual features (and combinations of those features) are important for the classification of satellite imagery. 
+
+It has been [pointed out](http://www.spacemachine.net/views/2016/3/datasets-over-algorithms) that many machine-learning breakthroughs are constrained by the availability of high-quality training datasets. The Terrapattern project is just so. When we began the project, we expected that we could find a pre-existing DCNN model for satellite imagery, such as those hosted at the [Caffe Model Zoo](http://caffe.berkeleyvision.org/model_zoo.html). We settled in for a much longer haul when we realized we would have to train our own. To that end, Terrapattern is only possible due to the amazing crowdsourced mapping effort of the OpenStreetMap project, which has generously categorized large parts of the world with its [Nominatim](http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN) taxonomy. We train our DCNN using 466 of the Nominatim categories (such as "airport", "marsh", "gas station", "prison", "monument", "church", etc.), with approximately 1000 images per category. Our resulting model, which trained for 5 days on an nVidia 980 GPU, has a top-5 error rate of 25.4%.
+
+After training the model, we compute descriptions for millions more satellite photos that cover the metropolitan regions of New York, San Francisco, and Pittsburgh. When we want to discover places that look similar to your query, we just have to find places whose descriptions are similar to those of the tile you selected. To perform this search asynchronously in near real time, we use the [CoverTree algorithm](https://github.com/manzilzaheer/CoverTree) for [K-Nearest Neighbors](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
+
+The Terrapattern website is built using Ruby and JavaScript, with satellite imagery from Google Maps. The visualizations on the search sites were created in JavaScript using [p5.js](http://p5js.org/). 
+
+For more technical information on Terrapattern, including our open-source code, models and datasets, please see this [list of technical references](http://www.terrapattern.com/references#technical-bibliography) and [our Github repository](http://github.com/workergnome/terrapattern). 
