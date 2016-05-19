@@ -269,12 +269,6 @@ a:hover {
   margin-bottom: 15px;
   color: #fff;
 }
-#call-to-action .block p {
-  font-size: 16px;
-  font-weight: 300;
-  font-family: 'Roboto', sans-serif;
-  margin-top: 20px;
-}
 #call-to-action .block .btn-contact {
   background: none ;
   border: none;
@@ -1003,12 +997,14 @@ ul.social-icons li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/*
 .export {
   font-size: 24px;
   line-height: 40px;
   font-weight: 500;
   text-transform: none ;
 }
+*/
 
 #top-bar.landing-page{
   background-color:  #2ecc71;
@@ -1139,6 +1135,14 @@ ul.social-icons li {
   color: white;
 }
 
+#call-to-action a {
+  color: rgba(255,255,255,.5);
+}
+
+#call-to-action a:hover {
+  color: white;
+}
+
 /* INTRO PAGE */
 
 #landing-page-2 {
@@ -1176,4 +1180,8 @@ ul.social-icons li {
 /* All pages */
 .header-content {
   height: 162px;
+}
+
+#call-to-action h3 {
+  color: white;
 }
