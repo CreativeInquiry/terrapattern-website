@@ -3,6 +3,8 @@
     .row
       .col-md-5
         = insert_content("footer_blurb")
+        %a{:href => "http://creativecommons.org/licenses/by-sa/4.0/", :rel => "license"}
+          %img{:alt => "Creative Commons License", :src => "images/cc_by_sa.svg", :style => "border-width:0"}/
 
       .col-md-2.col-md-offset-2.reference_links.hidden-sm.hidden-xs
         = insert_content("footer_links")
@@ -16,4 +18,3 @@
             = insert_content("footer_creators_1")
           .col-xs-6.hidden-md.hidden-lg.hidden-xl
             = insert_content("footer_creators_2")
-        
