@@ -1,4 +1,4 @@
-### Motivation and Intended Use
+## Motivation and Intended Use
 
 It has been predicted that, within the next three years, access to daily-updated, whole-earth satellite imagery with sub-meter resolution will become widely available online. There will be many important stories about natural and human activities latent in this data. Without special effort, however, it is doubtful that this imagery will have annotation layers that make such stories discoverable.
 

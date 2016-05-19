@@ -1,4 +1,4 @@
-### Examples
+## Examples
 
 Terrapattern is ideal for discovering, locating and labeling typologies that aren't customarily indicated on maps. These might include ephemeral or temporally-contingent features (such as vehicles or construction sites), or the sorts of banal infrastructure (like fracking wells or smokestacks) that only appear on specialist blueprints, if they appear at all. 
 
