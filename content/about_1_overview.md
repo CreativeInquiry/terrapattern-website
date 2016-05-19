@@ -1,4 +1,4 @@
-### Overview
+## Overview
 
 **We present *Terrapattern*: "similar-image search" for satellite photos.** It's an open-source tool for discovering "patterns of interest" in unlabeled satellite imagery&mdash;a prototype for exploring the unmapped, and the unmappable. 
 

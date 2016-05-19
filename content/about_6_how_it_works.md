@@ -1,4 +1,4 @@
-### How it Works
+## How it Works
 
 Terrapattern uses a deep convolutional neural network (DCNN), based on the [Inception v3](http://arxiv.org/abs/1512.00567) architecture. We trained a DCNN using hundreds of thousands of satellite images labeled in [OpenStreetMap](https://www.openstreetmap.org/), teaching the neural network to predict the category of a place from a satellite photo. In the process, our network learned which high-level visual features (and combinations of those features) are important for the classification of satellite imagery. 
 

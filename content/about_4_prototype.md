@@ -1,4 +1,4 @@
-### About our Prototype
+## About our Prototype
 
 *Terrapattern* is a "panoptic perceptron" that allows a user to perform arbitrary *queries-by-example* in satellite imagery. A guest clicks on a "feature of interest" in a satellite image; the *Terrapattern* system presents a batch of the most similar-looking places nearby; and the guest can then download a list of these locations in GeoJSON format.
 
