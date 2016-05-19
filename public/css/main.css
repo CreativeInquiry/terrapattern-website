@@ -37,7 +37,6 @@ h1 {
   line-height: 40px;
 }
 h2 {
-  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 28px;
   line-height: 40px;
@@ -49,6 +48,12 @@ h3 {
   font-size: 22px;
   line-height: 30px;
   color: rgba(0,0,0,0.75);
+}
+h4 {
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 16px;
+  color: #7f7f7f;
 }
 /*ADDED*/
 .main-menu {
@@ -76,7 +81,7 @@ a:hover {
 }
 .section-heading {
   text-align: center;
-  margin-bottom: 65px;
+  margin-bottom: 30px;
 }
 /*.section-heading p {
   font-size: 14px;
@@ -430,7 +435,8 @@ figure figcaption p {
   margin-top: 5px;
 }
 #feature {
-  padding: 80px 0;
+  padding-top:70px;
+  padding-bottom: 80px;
 }
 #feature .media {
   margin: 0px 0 70px 0;
@@ -1047,11 +1053,6 @@ ul.social-icons li {
   width:80%;
 }
 
-.grid-acknowledgments {
-  padding-top:60px;
-  padding-bottom: 40px;
-}
-
 .vcenter {
     display: flex;
     align-items: center;
@@ -1071,7 +1072,7 @@ ul.social-icons li {
 }
 
 .global-page-header a {
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.7);
 }
 
 .global-page-header a:hover {
@@ -1128,7 +1129,7 @@ ul.social-icons li {
 }
 
 .about-blue a {
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.7);
 }
 
 .about-blue a:hover {
@@ -1136,7 +1137,7 @@ ul.social-icons li {
 }
 
 #call-to-action a {
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.7);
 }
 
 #call-to-action a:hover {

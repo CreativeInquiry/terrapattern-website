@@ -27,9 +27,6 @@
   padding-bottom: 30px;
   padding-top: 30px; }
 
-.grid-acknowledgments h4 {
-  text-align: center; }
-
 @media only screen and (max-width: 767px) {
   #knight_acknowledgement h2 {
     font-size: 40px; } }
@@ -42,3 +39,11 @@
 
 .team h3 {
   margin-bottom: 14px; }
+
+.centered-column {
+  float: none;
+  margin: 0 auto; }
+
+#thank-yous {
+  padding-top: 100px;
+  padding-bottom: 100px; }

@@ -52,15 +52,17 @@
   .container
     .section-heading
       .row#knight_acknowledgement
-        .col-md-6.col-md-offset-3
+        .col-md-7.centered-column
           = insert_content("acknowledgement_knight")
       .row
-        .col-md-6.col-md-offset-3
+        .col-md-4.centered-column
           %img.img-responsive.center-block.knight-logo.wow.fadeInDown{:alt => "", "data-wow-delay" => ".5s", :src => "images/knight.png"}
+
+%section#thank-yous
+  .container
     .row.grid-acknowledgments
       .col-md-8.col-md-offset-2
         = insert_content("thanks")
-
 
 %section#call-to-action
   .container
