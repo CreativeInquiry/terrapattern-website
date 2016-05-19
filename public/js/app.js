@@ -201,8 +201,8 @@ var p5Map = function(p) {
     p.rect(0,0,tsneFrameWidth,tsneFrameHeight);
 
     p.stroke(AXIS_COLOR);
-    p.line(2,tsneFrameHeight/2,tsneFrameWidth-2,tsneFrameHeight/2);
-    p.line(tsneFrameWidth/2,2,tsneFrameWidth/2,tsneFrameHeight-2);
+    // p.line(2,tsneFrameHeight/2,tsneFrameWidth-2,tsneFrameHeight/2);
+    // p.line(tsneFrameWidth/2,2,tsneFrameWidth/2,tsneFrameHeight-2);
     p.noStroke();
     p.pop();
 
