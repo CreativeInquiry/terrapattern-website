@@ -10,10 +10,16 @@ Here, for example, are [golf course sand traps](http://pgh.terrapattern.com/?lat
 Here, Terrapattern identified some of Pittsburgh's finest [school bus depots](http://pgh.terrapattern.com/?lat=40.461872&lng=-79.77872100000002):
 [![School bus depots in Allegheny county, identified by Terrapattern](images/demo_school_bus_depots.jpg "School bus depots in Allegheny county, identified by Terrapattern")](http://pgh.terrapattern.com/?lat=40.461872&lng=-79.77872100000002)
 
-...and a collection of suburban [cul-de-sacs](http://pgh.terrapattern.com/?lat=40.495312&lng=-80.16384749999997): 
-[![Cul-de-sacs in Allegheny county, identified by Terrapattern](images/demo_cul_de_sacs.jpg "Cul-de-sacs in Allegheny county, identified by Terrapattern")](http://pgh.terrapattern.com/?lat=40.495312&lng=-80.16384749999997)
+...[purple tennis courts](http://sf.terrapattern.com/?lat=37.7791702&lng=-122.45761950000002) in the Bay Area,
+[![Purple tennis courts in the San Francisco metro region, identified by Terrapattern](images/demo_tennis_courts.jpg "Purple tennis courts in the San Francisco metro region, identified by Terrapattern")](http://sf.terrapattern.com/?lat=37.7791702&lng=-122.45761950000002)
+
+...a collection of [transformer stations](http://pgh.terrapattern.com/?lat=40.465007&lng=-80.0471425):
+[![Transformer stations in Allegheny county, identified by Terrapattern](images/demo_transformer_stations.jpg "Transformer stations in Allegheny county, identified by Terrapattern")](http://pgh.terrapattern.com/?lat=40.465007&lng=-80.0471425)
+
+...and a collection of [nautical wrecks](http://nyc.terrapattern.com/?lat=40.5578818&lng=-74.21498739999998) in the NYC area:
+[![Nautical wrecks in the NYC area, identified by Terrapattern](images/demo_nautical_wrecks.jpg "Nautical wrecks in the NYC area, identified by Terrapattern")](http://nyc.terrapattern.com/?lat=40.5578818&lng=-74.21498739999998)
 
 Here are some more example searches you can try: [baseball diamonds](http://pgh.terrapattern.com/?lat=40.355282&lng=-80.14462550000002) &bull; [semi-trailer trucks on highways](http://pgh.terrapattern.com/?lat=40.4582145&lng=-80.1116735) &bull; [USAF bombers](http://pgh.terrapattern.com/?lat=40.4926995&lng=-80.21327550000001) &bull; [cracked tarmac](http://pgh.terrapattern.com/?lat=40.499492&lng=-80.23593) &bull; [bridges](http://pgh.terrapattern.com/?lat=40.4874745&lng=-79.905037) &bull; [fracking wells](http://pgh.terrapattern.com/?lat=40.292582&lng=-79.94142149999999) &bull; 
-[swimming pools in the woods](http://pgh.terrapattern.com/?lat=40.5721195&lng=-79.94004849999999) &bull; [Christmas tree farms](http://pgh.terrapattern.com/?lat=40.656242&lng=-79.75606649999997) &bull; [tennis courts](http://pgh.terrapattern.com/?lat=40.468142&lng=-80.13158199999998) &bull; [football stadium logos](http://pgh.terrapattern.com/?lat=40.443062&lng=-79.94004849999999) &bull; [transformer stations](http://pgh.terrapattern.com/?lat=40.465007&lng=-80.0471425) ...
+[swimming pools in the woods](http://pgh.terrapattern.com/?lat=40.5721195&lng=-79.94004849999999) &bull; [Christmas tree farms](http://pgh.terrapattern.com/?lat=40.656242&lng=-79.75606649999997) &bull; [tennis courts](http://pgh.terrapattern.com/?lat=40.468142&lng=-80.13158199999998) &bull; [football stadium logos](http://pgh.terrapattern.com/?lat=40.443062&lng=-79.94004849999999) &bull; [overpasses](http://nyc.terrapattern.com/?lat=40.7867368&lng=-73.80995239999999) ...
 
 Have you discovered an interesting collection? Please send a tweet with the hashtag [#terrapattern](https://twitter.com/hashtag/terrapattern) and the URL of your search!

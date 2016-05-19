@@ -18,8 +18,7 @@ Garling, Caleb."[Startup Promises Business Insights from Satellite Images](https
 
 Hogenboom, Melissa. "[Watching penguins, and their poo, from space](http://www.bbc.com/earth/story/20141210-surprising-use-of-penguin-poo)". *BBC.com*. 12/10/2014. Accessed 5/14/2016.
 
-Howard, Brian C. "[Tiny Team Uses Satellites to Bust Illegal Fishing Worldwide](http://news.nationalgeographic.com/2015/06/150615-skytruth-pirate-fishing-i
-llegal-big-data-ocean-conservation/)". *NationalGeographic.com*, 6/15/2015. Accessed 5/14/2016.
+Howard, Brian C. "[Tiny Team Uses Satellites to Bust Illegal Fishing Worldwide](http://news.nationalgeographic.com/2015/06/150615-skytruth-pirate-fishing-illegal-big-data-ocean-conservation/)". *NationalGeographic.com*, 6/15/2015. Accessed 5/14/2016.
 
 Howard, Brian C. "[New Theory Behind Dozens of Craters Found in Siberia](http://news.nationalgeographic.com/news/2015/02/150227-siberia-mystery-holes-craters-pingos-methane-hydrates-science/)". *news.nationalgeographic.com*, National Geographic Society, 2/27/2015. Accessed 5/14/2016.
 
