@@ -7,7 +7,6 @@
 * [ ] When you mouse over a Google map pin, the corresponding dots should light up in the Plot visualizations
 * [ ] Integrate GeoJSON contour maps from Johanna
 * [ ] it is not possible to zoom into the top edge of the NYC searchable region.
-* [X] *Experiment* with rounded corners for the result squares. 
 
 ## Irene's TODOS
 
@@ -50,6 +49,8 @@
 * [X] Write export script
 * [X] Add a loading message/screen
 * [X] Create contact@terrapattern.com email address; bump to GL & DN
+* [X] *Experiment* with rounded corners for the result squares. 
+
 
 --- 
 
