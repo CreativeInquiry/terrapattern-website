@@ -7,9 +7,8 @@
         %span.icon-bar
         %span.icon-bar
       .navbar-brand
-        %a{:href => subdomain_url("www")}
+        %a{:href => @exhibition_mode ? "/?exhibit=true" : subdomain_url("www")}
           %img{:alt => "", :src => "images/terrapattern_logo_white.png"}
-
     %nav.navbar.collapse.navbar-collapse.navbar-right{:role => "navigation"}
       .main-menu
         %ul.nav.navbar-nav.navbar-right
@@ -22,12 +21,13 @@
               %ul
                 - settings.city_names.each_with_index do |name, id|
                   %li
-                    %a{:href => subdomain_url(settings.city_urls[id])}= name
-          %li
-            %a{:href => "/about"}About
-          %li
-            %a{:href => "/team"}Team
-          %li
-            %a{:href => "/faq"}FAQ
-          %li
-            %a{:href => "/references"}References
+                    %a{:href => subdomain_url(settings.city_urls[id]) + (@exhibition_mode ? "/?exhibit=true" : "")}= name
+          - unless @exhibition_mode
+            %li
+              %a{:href => "/about"}About
+            %li
+              %a{:href => "/team"}Team
+            %li
+              %a{:href => "/faq"}FAQ
+            %li
+              %a{:href => "/references"}References

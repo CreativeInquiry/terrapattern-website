@@ -29,22 +29,20 @@
 -###################################################
 -#   Page template
 -###################################################
+- unless @exhibition_mode
+  %section.global-page-header
+    .container.header-content
+      .row
+        .col-md-8
+          .block
+            %h2= @city_data["name"]
+            .col-md-8.header-description
+              %p.prose= insert_content("interface_subhead", @city_data["name"])
+        .col-md-4
+          .block.wow.fadeInUp{"data-wow-delay" => ".3s"}
+            %img{:alt => "", :height => "100%", :src => "images/worldmap.svg", :width => "100%"}
 
-
-
-%section.global-page-header
-  .container.header-content
-    .row
-      .col-md-8
-        .block
-          %h2= @city_data["name"]
-          .col-md-8.header-description
-            %p.prose= insert_content("interface_subhead", @city_data["name"])
-      .col-md-4
-        .block.wow.fadeInUp{"data-wow-delay" => ".3s"}
-          %img{:alt => "", :height => "100%", :src => "images/worldmap.svg", :width => "100%"}
-
-%section#service-page.pages.service-page
+%section#service-page.pages.service-page{class: (@exhibition_mode ? "exhibit_mode" : "")}
   .container
     .row
       .col-md-7
@@ -78,11 +76,11 @@
             .col-md-12  
               #results_grid
               #results_pagination
-
-%section#call-to-action
-  .container
-    .row
-      .col-md-12
-        .block
-          %h2.title.wow.fadeInDown.export{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"} Export your results as GeoJSON
-          %a#export.btn.btn-default.btn-contact.wow.fadeInDown{"data-wow-delay" => ".7s", "data-wow-duration" => "500ms", :href => "#"} Export
+- unless @exhibition_mode
+  %section#call-to-action
+    .container
+      .row
+        .col-md-12
+          .block
+            %h2.title.wow.fadeInDown.export{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"} Export your results as GeoJSON
+            %a#export.btn.btn-default.btn-contact.wow.fadeInDown{"data-wow-delay" => ".7s", "data-wow-duration" => "500ms", :href => "#"} Export

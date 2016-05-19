@@ -76,6 +76,7 @@ class Terrapattern < Sinatra::Base
       send_to_www unless settings.city_urls.include? subdomain
       @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
       @geojson = File.read(@city_data["geojson"])
+      @exhibition_mode = (params["exhibit"] == "true")
       haml :interface
     end
 
