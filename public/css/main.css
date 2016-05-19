@@ -1178,11 +1178,11 @@ article {
 }
 
 .global-page-header a {
-  color: white;
+  color: rgba(255,255,255,.5);
 }
 
 .global-page-header a:hover {
-  color: #DBDBDB;
+  color: white;
   /*text-decoration: underline ;*/
 }
 
@@ -1241,6 +1241,14 @@ article {
 }
 
 .about-blue p {
+  color: white;
+}
+
+.about-blue a {
+  color: rgba(255,255,255,.5);
+}
+
+.about-blue a:hover {
   color: white;
 }
 
