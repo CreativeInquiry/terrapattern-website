@@ -76,6 +76,7 @@ class Terrapattern < Sinatra::Base
       send_to_www unless settings.city_urls.include? subdomain
       @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
       @geojson = File.read(@city_data["geojson"])
+      @water = File.read(@city_data["water"]) rescue nil
       @exhibition_mode = (params["exhibit"] == "true")
       haml :interface
     end
@@ -112,7 +113,7 @@ class Terrapattern < Sinatra::Base
     
       content_type :json
     attachment "terrapattern.json"
-     params["geojson"]
+     JSON.pretty_generate(JSON.parse(params["geojson"]))
     end
 
     # Special helper for the Markdown images.
