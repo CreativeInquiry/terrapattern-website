@@ -1244,9 +1244,6 @@ article {
   color: white;
 }
 
-.about img {
-  max-width: 100%;
-}
 
 /* INTRO PAGE */
 
@@ -1254,7 +1251,7 @@ article {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-#landing-page-2 img {
+#landing-page-2 img, .about-examples img {
   max-width: 100%;
   margin-bottom: 20px;
 }
