@@ -20,7 +20,7 @@ More generally, we hope you can help us understand how the Terrapattern project 
 
 Behind the scenes, Terrapattern's search is based on two tricks.
 
-The first trick is a deep convolutional neural network (DCNN). We feed the DCNN hundreds of thousands of satellite images that have categorized in [OpenStreetMap](https://www.openstreetmap.org/), teaching it to predict the category of a place from a satellite photo. In the process, it learns which visual features are important for classifying satellite imagery. After training, we compute descriptions for millions more satellite photos that cover various regions of interest. When we want to find places that are similar to your query, we just find places with similar descriptions.
+The first trick is a deep convolutional neural network (DCNN). We feed the DCNN hundreds of thousands of satellite images that have been categorized in [OpenStreetMap](https://www.openstreetmap.org/), teaching it to predict the category of a place from a satellite photo. In the process, it learns which visual features are important for classifying satellite imagery. After training, we compute descriptions for millions more satellite photos that cover various regions of interest, such as New York City. When we want to find places that are similar to your query, we just find places with similar descriptions.
 
 It can take a long time to search all the descriptions, so we have another trick. The [CoverTree](https://github.com/manzilzaheer/CoverTree) algorithm precomputes relationships between the descriptions, allowing us to do a search in just a second or two.
 
@@ -50,7 +50,7 @@ We'd love to hear your stories and feedback! If you discover something interesti
 
 We suspect that most of the big players in the space of satellite imaging, such as Google, Microsoft, Digital Globe, Planet Labs, and others are exploring the opportunities afforded by machine learning&mdash;particularly in light of recent and significant advances in convolutional neural networks and other deep learning techniques. 
 
-One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for *user-defined* ("out-of-set") categories. By contrast, most of the systems listed above are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. We believe we are also among the first researchers to publish a trained model for satellite imagery. For more information, please see our [**about**](about.html) page. 
+One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for *user-defined* ("out-of-set") categories. By contrast, most of the systems listed in our [**reference**](reference.html) page are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. We believe we are also among the first researchers to publish a trained model for satellite imagery. For more information, please see our [**about**](about.html) page. 
 
 ---
 ### Why have you only offered three cities? 
@@ -80,4 +80,4 @@ We're a group of new-media artists, creative technologists, and students who are
 --- 
 ### How should I cite this project? 
 
-Levin, G., Newbury, D., McDonald, K., Alvarado, I., Tiwari, A., and Zaheer, M. "Terrapattern: Open-Ended, Visual Query-By-Example for Satellite Imagery using Deep Learning", May 2016. [http://terrapattern.com](http://terrapattern.com).
+Levin, G., Newbury, D., McDonald, K., Alvarado, I., Tiwari, A., and Zaheer, M. "Terrapattern: Open-Ended, Visual Query-By-Example for Satellite Imagery using Deep Learning", Published 20 May 2016. [http://terrapattern.com](http://terrapattern.com).

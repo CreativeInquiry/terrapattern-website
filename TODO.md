@@ -3,16 +3,15 @@
 * [ ] color/style the markings
 * [ ] Fix the searching on doubleclick bug
 * [ ] Fix the rounding error in the URL
-* [ ] Fix weird horizontal offset in NYC tiles (BUG)
-* [ ] When you mouse over a Google map pin, 
-      the corresponding dots light up
+* [ ] Fix the weird horizontal offset in NYC tiles (BUG)
+* [ ] When you mouse over a Google map pin, the corresponding dots should light up in the Plot visualizations
 * [ ] Create contact@terrapattern.com email address; bump to GL & DN
 * [ ] Integrate GeoJSON contour maps from Johanna
 * [ ] it is not possible to zoom into the top edge of the NYC searchable region.
 
 ## Irene's TODOS
 
-* [ ] Add secondary section for homepage.
+* [ ] Test secondary section for homepage.
 * [ ] Make footer
 * [ ] Add survey link to CTA on interface
 * [ ] Make Favicon
