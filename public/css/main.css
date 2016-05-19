@@ -1206,8 +1206,8 @@ article {
 }
 
 .faq hr {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .references {
@@ -1280,4 +1280,9 @@ article {
   line-height: 20px;
   letter-spacing: 0;
   font-weight: 600;
+}
+
+/* All pages */
+.header-content {
+  height: 162px;
 }
