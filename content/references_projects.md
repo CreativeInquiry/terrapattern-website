@@ -2,6 +2,8 @@
 
 *The following projects and initiatives use satellite imagery, oftentimes in combination with various forms of computer vision, to track phenomena of interest in the built and natural world. Until recently, much of this work has been tuned for specific geospatial problems.*
 
+Abelson, B.; Varshney, K.; and Sun, J. "[Targeting direct cash transfers to the extremely poor](http://krvarshney.github.io/pubs/AbelsonVS_kdd2014.pdf)". In *Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining,* 2014. 1563–1572. ACM.
+
 Begall, Sabine et al. "[Magnetic alignment in grazing and resting cattle and deer](http://www.pnas.org/content/early/2008/08/22/0803650105)". *Proceedings of the National Academy of Sciences* 105, no. 36 (9/9/2008), pp. 13,451-13,455. DOI: 10.1073/pnas.0803650105
 
 Begley, Josh. "[Prison Map](http://prisonmap.com)", 2012. *prisonmap.com.* Accessed 5/16/2016. 
