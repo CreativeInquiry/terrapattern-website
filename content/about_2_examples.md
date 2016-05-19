@@ -13,8 +13,11 @@ Here, Terrapattern identified some of Pittsburgh's finest [school bus depots](ht
 ...[purple tennis courts](http://sf.terrapattern.com/?lat=37.7791702&lng=-122.45761950000002) in the Bay Area,
 [![Purple tennis courts in the San Francisco metro region, identified by Terrapattern](images/demo_tennis_courts.jpg "Purple tennis courts in the San Francisco metro region, identified by Terrapattern")](http://sf.terrapattern.com/?lat=37.7791702&lng=-122.45761950000002)
 
-...a collection of [transformer stations](http://pgh.terrapattern.com/?lat=40.465007&lng=-80.0471425):
-[![Transformer stations in Allegheny county, identified by Terrapattern](images/demo_transformer_stations.jpg "Transformer stations in Allegheny county, identified by Terrapattern")](http://pgh.terrapattern.com/?lat=40.465007&lng=-80.0471425)
+...a collection of [transformer stations](http://pgh.terrapattern.com/?lat=40.465007&lng=-80.0471425) in Allegheny County:
+[![Transformer stations in Allegheny County, identified by Terrapattern](images/demo_transformer_stations.jpg "Transformer stations in Allegheny County, identified by Terrapattern")](http://pgh.terrapattern.com/?lat=40.465007&lng=-80.0471425)
+
+...certain attractive [runway markings](http://nyc.terrapattern.com/?lat=40.6979118&lng=-74.16212689999998) from various New York ariports,
+[![Runway lines from various New York ariports, identified by Terrapattern](images/demo_airport_runway_lines.jpg "Runway lines from various New York ariports, identified by Terrapattern")](http://nyc.terrapattern.com/?lat=40.6979118&lng=-74.16212689999998)
 
 ...and a collection of [nautical wrecks](http://nyc.terrapattern.com/?lat=40.5578818&lng=-74.21498739999998) in the NYC area:
 [![Nautical wrecks in the NYC area, identified by Terrapattern](images/demo_nautical_wrecks.jpg "Nautical wrecks in the NYC area, identified by Terrapattern")](http://nyc.terrapattern.com/?lat=40.5578818&lng=-74.21498739999998)
