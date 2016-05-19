@@ -2,11 +2,11 @@
 
 Terrapattern is a prototype that provides *similar-image search for satellite photos*&mdash;an open-source, open-ended tool for exploring the unmapped, and mapping the unmappable. Click an interesting spot in a map of New York, San Francisco, or Pittsburgh, and Terrapattern will find other locations that look similar.
 
-* **YOU** click on a "feature of interest" in a satellite image.
+&bull; **YOU** click on a "feature of interest" in a satellite image.
 
-* **TERRAPATTERN** returns a batch of the most similar-looking places nearby.
+&bull; **TERRAPATTERN** returns a batch of the most similar-looking places nearby.
 
-* **YOU** can then download a list of these locations in GeoJSON format.
+&bull; **YOU** can then download a list of these locations in GeoJSON format.
 
 ---
 ### What can I use Terrapattern for? 
