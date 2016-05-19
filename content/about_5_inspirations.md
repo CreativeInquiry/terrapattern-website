@@ -21,9 +21,7 @@ In [another humanitarian project](http://krvarshney.github.io/pubs/AbelsonVS_kdd
 <img width="320" height="180" src="images/16x9_tukul_detector_hhi.jpg" alt="Researchers can detect mass atrocities by identifying domestic dwellings, known as 'tukuls', that have been razed in South Sudan. Image credit: The Signal Program on Human Security and Technology at the Harvard Humanitarian Initiative." />
 <img width="320" height="180" src="images/16x9_tukul_detector_hhi.jpg" alt="Researchers can detect mass atrocities by identifying domestic dwellings, known as 'tukuls', that have been razed in South Sudan. Image credit: The Signal Program on Human Security and Technology at the Harvard Humanitarian Initiative." />
 
-Tracking animal populations & megafauna
-
-Hogenboom, Melissa. "[Watching penguins, and their poo, from space](http://www.bbc.com/earth/story/20141210-surprising-use-of-penguin-poo)". *BBC.com*. 12/10/2014. Accessed 5/14/2016.
+The combination of satellite imaging and machine vision has also had a major impact on our ability to track animal populations. For example, one team of scientists were able to track Antarctic penguin populations&mdash;and take measurements of their diets&mdash;by [observing their poo from space](http://www.bbc.com/earth/story/20141210-surprising-use-of-penguin-poo). Another team of scientists was able to [locate and count families of Southern Right Whales](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088655). 
 
 <img width="320" height="180" src="images/16x9_penguin_poop_digitalglobe.jpg" alt="Satellite views of penguin poop can help track wildlife populations and their diet. Image credit: DigitalGlobe/BAS." />
 <img width="320" height="180" src="images/16x9_right_whales_fretwell.jpg" "Processed satellite images of southern right whales. Image credit: Peter Fretwell et al." />
@@ -33,43 +31,13 @@ The telescopic perspective of satellite imagery has enormous potential to provid
 <img width="320" height="180" src="images/16x9_parcak_space_archaeology_nasa.jpg" alt="'Space archaeologist' Sarah Parcak has discovered ancient Egyptian pyramids using satellite imagery and computer vision. Image credit: NASA" />
 <img width="320" height="180" src="images/16x9_magnetic_deer_alignment_begall.png" alt="Examinations of cattle and deer from satellite images reveal that they align their body axes along the earth's magnetic field. Image credit: Begall et al." />
 
-
-#### THIS IS NOT FINISHED HERE OK
-
-For art
-
-Onformative
-Benedikt Gross
-
-Previously, work of this kind has been highly bespoke, customized in idiosyncratic ways for specific problems by isolated teams.
+Art: 
+* Benedikt Gross
+* Jenny Odell
 
 
-first spotted by a helicopter pilot in 2013.
-In an ominous positive feedback loop, a recently discovered crater in the thawing Siberian permafrost is spewing methane, a potent greenhouse gas, into the atmosphere. Photo by Marya Zulinova, press service of the Governor, Yamal-Nenets Autonomous District (YaNAO).
+In many of the examples discussed above, researchers developed bespoke visual detectors that were tightly tuned and customized for specific problems. The techniques used in Terrapattern portend a new form of highly generalized detector which can be applied to searches by relative laypersons. In this new workflow, it is only important that the patterns of interest are visually consistent enough for algorithmic detection and analysis.
 
+There are a number of burgeoning, visually consistent, and in many cases worrisome phenomena which future versions of Terrapattern could be useful in tracking. These include [Concentrated Animal Feeding Operations](http://www.wired.com/2013/09/mishka-henner-factory-farms/), or CAFOs; [Uranium mill tailings deposits](http://clui.org/ludb/site/ambrosia-lake-uranium-tailings-pile); "[Gamma Gardens](http://pruned.blogspot.com/2011/04/atomic-gardens.html)" (also called radiation farms) for mutation breeding; and [Siberian methane blowholes](http://news.nationalgeographic.com/news/2015/02/150227-siberia-mystery-holes-craters-pingos-methane-hydrates-science/), which are arising due to global warming; and [megafauna poaching](http://news.nationalgeographic.com/news/2014/08/140818-elephants-africa-poaching-cites-census/). 
 
-
-* Catching pirate fishers
-
-* new logging roads in the central Peruvian Amazon
-
-Speculative: Concentrated Animal Feeding Operations, or CAFOs; URANIUM MILL TAILINGS DEPOSITS Uranium mill tailings deposits
-
-* "Gamma Gardens", also called radiation farms, are tomic Gardening/ Radiation Farms)
-http://pruned.blogspot.com/2011/04/atomic-gardens.html mutation breeding
-
-The Signal Program worked with 2014 HHI
-fellow Michael Hughes last year to develop
-a prototype feature extraction algorithm,
-called “Tukul Detector”. The Tukul DetecSIGNAL
-PROGRAM
-ON HUMAN SECURITY AND
-TECHNOLOGY
-tor identifies and counts traditional African
-huts, known as “tukuls”, that are routinely
-present in satellite imagery of rural regions
-in Africa. 
-
-Whether these patterns concern elephants, parking lots, logging roads, oil tanks, swimming pools, construction sites, munitions craters, methane blowholes, or other phenomena, we cannot predict: it is only important that the patterns of interest are visually consistent enough for algorithmic detection and analysis.
-
-The Terrapattern project is only a prototype, especially in its scale, and we feel we have only scratched the surface of what is possible. 
+The Terrapattern project is only a prototype&mdash;especially in its scale&mdash;and we feel we have only scratched the surface of what is possible. 
