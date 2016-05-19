@@ -31,10 +31,12 @@ The telescopic perspective of satellite imagery has enormous potential to provid
 <img width="320" height="180" src="images/16x9_parcak_space_archaeology_nasa.jpg" alt="'Space archaeologist' Sarah Parcak has discovered ancient Egyptian pyramids using satellite imagery and computer vision. Image credit: NASA" />
 <img width="320" height="180" src="images/16x9_magnetic_deer_alignment_begall.png" alt="Examinations of cattle and deer from satellite images reveal that they align their body axes along the earth's magnetic field. Image credit: Begall et al." />
 
-Art: 
-* Benedikt Gross
-* Jenny Odell
+The arts have the power to provide insights of an altogether different sort.  A number of artists have employed various forms of human and/or machine intelligence to the domain of satellite imagery, in order to produce projects that inform, provoke, entertain, and delight. An excellent example of this is the project "[*Aerial Bold*](http://type.aerial-bold.com/tw/)" by Benedikt Groß and Joseph Lee, which is a typeface wholly constructed from letterforms found in satellite imagery. Whereas Groß and Lee use a mixture of crowdsourcing and automated detection, artist Jenny Odell uses a more personalized, curatorial approach in her [*Satellite Collections*](http://www.jennyodell.com/satellite.html) project (2009-2011), in which parking lots, silos, landfills, waste ponds are compiled into typological collages. Of her work, Odell writes that "*The view from a satellite is not a human one, nor is it one we were ever really meant to see. But it is precisely from this inhuman point of view that we are able to read our own humanity, in all of its tiny, repetitive marks upon the face of the earth. From this view, the lines that make up basketball courts and the scattered blue rectangles of swimming pools become like hieroglyphs that say: people were here.*"
 
+Other interesting artworks in this space include [*The Big Atlas of LA Pools*](http://benedikt-gross.de/log/2013/06/the-big-atlas-of-la-pools/) (also by Groß & Lee), and Joshua Begley's stunning [*Prison Map*](http://prisonmap.com).
+
+<img width="320" height="180" src="images/16x9_aerial_bold_benedikt_gross.jpg" alt="Aerial Bold is a typeface made from letterforms found in satellite images. Image credit: Benedikt Gross and Joey Lee" />
+<img width="320" height="180" src="images/16x9_odell_container_ships.jpg" alt="Collections of container ships extracted from satellite imagery by artist Jenny Odell. Image credit: Jenny Odell" />
 
 In many of the examples discussed above, researchers developed bespoke visual detectors that were tightly tuned and customized for specific problems. The techniques used in Terrapattern portend a new form of highly generalized detector which can be used in searches by relative laypersons. In this new workflow, it is only important that the patterns of interest are visually consistent enough for algorithmic detection and analysis.
 

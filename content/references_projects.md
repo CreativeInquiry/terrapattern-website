@@ -16,22 +16,24 @@ Fretwell, Peter T.; Staniland Iain J.; and Forcada, Jaume. "[Whales from Space: 
 
 Garling, Caleb."[Startup Promises Business Insights from Satellite Images](https://www.technologyreview.com/s/535866/startup-promises-business-insights-from-satellite-images/)". *TechnologyReview.com,* MIT Technology Review, 3/16/2015. Accessed 5/14/2016.
 
+Gross, Benedikt and Lee, Joey. "[Aerial Bold](https://www.kickstarter.com/projects/357538735/aerial-bold-kickstart-the-planetary-search-for-let)". A typeface comprised of letters found in satellite images. *aerial-bold.com*, 2016. Accessed 5/14/2016.
+
 Hogenboom, Melissa. "[Watching penguins, and their poo, from space](http://www.bbc.com/earth/story/20141210-surprising-use-of-penguin-poo)". *BBC.com*. 12/10/2014. Accessed 5/14/2016.
 
 Howard, Brian C. "[Tiny Team Uses Satellites to Bust Illegal Fishing Worldwide](http://news.nationalgeographic.com/2015/06/150615-skytruth-pirate-fishing-illegal-big-data-ocean-conservation/)". *NationalGeographic.com*, 6/15/2015. Accessed 5/14/2016.
 
 Howard, Brian C. "[New Theory Behind Dozens of Craters Found in Siberia](http://news.nationalgeographic.com/news/2015/02/150227-siberia-mystery-holes-craters-pingos-methane-hydrates-science/)". *news.nationalgeographic.com*, National Geographic Society, 2/27/2015. Accessed 5/14/2016.
 
-Odell, Jenny. [*Satellite Collections*](http://www.jennyodell.com/satellite.html) (2009-2011).  Collages of similar-looking things that the artist has cut out from Google satellite imagery.
-
 Novoa, S.; Fuentes, M.T.; Finer, M.; Pena N.; and Julca, J. "[MAAP #18: Proliferation of Logging Roads in the Peruvian Amazon](http://maaproject.org/2015/maap18-logroads/)". *maaproject.org*, Monitoring of the Andean Amazon Project, 10/30/2015. Accessed 5/14/2016.
+
+Odell, Jenny. [*Satellite Collections*](http://www.jennyodell.com/satellite.html) (2009-2011).  Collages of similar-looking things that the artist has cut out from Google satellite imagery. Accessed 5/14/2016.
 
 Pell, Richard W. and Allen, Lauren B. "[Preface to a Genealogy of the Postnatural](http://postnatural.org/filter/Intercalations-2/Preface-to-a-Genealogy-of-the-Postnatural)". In *Intercalations 2: Land & Animal & Non-Animal*, Edited by Anna-Sophie Springer & Etienne Turpin. K. Verlag and the Haus der Kulturen der Welt, Berlin. 2015.
 
-Raymond, Nathaniel A.; Vidan, Gili; and the staff of the Signal Program on Human Security and Technology at the Harvard Humanitarian Initiative (Isaac Baker, Ziad Achkar, Brittany Card, Benjamin Davies, and Steve Juntunen). "[Tents and Tukuls: Lessons from the Development of AMALGAM](http://thetechchallenge.org/tents-and-tukuls-lessons-from-the-development-of-amalgam-3/)". *thetechchallenge.org*, Mass Atrocity Prevention Tech Challenge, 12/10/2014. Accessed 5/15/2016.
-
 Raymond, Nathaniel A.; Card, Brittany L.; Baker, Isaac L.; and Al Achkar, Ziad. "[Satellite Imagery Interpretation Guide: Intentional Burning of Tukuls](http://hhi.harvard.edu/sites/default/files/publications/siig_ii_burned_tukuls_3.pdf)". *http://hhi.harvard.edu*.
 Signal Program on Human Security and Technology at the Harvard Humanitarian Initative, 2014. Accessed 5/15/2016.
+
+Raymond, Nathaniel A.; Vidan, Gili; and the staff of the Signal Program on Human Security and Technology at the Harvard Humanitarian Initiative (Isaac Baker, Ziad Achkar, Brittany Card, Benjamin Davies, and Steve Juntunen). "[Tents and Tukuls: Lessons from the Development of AMALGAM](http://thetechchallenge.org/tents-and-tukuls-lessons-from-the-development-of-amalgam-3/)". *thetechchallenge.org*, Mass Atrocity Prevention Tech Challenge, 12/10/2014. Accessed 5/15/2016.
 
 Rothfeld, Michael and Patterson, Scott. "[Traders Seek an Edge With High-Tech Snooping](http://www.wsj.com/articles/SB10001424052702303497804579240182187225264)". *The Wall Street Journal,* 12/18/2013. Accessed 5/15/2016.
 
