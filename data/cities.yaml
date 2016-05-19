@@ -38,10 +38,10 @@ cities:
       lng: -73.9837883
       lat: 40.7535342
     bounding_box: 
-      sw_lat: 40.477399
-      sw_lng: -74.25909
-      ne_lat: 40.917577
-      ne_lng: -73.700272
+      sw_lat: 40.5301893
+      sw_lng: -74.2438204
+      ne_lat: 40.9413968
+      ne_lng: -73.6870689
     geojson: "data/nyc.json"      # The relative pat
 
   
