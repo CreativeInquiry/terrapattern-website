@@ -27,7 +27,7 @@
   %body
   = partial "partials/header", locals: {alt_header: @use_alt_header}
   = yield
-  - if !@use_alt_header
+  - if !@use_alt_header && !@exhibition_mode
     = partial "partials/footer"
 
   / JAVASCRIPTS -------------------------------------------------------
