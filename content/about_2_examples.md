@@ -19,7 +19,7 @@ Here, Terrapattern identified some of Pittsburgh's finest [school bus depots](ht
 ...certain attractive [runway markings](http://nyc.terrapattern.com/?lat=40.6979118&lng=-74.16212689999998) from various New York ariports,
 [![Runway lines from various New York ariports, identified by Terrapattern](images/demo_airport_runway_lines.jpg "Runway lines from various New York ariports, identified by Terrapattern")](http://nyc.terrapattern.com/?lat=40.6979118&lng=-74.16212689999998)
 
-...and a collection of [nautical wrecks](http://nyc.terrapattern.com/?lat=40.5578818&lng=-74.21498739999998) in the NYC area:
+...and a collection of [nautical wrecks](http://nyc.terrapattern.com/?lat=40.5578818&lng=-74.21498739999998) in NYC-area coastal waters:
 [![Nautical wrecks in the NYC area, identified by Terrapattern](images/demo_nautical_wrecks.jpg "Nautical wrecks in the NYC area, identified by Terrapattern")](http://nyc.terrapattern.com/?lat=40.5578818&lng=-74.21498739999998)
 
 Here are some more example searches you can try: [baseball diamonds](http://pgh.terrapattern.com/?lat=40.355282&lng=-80.14462550000002) &bull; [semi-trailer trucks on highways](http://pgh.terrapattern.com/?lat=40.4582145&lng=-80.1116735) &bull; [USAF bombers](http://pgh.terrapattern.com/?lat=40.4926995&lng=-80.21327550000001) &bull; [cracked tarmac](http://pgh.terrapattern.com/?lat=40.499492&lng=-80.23593) &bull; [bridges](http://pgh.terrapattern.com/?lat=40.4874745&lng=-79.905037) &bull; [fracking wells](http://pgh.terrapattern.com/?lat=40.292582&lng=-79.94142149999999) &bull; 
