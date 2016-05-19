@@ -1273,3 +1273,8 @@ article {
   letter-spacing: 0;
   font-weight: 600;
 }
+
+/* All pages */
+.header-content {
+  height: 162px;
+}
