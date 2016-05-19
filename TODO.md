@@ -5,9 +5,9 @@
 * [ ] Fix the rounding error in the URL
 * [ ] Fix the weird horizontal offset in NYC tiles (BUG)
 * [ ] When you mouse over a Google map pin, the corresponding dots should light up in the Plot visualizations
-* [ ] Create contact@terrapattern.com email address; bump to GL & DN
 * [ ] Integrate GeoJSON contour maps from Johanna
 * [ ] it is not possible to zoom into the top edge of the NYC searchable region.
+* [ ] *Experiment* with rounded corners for the result squares. 
 
 ## Irene's TODOS
 
@@ -49,6 +49,7 @@
 * [X] Tweak Interface Colors
 * [X] Write export script
 * [X] Add a loading message/screen
+* [X] Create contact@terrapattern.com email address; bump to GL & DN
 
 --- 
 
