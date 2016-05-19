@@ -1250,6 +1250,10 @@ article {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+#landing-page-2 img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
 
 /* Footer */
 
