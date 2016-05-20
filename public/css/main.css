@@ -1266,6 +1266,15 @@ section ul li {
   color: #7f7f7f;
 }
 
+.about-images {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+/*.about-inspirations img{
+  width: 49%;
+}*/
+
 /* Lading page */
 
 #landing-page-2 img, #landing-page-3 img {
