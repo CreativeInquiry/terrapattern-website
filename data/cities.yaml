@@ -13,7 +13,7 @@ cities:
       ne_lat: 40.674935           #  --
       ne_lng: -79.688761          #  --
     geojson: "data/pgh.json"      # The relative path for the geojson boundary of the object
-
+    water:   "data/pgh_rivers.json"
   - name: San Francisco
     url_name: sf
     search_locale: "San_Fran"    # this is the search server's name for the region
@@ -28,6 +28,7 @@ cities:
       ne_lat: 37.89132854978251
       ne_lng: -121.8944091629237
     geojson: "data/sf.json"      # The relative path for the geojson boundary of the object
+    water:   "data/sf_coast.json"      # The relative path for the geojson boundary of the object
   
   - name: New York City
     search_locale: "New_York"    # this is the search server's name for the region

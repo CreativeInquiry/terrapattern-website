@@ -41,6 +41,7 @@ of the interface.
 
 // Color Palette
 var FRAME_COLOR = "#b2bdb3";                       // Color of the graph backgrounds
+var WATER_COLOR = "#c8d0c9";                       // Color of the graph backgrounds
 var AXIS_COLOR = "#efefec";                        // Color of the graph elements
 var SELECTED_COLOR = "#3887be";                    // Color of the current dot/pin
 var PRIMARY_TILE_COLOR = "#2ecc71";                // Color of the searched-for dot/pin
@@ -271,6 +272,20 @@ var p5Map = function(p) {
       p.vertex(pos.x,pos.y);
     });
     p.endShape(p.close);
+
+    if (WATER) {
+      p.fill(WATER_COLOR);
+      WATER.coordinates.forEach(function(poly){
+        poly.forEach(function(shape){ 
+          p.beginShape();
+          shape.forEach(function(point){
+            pos = getPointfromLatLng(point[1],point[0]);
+            p.vertex(pos.x,pos.y);
+          });
+          p.endShape(p.close);
+        })
+      })
+    }
 
     // draw Viewport Box
     var viewableBounds = terrapatternMap.getBounds();
