@@ -284,11 +284,13 @@ a:hover {
   color: white;
   padding: 16px 35px;
   margin-top: 20px;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   border-radius: 15px;
   box-shadow: 0px 0px 0px 2px white inset;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 #call-to-action .block .btn-contact i {
   margin-right: 10px;
@@ -559,7 +561,8 @@ figure figcaption p {
 }
 #footer {
   background: #fff;
-  padding: 25px 0;
+  padding-top: 50px;
+  padding-bottom: 30px;
   color: #555;
 }
 #footer .copyright {
@@ -1230,4 +1233,31 @@ ul.social-icons li {
 
 .twitter-link {
   color: rgba(255,255,255,.7);
+}
+
+.about-examples img {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.about-inspirations img {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+section ul {
+  margin-left: 40px;
+}
+
+section ul li {
+  list-style: inherit;
+  padding-bottom: 10px;
+}
+
+section ul li {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 15px;
+  color: #7f7f7f;
 }
