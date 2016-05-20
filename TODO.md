@@ -8,14 +8,9 @@
 
 ## Irene's TODOS
 
-* [ ] Test secondary section for homepage.
-* [ ] Make footer
 * [ ] Add survey link to CTA on interface
-* [ ] Make Favicon
-* [ ] Add license stuff
 * [ ] Help edit Visitor Survey (Google Survey)
-* [ ] In faq, YOU/TERRAPATTERN/YOU in the "What's the basic idea?" section should be bulleted (ul, li tags etc.) 
-* 
+* [ ] Add license extra part to about page
 
 ## Golan's Todos: 
 * [ ] Rate limit Google map searches.

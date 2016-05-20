@@ -28,15 +28,11 @@ It can take a long time to search all the descriptions, so we have another trick
 
 Sure. Here are some reasons why that may be true: 
 
-&bull; The Terrapattern project uses *tile-based* search, not *pixel-based* search. In other words, the tool finds places that are similar to the *map tile* you clicked in—not the exact *object* you clicked on. As a result, the system may be serving up tiles that match your selection in ways that are different than the ones you're expecting. If possible, experiment with selecting a tile that contains a better example of your object of interest.
-
-&bull; The Terrapattern tool is *scale dependent*. Our model is developed from Google map tiles analyzed at [magification level 19](http://gis.stackexchange.com/questions/7430/what-ratio-scales-do-google-maps-zoom-levels-correspond-to). At the latitude of NYC, these 256x256 pixel tiles represent portions of the earth that are roughly 50 meters across. This means that it may be difficult or unreliable to search for features smaller than ~10 meters, or larger than ~100 meters.
-
-&bull; Related to the above, some features fall on the *boundaries* between map tiles. As a result, they may not rise to the top of search results as quickly as features that occur near the center of map tiles. We're working on a fix for this. 
-
-&bull; It's possible that the map tiles returned in response to your searches are fresher than the data we analyzed in May 2016. In other words, the situation on-the-ground may have changed: there could have been new construction, demolition, seasonal variation, etc. 
-
-&bull; It's possible that you may have chosen to search for something that's genuinely *unique*, and there's really nothing else quite like it around. For example, the [Sandcastle Waterpark](https://www.google.com/maps/place/Sandcastle+Water+Park/@40.3980801,-79.9275436,604a,20y,317.39h/data=!3m1!1e3!4m5!3m4!1s0x8834f02d67fb76bd:0xf1b45395cec34844!8m2!3d40.3979202!4d-79.9273153) in Pittsburgh is extremely distinctive. 
+* The Terrapattern project uses *tile-based* search, not *pixel-based* search. In other words, the tool finds places that are similar to the *map tile* you clicked in—not the exact *object* you clicked on. As a result, the system may be serving up tiles that match your selection in ways that are different than the ones you're expecting. If possible, experiment with selecting a tile that contains a better example of your object of interest.
+* The Terrapattern tool is *scale dependent*. Our model is developed from Google map tiles analyzed at [magification level 19](http://gis.stackexchange.com/questions/7430/what-ratio-scales-do-google-maps-zoom-levels-correspond-to). At the latitude of NYC, these 256x256 pixel tiles represent portions of the earth that are roughly 50 meters across. This means that it may be difficult or unreliable to search for features smaller than ~10 meters, or larger than ~100 meters.
+* Related to the above, some features fall on the *boundaries* between map tiles. As a result, they may not rise to the top of search results as quickly as features that occur near the center of map tiles. We're working on a fix for this. 
+* It's possible that the map tiles returned in response to your searches are fresher than the data we analyzed in May 2016. In other words, the situation on-the-ground may have changed: there could have been new construction, demolition, seasonal variation, etc. 
+* It's possible that you may have chosen to search for something that's genuinely *unique*, and there's really nothing else quite like it around. For example, the [Sandcastle Waterpark](https://www.google.com/maps/place/Sandcastle+Water+Park/@40.3980801,-79.9275436,604a,20y,317.39h/data=!3m1!1e3!4m5!3m4!1s0x8834f02d67fb76bd:0xf1b45395cec34844!8m2!3d40.3979202!4d-79.9273153) in Pittsburgh is extremely distinctive. 
 
 ---
 ### I made a cool discovery with Terrapattern. How can I share it?
