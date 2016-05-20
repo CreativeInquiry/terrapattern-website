@@ -1,6 +1,6 @@
     {
-      "type": "Polygon",
-      "coordinates": [
+      "type": "MultiPolygon",
+      "coordinates": [[
         [
           [
             -80.0142296142556,
@@ -995,5 +995,5 @@
             40.4556041861879
           ]
         ]
-      ]
+      ]]
     }
