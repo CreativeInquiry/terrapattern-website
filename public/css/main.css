@@ -26,7 +26,10 @@ p {
   line-height: 24px;
   font-size: 16px;
   color: #7f7f7f;
-  /*font-weight: 300;*/
+}
+
+p strong {
+  font-weight: 600 ;
 }
 h1 {
   font-family: 'Brandon', sans-serif;
@@ -1186,4 +1189,45 @@ ul.social-icons li {
 
 #call-to-action h3 {
   color: white;
+}
+
+/* About page */
+
+.twitter-button {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 600;
+  display: block;
+  margin: 40px auto 0;
+  width: 50%;
+  /*height: 80px;*/
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  background-color: #3887be;
+  color: #fff;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  text-overflow: ellipsis;
+  border-radius: 15px;
+  white-space: inherit;
+  border: none;
+}
+
+.twitter-button:hover {
+  background-color: #52a1d8;
+  color: #fff;
+}
+
+.twitter-button:hover, .twitter-button.active {
+  background-color: #52a1d8;
+  color: #fff;
+}
+
+.export-button:hover {
+  background-color: #52a1d8 !important;
+}
+
+.twitter-link {
+  color: rgba(255,255,255,.7);
 }
