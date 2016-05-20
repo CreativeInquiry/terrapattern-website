@@ -39,7 +39,7 @@
             %h1= @city_data["name"]
             .col-md-8.header-description
               %p.prose= insert_content("interface_subhead", @city_data["name"])
-        .col-md-4
+        .col-md-4.visible-md-block.visible-lg-block
           .block.wow.fadeInUp{"data-wow-delay" => ".3s"}
             %img{:alt => "", :height => "100%", :src => "images/worldmap.svg", :width => "100%"}
 
