@@ -10,7 +10,6 @@
 
 * [ ] Add survey link to CTA on interface
 * [ ] Help edit Visitor Survey (Google Survey)
-* [ ] Add license extra part to about page
 
 ## Golan's Todos: 
 * [ ] Rate limit Google map searches.

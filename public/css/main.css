@@ -283,7 +283,7 @@ a:hover {
   border: none;
   color: white;
   padding: 16px 35px;
-  margin-top: 20px;
+  margin-top: 0px;
   /*text-transform: uppercase;*/
   border-radius: 15px;
   box-shadow: 0px 0px 0px 2px white inset;
@@ -1231,6 +1231,7 @@ ul.social-icons li {
   color: #fff;
 }
 
+
 .export-button:hover {
   background-color: #52a1d8 !important;
 }
@@ -1284,4 +1285,10 @@ section ul li {
 
 #landing-page-3 img {
   max-width: 100%;
+}
+
+/* All pages */
+.final-section {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
 }
