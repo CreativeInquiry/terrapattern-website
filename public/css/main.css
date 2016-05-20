@@ -1153,13 +1153,17 @@ ul.social-icons li {
 
 /* INTRO PAGE */
 
-#landing-page-2 {
+#landing-page-2, #landing-page-3 {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 #landing-page-2 img, .about-examples img {
   max-width: 100%;
   margin-bottom: 20px;
+}
+
+#landing-page-3 {
+  background: #f8f8f8;
 }
 
 /* Footer */
@@ -1260,4 +1264,15 @@ section ul li {
   line-height: 24px;
   font-size: 15px;
   color: #7f7f7f;
+}
+
+/* Lading page */
+
+#landing-page-2 img, #landing-page-3 img {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+#landing-page-3 img {
+  max-width: 100%;
 }
