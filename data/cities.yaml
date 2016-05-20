@@ -44,6 +44,6 @@ cities:
       ne_lat: 40.9413968
       ne_lng: -73.6870689
     geojson: "data/nyc.json"      # The relative pat
-    water:   "data/nyc_water.json"      # The relative path for the geojson boundary of the object
+    water:   "data/nyc_water_simple.json"      # The relative path for the geojson boundary of the object
 
   

@@ -87,6 +87,7 @@ var p5Map = function(p) {
   var minmapFrameHeight;
   var minmapFrameTop;
   var minmapFrameLeft;
+  var waterShape = [];
 
 
   //-----------------------------------------------------------------
@@ -274,17 +275,27 @@ var p5Map = function(p) {
     p.endShape(p.close);
 
     if (WATER) {
-      p.fill(WATER_COLOR);
-      WATER.coordinates.forEach(function(poly){
-        poly.forEach(function(shape){ 
-          p.beginShape();
-          shape.forEach(function(point){
-            pos = getPointfromLatLng(point[1],point[0]);
-            p.vertex(pos.x,pos.y);
-          });
-          p.endShape(p.close);
+
+      if (waterShape.length == 0) {
+        WATER.coordinates.forEach(function(poly){
+          poly.forEach(function(shape){ 
+            var shapeData = []
+            shape.forEach(function(point){
+              shapeData.push(getPointfromLatLng(point[1],point[0]));
+            });
+            waterShape.push(shapeData)
+          })
         })
-      })
+      }
+
+      p.fill(WATER_COLOR);
+      waterShape.forEach(function(shape) {
+        p.beginShape();
+        shape.forEach(function(pos){
+          p.vertex(pos.x,pos.y);
+        });
+        p.endShape();
+      });
     }
 
     // draw Viewport Box
@@ -370,6 +381,7 @@ var p5Map = function(p) {
     minmapFrameHeight = p.height;
     minmapFrameTop    = 0;
     minmapFrameLeft   = 0;
+    waterShape = [];
   }
 
 
