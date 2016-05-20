@@ -749,6 +749,8 @@ var terrapatternMap = (function(){
 
         form.appendChild(hiddenField);
 
+        
+
         document.body.appendChild(form);
         form.submit();
       }

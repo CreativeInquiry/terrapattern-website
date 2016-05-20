@@ -112,8 +112,12 @@ class Terrapattern < Sinatra::Base
     post "/download" do
     
       content_type :json
-    attachment "terrapattern.json"
-     JSON.pretty_generate(JSON.parse(params["geojson"]))
+      nameparts = ["terrapattern"]  
+      obj = JSON.parse(params["geojson"])
+      obj = {"properties" =>  {"note": "This collection of points represents a results set of visually similar locations.  It was created using Terrapattern.", "url": "http://www.terrapattern.com", "timestamp": Time.now.to_s}}.merge(obj)
+      id = obj["features"][0]["id"].gsub("_z19.png","").to_s
+      attachment "terrapattern_#{id}.json"
+      JSON.pretty_generate(obj)
     end
 
     # Special helper for the Markdown images.
