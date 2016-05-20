@@ -78,10 +78,10 @@
               #results_grid
               #results_pagination
 - unless @exhibition_mode
-  %section#call-to-action
+  %section#call-to-action.final-section
     .container
       .row
         .col-md-12
           .block
             %h3.wow.fadeInDown.export{"data-wow-delay" => ".3s", "data-wow-duration" => "500ms"} Export your results as GeoJSON
-            %a#export.btn.btn-default.btn-contact.wow.fadeInDown{"data-wow-delay" => ".7s", "data-wow-duration" => "500ms", :href => "#"} Export
+            %a#export.btn.btn-default.btn-contact.export-button.wow.fadeInDown{"data-wow-delay" => ".7s", "data-wow-duration" => "500ms", :href => "#"} Export &#10132;

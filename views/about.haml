@@ -18,6 +18,10 @@
     .row
       .col-md-12
         = insert_content("about_2_examples")
+        %a#export.btn.btn-default.btn-contact.twitter-button.link{:href => "https://twitter.com/hashtag/terrapattern"} 
+          Have you discovered an interesting collection? Please send a tweet with the hashtag 
+          %span.twitter-link #terrapattern
+          and the URL of your search! &#10132;
 
 %section.about.about-blue
   .container
@@ -31,14 +35,20 @@
       .col-md-12
         = insert_content("about_4_prototype")
 
-%section.about.about-grey
+%section.about.about-grey.about-inspirations
   .container
     .row
       .col-md-12
         = insert_content("about_5_inspirations")
 
-%section.about.about-blue
+%section.about
   .container
     .row
       .col-md-12
         = insert_content("about_6_how_it_works")
+
+%section#call-to-action.final-section
+  .container
+    .row
+      .col-md-8.col-md-offset-2
+        = insert_content("footer_license")
