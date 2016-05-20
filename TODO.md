@@ -4,7 +4,7 @@
 * [ ] Fix the searching on doubleclick bug
 * [ ] Fix the rounding error in the URL
 * [ ] When you mouse over a Google map pin, the corresponding dots should light up in the Plot visualizations
-* [ ] Integrate GeoJSON contour maps from Johanna
+* [X] Integrate GeoJSON contour maps from Johanna
 
 ## Irene's TODOS
 
