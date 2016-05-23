@@ -12,8 +12,8 @@ We thank the organizers of the [**Alt-AI**](http://alt-ai.net/) conference, [Gen
 
 We gratefully acknowledge [**Planet Labs**](https://www.planet.com/), and in particular Andrew Zolli, Joe Mascaro, and Rob Simmon, for their interest and encouragement, and for providing access to geospatial data through their Ambassadors Program.
 
-We thank Professor [**Rich Pell**](http://www.andrew.cmu.edu/user/rp3h/), founder and co-director of the [Center for Postnatural History](http://www.postnatural.org/), for invaluable suggestions and discussions about how our project can help us understand the anthropocene. 
-
 To train our neural network, our project made use of nearly 500,000 nodes, polygons and other map labels meticulously contributed by the members of the [**OpenStreetMap**](https://www.openstreetmap.org) volunteer community over nearly ten years. It has been [pointed out](http://www.spacemachine.net/views/2016/3/datasets-over-algorithms) that many AI breakthroughs have been constrained by the availability of high-quality training datasets. We are grateful to the OSM commmunity for developing and releasing their freely-reusable geospatial data.
+
+We thank our friends, [Rich Pell](http://www.andrew.cmu.edu/user/rp3h/), founder and co-director of the [Center for Postnatural History](http://www.postnatural.org/), and [Charlie Loyd](https://twitter.com/vruba), for invaluable suggestions and discussions about how our project can help us understand the anthropocene. 
 
 Last, but not least, we acknowledge the support of our hardworking staff and students at the [**Frank-Ratchye STUDIO for Creative Inquiry**](studioforcreativeinquiry.org), including Tom Hughes, Linda Hager, [Dan Moore](makeitdoathing.com), Johanna McAllister, Aprameya Mysore, and [Charlotte Stiles](http://charlottestiles.com/).
