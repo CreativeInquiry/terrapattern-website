@@ -47,7 +47,7 @@ We suspect that most of the big players in the space of satellite imaging, such 
 One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for *user-defined* ("out-of-set") categories. By contrast, most of the systems listed in our [**reference**](reference.html) page are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. We believe we are also among the first researchers to publish a trained model for satellite imagery. For more information, please see our [**about**](about.html) page. 
 
 ---
-### Why have you only offered three cities? 
+### Why have you offered so few cities? 
 
 It's the scale we could afford. Storing the model data for each metro region requires about 10GB of active RAM. (That's *RAM*&mdash;not hard disk.) To store and serve a searchable model for (say) the entire United States would require nearly 2,000 times as much RAM and CPU power as we're currently leasing, and the development of a much more sophisticated software architecture as well. Think of the *Terrapattern* project as a proof-of-concept probe to test how (or whether) "visual query-by-example" for satellite imagery might become a part of our everyday future. Remember, you saw it here first :)
 
@@ -70,6 +70,11 @@ We're a group of new-media artists, creative technologists, and students who are
 ### What data do you collect from this site's visitors? 
 
 *The following statement constitutes our privacy policy:* We are strongly committed to protecting the privacy and anonymity of the visitors to this site. We do not collect or share personal information, and we don't track or profile you. The IP address that is associated with your search(es) is not recorded or shared, and this web site does not use tracking or identifying cookies. Other than our optional [visitor feedback survey](http://goo.gl/forms/8T7zY28nHm), we do not collect or log any user data. Your search information is not stored, and cannot be linked back to you. 
+
+---
+### How is Terrapattern licensed? 
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Terrapattern</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://terrapattern.com" property="cc:attributionName" rel="cc:attributionURL">Golan Levin, David Newbury, Kyle McDonald, Irene Alvarado, Aman Tiwari, and Manzil Zaheer</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. The Terrapattern code and data files are made available under [the MIT Licence](https://en.wikipedia.org/wiki/MIT_License). 
 
 --- 
 ### How should I cite this project? 
