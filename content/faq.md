@@ -49,7 +49,7 @@ One of the main features which distinguishes the Terrapattern project is our emp
 ---
 ### Why have you offered so few cities? 
 
-It's the scale we could afford. Storing the model data for each metro region requires about 10GB of active RAM. (That's *RAM*&mdash;not hard disk.) To store and serve a searchable model for (say) the entire United States would require nearly 2,000 times as much RAM and CPU power as we're currently leasing, and the development of a much more sophisticated software architecture as well. Think of the *Terrapattern* project as a proof-of-concept probe to test how (or whether) "visual query-by-example" for satellite imagery might become a part of our everyday future. Remember, you saw it here first :)
+We're adding more soon! But for the moment, this is the scale we could afford. Storing the model data for each metro region requires about 10GB of active RAM. (That's *RAM*&mdash;not hard disk.) To store and serve a searchable model for (say) the entire United States would require nearly 2,000 times as much RAM and CPU power as we're currently leasing, and the development of a much more sophisticated software architecture as well. Think of the *Terrapattern* project as a proof-of-concept probe to test how (or whether) "visual query-by-example" for satellite imagery might become a part of our everyday future. Remember, you saw it here first :)
 
 ---
 ### Why did you select the cities you did? 
