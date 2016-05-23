@@ -405,7 +405,7 @@ var p5Map = function(p) {
       yOffset = (minmapFrameHeight - (minmapFrameWidth / mapRatio))/2;
     }
     else {
-      xOffset = (minmapFrameWidth - (minmapFrameHeight / mapRatio))/2;
+      xOffset = (minmapFrameWidth - (minmapFrameHeight / boxRatio))/2;
       yOffset = 0;
     }
 
