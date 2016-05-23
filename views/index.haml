@@ -17,7 +17,11 @@
         .block.wow.fadeInUp{"data-wow-delay" => ".6s"}
           - settings.city_names.each_with_index do |name, id|
             %a.btn-lines.dark.light.wow.fadeInUp.animated.smooth-scroll.btn.btn-default.btn-green{"data-wow-delay" => ".9s", :href => subdomain_url(settings.city_urls[id])}= name
-        
+    .row#more-cities
+      .col-md-12
+        .block.wow.fadeInUp.animated{"data-wow-delay" => ".6s"}
+          %h3 More Cities Coming Soon!     
+
 %section#landing-page-2
   .container
     .row

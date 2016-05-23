@@ -14,6 +14,7 @@ cities:
       ne_lng: -79.688761          #  --
     geojson: "data/pgh.json"      # The relative path for the geojson boundary of the object
     water:   "data/pgh_rivers.json"
+
   - name: San Francisco
     url_name: sf
     search_locale: "San_Fran"    # this is the search server's name for the region
@@ -45,5 +46,22 @@ cities:
       ne_lng: -73.6870689
     geojson: "data/nyc.json"      # The relative pat
     water:   "data/nyc_water_simple.json"      # The relative path for the geojson boundary of the object
+
+  - name: Detroit                 # The human-readable label for the location
+    url_name: detroit             # the subdomain string
+    search_locale: "Detroit"      # this is the search server's name for the region
+    primary_color:   "#F5DC0F"    # The dominant color for the location
+    secondary_color: "#000000"    # The secondary color for the location
+    center:                       # This is the default location for the map
+      lng: -83.0510701            #  --
+      lat: 42.3369902             #  --
+    bounding_box:                 # This is the bounding box for constraining search
+      sw_lat: 42.204234652875556  #  --
+      sw_lng: -83.22383880615234  #  --
+      ne_lat: 42.50146550893478   #  --
+      ne_lng: -82.88394927978516  #  --
+    geojson: "data/detroit.json"      # The relative path for the geojson boundary of the object
+    # water:   "data/detroit_water.json"
+
 
   

@@ -1287,6 +1287,12 @@ section ul li {
   max-width: 100%;
 }
 
+#more-cities h3{
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 /* All pages */
 .final-section {
   padding-top: 80px !important;

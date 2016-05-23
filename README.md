@@ -38,6 +38,7 @@ For testing, it can be helpful to modify your ``/etc/hosts`` file by adding the 
     127.0.0.1 pgh.terrapattern.dev
     127.0.0.1 sf.terrapattern.dev
     127.0.0.1 nyc.terrapattern.dev
+    127.0.0.1 detroit.terrapattern.dev
 
 This allows you to test the multi-domain functionality locally.
 
