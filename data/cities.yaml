@@ -56,10 +56,10 @@ cities:
       lng: -83.0510701            #  --
       lat: 42.3369902             #  --
     bounding_box:                 # This is the bounding box for constraining search
-      sw_lat: 42.204234652875556  #  --
-      sw_lng: -83.22383880615234  #  --
-      ne_lat: 42.50146550893478   #  --
-      ne_lng: -82.88394927978516  #  --
+      sw_lat: 42.2047572  #  --
+      sw_lng: -83.2231523  #  --
+      ne_lat: 42.5010147   #  --
+      ne_lng: -82.8847078  #  --
     geojson: "data/detroit.json"      # The relative path for the geojson boundary of the object
     water:   "data/detroit_water.json"
 

@@ -306,8 +306,6 @@ var p5Map = function(p) {
     var p1 = getPointfromLatLng(ne.lat(), ne.lng());
     var p2 = getPointfromLatLng(sw.lat(), sw.lng());
     p.fill(VIEWPORT_BOX_COLOR);
-    // console.log (ne.lat(), ne.lng(), sw.lat(), sw.lng())
-    // console.log (;
     if (p1.x > minmapFrameLeft + minmapFrameWidth) {
       p1.x = minmapFrameLeft + minmapFrameWidth;
     }
@@ -775,7 +773,6 @@ var terrapatternMap = (function(){
   function handlePopState(e) {
     var uri = URI(document.URL);
     var data = uri.search(true);
-    console.log("handlePopState", data);
 
     if (data.lat == undefined || data.lng == undefined) {
       resetUI();
