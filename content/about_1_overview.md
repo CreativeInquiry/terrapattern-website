@@ -1,6 +1,6 @@
 ## Overview
 
-**We present *Terrapattern*: "similar-image search" for satellite photos.** It's an open-source tool for discovering "patterns of interest" in unlabeled satellite imagery&mdash;a prototype for exploring the unmapped, and the unmappable. 
+**We present the alpha version of *Terrapattern*: "similar-image search" for satellite photos.** It's an open-source tool for discovering "patterns of interest" in unlabeled satellite imagery&mdash;a prototype for exploring the unmapped, and the unmappable. 
 
 Terrapattern provides an open-ended interface for visual query-by-example. Simply click an interesting spot on Terrapattern's map, and it will find other locations that look similar. Our tool is ideal for locating specialized 'nonbuilding structures' and other forms of soft infrastructure that aren't usually indicated on maps.
 
