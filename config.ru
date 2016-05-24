@@ -1,4 +1,4 @@
-$stdout.sync = true
+# $stdout.sync = true
 
 require './terrapattern'
 

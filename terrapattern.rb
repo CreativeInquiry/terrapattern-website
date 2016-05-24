@@ -3,10 +3,8 @@ require 'sinatra/base'
 require "sinatra/reloader" 
 require "sinatra/json"
 require "sinatra/content_for"
-require 'sinatra/flash'
 require "sinatra/namespace"
 require 'sinatra/partial'
-require "sinatra/cookies"
 require "sinatra/subdomain"
 
 # Rendering Libraries
@@ -26,8 +24,6 @@ require_relative "lib/helpers"
 #######################################
 
 class Terrapattern < Sinatra::Base
-  # enable :sessions
-  # set :session_secret, ENV["SESSION_SECRET"]
 
   # Load the data from the cities config file
   set :city_data, YAML::load(File.open('data/cities.yaml'))["cities"]
@@ -40,7 +36,6 @@ class Terrapattern < Sinatra::Base
   $markdown = MarkdownPartial.new
 
   # Register the various extensions and helpers
-  register Sinatra::Flash
   register Sinatra::Namespace
   register Sinatra::Partial
   register Sinatra::Subdomain
@@ -110,7 +105,6 @@ class Terrapattern < Sinatra::Base
     end
 
     post "/download" do
-    
       content_type :json
       nameparts = ["terrapattern"]  
       obj = JSON.parse(params["geojson"])
