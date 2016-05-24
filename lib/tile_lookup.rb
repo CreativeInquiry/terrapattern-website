@@ -52,8 +52,8 @@ class TileLookup
     uri += "&learning_rate=#{opts["learning_rate"]}" if opts["learning_rate"]
     uri += "&earlyx=#{opts["earlyx"]}"               if opts["earlyx"]
     uri += "&metric=#{opts["metric"]}"               if opts["metric"]
-    uri += "&pca=#{opts["pca"]}"                  if opts["pca"]
-    uri += "&pca_only=#{opts["pca_only"]}"             if opts["pca_only"]
+    uri += "&pca=#{opts["pca"]}"                     if opts["pca"]
+    uri += "&pca_only=#{opts["pca_only"]}"           if opts["pca_only"]
 
     puts "Searching for #{uri}"
     results = Typhoeus.get(uri)

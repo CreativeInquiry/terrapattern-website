@@ -24,21 +24,21 @@ class MarkdownPartial
 
   def insert_content(id, city_name=nil, suffix=nil)
 
-   # if ENV["environment"] == "development" || @memoed_content[id].nil?
+   key = [id,city_name,suffix].compact.join("_")
+   if ENV["environment"] == "development" || @memoed_content[key].nil?
       content = File.read("content/#{id}.md")
       if suffix
-        content += "\n#{suffix}"
+        content += "#{suffix}"
       end
       markdown_text =   @markdown.render(content)
       if city_name
         markdown_text.gsub!("$CITY", city_name)
       end
 
-      # @memoed_content[id] = markdown_text
-   # end  
+      @memoed_content[key] = markdown_text
+   end  
 
-    return markdown_text
-    # return @memoed_content[id]
+    return @memoed_content[key]
   end
 
 end
