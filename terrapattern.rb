@@ -63,7 +63,9 @@ class Terrapattern < Sinatra::Base
         :failover => true,
         :socket_timeout => 1.5,
         :socket_failure_delay => 0.2,
-        :pool_size => 5    
+        :pool_size => 5,
+        :compress => true,
+        :expires_in => 24*60*60
       }
       $cache = Dalli::Client.new((ENV["MEMCACHEDCLOUD_SERVERS"].split(',') rescue nil), dalli_config)
   end
