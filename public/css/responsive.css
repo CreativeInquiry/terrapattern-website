@@ -133,6 +133,31 @@ px      68    160    252    */
     color: #333;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
+
+  /* David is cleaning up for small screens here */
+
+  .service-page {
+    padding-top: 30px;
+  }
+
+  .final-section {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+  .global-page-header {
+    padding: 10px 0px 0px 0px;
+  }
+  .header-description p {
+    font-size: 100%;
+  }
+  .header-content {
+    height: auto;
+    min-height: auto;
+  }
+    #landing-page-2, #landing-page-3 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 /*		Wide Mobile Layout: 480px.
 		Gutters: 24px.

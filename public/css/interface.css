@@ -34,6 +34,15 @@
   height: 598px;
   width: 100%; }
 
+@media only screen and (max-width: 767px) {
+  #main-map {
+    width: 95%;
+    margin-left: 2.5%;
+    height: 400px; }
+
+  #interface_parts {
+    width: 95%;
+    margin-left: 2.5%; } }
 #map {
   width: 100%;
   height: 100%; }
@@ -72,3 +81,12 @@
     font-size: 30px;
     color: #ffffff;
     text-shadow: 3px 3px 3px #000; }
+
+#small-screen-warning {
+  background-color: #fff;
+  text-align: center;
+  padding: 10px 0; }
+  #small-screen-warning p {
+    color: #52a1d8;
+    font-weight: bold;
+    font-size: 120%; }

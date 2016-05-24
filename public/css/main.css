@@ -1191,7 +1191,7 @@ ul.social-icons li {
 
 /* All pages */
 .header-content {
-  height: 162px;
+  min-height: 162px;
 }
 
 #call-to-action h3 {

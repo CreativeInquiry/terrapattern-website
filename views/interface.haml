@@ -43,6 +43,13 @@
           .block.wow.fadeInUp{"data-wow-delay" => ".3s"}
             %img{:alt => "", :height => "100%", :src => "images/worldmap.svg", :width => "100%"}
 
+%section#small-screen-warning.visible-xs-block.visible-sm-block
+  .container
+    .row
+      .col-xs-12
+        %p During this alpha phase, Terrapattern may not fully support mobile devices.
+        %p Please revisit the site on a desktop machine for the full experience.
+
 %section#service-page.pages.service-page{class: (@exhibition_mode ? "exhibit_mode" : "")}
   .container
     .row
@@ -61,11 +68,11 @@
               #main-map
                 #map
       .col-md-5
-        .block
+        .block#interface_parts
           .row
-            .col-md-6
+            .col-xs-6
               %h4 Geographical Plot
-            .col-md-6
+            .col-xs-6
               %h4 Similarity Plot
           .row
             .col-md-12
