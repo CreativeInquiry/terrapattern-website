@@ -2,6 +2,8 @@ This is the website and front-end for the Terrapattern project.  For complete in
 
 Note that this project will not work without a **search server** from which to request search results.  To configure and run your own search server, see the documentation in the [main terrapattern repository](https://www.github.com/terrapattern).
 
+## Team
+
 Terrapattern is a project of [**Golan Levin**](http://flong.com/), [**David Newbury**](http://www.workergnome.com/), [**Kyle McDonald**](http://kylemcdonald.net/), 
 [**Irene Alvarado**](http://www.irenealvarado.com/), [**Aman Tiwari**](http://amantiwari.com/), and [**Manzil Zaheer**](http://manzil.ml/). 
 
@@ -46,8 +48,10 @@ For testing, it can be helpful to modify your ``/etc/hosts`` file by adding the 
     127.0.0.1 nyc.terrapattern.dev
     127.0.0.1 detroit.terrapattern.dev
 
-This allows you to test the multi-domain functionality locally.
+This makes those domains resolve to your local computer and will allow you to test the multi-domain functionality locally.  
 
+**Note that localhost:5100** will now work.  You must have an explicit subdomain set.**
+ 
 ## Running the Application
 
 The command to run the server locally is 
@@ -58,7 +62,18 @@ The command to run the server locally is
 
 ## Adding Additional Cities
 
-The Terrapattern project is designed to allow easy integration of additional cities into the codebase.
+The Terrapattern project is designed to allow easy integration of additional cities or regions into the project.
+
+To add a new city, you'll need to do 5 things:
+
+1. Add the tiles to the search server.
+    *(note that doing that is outside the scope of this document)*
+2. Add an entry to ``cities.yaml`` for the new region
+3. Add a geojson file for the new city.
+4. (optionally) add a geojson file for the water features for the region.
+5. Add the tile lat/lng pairs into the ``lat_lngs.json`` file
+
+#### cities.yaml
 
 <config/cities.yaml> is the main configuration file for the cities data.  Each supported city should have a block of metadata associated with it. To add a new city, you must a new block.  There are instructions within the comments within this file, but some additional notes are useful:
 
@@ -72,9 +87,14 @@ The ``center`` parameters indicate where the map will be centered on initial loa
 
 The ``bounding box`` parameters are used across the project, and should be set to the min and max values of the possible tile center latitude and longitude.  If these values are incorrect, the minimap will be distorted and pins will not appear centered in the search results.  
 
-the ``geojson`` parameter should be the local path   to a geojson file containing a single polygon.  This should be the polygon used during the data model construction phase to select which tiles were downloaded.  
+the ``geojson`` parameter should be the local path to a geojson file containing a single polygon.  This should be the polygon used during the data model construction phase to select which tiles were downloaded.  
 
-the ``water`` parameter is also a 
+the ``water`` parameter is also a geojson file, with a single MultiPolygon containing geometry that will display on the map.  We typically use this to help people understand the geography of the object.  Note that this will NOT clip to the mini-map boundaries, and that drawing this can be computationally expensive.  Use the simplest geometry you can.  Also note that this does not use a sophisticated geojson parser, so don't do anything clever with the geojson file—it's just looking for arrays of lat/lng points at the right locations.
+
+#### lat_lngs.json
+
+<data/lat_lngs.json> is a list of possible latitudes and longitudes for each region.  Within this json file, each region has an object, named with the `url_name` parameter for the region as defined within the `cities.yaml` file.  Each object contains two arrays, one for latitude and one for longitude.  These arrays should contain the possible latitude and longitude points for each tile.  They should be unique values, and there is no correlation between lat and lng.  These are used to make link clicked points with the potential tile ids.
+
 ## License
 
 The MIT License
