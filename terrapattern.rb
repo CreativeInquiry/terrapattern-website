@@ -27,6 +27,11 @@ class Terrapattern < Sinatra::Base
 
   # Load the data from the cities config file
   set :city_data, YAML::load(File.open('data/cities.yaml'))["cities"]
+  settings.city_data.each do |city|
+    city["geojson"] =  File.exist?(city["geojson"]) ? File.read(city["geojson"]) : nil
+    city["water"] = File.exist?(city["water"]) ? File.read(city["water"]) : nil
+  end
+
   set :city_urls, settings.city_data.collect{|city| city["url_name"]}
   set :city_names, settings.city_data.collect{|city| city["name"]}
 
@@ -70,8 +75,8 @@ class Terrapattern < Sinatra::Base
     get "/" do
       send_to_www unless settings.city_urls.include? subdomain
       @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
-      @geojson = File.read(@city_data["geojson"])
-      @water = File.read(@city_data["water"]) rescue nil
+      @geojson = @city_data["geojson"]
+      @water = @city_data["water"] 
       @exhibition_mode = (params["exhibit"] == "true")
       haml :interface
     end
