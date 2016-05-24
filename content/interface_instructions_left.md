@@ -1,1 +1,1 @@
-Click on a feature of interest in the map of $CITY below. Terrapattern will find map tiles in the region that look the most similar to the place you selected.
+Click on a feature of interest in the map of $CITY below. Terrapattern will find map tiles in the region that look the most similar to the place you selected. 
