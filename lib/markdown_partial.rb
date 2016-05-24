@@ -24,7 +24,7 @@ class MarkdownPartial
 
   def insert_content(id, city_name=nil, suffix=nil)
 
-   if ENV["environment"] == "development" || @memoed_content[id].nil?
+   # if ENV["environment"] == "development" || @memoed_content[id].nil?
       content = File.read("content/#{id}.md")
       if suffix
         content += "\n#{suffix}"
@@ -34,10 +34,11 @@ class MarkdownPartial
         markdown_text.gsub!("$CITY", city_name)
       end
 
-      @memoed_content[id] = markdown_text
-   end  
+      # @memoed_content[id] = markdown_text
+   # end  
 
-    return @memoed_content[id]
+    return markdown_text
+    # return @memoed_content[id]
   end
 
 end
