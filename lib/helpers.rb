@@ -8,8 +8,8 @@ module Sinatra
     end
 
     # Wrap the markdown helper.  Kludge for not being a real Sinatra extension.
-    def insert_content(id, city_name=nil)
-      $markdown.insert_content(id, city_name)
+    def insert_content(id, city_name=nil, suffix=nil)
+      $markdown.insert_content(id, city_name, suffix)
     end
 
     def subdomain_url(name)

@@ -247,7 +247,7 @@ a:hover {
   font-family: 'Open Sans', sans-serif;
   font-weight:300;
 }
-#hero-area .btn {
+#hero-area .btn, #landing-page-4 .btn {
   background: transparent;
   border: none;
   color: #fff;
@@ -1166,6 +1166,12 @@ ul.social-icons li {
   background: #f8f8f8;
 }
 
+#landing-page-4 {
+  background-color:  #2ecc71;
+  color: #fff;
+  padding: 50px 0;
+}
+
 /* Footer */
 
 #footer h4 {
@@ -1302,8 +1308,6 @@ section ul li {
 #down_arrow img {
   width: 50px;  
 }
-
-
 
 /* All pages */
 .final-section {

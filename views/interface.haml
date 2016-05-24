@@ -54,9 +54,10 @@
   .container
     .row
       .col-md-7
-        = insert_content("interface_instructions_left", @city_data["name"])
         - if @city_data["example_text"] && @city_data["example_url"]
-          %p= "For example, try clicking on <a href='#{@city_data["example_url"]}'>#{@city_data["example_text"]}</a>."
+          - suffix = "For example, try clicking on <a href='#{@city_data["example_url"]}'>#{@city_data["example_text"]}</a>."
+        = insert_content("interface_instructions_left", @city_data["name"], suffix)
+        
       .col-md-5
         = insert_content("interface_instructions_right", @city_data["name"])
     .row#map_interface
