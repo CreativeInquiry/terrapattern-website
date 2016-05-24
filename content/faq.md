@@ -11,7 +11,7 @@ Terrapattern is a prototype that provides *similar-image search for satellite ph
 
 The Terrapattern tool is ideal for locating specialized [nonbuilding structures](https://en.wikipedia.org/wiki/Nonbuilding_structure) and other forms of otherwise unremarkable [soft infrastructure](https://en.wikipedia.org/wiki/Soft_infrastructure) that aren't usually indicated on maps. For example, one of our friends is using it to find disused swimming pools—for [guerilla skateboarding](http://www.epictv.com/media/podcast/inside-californias-guerrilla-pool-skate-scene-%7C-pool-nation-ep-1/600243). 
 
-More generally, we hope you can help us understand how the Terrapattern project could useful to *you*! We especially invite citizen scientists, data journalists, humanitarian researchers, and other domain experts to tell us about how our app is, or could be, of use. For some of the case studies which inspired us, please see our [**about**](about.html) page. To share some of your own ideas, complete this [brief survey](http://goo.gl/forms/8T7zY28nHm).
+More generally, we hope you can help us understand how the Terrapattern project could useful to *you*! We especially invite citizen scientists, data journalists, humanitarian researchers, and other domain experts to tell us about how our app is, or could be, of use. For some of the case studies which inspired us, please see our [**about**](about) page. To share some of your own ideas, complete this [brief survey](http://goo.gl/forms/8T7zY28nHm).
 
 ---
 ### How does it work? 
@@ -44,7 +44,7 @@ We'd love to hear your stories and feedback! If you discover something interesti
 
 We suspect that most of the big players in the space of satellite imaging, such as Google, Microsoft, Digital Globe, Planet Labs, and others are exploring the opportunities afforded by machine learning&mdash;particularly in light of recent and significant advances in convolutional neural networks and other deep learning techniques. 
 
-One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for *user-defined* ("out-of-set") categories. By contrast, most of the systems listed in our [**reference**](reference.html) page are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. We believe we are also among the first researchers to publish a trained model for satellite imagery. For more information, please see our [**about**](about.html) page. 
+One of the main features which distinguishes the Terrapattern project is our emphasis on allowing our visitors to search, in an open-ended way, for *user-defined* ("out-of-set") categories. By contrast, most of the systems listed in our [**reference**](reference) page are designed to locate and identify specific things-with-names, such as roads, trails, or crosswalks. We believe we are also among the first researchers to publish a trained model for satellite imagery. For more information, please see our [**about**](about) page. 
 
 ---
 ### Why have you offered so few cities? 
@@ -67,7 +67,7 @@ Maybe.
 ---
 ### Who are you, and who funded this? 
 
-We're a group of new-media artists, creative technologists, and students who are affiliated in various ways with the Frank-Ratchye [STUDIO for Creative Inquiry](studioforcreativeinquiry.org) at Carnegie Mellon University, a lab for experimental research at the intersection of art, science, technology and culture. This project was made possible by a grant in Media Innovation from the [Knight Foundation](http://knightfoundation.org/grants/201551228/) [Prototype Fund](http://www.knightfoundation.org/funding-initiatives/knight-prototype-fund/). For more information, please see our [**team**](team.html) page. 
+We're a group of new-media artists, creative technologists, and students who are affiliated in various ways with the Frank-Ratchye [STUDIO for Creative Inquiry](studioforcreativeinquiry.org) at Carnegie Mellon University, a lab for experimental research at the intersection of art, science, technology and culture. This project was made possible by a grant in Media Innovation from the [Knight Foundation](http://knightfoundation.org/grants/201551228/) [Prototype Fund](http://www.knightfoundation.org/funding-initiatives/knight-prototype-fund/). For more information, please see our [**team**](team) page. 
 
 ---
 ### What data do you collect from this site's visitors? 
