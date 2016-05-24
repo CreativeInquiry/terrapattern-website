@@ -32,6 +32,8 @@ cities:
       ne_lng: -121.8944091629237
     geojson: "data/sf.json"      
     water:   "data/sf_coast.json" 
+    example_text: "these yellow crosswalks"
+    example_url: "/?lat=37.7650627&lng=-122.39858049999998"
   
   - name: New York City
     search_locale: "New_York"   
@@ -47,7 +49,9 @@ cities:
       ne_lat: 40.9413968
       ne_lng: -73.6870689
     geojson: "data/nyc.json"     
-    water:   "data/nyc_water_simple.json"   
+    water:   "data/nyc_water_simple.json"  
+    example_text: "these solar panels"
+    example_url: "/?lat=40.7161993&lng=-74.1477104"
 
   - name: Detroit                
     url_name: detroit            
@@ -64,3 +68,5 @@ cities:
       ne_lng: -82.8847078 
     geojson: "data/detroit.json"   
     water:   "data/detroit_water.json"
+    example_url: "/?lat=42.2747722&lng=-83.12429629999997"
+    example_text: "these fuel tanks"
