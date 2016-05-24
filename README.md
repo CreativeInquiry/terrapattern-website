@@ -1,5 +1,7 @@
 This is the website and front end for the Terrapattern project.  For more information about the project, please see the main repository at <https://www.github.com/terrapattern>.  
 
+This repository is a work-in-progress.
+
 ## Installation Instructions:
 
 This site has been developed using [Sinatra](http://www.sinatrarb.com), a Ruby library for small websites.  It uses the standard conventions of a Sinatra project, and is designed to be hosted on [Heroku](http://www.heroku.com).  

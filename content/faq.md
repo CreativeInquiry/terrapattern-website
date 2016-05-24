@@ -1,6 +1,6 @@
 ### What's the basic idea? 
 
-Terrapattern is a prototype that provides *similar-image search for satellite photos*&mdash;an open-source, open-ended tool for exploring the unmapped, and mapping the unmappable. Click an interesting spot in a map of New York, San Francisco, or Pittsburgh, and Terrapattern will find other locations that look similar.
+Terrapattern is a prototype that provides *similar-image search for satellite photos*&mdash;an open-source, open-ended tool for exploring the unmapped, and mapping the unmappable. Click an interesting spot in a map of New York, San Francisco, Detroit or Pittsburgh, and Terrapattern will find other locations that look similar in that city.
 
 * **YOU** click on a "feature of interest" in a satellite image.
 * **TERRAPATTERN** returns a batch of the most similar-looking places nearby.
@@ -11,7 +11,7 @@ Terrapattern is a prototype that provides *similar-image search for satellite ph
 
 The Terrapattern tool is ideal for locating specialized [nonbuilding structures](https://en.wikipedia.org/wiki/Nonbuilding_structure) and other forms of otherwise unremarkable [soft infrastructure](https://en.wikipedia.org/wiki/Soft_infrastructure) that aren't usually indicated on maps. For example, one of our friends is using it to find disused swimming pools—for [guerilla skateboarding](http://www.epictv.com/media/podcast/inside-californias-guerrilla-pool-skate-scene-%7C-pool-nation-ep-1/600243). 
 
-More generally, we hope you can help us understand how the Terrapattern project could useful to *you*! We especially invite citizen scientists, data journalists, humanitarian researchers, and other domain experts to tell us about how our app is, or could be, of use. For some of the case studies which inspired us, please see our [**about**](about.html) page. 
+More generally, we hope you can help us understand how the Terrapattern project could useful to *you*! We especially invite citizen scientists, data journalists, humanitarian researchers, and other domain experts to tell us about how our app is, or could be, of use. For some of the case studies which inspired us, please see our [**about**](about.html) page. To share some of your own ideas, complete this [brief survey](http://goo.gl/forms/8T7zY28nHm).
 
 ---
 ### How does it work? 
@@ -49,12 +49,12 @@ One of the main features which distinguishes the Terrapattern project is our emp
 ---
 ### Why have you offered so few cities? 
 
-We're adding more soon! But for the moment, this is the scale we could afford. Storing the model data for each metro region requires about 10GB of active RAM. (That's *RAM*&mdash;not hard disk.) To store and serve a searchable model for (say) the entire United States would require nearly 2,000 times as much RAM and CPU power as we're currently leasing, and the development of a much more sophisticated software architecture as well. Think of the *Terrapattern* project as a proof-of-concept probe to test how (or whether) "visual query-by-example" for satellite imagery might become a part of our everyday future. Remember, you saw it here first :)
+We're adding more soon! But for this alpha prototype, this is the scale we could achieve. Storing the model data for each metro region requires about 10GB of active RAM. (That's *RAM*&mdash;not hard disk.) To store and serve a searchable model for (say) the entire United States would require nearly 2,000 times as much RAM and CPU power as we're currently leasing, and the development of a much more sophisticated software architecture as well. Think of the *Terrapattern* project as a proof-of-concept probe to test how (or whether) "visual query-by-example" for satellite imagery might become a part of our everyday future. Remember, you saw it here first :)
 
 ---
 ### Why did you select the cities you did? 
 
-Most of our team members currently call Pittsburgh home. We additionally selected New York City and San Francisco because so many of our friends and peers live there&mdash;especially those exploring new intersections of art, design, journalism, technology, data science and social change.
+Most of our team members currently call Pittsburgh home. We additionally selected New York City, San Francisco and Detroit because so many of our friends and peers live there&mdash;especially those exploring new intersections of art, design, journalism, technology, data science and social change.
 
 ---
 ### Is this art? 
@@ -74,9 +74,9 @@ We're a group of new-media artists, creative technologists, and students who are
 ---
 ### How is Terrapattern licensed? 
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Terrapattern</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://terrapattern.com" property="cc:attributionName" rel="cc:attributionURL">Golan Levin, David Newbury, Kyle McDonald, Irene Alvarado, Aman Tiwari, and Manzil Zaheer</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. The Terrapattern code and data files are made available under [the MIT Licence](https://en.wikipedia.org/wiki/MIT_License). 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Terrapattern</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://terrapattern.com" property="cc:attributionName" rel="cc:attributionURL">Golan Levin, David Newbury, Kyle McDonald, Irene Alvarado, Aman Tiwari, and Manzil Zaheer</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. The Terrapattern code and data files are free software and open source, made available under [the MIT Licence](https://en.wikipedia.org/wiki/MIT_License). 
 
 --- 
 ### How should I cite this project? 
 
-Levin, G., Newbury, D., McDonald, K., Alvarado, I., Tiwari, A., and Zaheer, M. "Terrapattern: Open-Ended, Visual Query-By-Example for Satellite Imagery using Deep Learning", Published 20 May 2016. [http://terrapattern.com](http://terrapattern.com).
+Levin, G., Newbury, D., McDonald, K., Alvarado, I., Tiwari, A., and Zaheer, M. "Terrapattern: Open-Ended, Visual Query-By-Example for Satellite Imagery using Deep Learning". [*http://terrapattern.com*](http://terrapattern.com), 24 May 2016. 
