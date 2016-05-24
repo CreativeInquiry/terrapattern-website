@@ -12,6 +12,8 @@ require "haml"
 require 'tilt/haml'
 require "sass"
 require 'yaml'
+require 'dalli'
+
 
 # Terrapattern-specific libraries
 require_relative "lib/tile_lookup"
@@ -25,20 +27,7 @@ require_relative "lib/helpers"
 
 class Terrapattern < Sinatra::Base
 
-  # Load the data from the cities config file
-  set :city_data, YAML::load(File.open('data/cities.yaml'))["cities"]
-  settings.city_data.each do |city|
-    city["geojson"] =  File.exist?(city["geojson"]) ? File.read(city["geojson"]) : nil
-    city["water"] = File.exist?(city["water"]) ? File.read(city["water"]) : nil
-  end
 
-  set :city_urls, settings.city_data.collect{|city| city["url_name"]}
-  set :city_names, settings.city_data.collect{|city| city["name"]}
-
-  # initialize some of the helper classes
-  # TODO: Convert these to proper Sinatra Extensions. (Low priority—they work.)
-  $tile_lookup = TileLookup.new
-  $markdown = MarkdownPartial.new
 
   # Register the various extensions and helpers
   register Sinatra::Namespace
@@ -49,6 +38,36 @@ class Terrapattern < Sinatra::Base
   helpers Sinatra::ContentFor
   helpers Sinatra::TerrapatternHelpers
  
+  configure do
+
+      # Load the data from the cities config file
+      set :city_data, YAML::load(File.open('data/cities.yaml'))["cities"]
+      settings.city_data.each do |city|
+        city["geojson"] =  File.exist?(city["geojson"]) ? File.read(city["geojson"]) : nil
+        city["water"] = File.exist?(city["water"]) ? File.read(city["water"]) : nil
+      end
+
+      set :city_urls, settings.city_data.collect{|city| city["url_name"]}
+      set :city_names, settings.city_data.collect{|city| city["name"]}
+
+
+      # initialize some of the helper classes
+      # TODO: Convert these to proper Sinatra Extensions. (Low priority—they work.)
+      $tile_lookup = TileLookup.new
+      $markdown = MarkdownPartial.new
+
+
+      dalli_config = {
+        :username => ENV["MEMCACHEDCLOUD_USERNAME"],
+        :password => ENV["MEMCACHEDCLOUD_PASSWORD"],
+        :failover => true,
+        :socket_timeout => 1.5,
+        :socket_failure_delay => 0.2,
+        :pool_size => 5    
+      }
+      $cache = Dalli::Client.new((ENV["MEMCACHEDCLOUD_SERVERS"].split(',') rescue nil), dalli_config)
+  end
+
   # Set up some specific functionality for the development environment
   configure :development do
     register Sinatra::Reloader
@@ -75,8 +94,6 @@ class Terrapattern < Sinatra::Base
     get "/" do
       send_to_www unless settings.city_urls.include? subdomain
       @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
-      @geojson = @city_data["geojson"]
-      @water = @city_data["water"] 
       @exhibition_mode = (params["exhibit"] == "true")
       haml :interface
     end
@@ -105,8 +122,16 @@ class Terrapattern < Sinatra::Base
     # JSON route for connecting to the search implementation
     get "/search" do
       redirect("/") unless settings.city_urls.include? subdomain
-      @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
-      json $tile_lookup.lookup(params['lat'], params['lng'], @city_data["search_locale"], 19, 96, params)
+      zoom_level = 19
+      result_count = 96
+      key = [subdomain.to_s,zoom_level,result_count,params.values].flatten.join("_")
+      content = $cache.get(key)
+      unless content
+        @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
+        content =  $tile_lookup.lookup(params['lat'], params['lng'], @city_data["search_locale"], zoom_level, result_count, params)
+        $cache.set(key,content)
+      end
+      json content
     end
 
     post "/download" do

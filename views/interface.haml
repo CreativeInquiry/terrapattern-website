@@ -14,8 +14,8 @@
     var MAPS_API_KEY = "#{ENV["GMAPS_KEY"]}";
     var BOUNDING_BOX = #{@city_data["bounding_box"].to_json};
     var MAP_CENTER   = #{@city_data["center"].to_json};
-    var BOUNDARY     = #{@geojson};
-    var WATER        = #{@water || false};
+    var BOUNDARY     = #{@city_data["geojson"]};
+    var WATER        = #{@city_data["water"] || false};
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/p5.min.js" charset="utf-8"></script>

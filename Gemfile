@@ -21,6 +21,11 @@ gem "haml",              "~> 4.0.7"
 gem "sass",              "~> 3.4.21"
 gem "redcarpet",         "~> 3.3.4"
 
+
+# Cache Helpers
+gem 'dalli'
+gem 'connection_pool'
+
 # Development Gems
 group :test, :development do
   gem 'guard',    "~> 2.13.0"
