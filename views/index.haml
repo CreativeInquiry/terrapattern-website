@@ -1,3 +1,11 @@
+- content_for :javascript do
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+  :javascript
+    $('#down_arrow').on("click", "a", function(e) {
+      e.preventDefault();
+      $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true});
+    })
+
 %section#hero-area.vcenter
   .container
     .row
@@ -21,6 +29,11 @@
       .col-md-12
         .block.wow.fadeInUp.animated{"data-wow-delay" => ".6s"}
           %em More Cities Coming Soon! 
+    .row#more-cities
+      .col-md-12
+        #down_arrow.block.wow.fadeInUp.animated{"data-wow-delay" => ".6s"}
+          %a{href: "#landing-page-2"}
+            %img{src: "/images/arrow_down.svg"}
 %section#landing-page-2
   .container
     .row

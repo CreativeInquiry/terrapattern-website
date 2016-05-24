@@ -1293,6 +1293,18 @@ section ul li {
   font-size: 18px;
 }
 
+#down_arrow {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -10%;
+
+}
+#down_arrow img {
+  width: 50px;  
+}
+
+
+
 /* All pages */
 .final-section {
   padding-top: 80px !important;
