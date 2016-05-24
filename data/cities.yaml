@@ -14,6 +14,8 @@ cities:
       ne_lng: -79.688761              #  ''
     geojson: "data/pgh.json"        # The relative path for the geojson boundary of the object
     water:   "data/pgh_rivers.json" # The relative path for the water polygons for the minimap.
+    example_text: "the city marinas"
+    example_url: "/?lat=40.454557&lng=-79.98535750000002"
 
   - name: San Francisco
     url_name: sf
