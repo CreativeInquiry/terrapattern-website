@@ -55,7 +55,7 @@
     .row
       .col-md-7
         - if @city_data["example_text"] && @city_data["example_url"]
-          - suffix = "For example, try clicking on <a href='#{@city_data["example_url"]}'>#{@city_data["example_text"]}</a>."
+          - suffix = " For example, try clicking on <a href='#{@city_data["example_url"]}'>#{@city_data["example_text"]}</a>."
         = insert_content("interface_instructions_left", @city_data["name"], suffix)
         
       .col-md-5
