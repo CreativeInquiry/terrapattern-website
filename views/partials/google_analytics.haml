@@ -1,7 +1,4 @@
-- if subdomain == "www"
-  - domains = settings.city_urls.collect{|i| "'#{i}.terrapattern.com'"}.join(" ,")
-- else
-  - domains = "'www.terrapattern.com', " + settings.city_urls.reject{|i| i == subdomain}.collect{|i| "'#{i}.terrapattern.com'"}.join(" ,")
+- domains = "'www.terrapattern.com', " +settings.city_urls.collect{|i| "'#{i}.terrapattern.com'"}.join(" ,")
 
 :javascript
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
