@@ -75,7 +75,7 @@ class Terrapattern < Sinatra::Base
         :compress => true,
         :expires_in => 24*60*60
       }
-      $cache = Dalli::Client.new(ENV["MEMCACHEDCLOUD_SERVERS"].split(','), dalli_config)
+      set :cache, Dalli::Client.new(ENV["MEMCACHEDCLOUD_SERVERS"].split(','), dalli_config)
   end
 
   # Set up some specific functionality for the development environment
@@ -142,11 +142,11 @@ class Terrapattern < Sinatra::Base
       zoom_level = 19
       result_count = 96
       key = [subdomain.to_s,zoom_level,result_count,params.values].flatten.join("_")
-      content = $cache.get(key)
+      content = settings.cache.get(key)
       unless content
         @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
         content =  $tile_lookup.lookup(params['lat'], params['lng'], @city_data["search_locale"], zoom_level, result_count, params)
-        $cache.set(key,content)
+        settings.cache.set(key,content)
       end
       json content
     end
