@@ -2,7 +2,7 @@ This is the codebase for the user interface for the Terrapattern project.
 
 For information about the project itself, or to try out the project, please see the [Terrapattern website at http://www.terrapattern.com](http://www.terrapattern.com). 
 
-For technical details about the machine learning and search code, please see the repository at <https://www.github.com/terrapattern>.   
+For technical details about the machine learning and search code, please see the repository at <https://www.github.com/CreativeInquiry/terrapattern>.   
 
 ## Team
 

@@ -143,7 +143,9 @@ class Terrapattern < Sinatra::Base
       result_count = 96
       key = [subdomain.to_s,zoom_level,result_count,params.values].flatten.join("_")
       content = settings.cache.get(key)
-      unless content
+      if content
+        settings.cache.touch(key)
+      else
         @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
         content =  $tile_lookup.lookup(params['lat'], params['lng'], @city_data["search_locale"], zoom_level, result_count, params)
         settings.cache.set(key,content)
