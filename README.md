@@ -1,6 +1,8 @@
-This is the website and front-end for the Terrapattern project.  For complete information about the project, please see the main repository at <https://www.github.com/terrapattern> or the project itself at <http://www.terrapattern.com>.   
+This is the codebase for the user interface for the Terrapattern project.
 
-Note that this project will not work without a **search server** from which to request search results.  To configure and run your own search server, see the documentation in the [main terrapattern repository](https://www.github.com/terrapattern).
+For information about the project itself, or to try out the project, please see the [Terrapattern website at http://www.terrapattern.com](http://www.terrapattern.com). 
+
+For technical details about the machine learning and search code, please see the repository at <https://www.github.com/terrapattern>.   
 
 ## Team
 
@@ -17,6 +19,8 @@ Much of the javascript functionality has been added using the wonderful [p5.js l
 
 The site's has also made use of the [Bootstrap Framework](http://getbootstrap.com), and the [????? Theme](#).
 
+If you're interested in trying to run a version of Terrapattern yourself, note that this project requires a **search server** from which to request search results.  This is a completely separate process, and in our implementation is running on a Google App Engine server out in the cloud. To configure and run your own search server, please see the documentation in the [main terrapattern repository](https://www.github.com/terrapattern).
+
 ## Installation Instructions:
 
 To run this site locally, you'll need to clone the repo, then run the following commands in your terminal:
@@ -27,7 +31,22 @@ To run this site locally, you'll need to clone the repo, then run the following 
   bundle install
 ```
 
-Additionally, you'll need the following environment variables to be set:
+The application also uses [memcached](https://memcached.org) for caching, and assumes that you have it installed.  Our production version uses [Memcached-Cloud](https://redislabs.com/memcached-cloud), but for local testing you can use a locally-hosted version using the default configuration.
+
+#### Memcached for Caching
+
+on OSX, the easiest way to install this is via homebrew:
+
+```bash
+  brew install memcached
+```
+
+The Procfile will automatically start up an instance of memcached for running.
+
+#### Environment Variables for Configuration
+
+For security, many 
+You'll need the following environment variables to be set:
 
     SEARCH_SERVER=<URL to the Search Server>
     # This is the URL to to the service running the search engine.
@@ -50,7 +69,7 @@ For testing, it can be helpful to modify your ``/etc/hosts`` file by adding the 
 
 This makes those domains resolve to your local computer and will allow you to test the multi-domain functionality locally.  
 
-**Note that localhost:5100** will now work.  You must have an explicit subdomain set.**
+**Note that <localhost:5100> will not work.  You must have an explicit subdomain set.**
  
 ## Running the Application
 
