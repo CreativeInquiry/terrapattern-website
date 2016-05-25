@@ -12,8 +12,10 @@ require "haml"
 require 'tilt/haml'
 require "sass"
 require 'yaml'
-require 'dalli'
 
+#Caching Libaries
+require 'dalli'
+require "rack-cache"
 
 # Terrapattern-specific libraries
 require_relative "lib/tile_lookup"
@@ -39,6 +41,12 @@ class Terrapattern < Sinatra::Base
   helpers Sinatra::TerrapatternHelpers
  
   configure do
+
+      # Caching Info
+      set :server_start_time, Time.now
+      set :cache_max_age, 60*5
+      set :static_cache_control, [:public, :max_age => settings.cache_max_age]
+
 
       # Load the data from the cities config file
       set :city_data, YAML::load(File.open('data/cities.yaml'))["cities"]
@@ -81,10 +89,17 @@ class Terrapattern < Sinatra::Base
   # BELOW HERE ARE ROUTES
   ##----
 
+  before do
+    last_modified settings.server_start_time
+    etag settings.server_start_time.to_s
+    expires settings.cache_max_age, :public, :must_revalidate
+  end
+
 
   # Handle the landing page
   subdomain :www do
     get '/' do
+      
       @use_alt_header = true
       haml :index
     end

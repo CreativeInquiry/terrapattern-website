@@ -25,6 +25,7 @@ gem "redcarpet",         "~> 3.3.4"
 # Cache Helpers
 gem 'dalli'
 gem 'connection_pool'
+gem "rack-cache"
 
 # Development Gems
 group :test, :development do

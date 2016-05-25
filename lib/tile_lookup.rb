@@ -57,13 +57,17 @@ class TileLookup
 
     puts "Searching for #{uri}"
     results = Typhoeus.get(uri)
-    data = JSON.parse(results.body)
-    processed_data = data["matches"].collect do |point|
-      {
-       filename: point["filename"],
-       coords: id_to_coords(point["filename"],location),
-       tsne: point["tsne_pos"]} 
+    if results.code == 200
+      data = JSON.parse(results.body)
+      processed_data = data["matches"].collect do |point|
+        {
+         filename: point["filename"],
+         coords: id_to_coords(point["filename"],location),
+         tsne: point["tsne_pos"]} 
+      end
+      create_geojson processed_data
+    else
+      return nil
     end
-    create_geojson processed_data
   end
 end

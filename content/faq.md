@@ -72,7 +72,7 @@ We're a group of new-media artists, creative technologists, and students who are
 ---
 ### What data do you collect from this site's visitors? 
 
-*The following statement constitutes our privacy policy:* We are strongly committed to protecting the privacy and anonymity of the visitors to this site. We do not collect or share personal information, and we don't track or profile you. The IP address that is associated with your search(es) is not recorded or shared, and this web site does not use tracking or identifying cookies. Other than our optional [visitor feedback survey](http://goo.gl/forms/8T7zY28nHm), we do not collect or log any user data. Your search information is not stored, and cannot be linked back to you. 
+*The following statement constitutes our privacy policy:* We are strongly committed to protecting the privacy and anonymity of the visitors to this site. We collect visitor data using Google Analytics, and we only share collected information in aggregate (such as most commonly clicked locations). We do not otherwise collect any visitor information, and don't track or profile you. We also collect user data from the optional [visitor feedback survey](http://goo.gl/forms/8T7zY28nHm).
 
 ---
 ### How is Terrapattern licensed? 
