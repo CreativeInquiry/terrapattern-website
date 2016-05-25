@@ -161,15 +161,15 @@ class Terrapattern < Sinatra::Base
       JSON.pretty_generate(obj)
     end
 
-    # Special helper for the Markdown images.
-    get '/images/*.*' do |file,ext|
-      path = "content/images/#{file}.#{ext}"
-      unless File.exist? path
-        pass
-      end
-      content_type ext.to_sym
-      File.read(path, mode: "rb")
-    end
+    # # Special helper for the Markdown images.
+    # get '/images/*.*' do |file,ext|
+    #   path = "content/images/#{file}.#{ext}"
+    #   unless File.exist? path
+    #     pass
+    #   end
+    #   content_type ext.to_sym
+    #   File.read(path, mode: "rb")
+    # end
 
   end
 end
