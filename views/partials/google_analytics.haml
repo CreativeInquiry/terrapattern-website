@@ -1,7 +1,14 @@
+- if subdomain == "www"
+  - domains = settings.city_urls.collect{|i| "'#{i}.terrapattern.com'"}.join(" ,")
+- else
+  - domains = "'www.terrapattern.com', " + settings.city_urls.reject{|i| i == subdomain}.collect{|i| "'#{i}.terrapattern.com'"}.join(" ,")
+
 :javascript
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', 'UA-78282433-1', 'auto');
+  ga('create', 'UA-78282433-1', 'auto', {'allowLinker': true});
   ga('require', 'autotrack');
+  ga('require', 'linker');
+  ga('linker:autoLink', [#{domains}] );
   ga('send', 'pageview');
 
 <script async src='https://www.google-analytics.com/analytics.js'></script>

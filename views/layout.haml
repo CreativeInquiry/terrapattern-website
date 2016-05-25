@@ -21,6 +21,9 @@
     %link{rel:"stylesheet", href:"/css/main.css"}
     %link{rel:"stylesheet", href:"/css/responsive.css"}
     = yield_content :css
+
+    = partial "partials/google_analytics"
+
     
   %body
   = partial "partials/header", locals: {alt_header: @use_alt_header}
@@ -35,4 +38,3 @@
 
   = yield_content :javascript
 
-  = partial "partials/google_analytics"
