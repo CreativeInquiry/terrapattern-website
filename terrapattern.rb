@@ -75,7 +75,7 @@ class Terrapattern < Sinatra::Base
         :compress => true,
         :expires_in => 24*60*60
       }
-      $cache = Dalli::Client.new((ENV["MEMCACHEDCLOUD_SERVERS"].split(',') rescue nil), dalli_config)
+      $cache = Dalli::Client.new((ENV["MEMCACHEDCLOUD_SERVERS"].split(','), dalli_config)
   end
 
   # Set up some specific functionality for the development environment
