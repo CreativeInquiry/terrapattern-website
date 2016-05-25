@@ -1,7 +1,7 @@
 - content_for :javascript do
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
   :javascript
-    $('#down_arrow').on("click", "a", function(e) {
+    $('window').on("click", "'#down_arrow a", function(e) {
       e.preventDefault();
       $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true});
     })
@@ -24,7 +24,7 @@
       .col-md-12
         .block.wow.fadeInUp{"data-wow-delay" => ".6s"}
           - settings.city_names.each_with_index do |name, id|
-            %a.btn-lines.dark.light.wow.fadeInUp.animated.smooth-scroll.btn.btn-default.btn-green{"data-wow-delay" => ".9s", :href => subdomain_url(settings.city_urls[id])}= name
+            %a.btn-lines.dark.light.smooth-scroll.btn.btn-default.btn-green{:href => subdomain_url(settings.city_urls[id])}= name
     .row#more-cities
       .col-md-12
         .block.wow.fadeInUp.animated{"data-wow-delay" => ".6s"}
@@ -38,32 +38,23 @@
   .container
     .row
       .col-md-12
-        .block.wow.fadeInUp{"data-wow-delay" => ".3s"}
-          / %section.cd-intro
-          /   %h1.wow.fadeInUp.animated.cd-headline.slide{"data-wow-delay" => ".4s"}
-          /     %span TERRAPATTERN
-          /     %br
-          .wow.fadeInUp.animated{"data-wow-delay"=>".6s"}
-            = insert_content("landing_page_2")
+        .block
+          = insert_content("landing_page_2")
 
 %section#landing-page-3
   .container
     .row
       .col-md-12
-        .block.wow.fadeInUp{"data-wow-delay" => ".3s"}
-          = insert_content("landing_page_3")
+        = insert_content("landing_page_3")
 %section#landing-page-4
   .container
     .row
       .col-md-12
-        .block.wow.fadeInUp{"data-wow-delay" => ".3s"}
-          = insert_content("landing_page_4")
+        = insert_content("landing_page_4")
     .row
       .col-md-12
-        .block.wow.fadeInUp{"data-wow-delay" => ".6s"}
-          - settings.city_names.each_with_index do |name, id|
-            %a.btn-lines.dark.light.wow.fadeInUp.animated.smooth-scroll.btn.btn-default.btn-green{"data-wow-delay" => ".9s", :href => subdomain_url(settings.city_urls[id])}= name
+        - settings.city_names.each_with_index do |name, id|
+          %a.btn-lines.dark.light.smooth-scroll.btn.btn-default.btn-green{:href => subdomain_url(settings.city_urls[id])}= name
     .row#more-cities
       .col-md-12
-        .block.wow.fadeInUp.animated{"data-wow-delay" => ".6s"}
-          %em More Cities Coming Soon! 
+        %em More Cities Coming Soon! 
