@@ -5,11 +5,23 @@ require './terrapattern'
 use Rack::Deflater, include: ["text/html", "application/json", "text/css", "text/javascript"]
 # 
 
-memcache_servers = ENV["MEMCACHEDCLOUD_SERVERS"] || "localhost"
+dalli_config = {
+  :username => ENV["MEMCACHEDCLOUD_USERNAME"],
+  :password => ENV["MEMCACHEDCLOUD_PASSWORD"],
+  :failover => true,
+  :socket_timeout => 1.5,
+  :socket_failure_delay => 0.2,
+  :pool_size => 5,
+  :compress => true,
+  :expires_in => 24*60*60
+}
+cache = Dalli::Client.new(ENV["MEMCACHEDCLOUD_SERVERS"].split(','), dalli_config)
+
+
 use Rack::Cache,
   verbose: true,
-  metastore:   "memcached://#{memcache_servers}",
-  entitystore: "memcached://#{memcache_servers}"
+  metastore:   cache,
+  entitystore: cache
 
 
 if ENV["TERRAPATTERN_USERNAME"] && ENV["TERRAPATTERN_PASSWORD"]
