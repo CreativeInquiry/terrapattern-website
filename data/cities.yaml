@@ -70,3 +70,19 @@ cities:
     water:   "data/detroit_water.json"
     example_url: "/?lat=42.2747722&lng=-83.12429629999997"
     example_text: "these fuel tanks"
+
+  - name: Berlin                
+    url_name: berlin            
+    search_locale: "Berlin"    
+    center:                      
+      lng: 13.40952          
+      lat: 52.52082           
+    bounding_box:                
+      sw_lat: 52.3387643  
+      sw_lng: 13.0890197
+      ne_lat: 52.6747318  
+      ne_lng: 13.7597302 
+    geojson: "data/berlin.json"   
+    # water:   "data/berlin_water.json"
+    example_url: "http://berlin.terrapattern.dev:5100/?lat=52.5007393&lng=13.264763700000003"
+    example_text: "these football fields"
