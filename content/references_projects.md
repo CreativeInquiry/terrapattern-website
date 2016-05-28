@@ -28,6 +28,8 @@ Novoa, S.; Fuentes, M.T.; Finer, M.; Pena N.; and Julca, J. "[MAAP #18: Prolifer
 
 Odell, Jenny. [*Satellite Collections*](http://www.jennyodell.com/satellite.html) (2009-2011).  Collages of similar-looking things that the artist has cut out from Google satellite imagery. Accessed 5/14/2016.
 
+Onformative Design. [*Google Faces*](http://onformative.com/work/google-faces?p=lab/googlefaces/). 2013. Faces in satellite imagery, discovered with a face tracker.
+
 Pell, Richard W. and Allen, Lauren B. "[Preface to a Genealogy of the Postnatural](http://postnatural.org/filter/Intercalations-2/Preface-to-a-Genealogy-of-the-Postnatural)". In *Intercalations 2: Land & Animal & Non-Animal*, Edited by Anna-Sophie Springer & Etienne Turpin. K. Verlag and the Haus der Kulturen der Welt, Berlin. 2015.
 
 Raymond, Nathaniel A.; Card, Brittany L.; Baker, Isaac L.; and Al Achkar, Ziad. "[Satellite Imagery Interpretation Guide: Intentional Burning of Tukuls](http://hhi.harvard.edu/sites/default/files/publications/siig_ii_burned_tukuls_3.pdf)". *http://hhi.harvard.edu*.
