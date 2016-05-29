@@ -11,6 +11,8 @@ Terrapattern is a project of [**Golan Levin**](http://flong.com/), [**David Newb
 
 Terrapattern was made possible through a Media Innovation [Prototype Fund](http://www.knightfoundation.org/grants/201551228/) grant from the [John S. and James L. Knight Foundation](http://www.knightfoundation.org/), which supports transformational ideas that promote quality journalism, advance media innovation, engage communities and foster the arts. The Knight Foundation believes that democracy thrives when people and communities are informed and engaged.
 
+----------------------------------------------------------------------------
+
 ## Technical Details
 
 This site has been developed using [Sinatra](http://www.sinatrarb.com), a Ruby library for small websites.  It uses the standard conventions of a Sinatra project, and is designed to be hosted on [Heroku](http://www.heroku.com).  
@@ -31,11 +33,11 @@ To run this site locally, you'll need to clone the repo, then run the following 
   bundle install
 ```
 
-The application also uses [memcached](https://memcached.org) for caching, and assumes that you have it installed.  Our production version uses [Memcached-Cloud](https://redislabs.com/memcached-cloud), but for local testing you can use a locally-hosted version using the default configuration.
-
 #### Memcached for Caching
 
-on OSX, the easiest way to install this is via homebrew:
+The application also uses [memcached](https://memcached.org) for caching and assumes that you have it installed locally for testing.  Our production version uses [Memcached-Cloud](https://redislabs.com/memcached-cloud), but for development you should use a locally-hosted version using the default configuration (no username/password, standard port, etc).
+
+On OSX, the easiest way to install this is via homebrew:
 
 ```bash
   brew install memcached
@@ -45,7 +47,6 @@ The Procfile will automatically start up an instance of memcached for running.
 
 #### Environment Variables for Configuration
 
-For security, many 
 You'll need the following environment variables to be set:
 
     SEARCH_SERVER=<URL to the Search Server>
@@ -59,6 +60,8 @@ If you'd like the project to have a *tiny* bit of security, you can set these va
     TERRAPATTERN_USERNAME=<username>
     TERRAPATTERN_PASSWORD=<password>
 
+#### Local Routes
+
 For testing, it can be helpful to modify your ``/etc/hosts`` file by adding the following the lines:
 
     127.0.0.1 www.terrapattern.dev
@@ -71,6 +74,8 @@ This makes those domains resolve to your local computer and will allow you to te
 
 **Note that <localhost:5100> will not work.  You must have an explicit subdomain set.**
  
+----------------------------------------------------------------------------
+
 ## Running the Application
 
 The command to run the server locally is 
@@ -113,6 +118,9 @@ the ``water`` parameter is also a geojson file, with a single MultiPolygon conta
 #### lat_lngs.json
 
 <data/lat_lngs.json> is a list of possible latitudes and longitudes for each region.  Within this json file, each region has an object, named with the `url_name` parameter for the region as defined within the `cities.yaml` file.  Each object contains two arrays, one for latitude and one for longitude.  These arrays should contain the possible latitude and longitude points for each tile.  They should be unique values, and there is no correlation between lat and lng.  These are used to make link clicked points with the potential tile ids.
+
+
+----------------------------------------------------------------------------
 
 ## License
 
