@@ -22,7 +22,7 @@ Singleton, Micah. "<a href="http://www.theverge.com/2016/5/27/11796786/errapatte
 
 Stinson, Liz. "<a href="http://www.wired.com/2016/05/terrapattern-like-search-engine-satellite-imagery/">Terrapattern is Like a Search Engine for Satellite Imagery</a>". <em>WIRED.com</em>, 5/27/2016. [<a href="/pdf/wired_20160527.pdf">PDF</a>]<br />
 
-Toobin, Adam. "<a href="https://www.inverse.com/article/16252-kill-some-time-with-terrapattern-which-turns-satellite-images-into-art">Kill Some Time With Terrapattern, Which Turns Satellite Images Into Art</a>". <em>Inverse.com</em>, 5/27/2016.[<a href="/pdf/inverse_20160527.pdf">PDF</a>]<br />
+Toobin, Adam. "<a href="https://www.inverse.com/article/16252-kill-some-time-with-terrapattern-which-turns-satellite-images-into-art">Kill Some Time With Terrapattern, Which Turns Satellite Images Into Art</a>". <em>Inverse.com</em>, 5/27/2016. [<a href="/pdf/inverse_20160527.pdf">PDF</a>]<br />
 
 Twilley, Nicola. "<a href="http://www.newyorker.com/tech/elements/meet-terrapattern-google-earths-missing-search-engine">Meet Terrapattern, Google Earth's Missing Search Engine</a>". <em>The New Yorker</em>, 5/25/2016. [<a href="/pdf/new_yorker_20160525.pdf">PDF</a>]<br />
 
