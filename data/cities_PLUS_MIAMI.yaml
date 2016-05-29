@@ -1,0 +1,90 @@
+cities:
+  - name: Pittsburgh                # The human-readable label for the location
+    url_name: pgh                   # the subdomain string
+    search_locale: "Allegheny"      # this is the search server's name for the region
+    primary_color:   "#F5DC0F"      # The dominant color for the location
+    secondary_color: "#000000"      # The secondary color for the location
+    center:                         # This is the default location for the map
+      lng: -79.942907                 #  ''
+      lat: 40.441544                  #  ''
+    bounding_box:                   # This is the bounding box for constraining search
+      sw_lat: 40.194352               #  ''
+      sw_lng: -80.360873              #  ''
+      ne_lat: 40.674935               #  ''
+      ne_lng: -79.688761              #  ''
+    geojson: "data/pgh.json"        # The relative path for the geojson boundary of the object
+    water:   "data/pgh_rivers.json" # The relative path for the water polygons for the minimap.
+    example_text: "the city marinas"
+    example_url: "/?lat=40.454557&lng=-79.98535750000002"
+
+  - name: San Francisco
+    url_name: sf
+    search_locale: "San_Fran"    
+    primary_color:   "#c41230"
+    secondary_color: "#fdbf57"
+    center:
+      lat: 37.8008602
+      lng: -122.4008237
+    bounding_box:
+      sw_lat: 37.41969024129289
+      sw_lng: -122.56951903458685
+      ne_lat: 37.89132854978251
+      ne_lng: -121.8944091629237
+    geojson: "data/sf.json"      
+    water:   "data/sf_coast.json" 
+    example_text: "these yellow crosswalks"
+    example_url: "/?lat=37.7650627&lng=-122.39858049999998"
+  
+  - name: New York City
+    search_locale: "New_York"   
+    url_name: nyc
+    primary_color:   "#003884"
+    secondary_color: "#ff6600"
+    center:
+      lng: -73.9837883
+      lat: 40.7535342
+    bounding_box: 
+      sw_lat: 40.5301893
+      sw_lng: -74.2438204
+      ne_lat: 40.9413968
+      ne_lng: -73.6870689
+    geojson: "data/nyc.json"     
+    water:   "data/nyc_water_simple.json"  
+    example_text: "these solar panels"
+    example_url: "/?lat=40.7161993&lng=-74.1477104"
+
+  - name: Detroit                
+    url_name: detroit            
+    search_locale: "Detroit"    
+    primary_color:   "#F5DC0F"   
+    secondary_color: "#000000"   
+    center:                      
+      lng: -83.0510701           
+      lat: 42.3369902            
+    bounding_box:                
+      sw_lat: 42.2047572  
+      sw_lng: -83.2231523 
+      ne_lat: 42.5010147  
+      ne_lng: -82.8847078 
+    geojson: "data/detroit.json"   
+    water:   "data/detroit_water.json"
+    example_url: "/?lat=42.2747722&lng=-83.12429629999997"
+    example_text: "these fuel tanks"
+
+  - name: Miami                       # The human-readable label for the location
+    url_name: miami                   # the subdomain string
+    search_locale: "Miami"            # this is the search server's name for the region
+    primary_color:   "#F5DC0F"        # The dominant color for the location
+    secondary_color: "#000000"        # The secondary color for the location
+    center:                           # This is the default location for the map
+      lng: -80.1903405                # Knight Foundation
+      lat: 25.772207                  #  ''
+    bounding_box:                     # This is the bounding box for constraining search
+      sw_lat: 25.60190226             #  ''
+      sw_lng: -80.51742554            #  ''
+      ne_lat: 26.22444695             #  ''
+      ne_lng: -80.06835938            #  ''
+    geojson: "data/miami.json"        # The relative path for the geojson boundary of the object
+    water:   "data/miami_coast.json"  # The relative path for the water polygons for the minimap.
+    example_text: "the Knight Foundation, for the time being"
+    example_url: "/?lat=25.772207&lng=-80.1903405"
