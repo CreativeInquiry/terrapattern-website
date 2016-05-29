@@ -25,7 +25,7 @@ class MarkdownPartial
   def insert_content(id, city_name=nil, suffix=nil)
 
    key = [id,city_name,suffix].compact.join("_")
-   if ENV["environment"] == "development" || @memoed_content[key].nil?
+   if ENV["RACK_ENV"] == "development" || @memoed_content[key].nil?
       content = File.read("content/#{id}.md")
       if suffix
         content += "#{suffix}"
