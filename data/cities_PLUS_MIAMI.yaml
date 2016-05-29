@@ -77,8 +77,8 @@ cities:
     primary_color:   "#F5DC0F"        # The dominant color for the location
     secondary_color: "#000000"        # The secondary color for the location
     center:                           # This is the default location for the map
-      lng: -80.1903405                # Knight Foundation
-      lat: 25.772207                  #  ''
+      lng: -80.1902035                # Knight Foundation
+      lat: 25.7720758                  #  ''
     bounding_box:                     # This is the bounding box for constraining search
       sw_lat: 25.60190226             #  ''
       sw_lng: -80.51742554            #  ''
@@ -87,4 +87,4 @@ cities:
     geojson: "data/miami.json"        # The relative path for the geojson boundary of the object
     water:   "data/miami_coast.json"  # The relative path for the water polygons for the minimap.
     example_text: "the Knight Foundation, for the time being"
-    example_url: "/?lat=25.772207&lng=-80.1903405"
+    example_url: "/?lat=25.7720758&lng=-80.1902035"
