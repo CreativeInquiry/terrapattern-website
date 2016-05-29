@@ -32,6 +32,8 @@ Bravo, Eduardo. "<a href="http://www.yorokobu.es/la-web-encuentra-la-tierra-luga
 
 Clarke, Keir. "<a href="http://googlemapsmania.blogspot.it/2016/05/searching-for-map-patterns.html">Searching for Map Patterns</a>". <em>GoogleMapsMania</em>, 5/26/2016. [<a href="../public/pdf/google_maps_mania_20160526.pdf">PDF</a>]<br />
 
+Cohen, Tanya. "<a href="http://knife.media/terrapattern/">&#1053;&#1054;&#1042;&#1067;&#1049; &#1051;&#1059;&#1063;&#1064;&#1048;&#1049; &#1057;&#1040;&#1049;&#1058;: &#1055;&#1054;&#1048;&#1057;&#1050;&#1054;&#1042;&#1048;&#1050; &#1055;&#1054; &#1048;&#1047;&#1054;&#1041;&#1056;&#1040;&#1046;&#1045;&#1053;&#1048;&#1071;&#1052; &#1057;&#1054; &#1057;&#1055;&#1059;&#1058;&#1053;&#1048;&#1050;&#1040;</a>". <em>Knife.Media</em>, 5/28/2016. [<a href="../public/pdf/knife_20160528.pdf">PDF</a>]<br />
+
 Coldewey, Devin. "<a href="http://techcrunch.com/2016/05/25/terrapattern-is-a-neural-net-powered-reverse-image-search-for-maps/">Terrapattern is reverse image search for maps, powered by a neural network</a>". <em>TechCrunch</em>, 5/25/2016. [<a href="../public/pdf/techcrunch_20160526.pdf">PDF</a>]<br />
 
 Dempsey, Caitlin. "<a href="https://www.gislounge.com/terrapattern-search-engine-satellite-imagery/">Terrapattern: Search Engine for Satellite Imagery</a>". <em>GIS Lounge</em>, 5/28/2016. [<a href="../public/pdf/gislounge_20160528.pdf">PDF</a>]<br />
