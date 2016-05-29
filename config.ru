@@ -3,7 +3,7 @@
 require './terrapattern'
 
 if ENV["RACK_ENV"] == "production"
-  use Rack::Deflater, include: ["text/html", "application/json", "text/css", "text/javascript"]
+  use Rack::Deflater, include: ["text/html", "application/json", "text/css", "text/javascript", "application/pdf"]
 
   dalli_config = {
     :username => ENV["MEMCACHEDCLOUD_USERNAME"],
