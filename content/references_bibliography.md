@@ -12,3 +12,5 @@ Images](http://www.cs.toronto.edu/~fritz/absps/road_detection.pdf) by Volodymyr 
 [OSM-Crosswalk-Detection](https://github.com/geometalab/OSM-Crosswalk-Detection) by Marcel Huber (2015). Developed at the University of Applied Sciences Rapperswil, this project again trains deep learning models with OSM labels to locate Swiss crosswalks.
 
 [DeepOSM](https://github.com/trailbehind/DeepOSM) (2016), by Andrew L. Johnson, trains a neural network with OSM labels and infrared images from the U.S. National Agriculture Imagery Program (NAIP), in order to detect unmapped hiking trails.
+
+[skynet-data](https://github.com/developmentseed/skynet-data) (2016), by Anand Thakker at DevelopmentSEED, is "a pipeline to simplify building a set of training data for aerial-imagery-based and OpenStreetMap-based machine learning." Skynet uses OSM QA Tiles to generate ground truth images where each color represents some category derived from OSM features.

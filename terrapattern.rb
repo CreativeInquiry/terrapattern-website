@@ -42,10 +42,6 @@ class Terrapattern < Sinatra::Base
  
   configure do
 
-      # Caching Info
-      set :server_start_time, Time.now
-      set :cache_max_age, 60*5
-      set :static_cache_control, [:public, :max_age => settings.cache_max_age]
 
 
       # Load the data from the cities config file
@@ -65,17 +61,27 @@ class Terrapattern < Sinatra::Base
       $markdown = MarkdownPartial.new
 
 
-      dalli_config = {
-        :username => ENV["MEMCACHEDCLOUD_USERNAME"],
-        :password => ENV["MEMCACHEDCLOUD_PASSWORD"],
-        :failover => true,
-        :socket_timeout => 1.5,
-        :socket_failure_delay => 0.2,
-        :pool_size => 5,
-        :compress => true,
-        :expires_in => 24*60*60
-      }
-      set :cache, Dalli::Client.new(ENV["MEMCACHEDCLOUD_SERVERS"].split(','), dalli_config)
+
+  end
+
+  configure :production do
+
+    # Caching Info
+    set :server_start_time, Time.now
+    set :cache_max_age, 60*5
+    set :static_cache_control, [:public, :max_age => settings.cache_max_age]
+
+    dalli_config = {
+      :username => ENV["MEMCACHEDCLOUD_USERNAME"],
+      :password => ENV["MEMCACHEDCLOUD_PASSWORD"],
+      :failover => true,
+      :socket_timeout => 1.5,
+      :socket_failure_delay => 0.2,
+      :pool_size => 5,
+      :compress => true,
+      :expires_in => 24*60*60
+    }
+    set :cache, Dalli::Client.new(ENV["MEMCACHEDCLOUD_SERVERS"].split(','), dalli_config)
   end
 
   # Set up some specific functionality for the development environment
@@ -90,9 +96,11 @@ class Terrapattern < Sinatra::Base
   ##----
 
   before do
-    last_modified settings.server_start_time
-    etag settings.server_start_time.to_s
-    expires settings.cache_max_age, :public, :must_revalidate
+    if settings.production?
+      last_modified settings.server_start_time
+      etag settings.server_start_time.to_s
+      expires settings.cache_max_age, :public, :must_revalidate
+    end
   end
 
 
@@ -136,19 +144,26 @@ class Terrapattern < Sinatra::Base
       haml :references
     end
 
+    get "/press" do
+      send_to_www
+      haml :press
+    end
+
     # JSON route for connecting to the search implementation
     get "/search" do
       redirect("/") unless settings.city_urls.include? subdomain
       zoom_level = 19
       result_count = 96
       key = [subdomain.to_s,zoom_level,result_count,params.values].flatten.join("_")
-      content = settings.cache.get(key)
+
+      content = settings.production? ? settings.cache.get(key) : nil
+
       if content
         settings.cache.touch(key)
       else
         @city_data = settings.city_data.find{|city| city["url_name"] == subdomain.to_s}
         content =  $tile_lookup.lookup(params['lat'], params['lng'], @city_data["search_locale"], zoom_level, result_count, params)
-        settings.cache.set(key,content)
+        settings.cache.set(key,content) if settings.production?
       end
       json content
     end
