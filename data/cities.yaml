@@ -70,3 +70,22 @@ cities:
     water:   "data/detroit_water.json"
     example_url: "/?lat=42.2747722&lng=-83.12429629999997"
     example_text: "these fuel tanks"
+
+
+  # - name: Miami                       # The human-readable label for the location
+  #   url_name: miami                   # the subdomain string
+  #   search_locale: "Miami"            # this is the search server's name for the region
+  #   primary_color:   "#F5DC0F"        # The dominant color for the location
+  #   secondary_color: "#000000"        # The secondary color for the location
+  #   center:                           # This is the default location for the map
+  #     lng: -80.1902035                # Knight Foundation
+  #     lat: 25.7720758                  #  ''
+  #   bounding_box:                     # This is the bounding box for constraining search
+  #     sw_lat: 25.60190226             #  ''
+  #     sw_lng: -80.51742554            #  ''
+  #     ne_lat: 26.22444695             #  ''
+  #     ne_lng: -80.06835938            #  ''
+  #   geojson: "data/miami.json"        # The relative path for the geojson boundary of the object
+  #   water:   "data/miami_coast.json"  # The relative path for the water polygons for the minimap.
+  #   example_text: "the Knight Foundation, for the time being"
+  #   example_url: "/?lat=25.7720758&lng=-80.1902035"
