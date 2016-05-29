@@ -3,13 +3,13 @@
 **Summary**<br />
 Terrapattern is an open-ended interface for finding *"more like this, please"* in satellite photos. Simply click an interesting spot on Terrapattern's map, and it will find other locations that look similar. Terrapattern is particularly useful for locating things that aren't usually indicated on maps.
 
-Terrapattern can be briefly described as "similar-image search for satellite photos", or "a prototype for visual query-by-example in satellite imagery". We hope it will help citizen scientists, humanitarians, journalists, and other curious people to discover "patterns of interest". 
+Terrapattern can be briefly described as "a visual search engine for satellite imagery", "similar-image search for satellite photos", or "a prototype for visual query-by-example in satellite imagery". We hope it will help citizen scientists, humanitarians, journalists, and other curious people to discover "patterns of interest". 
 
-Technically, the project uses a Deep Convolutional Neural Net to assist with image recognition. For more information, please read our [About](http://www.terrapattern.com/about) page and our [FAQ](http://www.terrapattern.com/faq). For examples of related and prior work, please see our [References](http://www.terrapattern.com/references) page.
+Technically, the project uses a Deep Convolutional Neural Net (DCNN) to assist with image recognition. For more information, please read our [About](http://www.terrapattern.com/about) page and our [FAQ](http://www.terrapattern.com/faq). For examples of related and prior work, please see our [References](http://www.terrapattern.com/references) page.
 
 Terrapattern is an open-source project created by a collaborative team of artists, creative technologists, and students. Terrapattern is not a company or startup; it is an experimental research prototype, developed in a university setting, whose purpose is to present a new way of exploring and understanding the world. Terrapattern went live on May 24th, 2016. 
 
-**Images**<br />
+**Press Images**<br />
 We maintain an archive of high-resolution images in [this Flickr archive](https://www.flickr.com/photos/creativeinquiry/albums/72157668099025550): [http://flic.kr/s/aHskzPzVE7](http://flic.kr/s/aHskzPzVE7). These images are available under the [Creative Commons CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) licence.
 
 **Credits**<br />
