@@ -34,6 +34,8 @@ Clarke, Keir. "<a href="http://googlemapsmania.blogspot.it/2016/05/searching-for
 
 Coldewey, Devin. "<a href="http://techcrunch.com/2016/05/25/terrapattern-is-a-neural-net-powered-reverse-image-search-for-maps/">Terrapattern is reverse image search for maps, powered by a neural network</a>". <em>TechCrunch</em>, 5/25/2016. [<a href="../public/pdf/techcrunch_20160526.pdf">PDF</a>]<br />
 
+Dempsey, Caitlin. "<a href="https://www.gislounge.com/terrapattern-search-engine-satellite-imagery/">Terrapattern: Search Engine for Satellite Imagery</a>". <em>GIS Lounge</em>, 5/28/2016. [<a href="../public/pdf/gislounge_20160528.pdf">PDF</a>]<br />
+
 Ib&#225;&#241;ez, Alvaro. "<a href="http://www.microsiervos.com/archivo/internet/terrapattern-buscador-imagenes-satelite.html">Terrapattern, el buscador de im&#225;genes de sat&#233;lite similares</a>". <em>Microsiervos</em>, 5/28/2016. [<a href="../public/pdf/microservios_20160528.pdf">PDF</a>]<br />
 
 Mandelbaum, Ryan F. "<a href="http://www.popsci.com/you-can-now-search-google-maps-by-matching-similar-landscapes">This website lets you find the hidden similarities in big cities</a>". <em>PopSci.com</em>, Popular Science, 5/25/2016. [<a href="../public/pdf/popular_science_20160525.pdf">PDF</a>]<br />
