@@ -18,6 +18,8 @@ Mandelbaum, Ryan F. "<a href="http://www.popsci.com/you-can-now-search-google-ma
 
 Meyer, Robinson. "<a href="http://www.theatlantic.com/technology/archive/2016/05/the-promise-of-terrapattern-the-visual-search-engine-for-satellite-imagery/484610/">The Thrill of Terrapattern, a New Way to Search Satellite Imagery</a>". <em>The Atlantic</em>, 5/27/2016. [<a href="/pdf/atlantic_20160527.pdf">PDF</a>]<br /> 
 
+Merkezi, Haber. "<a href="https://www.techinside.com/terrapattern-gorsel-arama-yapiyor/">Terrapattern uydu haritas&#305;nda g&#246;rsel arama yap&#305;yor</a>". <em>TechInside</em>, 5/30/2016. [<a href="/pdf/techinside_20160530.pdf">PDF</a>]<br />
+
 Singleton, Micah. "<a href="http://www.theverge.com/2016/5/27/11796786/errapattern-visual-search-engine-satellite-maps">Terrapattern is the first open-access visual search engine for satellite maps</a>". <em>The Verge</em>, 5/27/2016. [<a href="/pdf/the_verge_20160527.pdf">PDF</a>]<br />
 
 Stinson, Liz. "<a href="http://www.wired.com/2016/05/terrapattern-like-search-engine-satellite-imagery/">Terrapattern is Like a Search Engine for Satellite Imagery</a>". <em>WIRED.com</em>, 5/27/2016. [<a href="/pdf/wired_20160527.pdf">PDF</a>]<br />
