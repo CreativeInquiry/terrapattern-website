@@ -14,3 +14,5 @@ Images](http://www.cs.toronto.edu/~fritz/absps/road_detection.pdf) by Volodymyr 
 [DeepOSM](https://github.com/trailbehind/DeepOSM) (2016), by Andrew L. Johnson, trains a neural network with OSM labels and infrared images from the U.S. National Agriculture Imagery Program (NAIP), in order to detect unmapped hiking trails.
 
 [skynet-data](https://github.com/developmentseed/skynet-data) (2016), by Anand Thakker at DevelopmentSEED, is "a pipeline to simplify building a set of training data for aerial-imagery-based and OpenStreetMap-based machine learning." Skynet uses OSM QA Tiles to generate ground truth images where each color represents some category derived from OSM features.
+
+Costea, Dragos and Leordeanu, Marius. "[Aerial image geolocalization from recognition and matching of roads and intersections](http://arxiv.org/abs/1605.08323)". arXiv:1605.08323, 5/26/2016. 
