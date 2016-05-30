@@ -125,13 +125,14 @@ the ``water`` parameter is also a geojson file, with a single MultiPolygon conta
 
 ## License
 
-A one-sentence summary of our license would be: "**give us proper visible credit, and keep a public version of your derivative code available for others**".
+One of the goals of Terrapattern is to provide new capabilites to the public.  As such, we are releasing all of the source code and content under permissive licenses that allow both commercial and non-commercial applications.  We do ask that if you use our work in your own projects you provide visible credit to the Terrapattern team.  
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Terrapattern</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Golan Levin, David Newbury, Kyle McDonald, Irene Alvaredo, Aman Tiwari, and Manzil Zaheer,</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+All map data and satellite imagery is provided by third parties and is not subject to these licenses.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Terrapattern</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Golan Levin, David Newbury, Kyle McDonald, Irene Alvaredo, Aman Tiwari, and Manzil Zaheer,</span> and the content on the site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
 
 
-
-The Terrapattern code is made available under the MIT License.
+The underlying software for Terrapattern is made available under the MIT License.
 
 Copyright (c) 2010-2016 Golan Levin, David Newbury, Kyle McDonald, Irene Alvarado, Aman Tiwari, & Manzil Zaheer. http://www.terrapattern.com
 
