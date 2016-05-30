@@ -14,6 +14,8 @@ Dempsey, Caitlin. "<a href="https://www.gislounge.com/terrapattern-search-engine
 
 Ib&#225;&#241;ez, Alvaro. "<a href="http://www.microsiervos.com/archivo/internet/terrapattern-buscador-imagenes-satelite.html">Terrapattern, el buscador de im&#225;genes de sat&#233;lite similares</a>". <em>Microsiervos</em>, 5/28/2016. [<a href="/pdf/microservios_20160528.pdf">PDF</a>]<br />
 
+Kottke, Jason. "<a href="http://kottke.org/16/05/satellite-imagery-search-engine">Satellite imagery search engine</a>". <em>Kottke.org</em>, 5/25/2016. [<a href="/pdf/kottke_20160525.pdf">PDF</a>]<br />
+
 Mandelbaum, Ryan F. "<a href="http://www.popsci.com/you-can-now-search-google-maps-by-matching-similar-landscapes">This website lets you find the hidden similarities in big cities</a>". <em>PopSci.com</em>, Popular Science, 5/25/2016. [<a href="/pdf/popular_science_20160525.pdf">PDF</a>]<br />
 
 Meyer, Robinson. "<a href="http://www.theatlantic.com/technology/archive/2016/05/the-promise-of-terrapattern-the-visual-search-engine-for-satellite-imagery/484610/">The Thrill of Terrapattern, a New Way to Search Satellite Imagery</a>". <em>The Atlantic</em>, 5/27/2016. [<a href="/pdf/atlantic_20160527.pdf">PDF</a>]<br /> 
