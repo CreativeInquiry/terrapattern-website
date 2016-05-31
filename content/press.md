@@ -10,9 +10,13 @@ Cohen, Tanya. "<a href="http://knife.media/terrapattern/">&#1053;&#1054;&#1042;&
 
 Coldewey, Devin. "<a href="http://techcrunch.com/2016/05/25/terrapattern-is-a-neural-net-powered-reverse-image-search-for-maps/">Terrapattern is reverse image search for maps, powered by a neural network</a>". <em>TechCrunch</em>, 5/25/2016. [<a href="/pdf/techcrunch_20160526.pdf">PDF</a>]<br />
 
+"<a href="http://gisuser.com/2016/05/cool-tech-terrapattern-open-source-tool-for-discovering-patterns-of-interest/">Cool Tech! TerraPattern, open-source tool for discovering 'patterns of interest'</a>". <em>GISUser</em>, 5/31/2016. [<a href="/pdf/gisuser_20160531.pdf">PDF</a>]<br />
+
 Dempsey, Caitlin. "<a href="https://www.gislounge.com/terrapattern-search-engine-satellite-imagery/">Terrapattern: Search Engine for Satellite Imagery</a>". <em>GIS Lounge</em>, 5/28/2016. [<a href="/pdf/gislounge_20160528.pdf">PDF</a>]<br />
 
 Ib&#225;&#241;ez, Alvaro. "<a href="http://www.microsiervos.com/archivo/internet/terrapattern-buscador-imagenes-satelite.html">Terrapattern, el buscador de im&#225;genes de sat&#233;lite similares</a>". <em>Microsiervos</em>, 5/28/2016. [<a href="/pdf/microservios_20160528.pdf">PDF</a>]<br />
+
+Kohlstedt, Kurt. "<a href="http://weburbanist.com/2016/05/30/terrapattern-satellite-image-search-engine-matches-similar-places/">Terrapattern: Satellite Image Search Engine Matches Similar Places</a>". <em>Weburbanist</em>, 5/30/2016. [<a href="/pdf/weburbanist_20160530.pdf">PDF</a>]<br />
 
 Kottke, Jason. "<a href="http://kottke.org/16/05/satellite-imagery-search-engine">Satellite imagery search engine</a>". <em>Kottke.org</em>, 5/25/2016. [<a href="/pdf/kottke_20160525.pdf">PDF</a>]<br />
 
@@ -35,3 +39,5 @@ Twilley, Nicola. "<a href="http://www.newyorker.com/tech/elements/meet-terrapatt
 Visnjic, Filip. "<a href="http://www.creativeapplications.net/processing/terrapattern-neural-network-visual-search-tool-for-satellite-imagery/">Terrapattern &#8211; Neural network visual search tool for satellite imagery</a>". <em>CreativeApplications.net</em>, 5/25/2016. [<a href="/pdf/creative_applications_20160525.pdf">PDF</a>]<br />
 
 Whitehead, Timothy. "<a href="http://www.gearthblog.com/blog/archives/2016/05/terrapattern-search-engine-imagery.html">Terrapattern, the search engine for imagery</a>". <em>Google Earth Blog</em>, 5/27/2016. [<a href="/pdf/google_earth_blog_20160527.pdf">PDF</a>]<br />
+
+Worms, Anne-C&eacute;cile. "<a href="http://www.makery.info/2016/05/31/terrapattern-le-nouveau-moteur-de-recherche-des-images-satellite/">Terrapattern, le nouveau moteur de recherche des images satellite</a>". <em>Makery</em>, 5/31/2016. [<a href="/pdf/makery_20160531.pdf">PDF</a>]<br />
