@@ -54,7 +54,7 @@ We're adding more soon! But for this alpha prototype, this is the scale we could
 ---
 ### Why did you select the cities you did? 
 
-There are many regions of the world that might benefit from being studied or mapped with a tool similar to ours. The work involved in doing so, however, is not trivial. "[Solutionist](https://en.wikipedia.org/wiki/Evgeny_Morozov#To_Save_Everything.2C_Click_Here:_The_Folly_of_Technological_Solutionism)" approaches may well do more harm than good. We caution interested readers not to say "OMG let's use this for all the humanitarian problems", and instead consider partnering with or studying the work of an informed organization, such as the Harvard Humanitarian Initiative's [*Satellite Sentinel*](http://hhi.harvard.edu/resources/satellite-sentinel-project) project. 
+There are many regions of the world that might benefit from being studied or mapped with a tool similar to ours. The work involved in doing so, however, is not trivial. "[Solutionist](https://en.wikipedia.org/wiki/Evgeny_Morozov#To_Save_Everything.2C_Click_Here:_The_Folly_of_Technological_Solutionism)" approaches may well do more harm than good. We caution interested readers not to say "OMG let's use this for all the humanitarian problems", and instead consider partnering with or studying the work of an informed organization, such as the Harvard Humanitarian Initiative's [Satellite Sentinel Propject](http://hhi.harvard.edu/resources/satellite-sentinel-project). 
  
 For this alpha prototype, we deliberately sidestepped regions suffering from profound humanitarian or other crises, and instead selected cities primarily for their personal signficance. For example, most of our team members currently call Pittsburgh home, and it was easiest to test our tool in familiar territory. We additionally selected New York City, San Francisco and Detroit because so many of our friends and peers live there&mdash;especially those exploring new intersections of art, design, journalism, technology, data science and social change.
  
@@ -70,9 +70,14 @@ Maybe.
 We're a group of new-media artists, creative technologists, and students who are affiliated in various ways with the Frank-Ratchye [STUDIO for Creative Inquiry](studioforcreativeinquiry.org) at Carnegie Mellon University, a lab for experimental research at the intersection of art, science, technology and culture. This project was made possible by a grant in Media Innovation from the [Knight Foundation](http://knightfoundation.org/grants/201551228/) [Prototype Fund](http://www.knightfoundation.org/funding-initiatives/knight-prototype-fund/). For more information, please see our [**team**](team) page. 
 
 ---
+### How did you get the idea for Terrapattern?
+
+We first became interested in how satellite imagery could help people make interesting discoveries, in early 2009, when we learned how Dr. Sabine Begall [discovered](http://www.pnas.org/content/105/36/13451.abstract) that cows tend to align themselves with the earth's magnetic field. We became motivated to make an open-source tool in 2014, when we learned about how [Wall Street traders were using insights](http://www.wsj.com/articles/SB10001424052702303497804579240182187225264) from satellite imagery to game the system, while ecological and humanitarian initiatives like [MAAP](http://maaproject.org/en/) and the [Satellite Sentinel Project](http://www.satsentinel.org/) were using it to make the world a better place. Of course, like a lot of people, we've also been very impressed and inspired by Google's ["search-by-image"](https://www.google.com/intl/es419/insidesearch/features/images/searchbyimage.html) feature. 
+
+---
 ### What data do you collect from this site's visitors? 
 
-*The following statement constitutes our privacy policy:* We are strongly committed to protecting the privacy and anonymity of the visitors to this site. We collect visitor data using Google Analytics, and we only share collected information in aggregate (such as most commonly clicked locations). We do not otherwise collect any visitor information, and don't track or profile you. We also collect user data from the optional [visitor feedback survey](http://goo.gl/forms/8T7zY28nHm).
+*The following statement constitutes our privacy policy:* We are strongly committed to protecting the privacy and anonymity of the visitors to this site. We collect visitor data using Google Analytics, and we only share collected information in aggregate (such as most commonly clicked locations). We do not otherwise collect any visitor information, and we don't track or profile you. We also collect user data from the optional [visitor feedback survey](http://goo.gl/forms/8T7zY28nHm).
 
 ---
 ### How is Terrapattern licensed? 
