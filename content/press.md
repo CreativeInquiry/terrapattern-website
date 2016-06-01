@@ -4,6 +4,8 @@
 
 Bravo, Eduardo. "<a href="http://www.yorokobu.es/la-web-encuentra-la-tierra-lugares-parecidos/">La web que encuentra lugares parecidos entre s&#237; desde el cielo</a>". <em>Yorokobu.es</em>, 5/27/2016. [<a href="/pdf/yorokobu_20160527.pdf">PDF</a>]<br />
 
+Brownlee, John. "<a href="http://www.fastcodesign.com/3060424/this-neural-network-reveals-your-citys-secret-patterns">This Neural Network Reveals Your City's Secret Patterns</a>". <em>Fast Company</em>, 6/1/2016. [<a href="/pdf/fastco_20160601.pdf">PDF</a>]<br />
+
 Clarke, Keir. "<a href="http://googlemapsmania.blogspot.it/2016/05/searching-for-map-patterns.html">Searching for Map Patterns</a>". <em>GoogleMapsMania</em>, 5/26/2016. [<a href="/pdf/google_maps_mania_20160526.pdf">PDF</a>]<br />
 
 Cohen, Tanya. "<a href="http://knife.media/terrapattern/">&#1053;&#1054;&#1042;&#1067;&#1049; &#1051;&#1059;&#1063;&#1064;&#1048;&#1049; &#1057;&#1040;&#1049;&#1058;: &#1055;&#1054;&#1048;&#1057;&#1050;&#1054;&#1042;&#1048;&#1050; &#1055;&#1054; &#1048;&#1047;&#1054;&#1041;&#1056;&#1040;&#1046;&#1045;&#1053;&#1048;&#1071;&#1052; &#1057;&#1054; &#1057;&#1055;&#1059;&#1058;&#1053;&#1048;&#1050;&#1040;</a>". <em>Knife.Media</em>, 5/28/2016. [<a href="/pdf/knife_20160528.pdf">PDF</a>]<br />
