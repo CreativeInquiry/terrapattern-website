@@ -458,10 +458,16 @@ var terrapatternMap = (function(){
   var LAT_OFFSET = 0.0005225;
   var LNG_OFFSET = 0.0006865;
 
-  if (CITY_NAME == "miami") {
-    LAT_OFFSET = 0.000620;
-    LNG_OFFSET = 0.000687;
-  }
+if (CITY_NAME == "miami") {
+  LAT_OFFSET = 0.000620;
+  LNG_OFFSET = 0.000687;
+} else if (CITY_NAME == "berlin") {
+  LNG_OFFSET = 0.000688;
+  LAT_OFFSET = 0.000420;
+} else if (CITY_NAME == "austin") {
+  LNG_OFFSET = 0.0006879;
+  LAT_OFFSET = 0.000595;
+}
 
   var THE_WHOLE_WORLD = [
           [0, 90],

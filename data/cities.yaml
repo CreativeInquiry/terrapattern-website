@@ -88,6 +88,7 @@ cities:
   #   example_text: "these football fields"
 
 
+
   # - name: Miami                       # The human-readable label for the location
   #   url_name: miami                   # the subdomain string
   #   search_locale: "Miami"            # this is the search server's name for the region
@@ -105,3 +106,18 @@ cities:
   #   water:   "data/miami_coast.json"  # The relative path for the water polygons for the minimap.
   #   example_text: "the Knight Foundation, for the time being"
   #   example_url: "/?lat=25.7720758&lng=-80.1902035"
+
+  # - name: Austin                       # The human-readable label for the location
+  #   url_name: austin                   # the subdomain string
+  #   search_locale: "Austin"            # this is the search server's name for the region
+  #   center:                           # This is the default location for the map
+  #     lng: -97.732535                  # 
+  #     lat: 30.283658                  #  ''
+  #   bounding_box:                     # This is the bounding box for constraining search
+  #     sw_lat: 25.60190226             #  ''
+  #     sw_lng: -80.51742554            #  ''
+  #     ne_lat: 26.22444695             #  ''
+  #     ne_lng: -80.06835938            #  ''
+  #   geojson: "data/austin.json"        # The relative path for the geojson boundary of the object
+  #   example_text: "something cool"
+  #   example_url: "/?lat=30.283658&lng=-97.732535"
