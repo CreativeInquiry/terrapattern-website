@@ -523,16 +523,9 @@ if (CITY_NAME == "miami") {
     var west = minLng + Math.floor((lng-minLng)/LNG_OFFSET)*LNG_OFFSET+LNG_OFFSET/2;
     var east = minLng + Math.ceil((lng-minLng)/LNG_OFFSET)*LNG_OFFSET+LNG_OFFSET/2;
 
-    var northFudge = 0;
-    var southFudge = 0;
-
-    if (CITY_NAME == "berlin") {
-        northFudge = (LNG_OFFSET/2)*0.166;
-        southFudge = -(LNG_OFFSET/2)*0.166;
-    }
     var obj = {
-      north: north + northFudge,
-      south: south + southFudge,
+      north: north ,
+      south: south ,
       east:  east,
       west: west
     };
