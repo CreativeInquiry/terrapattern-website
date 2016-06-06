@@ -40,6 +40,8 @@ Stinson, Liz. "<a href="http://www.wired.com/2016/05/terrapattern-like-search-en
 
 "<a href="http://www.nerdcore.de/2016/06/05/terrapattern-berlin/">Terrapattern Berlin</a>". <em>Nerdcore.de</em>, 6/5/2016. [<a href="/pdf/nerdcore_20160605.pdf">PDF</a>]<br />
 
+"<a href="http://futurezone.at/science/terrapattern-webdienst-durchsucht-satellitenbilder/202.663.045">Terrapattern: Webdienst durchsucht Satellitenbilder</a>". <em>Futurezone Technology News</em>, 6/4/2016. [<a href="/pdf/futurezone_20160604.pdf">PDF</a>]
+
 Toobin, Adam. "<a href="https://www.inverse.com/article/16252-kill-some-time-with-terrapattern-which-turns-satellite-images-into-art">Kill Some Time With Terrapattern, Which Turns Satellite Images Into Art</a>". <em>Inverse.com</em>, 5/27/2016. [<a href="/pdf/inverse_20160527.pdf">PDF</a>]<br />
 
 Twilley, Nicola. "<a href="http://www.newyorker.com/tech/elements/meet-terrapattern-google-earths-missing-search-engine">Meet Terrapattern, Google Earth's Missing Search Engine</a>". <em>The New Yorker</em>, 5/25/2016. [<a href="/pdf/new_yorker_20160525.pdf">PDF</a>]<br />
@@ -47,6 +49,8 @@ Twilley, Nicola. "<a href="http://www.newyorker.com/tech/elements/meet-terrapatt
 "<a href="http://www.leiphone.com/news/201605/uZhQO2dXj6a8Zaxa.html">&#35270;&#35273;&#25628;&#32034;&#22320;&#22270;&#38382;&#19990;&#65292;&#31070;&#32463;&#32593;&#32476;&#23454;&#29616;&#36870;&#21521;&#22270;&#20687;&#25628;&#32034; (Visual search map advent of neural network Reverse Image Search)</a>". <em>Lei Feng Network</em>, 5/26/2016. [<a href="/pdf/leiphone_20160526.pdf">PDF</a>]<br />
 
 Visnjic, Filip. "<a href="http://www.creativeapplications.net/processing/terrapattern-neural-network-visual-search-tool-for-satellite-imagery/">Terrapattern &#8211; Neural network visual search tool for satellite imagery</a>". <em>CreativeApplications.net</em>, 5/25/2016. [<a href="/pdf/creative_applications_20160525.pdf">PDF</a>]<br />
+
+Pluta, Werner. "<a href="http://www.golem.de/news/bildersuche-terrapattern-erkennt-strukturen-auf-satellitenbildern-1606-121317.html">Terrapattern erkennt Strukturen auf Satellitenbildern</a>". <em>Golem.de</em>, 6/6/2016. [<a href="/pdf/golem_20160606.pdf">PDF</a>]<br />
 
 Whitehead, Timothy. "<a href="http://www.gearthblog.com/blog/archives/2016/05/terrapattern-search-engine-imagery.html">Terrapattern, the search engine for imagery</a>". <em>Google Earth Blog</em>, 5/27/2016. [<a href="/pdf/google_earth_blog_20160527.pdf">PDF</a>]<br />
 
