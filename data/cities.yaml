@@ -84,7 +84,7 @@ cities:
       ne_lng: 13.759133
     geojson: "data/berlin.json"   
     # water:   "data/berlin_water.json"
-    example_url: "http://berlin.terrapattern.dev:5100/?lat=52.5007393&lng=13.264763700000003"
+    example_url: "http://berlin.terrapattern.com/?lat=52.5007393&lng=13.264763700000003"
     example_text: "these football fields"
 
 
