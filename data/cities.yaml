@@ -104,9 +104,8 @@ cities:
       ne_lng: -80.0688145            #  ''
     geojson: "data/miami.json"        # The relative path for the geojson boundary of the object
     water:   "data/miami_coast.json"  # The relative path for the water polygons for the minimap.
-    example_text: "these planes"
-    example_url: "/?lat=25.7990623&lng=-80.2714795"
-
+    example_text: "these coastal mansions"
+    example_url: "/?lat=25.7911978&lng=-80.1589013"
   # - name: Austin                       # The human-readable label for the location
   #   url_name: austin                   # the subdomain string
   #   search_locale: "Austin"            # this is the search server's name for the region
