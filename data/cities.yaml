@@ -84,28 +84,28 @@ cities:
       ne_lng: 13.759133
     geojson: "data/berlin.json"   
     # water:   "data/berlin_water.json"
-    example_url: "http://berlin.terrapattern.com/?lat=52.5007393&lng=13.264763700000003"
+    example_url: "/?lat=52.5007393&lng=13.264763700000003"
     example_text: "these football fields"
 
 
 
-  # - name: Miami                       # The human-readable label for the location
-  #   url_name: miami                   # the subdomain string
-  #   search_locale: "Miami"            # this is the search server's name for the region
-  #   primary_color:   "#F5DC0F"        # The dominant color for the location
-  #   secondary_color: "#000000"        # The secondary color for the location
-  #   center:                           # This is the default location for the map
-  #     lng: -80.1902035                # Knight Foundation
-  #     lat: 25.7720758                  #  ''
-  #   bounding_box:                     # This is the bounding box for constraining search
-  #     sw_lat: 25.60190226             #  ''
-  #     sw_lng: -80.51742554            #  ''
-  #     ne_lat: 26.22444695             #  ''
-  #     ne_lng: -80.06835938            #  ''
-  #   geojson: "data/miami.json"        # The relative path for the geojson boundary of the object
-  #   water:   "data/miami_coast.json"  # The relative path for the water polygons for the minimap.
-  #   example_text: "the Knight Foundation, for the time being"
-  #   example_url: "/?lat=25.7720758&lng=-80.1902035"
+  - name: Miami                       # The human-readable label for the location
+    url_name: miami                   # the subdomain string
+    search_locale: "Miami"            # this is the search server's name for the region
+    primary_color:   "#F5DC0F"        # The dominant color for the location
+    secondary_color: "#000000"        # The secondary color for the location
+    center:                           # This is the default location for the map
+      lng: -80.1902035                # Knight Foundation
+      lat: 25.7720758                  #  ''
+    bounding_box:                     # This is the bounding box for constraining search
+      sw_lat: 25.6025223             #  ''
+      sw_lng: -80.5167385            #  ''
+      ne_lat: 26.2243823             #  ''
+      ne_lng: -80.0688145            #  ''
+    geojson: "data/miami.json"        # The relative path for the geojson boundary of the object
+    water:   "data/miami_coast.json"  # The relative path for the water polygons for the minimap.
+    example_text: "these planes"
+    example_url: "/?lat=25.7990623&lng=-80.2714795"
 
   # - name: Austin                       # The human-readable label for the location
   #   url_name: austin                   # the subdomain string
