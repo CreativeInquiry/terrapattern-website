@@ -4,6 +4,8 @@
 
 Anzilotti, Eillie. "<a href="http://www.citylab.com/design/2016/06/mapping-the-hidden-patterns-of-urban-life/485924/">Mapping the Hidden Patterns of Urban Life</a>". <em>Citylab</em>, 6/7/2016. [<a href="/pdf/citylab_20160607.pdf">PDF</a>]<br />
 
+Blakemore, Erin. "<a href="http://www.smithsonianmag.com/smart-news/this-new-satellite-project-helps-people-find-patterns-in-city-spaces-180959336/">This New Satellite Project Helps People Find Patterns in City Spaces</a>". <em>Smithsonian</em>, 6/9/2016. [<a href="/pdf/smithsonian_20160609.pdf">PDF</a>]<br />
+
 Bravo, Eduardo. "<a href="http://www.yorokobu.es/la-web-encuentra-la-tierra-lugares-parecidos/">La web que encuentra lugares parecidos entre s&#237; desde el cielo</a>". <em>Yorokobu.es</em>, 5/27/2016. [<a href="/pdf/yorokobu_20160527.pdf">PDF</a>]<br />
 
 Brien, J&ouml;rn. "<a href="http://t3n.de/news/satellitenbilder-terrapattern-suchmaschine-713392/">Satellitenbilder durchsuchen mit Terrapattern: Suchmaschine arbeitet mit K&uuml;nstlicher Intelligenz</a>". <em>t3n.de</em>, 6/6/2016. [<a href="/pdf/t3n_20160606.pdf"</a>PDF</a>] <br />
@@ -28,6 +30,8 @@ Kohlstedt, Kurt. "<a href="http://weburbanist.com/2016/05/30/terrapattern-satell
 
 Kottke, Jason. "<a href="http://kottke.org/16/05/satellite-imagery-search-engine">Satellite imagery search engine</a>". <em>Kottke.org</em>, 5/25/2016. [<a href="/pdf/kottke_20160525.pdf">PDF</a>]<br />
 
+Manaugh, Geoff. "<a href="http://www.theatlantic.com/technology/archive/2016/06/duping-the-satellite-and-other-adventures-in-landscape-recognition/485921/">Subverting Our New Space Overlords</a>". <em>The Atlantic</em>, 6/9/2016. [<a href="/pdf/atlantic_20160609.pdf">PDF</a>]<br />
+
 Mandelbaum, Ryan F. "<a href="http://www.popsci.com/you-can-now-search-google-maps-by-matching-similar-landscapes">This website lets you find the hidden similarities in big cities</a>". <em>PopSci.com</em>, Popular Science, 5/25/2016. [<a href="/pdf/popular_science_20160525.pdf">PDF</a>]<br />
 
 Meyer, Robinson. "<a href="http://www.theatlantic.com/technology/archive/2016/05/the-promise-of-terrapattern-the-visual-search-engine-for-satellite-imagery/484610/">The Thrill of Terrapattern, a New Way to Search Satellite Imagery</a>". <em>The Atlantic</em>, 5/27/2016. [<a href="/pdf/atlantic_20160527.pdf">PDF</a>]<br /> 
@@ -40,11 +44,15 @@ Pluta, Werner. "<a href="http://www.golem.de/news/bildersuche-terrapattern-erken
 
 Reese, Hope. "<a href="http://www.techrepublic.com/article/google-maps-meets-ai-carnegie-mellons-terrapattern-can-find-and-map-every-pool-in-new-york-city/">Google Maps meets AI: Carnegie Mellon's Terrapattern can find and map every pool in New York City</a>". <em>TechRepublic</em>, 6/8/2016. [<a href="/pdf/techrepublic_20160608.pdf">PDF</a>]<br />
 
+Schieb, J&ouml;rg. "<a href="http://www.schieb.de/748910/terrapattern-neue-suchmaschine-fuer-satellitenaufnahmen">TerraPattern: Neue Such-Maschine f&uuml;r Satelliten-Aufnahmen</a>". <em>Scheib.de</em>, 6/8/2016. [<a href="/pdf/scheib_20160608.pdf">PDF</a>]<br />
+
 Singleton, Micah. "<a href="http://www.theverge.com/2016/5/27/11796786/errapattern-visual-search-engine-satellite-maps">Terrapattern is the first open-access visual search engine for satellite maps</a>". <em>The Verge</em>, 5/27/2016. [<a href="/pdf/the_verge_20160527.pdf">PDF</a>]<br />
 
 Stinson, Liz. "<a href="http://www.wired.com/2016/05/terrapattern-like-search-engine-satellite-imagery/">Terrapattern is Like a Search Engine for Satellite Imagery</a>". <em>WIRED.com</em>, 5/27/2016. [<a href="/pdf/wired_20160527.pdf">PDF</a>]<br />
 
 "<a href="http://www.nerdcore.de/2016/06/05/terrapattern-berlin/">Terrapattern Berlin</a>". <em>Nerdcore.de</em>, 6/5/2016. [<a href="/pdf/nerdcore_20160605.pdf">PDF</a>]<br />
+
+"<a href="http://mobile.hdblog.it/2016/06/09/terrapattern-ricerca-immagini-satellitari/">Terrapattern, il motore di ricerca intelligente per foto satellitari.</a>". <em>HDBlog.it</em>, 6/9/2016. [<a href="/pdf/hdblogit_20160609.pdf">PDF</a>]<br />
 
 "<a href="http://futurezone.at/science/terrapattern-webdienst-durchsucht-satellitenbilder/202.663.045">Terrapattern: Webdienst durchsucht Satellitenbilder</a>". <em>Futurezone Technology News</em>, 6/4/2016. [<a href="/pdf/futurezone_20160604.pdf">PDF</a>]
 
