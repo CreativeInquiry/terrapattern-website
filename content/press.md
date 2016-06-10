@@ -26,6 +26,8 @@ Heller, Piotr. "<a href="http://www.spiegel.de/netzwelt/apps/terrapattern-luftau
 
 Ib&#225;&#241;ez, Alvaro. "<a href="http://www.microsiervos.com/archivo/internet/terrapattern-buscador-imagenes-satelite.html">Terrapattern, el buscador de im&#225;genes de sat&#233;lite similares</a>". <em>Microsiervos</em>, 5/28/2016. [<a href="/pdf/microservios_20160528.pdf">PDF</a>]<br />
 
+"<a href="http://www.ilpost.it/2016/06/09/terrapattern/">Il motore di ricerca dei paesaggi</a>". <em>Il Post</em>, 6/9/2016. [<a href="/pdf/ilpost_20160609.pdf">PDF</a>]<br />
+
 Kohlstedt, Kurt. "<a href="http://weburbanist.com/2016/05/30/terrapattern-satellite-image-search-engine-matches-similar-places/">Terrapattern: Satellite Image Search Engine Matches Similar Places</a>". <em>Weburbanist</em>, 5/30/2016. [<a href="/pdf/weburbanist_20160530.pdf">PDF</a>]<br />
 
 Kottke, Jason. "<a href="http://kottke.org/16/05/satellite-imagery-search-engine">Satellite imagery search engine</a>". <em>Kottke.org</em>, 5/25/2016. [<a href="/pdf/kottke_20160525.pdf">PDF</a>]<br />
