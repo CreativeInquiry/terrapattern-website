@@ -12,6 +12,8 @@ Brien, J&ouml;rn. "<a href="http://t3n.de/news/satellitenbilder-terrapattern-suc
 
 Brownlee, John. "<a href="http://www.fastcodesign.com/3060424/this-neural-network-reveals-your-citys-secret-patterns">This Neural Network Reveals Your City's Secret Patterns</a>". <em>Fast Company</em>, 6/1/2016. [<a href="/pdf/fastco_20160601.pdf">PDF</a>]<br />
 
+Chen, Qi. "<a href="http://news.3snews.net/2016/0612/42207.html">Open source Terrapattern, the public use of artificial intelligence Nuggets big data from remote sensing (&#x5F00;&#x6E90;&#x7684;Terrapattern, &#x8BA9;&#x516C;&#x4F17;&#x5229;&#x7528;&#x4EBA;&#x5DE5;&#x667A;&#x80FD;&#x4ECE;&#x9065;&#x611F;&#x5927;&#x6570;&#x636E;&#x4E2D;&#x6398;&#x91D1;)</a>". <em>3sNews</em>, 6/12/2016. [<a href="/pdf/3snews_20160612.pdf">PDF</a>]<br />
+
 Clarke, Keir. "<a href="http://googlemapsmania.blogspot.it/2016/05/searching-for-map-patterns.html">Searching for Map Patterns</a>". <em>GoogleMapsMania</em>, 5/26/2016. [<a href="/pdf/google_maps_mania_20160526.pdf">PDF</a>]<br />
 
 Cohen, Tanya. "<a href="http://knife.media/terrapattern/">&#1053;&#1054;&#1042;&#1067;&#1049; &#1051;&#1059;&#1063;&#1064;&#1048;&#1049; &#1057;&#1040;&#1049;&#1058;: &#1055;&#1054;&#1048;&#1057;&#1050;&#1054;&#1042;&#1048;&#1050; &#1055;&#1054; &#1048;&#1047;&#1054;&#1041;&#1056;&#1040;&#1046;&#1045;&#1053;&#1048;&#1071;&#1052; &#1057;&#1054; &#1057;&#1055;&#1059;&#1058;&#1053;&#1048;&#1050;&#1040;</a>". <em>Knife.Media</em>, 5/28/2016. [<a href="/pdf/knife_20160528.pdf">PDF</a>]<br />
@@ -64,11 +66,13 @@ Toobin, Adam. "<a href="https://www.inverse.com/article/16252-kill-some-time-wit
 
 Twilley, Nicola. "<a href="http://www.newyorker.com/tech/elements/meet-terrapattern-google-earths-missing-search-engine">Meet Terrapattern, Google Earth's Missing Search Engine</a>". <em>The New Yorker</em>, 5/25/2016. [<a href="/pdf/new_yorker_20160525.pdf">PDF</a>]<br />
 
-"<a href="http://www.leiphone.com/news/201605/uZhQO2dXj6a8Zaxa.html">Visual search map advent of neural network Reverse Image Search (&#35270;&#35273;&#25628;&#32034;&#22320;&#22270;&#38382;&#19990;&#65292;&#31070;&#32463;&#32593;&#32476;&#23454;&#29616;&#36870;&#21521;&#22270;&#20687;&#25628;&#32034;)</a>". <em>Lei Feng Network</em>, 5/26/2016. [<a href="/pdf/leiphone_20160526.pdf">PDF</a>]<br />
+"<a href="http://www.leiphone.com/news/201605/uZhQO2dXj6a8Zaxa.html">Visual search map advent of neural network Reverse Image Search (&#35270;&#35273;&#25628;&#32034;&#22320;&#22270;&#38382;&#19990;, &#31070;&#32463;&#32593;&#32476;&#23454;&#29616;&#36870;&#21521;&#22270;&#20687;&#25628;&#32034;)</a>". <em>Lei Feng Network</em>, 5/26/2016. [<a href="/pdf/leiphone_20160526.pdf">PDF</a>]<br />
 
 Visnjic, Filip. "<a href="http://www.creativeapplications.net/processing/terrapattern-neural-network-visual-search-tool-for-satellite-imagery/">Terrapattern &#8211; Neural network visual search tool for satellite imagery</a>". <em>CreativeApplications.net</em>, 5/25/2016. [<a href="/pdf/creative_applications_20160525.pdf">PDF</a>]<br />
 
 Pluta, Werner. "<a href="http://www.golem.de/news/bildersuche-terrapattern-erkennt-strukturen-auf-satellitenbildern-1606-121317.html">Terrapattern erkennt Strukturen auf Satellitenbildern</a>". <em>Golem.de</em>, 6/6/2016. [<a href="/pdf/golem_20160606.pdf">PDF</a>]<br />
+
+"<a href="http://www.cnbeta.com/articles/509687.htm">When Google Maps experience AI: Terrapattern AI to find and locate the swimming pool in New York City (&#x5F53;&#x8C37;&#x6B4C;&#x5730;&#x56FE;&#x9047;&#x5230;&#x4EBA;&#x5DE5;&#x667A;&#x80FD;: Terrapattern AI&#x80FD;&#x627E;&#x5230;&#x5E76;&#x5B9A;&#x4F4D;&#x7EBD;&#x7EA6;&#x5E02;&#x7684;&#x6E38;&#x6CF3;&#x6C60;)</a>". <em>cnBeta.com</em>, 6/12/2016. [<a href="/pdf/cnbeta_20160612.pdf">PDF</a>]<br />
 
 Whitehead, Timothy. "<a href="http://www.gearthblog.com/blog/archives/2016/05/terrapattern-search-engine-imagery.html">Terrapattern, the search engine for imagery</a>". <em>Google Earth Blog</em>, 5/27/2016. [<a href="/pdf/google_earth_blog_20160527.pdf">PDF</a>]<br />
 
