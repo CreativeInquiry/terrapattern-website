@@ -28,6 +28,8 @@ Dempsey, Caitlin. "<a href="https://www.gislounge.com/terrapattern-search-engine
 
 Heller, Piotr. "<a href="http://www.spiegel.de/netzwelt/apps/terrapattern-luftaufklaerung-fuer-alle-a-1095342.html">Suchmaschine f&uuml;r Satellitenbilder: Wir wissen, wo euer Flugzeug steht</a>". <em>Spiegel Online</em>, 6/3/2016. [<a href="/pdf/spiegel_20160603.pdf">PDF</a>]<br />
 
+Hl&aacute;cs, Ferenc. "<a href="http://www.hwsw.hu/hirek/55732/analitika-muhold-orbital-insight.html">Az &eacute;gbe k&ouml;lt&ouml;zik a gazdas&aacute;gi analitika</a>". <em>hwsw.hu</em>, 6/13/2016. [<a href="/pdf/hwsw_20160613.pdf">PDF</a>]<br />
+
 Ib&#225;&#241;ez, Alvaro. "<a href="http://www.microsiervos.com/archivo/internet/terrapattern-buscador-imagenes-satelite.html">Terrapattern, el buscador de im&#225;genes de sat&#233;lite similares</a>". <em>Microsiervos</em>, 5/28/2016. [<a href="/pdf/microservios_20160528.pdf">PDF</a>]<br />
 
 "<a href="http://www.ilpost.it/2016/06/09/terrapattern/">Il motore di ricerca dei paesaggi</a>". <em>Il Post</em>, 6/9/2016. [<a href="/pdf/ilpost_20160609.pdf">PDF</a>]<br />
