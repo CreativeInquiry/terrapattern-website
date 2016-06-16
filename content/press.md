@@ -4,6 +4,8 @@
 
 Anzilotti, Eillie. "<a href="http://www.citylab.com/design/2016/06/mapping-the-hidden-patterns-of-urban-life/485924/">Mapping the Hidden Patterns of Urban Life</a>". <em>Citylab</em>, 6/7/2016. [<a href="/pdf/citylab_20160607.pdf">PDF</a>]<br />
 
+Anzilotti, Eillie. "<a href="http://www.univision.com/noticias/citylab-vida-urbana/mapeando-los-patrones-ocultos-de-la-vida-urbana">Mapeando los patrones ocultos de la vida urbana</a>". <em>Univision</em>, 6/16/2016. [<a href="/pdf/univision_20160616.pdf">PDF</a>]<br />
+
 Blakemore, Erin. "<a href="http://www.smithsonianmag.com/smart-news/this-new-satellite-project-helps-people-find-patterns-in-city-spaces-180959336/">This New Satellite Project Helps People Find Patterns in City Spaces</a>". <em>Smithsonian</em>, 6/9/2016. [<a href="/pdf/smithsonian_20160609.pdf">PDF</a>]<br />
 
 Bravo, Eduardo. "<a href="http://www.yorokobu.es/la-web-encuentra-la-tierra-lugares-parecidos/">La web que encuentra lugares parecidos entre s&#237; desde el cielo</a>". <em>Yorokobu.es</em>, 5/27/2016. [<a href="/pdf/yorokobu_20160527.pdf">PDF</a>]<br />
