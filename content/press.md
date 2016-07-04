@@ -68,7 +68,7 @@ Stinson, Liz. "<a href="http://www.wired.com/2016/05/terrapattern-like-search-en
 
 "<a href="http://mobile.hdblog.it/2016/06/09/terrapattern-ricerca-immagini-satellitari/">Terrapattern, il motore di ricerca intelligente per foto satellitari.</a>". <em>HDBlog.it</em>, 6/9/2016. [<a href="/pdf/hdblogit_20160609.pdf">PDF</a>]<br />
 
-"<a href="http://futurezone.at/science/terrapattern-webdienst-durchsucht-satellitenbilder/202.663.045">Terrapattern: Webdienst durchsucht Satellitenbilder</a>". <em>Futurezone Technology News</em>, 6/4/2016. [<a href="/pdf/futurezone_20160604.pdf">PDF</a>]
+"<a href="http://futurezone.at/science/terrapattern-webdienst-durchsucht-satellitenbilder/202.663.045">Terrapattern: Webdienst durchsucht Satellitenbilder</a>". <em>Futurezone Technology News</em>, 6/4/2016. [<a href="/pdf/futurezone_20160604.pdf">PDF</a>]<br />
 
 Toobin, Adam. "<a href="https://www.inverse.com/article/16252-kill-some-time-with-terrapattern-which-turns-satellite-images-into-art">Kill Some Time With Terrapattern, Which Turns Satellite Images Into Art</a>". <em>Inverse.com</em>, 5/27/2016. [<a href="/pdf/inverse_20160527.pdf">PDF</a>]<br />
 
