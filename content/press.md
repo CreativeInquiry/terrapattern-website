@@ -78,7 +78,7 @@ Twilley, Nicola. "<a href="http://www.newyorker.com/tech/elements/meet-terrapatt
 
 Visnjic, Filip. "<a href="http://www.creativeapplications.net/processing/terrapattern-neural-network-visual-search-tool-for-satellite-imagery/">Terrapattern &#8211; Neural network visual search tool for satellite imagery</a>". <em>CreativeApplications.net</em>, 5/25/2016. [<a href="/pdf/creative_applications_20160525.pdf">PDF</a>]<br />
 
-Pluta, Werner. "<a href="http://www.golem.de/news/bildersuche-terrapattern-erkennt-strukturen-auf-satellitenbildern-1606-121317.html">Terrapattern erkennt Strukturen auf Satellitenbildern</a>". <em>Golem.de</em>, 6/6/2016. [<a href="/pdf/golem_20160606.pdf">PDF</a>]<br />
+Voon, Claire. "<a href="http://hyperallergic.com/301858/a-visual-search-engine-for-the-aerial-patterns-of-cities/">A Visual Search Engine for the Aerial Patterns of Cities</a>". <em>Hyperallergic</em>, 7/6/2016. [<a href="/pdf/hyperallergic_20160706.pdf">PDF</a>]<br />
 
 "<a href="http://www.cnbeta.com/articles/509687.htm">When Google Maps experience AI: Terrapattern AI to find and locate the swimming pool in New York City (&#x5F53;&#x8C37;&#x6B4C;&#x5730;&#x56FE;&#x9047;&#x5230;&#x4EBA;&#x5DE5;&#x667A;&#x80FD;: Terrapattern AI&#x80FD;&#x627E;&#x5230;&#x5E76;&#x5B9A;&#x4F4D;&#x7EBD;&#x7EA6;&#x5E02;&#x7684;&#x6E38;&#x6CF3;&#x6C60;)</a>". <em>cnBeta.com</em>, 6/12/2016. [<a href="/pdf/cnbeta_20160612.pdf">PDF</a>]<br />
 
