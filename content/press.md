@@ -74,9 +74,9 @@ Toobin, Adam. "<a href="https://www.inverse.com/article/16252-kill-some-time-wit
 
 Twilley, Nicola. "<a href="http://www.newyorker.com/tech/elements/meet-terrapattern-google-earths-missing-search-engine">Meet Terrapattern, Google Earth's Missing Search Engine</a>". <em>The New Yorker</em>, 5/25/2016. [<a href="/pdf/new_yorker_20160525.pdf">PDF</a>]<br />
 
-"<a href="http://www.leiphone.com/news/201605/uZhQO2dXj6a8Zaxa.html">Visual search map advent of neural network Reverse Image Search (&#35270;&#35273;&#25628;&#32034;&#22320;&#22270;&#38382;&#19990;, &#31070;&#32463;&#32593;&#32476;&#23454;&#29616;&#36870;&#21521;&#22270;&#20687;&#25628;&#32034;)</a>". <em>Lei Feng Network</em>, 5/26/2016. [<a href="/pdf/leiphone_20160526.pdf">PDF</a>]<br />
-
 Visnjic, Filip. "<a href="http://www.creativeapplications.net/processing/terrapattern-neural-network-visual-search-tool-for-satellite-imagery/">Terrapattern &#8211; Neural network visual search tool for satellite imagery</a>". <em>CreativeApplications.net</em>, 5/25/2016. [<a href="/pdf/creative_applications_20160525.pdf">PDF</a>]<br />
+
+"<a href="http://www.leiphone.com/news/201605/uZhQO2dXj6a8Zaxa.html">Visual search map advent of neural network Reverse Image Search (&#35270;&#35273;&#25628;&#32034;&#22320;&#22270;&#38382;&#19990;, &#31070;&#32463;&#32593;&#32476;&#23454;&#29616;&#36870;&#21521;&#22270;&#20687;&#25628;&#32034;)</a>". <em>Lei Feng Network</em>, 5/26/2016. [<a href="/pdf/leiphone_20160526.pdf">PDF</a>]<br />
 
 Voon, Claire. "<a href="http://hyperallergic.com/301858/a-visual-search-engine-for-the-aerial-patterns-of-cities/">A Visual Search Engine for the Aerial Patterns of Cities</a>". <em>Hyperallergic</em>, 7/6/2016. [<a href="/pdf/hyperallergic_20160706.pdf">PDF</a>]<br />
 
