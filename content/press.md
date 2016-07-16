@@ -10,7 +10,9 @@ Blakemore, Erin. "<a href="http://www.smithsonianmag.com/smart-news/this-new-sat
 
 Bravo, Eduardo. "<a href="http://www.yorokobu.es/la-web-encuentra-la-tierra-lugares-parecidos/">La web que encuentra lugares parecidos entre s&#237; desde el cielo</a>". <em>Yorokobu.es</em>, 5/27/2016. [<a href="/pdf/yorokobu_20160527.pdf">PDF</a>]<br />
 
-Brien, J&ouml;rn. "<a href="http://t3n.de/news/satellitenbilder-terrapattern-suchmaschine-713392/">Satellitenbilder durchsuchen mit Terrapattern: Suchmaschine arbeitet mit K&uuml;nstlicher Intelligenz</a>". <em>t3n.de</em>, 6/6/2016. [<a href="/pdf/t3n_20160606.pdf"</a>PDF</a>] <br />
+Brien, J&ouml;rn. "<a href="http://t3n.de/news/satellitenbilder-terrapattern-suchmaschine-713392/">Satellitenbilder durchsuchen mit Terrapattern: Suchmaschine arbeitet mit K&uuml;nstlicher Intelligenz</a>". <em>t3n.de</em>, 6/6/2016. [<a href="/pdf/t3n_20160606.pdf"</a>PDF</a>]<br />
+
+Brown, Eileen. "<a href="http://www.zdnet.com/article/terrapattern-is-google-earths-missing-search-engine-finding-patterns-in-the-landscape/">Terrapattern search engine finds patterns in the Google Earth landscape</a>". <em>ZDNet</em>, 7/14/2016. [<a href="/pdf/zdnet_20160714.pdf"</a>PDF</a>]<br />
 
 Brownlee, John. "<a href="http://www.fastcodesign.com/3060424/this-neural-network-reveals-your-citys-secret-patterns">This Neural Network Reveals Your City's Secret Patterns</a>". <em>Fast Company</em>, 6/1/2016. [<a href="/pdf/fastco_20160601.pdf">PDF</a>]<br />
 
