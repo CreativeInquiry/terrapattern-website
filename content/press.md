@@ -86,6 +86,10 @@ Voon, Claire. "<a href="http://hyperallergic.com/301858/a-visual-search-engine-f
 
 Whitehead, Timothy. "<a href="http://www.gearthblog.com/blog/archives/2016/05/terrapattern-search-engine-imagery.html">Terrapattern, the search engine for imagery</a>". <em>Google Earth Blog</em>, 5/27/2016. [<a href="/pdf/google_earth_blog_20160527.pdf">PDF</a>]<br />
 
+Whitehead, Timothy. "<a href="http://www.gearthblog.com/blog/archives/2016/07/image-recognition-and-google-earth.html">Image recognition and Google Earth</a>". <em>Google Earth Blog</em>, 7/28/2016. [<a href="/pdf/google_earth_blog_20160728.pdf">PDF</a>]<br />
+
+Wolfson, Elijah. "<a href="http://qz.com/764746/terrapattern-open-source-satellite-photo-search-tool/">There’s now a tool you can use to scour satellite images for criminal activity and environmental devastation</a>". <em>Quartz</em>, 8/25/2016. [<a href="/pdf/quartz_20160825.pdf">PDF</a>]<br />
+
 Worms, Anne-C&eacute;cile. "<a href="http://www.makery.info/2016/05/31/terrapattern-le-nouveau-moteur-de-recherche-des-images-satellite/">Terrapattern, le nouveau moteur de recherche des images satellite</a>". <em>Makery</em>, 5/31/2016. [<a href="/pdf/makery_20160531.pdf">PDF</a>]<br />
 
 Yau, Nathan. "<a href="http://flowingdata.com/2016/06/01/visual-search-tool-for-satellite-imagery/">Visual search tool for satellite imagery</a>". <em>FlowingData</em>, 6/1/2016. [<a href="/pdf/flowingdata_20160601.pdf">PDF</a>]<br />
