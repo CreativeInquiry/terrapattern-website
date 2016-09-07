@@ -54,6 +54,8 @@ Merkezi, Haber. "<a href="https://www.techinside.com/terrapattern-gorsel-arama-y
 
 "<a href="http://derstandard.at/2000038224414/Maechtiger-als-Google-Maps-Mit-Terrapattern-die-Welt-erkunden">Neuronales Netz: Mit Terrapattern die Welt erkunden</a>". <em>Der Standard</em>, 6/4/2016. [<a href="/pdf/derstandard_20160604.pdf">PDF</a>]<br />
 
+Nickel, Katharina. "<a href="https://www.wired.de/collection/tech/mit-diesem-tool-koennt-ihr-satelliten-bilder-fuer-eure-arbeit-nutzen">Mit diesem Tool k&ouml;nnt ihr Satelliten-Bilder f&uuml;r eure Arbeit nutzen</a>". <em>WIRED.de</em>, 8/29/2016. [<a href="/pdf/wiredde_20160829.pdf">PDF</a>]<br />
+
 Parlangeli, Diletta. "<a href="http://www.wired.it/internet/web/2016/06/23/citta-nascoste-terrapattern/">Le citt&agrave; nascoste su Terrapattern, il motore di ricerca di immagini satellitari</a>". <em>WIRED.it</em>, 6/23/2016. [<a href="/pdf/wiredit_20160623.pdf">PDF</a>]<br />
 
 Pluta, Werner. "<a href="http://www.golem.de/news/bildersuche-terrapattern-erkennt-strukturen-auf-satellitenbildern-1606-121317.html">Terrapattern erkennt Strukturen auf Satellitenbildern</a>". <em>Golem.de</em>, 6/6/2016. [<a href="/pdf/golem_20160606.pdf">PDF</a>]<br />
