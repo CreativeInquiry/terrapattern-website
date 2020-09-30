@@ -13,7 +13,7 @@ Terrapattern was made possible through a Media Innovation [Prototype Fund](http:
 
 ----------------------------------------------------------------------------
 
-## Technical Details
+## Technical Details of this project
 
 This site has been developed using [Sinatra](http://www.sinatrarb.com), a Ruby library for small websites.  It uses the standard conventions of a Sinatra project, and is designed to be hosted on [Heroku](http://www.heroku.com).  
 
